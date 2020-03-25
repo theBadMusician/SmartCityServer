@@ -14,18 +14,6 @@ var server = app.listen(port, function(){
 // Static files
 app.use('/assets', express.static('assets'));
 
-//HTTP reqs
-app.get('/', (req, res) => {
-    console.log(Date().toString(), "Requested URL: ", req.url);
-    res.render('index');
-});
-
-app.get('/chat', (req, res) => {
-    console.log("Requested URL: ", req.url);
-    res.render('chat');
-});
-
-
 // Socket setup & pass server
 var io = socket(server);
 io.on('connection', (socket) => {
@@ -41,4 +29,15 @@ io.on('connection', (socket) => {
     socket.on('typing', function(data){
       socket.broadcast.emit('typing', data);
     })
+});
+
+//HTTP reqs
+app.get('/', (req, res) => {
+    console.log(Date().toString(), "Requested URL: ", req.url);
+    res.render('index');
+});
+
+app.get('/chat', (req, res) => {
+    console.log(Date().toString(), "Requested URL: ", req.url);
+    res.render('chat');
 });
