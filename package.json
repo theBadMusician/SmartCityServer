@@ -1,0 +1,36 @@
+{
+  "name": "smartcityserver",
+  "version": "1.0.0",
+  "description": "Smart City Full Stack for project in course IELET1002 (Computer techniques) for Spring of 2020.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theBadMusician/SmartCityServer.git"
+  },
+  "keywords": [
+    "project",
+    "course",
+    "server",
+    "full-stack",
+    "backend",
+    "frontend",
+    "node",
+    "js",
+    "html",
+    "css",
+    "websockets"
+  ],
+  "author": "Benjaminas Visockis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theBadMusician/SmartCityServer/issues"
+  },
+  "homepage": "https://github.com/theBadMusician/SmartCityServer#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}
