@@ -29,20 +29,12 @@
             </li>
         </ul>
     </nav>
-    <div id="mario-chat">
-        <h2><strong>Smart City Chat</strong></h2>
-        <div id="chat-window">
-            <div id="output"></div>
-            <div id="feedback"></div>
-        </div>
-        <input id="handle" type="text" placeholder="User" />
-        <input id="message" type="text" placeholder="Message" />
-        <button id="send">Send</button>
-    </div>
+    <div id="chart_div" style="width:1200; height:900"></div>
+    <div id="curve_chart" style="width:1200; height:900"></div>
 </body>
 <!-- More or less mandatory scripts -->
 <%- include ('partials/scripts'); %>
 <!-- Socket Scripts -->
-<script src="assets\chat.js"></script>
+<script src="assets\city.js"></script>
 
 </html>

@@ -34,7 +34,7 @@ io.on('connection', (socket) => {
 //HTTP reqs
 app.get('/', (req, res) => {
     console.log(Date().toString(), "Requested URL: ", req.url);
-    res.render('index');
+    res.render('test');
 });
 
 app.get('/chat', (req, res) => {
