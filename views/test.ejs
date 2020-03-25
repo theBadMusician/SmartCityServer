@@ -6,29 +6,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse">
-        <a class="navbar-brand" href="/">Smart City Monitor</a>
-        <ul class="nav navbar-nav">
-            <li class="active">
-                <a href="/">Home</a>
-            </li>
-        </ul>
-        <ul class="nav navbar-nav">
-            <li class="active">
-                <a href="/monitor">WIP Monitor</a>
-            </li>
-        </ul>
-        <ul class="nav navbar-nav">
-            <li class="active">
-                <a href="/chat">Chat</a>
-            </li>
-        </ul>
-        <ul class="nav navbar-nav">
-            <li class="active">
-                <a href="/panel">WIP Control Panel</a>
-            </li>
-        </ul>
-    </nav>
+    <%- include ('partials/navBar'); %>
     <div id="chart_div" style="width:1200; height:900"></div>
     <div id="curve_chart" style="width:1200; height:900"></div>
 </body>
