@@ -34,10 +34,15 @@ io.on('connection', (socket) => {
 //HTTP reqs
 app.get('/', (req, res) => {
     console.log(Date().toString(), "Requested URL: ", req.url);
-    res.render('test');
+    res.render('index');
 });
 
 app.get('/chat', (req, res) => {
     console.log(Date().toString(), "Requested URL: ", req.url);
     res.render('chat');
+});
+
+app.get('/monitor', (req, res) => {
+    console.log(Date().toString(), "Requested URL: ", req.url);
+    res.render('monitor');
 });

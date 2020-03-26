@@ -32,12 +32,12 @@ function drawPieChart() {
 };
 
 function drawTimeChart() {
+    let year = 2004,
+        sales = 1000,
+        expenses = 400;
     var data = google.visualization.arrayToDataTable([
       ['Year', 'Sales', 'Expenses'],
-      ['2004',  1000,      400],
-      ['2005',  1170,      460],
-      ['2006',  660,       1120],
-      ['2007',  1030,      540]
+      [year, sales, expenses]
     ]);
 
     var options = {
@@ -45,7 +45,7 @@ function drawTimeChart() {
       curveType: '',
       legend: { position: 'right' },
       'width':1200,
-      'height':600
+      'height':500
     };
 
     var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
