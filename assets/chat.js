@@ -6,11 +6,12 @@ var message = document.getElementById('message'),
       handle = document.getElementById('handle'),
       btn = document.getElementById('send'),
       output = document.getElementById('output'),
-      feedback = document.getElementById('feedback');
+      feedback = document.getElementById('feedback'),
+      chatWindow = document.getElementById('chat-window');
 
 // Emit events
 btn.addEventListener('click', function(){
-  if (message != '') {
+  if (message.value !== '') {
   socket.emit('chat', {
       message: message.value,
       handle: handle.value
@@ -38,6 +39,7 @@ message.addEventListener('keypress', function(){
 socket.on('chat', function(data){
     feedback.innerHTML = "";
     output.innerHTML += '<p><strong>' + data.handle + ': </strong>' + data.message + '</p>';
+    chatWindow.scrollTop = chatWindow.scrollHeight;
 });
 
 socket.on('typing', function(data){

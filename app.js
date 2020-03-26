@@ -20,9 +20,9 @@ io.on('connection', (socket) => {
 
     console.log(Date().toString(), 'Made a socket connection. Socket ID:', socket.id);
 
-    // Handle chat event
+    // Handle chat events
     socket.on('chat', function(data){
-        console.log(data);
+        console.log(Date().toString(), data);
         io.sockets.emit('chat', data);
     });
 
