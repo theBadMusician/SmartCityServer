@@ -2,6 +2,21 @@ var express = require('express');
 var socket = require('socket.io');
 var ejs = require('ejs');
 
+//Initializing variables
+let visitCounter = 0;
+
+//----------------------------------------------------------------------------<||>>
+var n = 0;
+
+var i = Math.floor(Math.random() * 3);
+
+function increment(){
+
+  n++;
+  return n;
+}
+//----------------------------------------------------------------------------<||>>
+
 // App setup
 const port = 80;
 
@@ -19,6 +34,7 @@ var io = socket(server);
 io.on('connection', (socket) => {
 
     console.log(Date().toString(), 'Made a socket connection. Socket ID:', socket.id);
+    io.sockets.emit('visitCounter', visitCounter);
 
     // Handle chat events
     socket.on('chat', function(data){
@@ -37,8 +53,9 @@ io.on('connection', (socket) => {
     });
     // Emit events
     setInterval(() => {
-    socket.emit('update', {
-        temp: Math.floor(Math.random() * 3),
+    increment();
+    io.sockets.emit('update', {
+        temp: n,
         time: Date().toString().slice(16, 24)
         });
     }, 1000);
@@ -47,7 +64,9 @@ io.on('connection', (socket) => {
 
 //HTTP reqs
 app.get('/', (req, res) => {
+    visitCounter += 1;
     console.log(Date().toString(), "Requested URL: ", req.url);
+    console.log("Visit count:", visitCounter);
     res.render('index');
 });
 

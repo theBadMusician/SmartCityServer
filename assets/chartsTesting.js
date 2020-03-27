@@ -4,7 +4,7 @@ var tempTable = [
   ];
 
 var humidityTable = [
-    ['Time', 'Humidity [g/m³.]'], 
+    ['Time', 'Humidity [g/m³]'], 
     [1, 23],
     [2, 87]
 ];
@@ -55,7 +55,7 @@ function drawTempChart() {
     var data = google.visualization.arrayToDataTable(tempTable);
 
     var options = {
-      title: 'Temperature',
+      title: 'Temperature [°C]',
       curveType: '',
       legend: { position: 'none' },
       explorer: {
@@ -67,7 +67,7 @@ function drawTempChart() {
       height: 600,
       width: window.innerWidth,
       chartArea:{
-        left: 400,
+        left: 350,
         top: 20,
         right: 35,
         width: '100%'
@@ -75,10 +75,10 @@ function drawTempChart() {
     };
 
     if (window.dash_open == false) {
-        options.chartArea.left = 5;
+        options.chartArea.left = 50;
     }
     else {
-        options.chartArea.left = 400;
+        options.chartArea.left = 350;
     };
 
     var chart = new google.visualization.LineChart(document.getElementById('temp_chart'));
@@ -90,7 +90,7 @@ function drawHumidityChart() {
     var data = google.visualization.arrayToDataTable(humidityTable);
 
     var options = {
-      title: 'Humidity',
+      title: 'Humidity [g/m³]',
       curveType: '',
       legend: { position: 'none' },
       explorer: {
@@ -102,7 +102,7 @@ function drawHumidityChart() {
       height: 600,
       width: window.innerWidth,
       chartArea:{
-        left: 400,
+        left: 350,
         top: 20,
         right: 35,
         width: '100%'
@@ -110,10 +110,10 @@ function drawHumidityChart() {
     };
 
     if (window.dash_open == false) {
-        options.chartArea.left = 5;
+        options.chartArea.left = 50;
     }
     else {
-        options.chartArea.left = 400;
+        options.chartArea.left = 350;
     };
 
     var chart = new google.visualization.LineChart(document.getElementById('humidity_chart'));
@@ -125,7 +125,7 @@ function drawLightChart() {
     var data = google.visualization.arrayToDataTable(lightTable);
 
     var options = {
-      title: 'Light',
+      title: 'Light [lx]',
       curveType: '',
       legend: { position: 'none' },
       explorer: {
@@ -137,7 +137,7 @@ function drawLightChart() {
       height: 600,
       width: window.innerWidth,
       chartArea:{
-        left: 400,
+        left: 350,
         top: 20,
         right: 35,
         width: '100%'
@@ -145,10 +145,10 @@ function drawLightChart() {
     };
 
     if (window.dash_open == false) {
-        options.chartArea.left = 5;
+        options.chartArea.left = 50;
     }
     else {
-        options.chartArea.left = 400;
+        options.chartArea.left = 350;
     };
 
     var chart = new google.visualization.LineChart(document.getElementById('light_chart'));
