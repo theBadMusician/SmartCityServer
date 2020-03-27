@@ -1,7 +1,7 @@
 google.charts.load('current', {'packages':['corechart', ]});
 
 // Set a callback to run when the Google Visualization API is loaded.
-google.charts.setOnLoadCallback(drawPieChart);
+// google.charts.setOnLoadCallback(drawPieChart);
 google.charts.setOnLoadCallback(drawTimeChart);
 
 // Callback that creates and populates a data table,
@@ -48,7 +48,7 @@ function drawTimeChart() {
       'height':500
     };
 
-    var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+    var chart = new google.visualization.LineChart(document.getElementById('time_chart'));
 
     chart.draw(data, options);
 };

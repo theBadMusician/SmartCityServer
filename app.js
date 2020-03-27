@@ -29,6 +29,20 @@ io.on('connection', (socket) => {
     socket.on('typing', function(data){
       socket.broadcast.emit('typing', data);
     })
+
+    //Handle monitor events
+    socket.on('update', function(data){
+        console.log(Date().toString(), data);
+        io.sockets.emit('chat', data);
+    });
+    // Emit events
+    setInterval(() => {
+    socket.emit('update', {
+        temp: Math.floor(Math.random() * 3),
+        time: Date().toString().slice(16, 24)
+        });
+    }, 1000);
+
 });
 
 //HTTP reqs
@@ -46,3 +60,4 @@ app.get('/monitor', (req, res) => {
     console.log(Date().toString(), "Requested URL: ", req.url);
     res.render('monitor');
 });
+
