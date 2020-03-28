@@ -9,14 +9,8 @@ function check(form) {
     });
     
     socket.on('correct', function (data) {
-        $.ajax({
-            url:data,
-            type:'get',
-            success:function(){
-                window.open(data, "_self");
-            }
+        window.open(data, "_self");
         });
-    });
 
     socket.on('incorrect', function (data) {
         alert('Error! Username and password were incorrect.');

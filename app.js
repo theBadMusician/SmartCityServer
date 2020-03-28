@@ -3,8 +3,11 @@ var socket = require('socket.io');
 var ejs = require('ejs');
 var secrets = require('./SECRETS.js');
 var bodyParser = require('body-parser');
+var events = require('events');
+var uuid = require('node-uuid');
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
+var myEmitter = new events.EventEmitter();
 
 //Initializing variables
 let visitCounter = 0;
@@ -25,23 +28,13 @@ setInterval(() => {
 }, rand_num());
 //----------------------------------------------------------------------------<||>>
 
-// Generate n-bit random numbers ---------------------------------------------<||>>
-function generate(n) {
-    var add = 1, max = 12 - add;   // 12 is the min safe number Math.random() can generate without it starting to pad the end with zeros.   
-
-    if ( n > max ) {
-            return generate(max) + generate(n - max);
-    }
-
-    max        = Math.pow(10, n+add);
-    var min    = max/10; // Math.pow(10, n) basically
-    var number = Math.floor( Math.random() * (max - min + 1) ) + min;
-
-    return ("/" + number).toString(); 
-}
-var i = generate(10);
-console.log(i);
-//----------------------------------------------------------------------------<||>>
+var randomID = '/'+uuid.v4();
+/*
+setInterval(() => {
+    randomID = '/'+uuid.v4();
+    console.log(randomID);
+}, 10000);
+*/
 
 // App setup
 const port = 80;
@@ -80,9 +73,9 @@ io.on('connection', (socket) => {
 
     // Handle login events
     socket.on('ESP32login', function(data){
-        console.log(data.userid, data.password, secrets.ESP32_userid, secrets.ESP32_pwd);
+        console.log("Login submitted.", randomID)
         if (data.userid == secrets.ESP32_userid && data.password == secrets.ESP32_pwd) {
-            socket.emit('correct', i);
+            socket.emit('correct', '/redirect');
         } else {
             socket.emit('incorrect');
         }
@@ -122,10 +115,12 @@ app.get('/esp-login', (req, res) => {
 });
 
 app.get('/redirect', (req, res) => {
-    res.redirect(i);
+    console.log("REDIRECT", randomID);
+    res.redirect(randomID);
 });
 
-app.get(i, (req, res) => {
+app.get(randomID, (req, res) => {
     console.log(Date().toString(), "Requested URL: ", req.url);
-    res.render('ESP32upload');
+    res.render('esp_upload');
 });
+
