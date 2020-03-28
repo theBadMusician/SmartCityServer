@@ -4,6 +4,7 @@ var ejs = require('ejs');
 
 //Initializing variables
 let visitCounter = 0;
+let rand_num = function() {return Math.floor(Math.random() * 4000) + 1000};
 
 //----------------------------------------------------------------------------<||>>
 var n = 0;
@@ -16,6 +17,12 @@ function increment(){
   return n;
 }
 //----------------------------------------------------------------------------<||>>
+
+setInterval(() => {
+    increment();
+    console.log(rand_num());
+}, rand_num());
+
 
 // App setup
 const port = 80;
@@ -51,10 +58,10 @@ io.on('connection', (socket) => {
         console.log(Date().toString(), data);
         io.sockets.emit('chat', data);
     });
+
     // Emit events
     setInterval(() => {
-    increment();
-    io.sockets.emit('update', {
+    socket.emit('update', {
         temp: n,
         time: Date().toString().slice(16, 24)
         });
@@ -65,8 +72,7 @@ io.on('connection', (socket) => {
 //HTTP reqs
 app.get('/', (req, res) => {
     visitCounter += 1;
-    console.log(Date().toString(), "Requested URL: ", req.url);
-    console.log("Visit count:", visitCounter);
+    console.log(Date().toString(), "Requested URL: ", req.url, "Request number ", visitCounter);
     res.render('index');
 });
 
