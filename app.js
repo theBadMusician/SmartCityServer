@@ -1,28 +1,47 @@
 var express = require('express');
 var socket = require('socket.io');
 var ejs = require('ejs');
+var secrets = require('./SECRETS.js');
+var bodyParser = require('body-parser');
+
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 //Initializing variables
 let visitCounter = 0;
 let rand_num = function() {return Math.floor(Math.random() * 4000) + 1000};
 
-//----------------------------------------------------------------------------<||>>
+// Randomize increment time --------------------------------------------------<||>>
 var n = 0;
-
-var i = Math.floor(Math.random() * 3);
 
 function increment(){
 
   n++;
   return n;
 }
-//----------------------------------------------------------------------------<||>>
 
 setInterval(() => {
     increment();
-    console.log(rand_num());
+    // console.log(rand_num());
 }, rand_num());
+//----------------------------------------------------------------------------<||>>
 
+// Generate n-bit random numbers ---------------------------------------------<||>>
+function generate(n) {
+    var add = 1, max = 12 - add;   // 12 is the min safe number Math.random() can generate without it starting to pad the end with zeros.   
+
+    if ( n > max ) {
+            return generate(max) + generate(n - max);
+    }
+
+    max        = Math.pow(10, n+add);
+    var min    = max/10; // Math.pow(10, n) basically
+    var number = Math.floor( Math.random() * (max - min + 1) ) + min;
+
+    return ("/" + number).toString(); 
+}
+var i = generate(10);
+console.log(i);
+//----------------------------------------------------------------------------<||>>
 
 // App setup
 const port = 80;
@@ -53,10 +72,21 @@ io.on('connection', (socket) => {
       socket.broadcast.emit('typing', data);
     })
 
-    //Handle monitor events
+    // Handle monitor events
     socket.on('update', function(data){
         console.log(Date().toString(), data);
         io.sockets.emit('chat', data);
+    });
+
+    // Handle login events
+    socket.on('ESP32login', function(data){
+        console.log(data.userid, data.password, secrets.ESP32_userid, secrets.ESP32_pwd);
+        if (data.userid == secrets.ESP32_userid && data.password == secrets.ESP32_pwd) {
+            socket.emit('correct', i);
+        } else {
+            socket.emit('incorrect');
+        }
+        
     });
 
     // Emit events
@@ -86,3 +116,16 @@ app.get('/monitor', (req, res) => {
     res.render('monitor');
 });
 
+app.get('/esp-login', (req, res) => {
+    console.log(Date().toString(), "Requested URL: ", req.url);
+    res.render('esp_login');
+});
+
+app.get('/redirect', (req, res) => {
+    res.redirect(i);
+});
+
+app.get(i, (req, res) => {
+    console.log(Date().toString(), "Requested URL: ", req.url);
+    res.render('ESP32upload');
+});
