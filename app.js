@@ -1,10 +1,10 @@
 var express = require('express');
 var socket = require('socket.io');
-var ejs = require('ejs');
 var secrets = require('./SECRETS.js');
 var bodyParser = require('body-parser');
 var events = require('events');
 var uuid = require('node-uuid');
+var fs = require('fs');
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 var myEmitter = new events.EventEmitter();
