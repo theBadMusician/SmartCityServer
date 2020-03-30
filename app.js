@@ -6,27 +6,16 @@ var events = require('events');
 var uuid = require('node-uuid');
 var fs = require('fs');
 
-var urlencodedParser = bodyParser.urlencoded({ extended: false });
+var fileName = './measuredData.json';
+var measuredData = require('./measuredData.json');
+
+//Initializing variables/objects
+var urlencodedParser = bodyParser.urlencoded({ extended: true });
+var jsonParser = bodyParser.json();
 var myEmitter = new events.EventEmitter();
 
-//Initializing variables
+
 let visitCounter = 0;
-let rand_num = function() {return Math.floor(Math.random() * 4000) + 1000};
-
-// Randomize increment time --------------------------------------------------<||>>
-var n = 0;
-
-function increment(){
-
-  n++;
-  return n;
-}
-
-setInterval(() => {
-    increment();
-    // console.log(rand_num());
-}, rand_num());
-//----------------------------------------------------------------------------<||>>
 
 var randomID = '/'+uuid.v4();
 /*
@@ -36,17 +25,68 @@ setInterval(() => {
 }, 10000);
 */
 
+// Read/Write JSON measurements
+var tempData;
+var writeData;
+var dataList = [];
+
+function UNIXtoHHMMSS(UnixTimeStampInMillis) {
+    var date = new Date(UnixTimeStampInMillis);
+    // Hours part from the timestamp
+    var hours = date.getHours();
+    // Minutes part from the timestamp
+    var minutes = "0" + date.getMinutes();
+    // Seconds part from the timestamp
+    var seconds = "0" + date.getSeconds();
+    
+    // Will display time in 10:30:23 format
+    return hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+}
+
+if (measuredData.thermometer.data.length < 50) return;
+for (var i = 50; i > 0; i--){
+
+    var timeData = [UNIXtoHHMMSS(measuredData.thermometer.data[measuredData.thermometer.data.length - i][0]),
+                measuredData.thermometer.data[measuredData.thermometer.data.length - i][1]];
+    dataList.push(timeData);
+}
+
+
+myEmitter.on('tempUpdate', function() {
+    measuredData.thermometer.data.push(writeData);
+    fs.writeFile(fileName, JSON.stringify(measuredData, null, 2), function writeJSON(err) {
+        if (err) return console.log(err);
+        
+        var timeData = [UNIXtoHHMMSS(measuredData.thermometer.data[measuredData.thermometer.data.length - 1][0]),
+        measuredData.thermometer.data[measuredData.thermometer.data.length - 1][1]];
+
+        dataList.shift();
+        dataList.push(timeData);
+        
+        myEmitter.emit('dataWritten');
+    });
+})
+
+
+
 // App setup
 const port = 80;
 
 var app = express();
 app.set('view engine', 'ejs');
+
+app.use(bodyParser.urlencoded({ extended: true }));
+//app.use(bodyParser.json());
+//app.use(bodyParser.raw());
+
+// Static files
+app.use('/assets', express.static('assets'));
+
+// Start listening
 var server = app.listen(port, function(){
     console.log('%s Listening for requests on port %d...', Date().toString(), port);
 });
 
-// Static files
-app.use('/assets', express.static('assets'));
 
 // Socket setup & pass server
 var io = socket(server);
@@ -66,9 +106,8 @@ io.on('connection', (socket) => {
     })
 
     // Handle monitor events
-    socket.on('update', function(data){
-        console.log(Date().toString(), data);
-        io.sockets.emit('chat', data);
+    myEmitter.on('dataWritten',function() {
+        io.sockets.emit('update', dataList);
     });
 
     // Handle login events
@@ -81,15 +120,6 @@ io.on('connection', (socket) => {
         }
         
     });
-
-    // Emit events
-    setInterval(() => {
-    socket.emit('update', {
-        temp: n,
-        time: Date().toString().slice(16, 24)
-        });
-    }, 1000);
-
 });
 
 //HTTP reqs
@@ -123,4 +153,21 @@ app.get(randomID, (req, res) => {
     console.log(Date().toString(), "Requested URL: ", req.url);
     res.render('esp_upload');
 });
+
+app.post('/post-test', function(req, res){
+    req.setEncoding('utf8');
+    req.on('data', chunk => {
+      tempData = JSON.parse(chunk);
+      writeData = [Date.now(), tempData.temp];
+      console.log(Date().toString(), "Received data: ", tempData);
+      //sensor = tempData.sensor;
+    });
+    req.on('end', () => {
+      console.log('*END OF DATA*');
+      myEmitter.emit('tempUpdate');
+    })
+    res.sendStatus(200);
+    
+});
+
 

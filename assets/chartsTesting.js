@@ -158,7 +158,9 @@ function drawLightChart() {
 
 // Listen for events
 socket.on('update', function(data){
-    tempTable.push([data.time, data.temp]);
-    if (tempTable.length >= 51) tempTable.splice(1, 1);
+    data.unshift(['Time', 'Temperature [°C]']);
+    tempTable = data;
+    //if (tempTable.length >= 51) tempTable.splice(1, 51);
     drawTempChart();
+    console.log(data);
 });
