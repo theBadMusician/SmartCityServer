@@ -28,7 +28,7 @@ setInterval(() => {
 // Read/Write JSON measurements
 var tempData;
 var writeData;
-var dataList = [];
+var dataList0 = [];
 
 function UNIXtoHHMMSS(UnixTimeStampInMillis) {
     var date = new Date(UnixTimeStampInMillis);
@@ -43,25 +43,24 @@ function UNIXtoHHMMSS(UnixTimeStampInMillis) {
     return hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
 }
 
-if (measuredData.thermometer.data.length < 50) return;
+if (measuredData.BMP280.thermometer.data.length < 50) return;
 for (var i = 50; i > 0; i--){
-
-    var timeData = [UNIXtoHHMMSS(measuredData.thermometer.data[measuredData.thermometer.data.length - i][0]),
-                measuredData.thermometer.data[measuredData.thermometer.data.length - i][1]];
-    dataList.push(timeData);
+    var timeData = [UNIXtoHHMMSS(measuredData.BMP280.thermometer.data[measuredData.BMP280.thermometer.data.length - i][0]),
+                measuredData.BMP280.thermometer.data[measuredData.BMP280.thermometer.data.length - i][1]];
+    dataList0.push(timeData);
 }
 
 
 myEmitter.on('tempUpdate', function() {
-    measuredData.thermometer.data.push(writeData);
+    measuredData.BMP280.thermometer.data.push(writeData);
     fs.writeFile(fileName, JSON.stringify(measuredData, null, 2), function writeJSON(err) {
         if (err) return console.log(err);
         
-        var timeData = [UNIXtoHHMMSS(measuredData.thermometer.data[measuredData.thermometer.data.length - 1][0]),
-        measuredData.thermometer.data[measuredData.thermometer.data.length - 1][1]];
+        var timeData = [UNIXtoHHMMSS(measuredData.BMP280.thermometer.data[measuredData.BMP280.thermometer.data.length - 1][0]),
+        measuredData.BMP280.thermometer.data[measuredData.BMP280.thermometer.data.length - 1][1]];
 
-        dataList.shift();
-        dataList.push(timeData);
+        dataList0.shift();
+        dataList0.push(timeData);
         
         myEmitter.emit('dataWritten');
     });
@@ -94,6 +93,7 @@ io.on('connection', (socket) => {
 
     console.log(Date().toString(), 'Made a socket connection. Socket ID:', socket.id);
     io.sockets.emit('visitCounter', visitCounter);
+    io.sockets.emit('update', dataList0);
 
     // Handle chat events
     socket.on('chat', function(data){
@@ -107,7 +107,7 @@ io.on('connection', (socket) => {
 
     // Handle monitor events
     myEmitter.on('dataWritten',function() {
-        io.sockets.emit('update', dataList);
+        io.sockets.emit('update', dataList0);
     });
 
     // Handle login events
@@ -158,7 +158,7 @@ app.post('/post-test', function(req, res){
     req.setEncoding('utf8');
     req.on('data', chunk => {
       tempData = JSON.parse(chunk);
-      writeData = [Date.now(), tempData.temp];
+      writeData = [Date.now(), tempData.temperature, tempData.pressure, tempData.altitude];
       console.log(Date().toString(), "Received data: ", tempData);
       //sensor = tempData.sensor;
     });
@@ -170,4 +170,7 @@ app.post('/post-test', function(req, res){
     
 });
 
-
+app.get("/get-data", (req, res) => {
+    console.log(Date().toString(), "Requested URL: ", req.url);
+    res.json(measuredData);;
+});

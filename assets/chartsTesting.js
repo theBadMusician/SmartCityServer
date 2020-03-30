@@ -162,5 +162,4 @@ socket.on('update', function(data){
     tempTable = data;
     //if (tempTable.length >= 51) tempTable.splice(1, 51);
     drawTempChart();
-    console.log(data);
 });
