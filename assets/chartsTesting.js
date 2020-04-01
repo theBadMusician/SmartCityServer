@@ -1,19 +1,28 @@
 // Initialize variables
-var tempTable = [
-    ['Time', 'Temperature [°C]']
-  ];
+var tables = {
+    temperature: [
+        ['Time', 'Temperature [°C]']
+    ],
+    pressure: [
+        ['Time', 'Pressure [hPa]']
+    ],
+    altitude: [
+        ['Time', 'Pressure [hPa]']
+    ]
+}
 
-var humidityTable = [
-    ['Time', 'Humidity [g/m³]'], 
-    [1, 23],
-    [2, 87]
-];
-
-var lightTable = [
-    ['Time', 'Light [lx]'],
-    [1, 23],
-    [2, 87]
-];
+function UNIXtoHHMMSS(UnixTimeStampInMillis) {
+    var date = new Date(UnixTimeStampInMillis);
+    // Hours part from the timestamp
+    var hours = date.getHours();
+    // Minutes part from the timestamp
+    var minutes = "0" + date.getMinutes();
+    // Seconds part from the timestamp
+    var seconds = "0" + date.getSeconds();
+    
+    // Will display time in 10:30:23 format
+    return hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+}
 
 // Make connection
 var socket = io.connect('http://88.91.42.155:80');

@@ -12,8 +12,8 @@ var measuredData = require('./measuredData.json');
 //Initializing variables/objects
 var urlencodedParser = bodyParser.urlencoded({ extended: true });
 var jsonParser = bodyParser.json();
-var myEmitter = new events.EventEmitter();
-
+var rxEmitter = new events.EventEmitter();
+var txEmitter = new events.EventEmitter();
 
 let visitCounter = 0;
 
@@ -25,48 +25,27 @@ setInterval(() => {
 }, 10000);
 */
 
+function DBpushToArray(device, array, numItems) {
+    if (numItems > device.length) throw RangeError("'numItems' is out of bounds for the 'array'.");
+
+    for (var i = numItems; i > 0; i--) array.push(device[device.length - i]);
+}
+
+function DBshiftpushToArray(device, array, numItems) {
+    if (numItems > device.length) throw RangeError("'numItems' is out of bounds for the 'array'.");
+
+    for (var i = numItems; i > 0; i--) {
+        array.shift();
+        array.push(device[device.length - i]);
+    }
+}
+
 // Read/Write JSON measurements
 var tempData;
-var writeData;
-var dataList0 = [];
-
-function UNIXtoHHMMSS(UnixTimeStampInMillis) {
-    var date = new Date(UnixTimeStampInMillis);
-    // Hours part from the timestamp
-    var hours = date.getHours();
-    // Minutes part from the timestamp
-    var minutes = "0" + date.getMinutes();
-    // Seconds part from the timestamp
-    var seconds = "0" + date.getSeconds();
-    
-    // Will display time in 10:30:23 format
-    return hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
-}
-
-if (measuredData.BMP280.thermometer.data.length < 50) return;
-for (var i = 50; i > 0; i--){
-    var timeData = [UNIXtoHHMMSS(measuredData.BMP280.thermometer.data[measuredData.BMP280.thermometer.data.length - i][0]),
-                measuredData.BMP280.thermometer.data[measuredData.BMP280.thermometer.data.length - i][1]];
-    dataList0.push(timeData);
-}
-
-
-myEmitter.on('tempUpdate', function() {
-    measuredData.BMP280.thermometer.data.push(writeData);
-    fs.writeFile(fileName, JSON.stringify(measuredData, null, 2), function writeJSON(err) {
-        if (err) return console.log(err);
-        
-        var timeData = [UNIXtoHHMMSS(measuredData.BMP280.thermometer.data[measuredData.BMP280.thermometer.data.length - 1][0]),
-        measuredData.BMP280.thermometer.data[measuredData.BMP280.thermometer.data.length - 1][1]];
-
-        dataList0.shift();
-        dataList0.push(timeData);
-        
-        myEmitter.emit('dataWritten');
-    });
-})
-
-
+var sensorObjects = {BMP280: []};
+var sensorName;
+sensorObjects.BMP280 = measuredData.BMP280.slice(-50);
+// DBpushToArray(measuredData.BMP280, sensorObjects.BMP280, 50);
 
 // App setup
 const port = 80;
@@ -89,11 +68,21 @@ var server = app.listen(port, function(){
 
 // Socket setup & pass server
 var io = socket(server);
+
+// Handle monitor events
+txEmitter.on('dataWritten', function () {
+    console.log("dataWritten received!", sensorName);
+
+    io.emit('update', sensorObjects);
+});
+
 io.on('connection', (socket) => {
+    // socket.removeAllListeners();
 
     console.log(Date().toString(), 'Made a socket connection. Socket ID:', socket.id);
     io.sockets.emit('visitCounter', visitCounter);
-    io.sockets.emit('update', dataList0);
+    io.sockets.emit('update', sensorObjects);
+  
 
     // Handle chat events
     socket.on('chat', function(data){
@@ -103,11 +92,6 @@ io.on('connection', (socket) => {
 
     socket.on('typing', function(data){
       socket.broadcast.emit('typing', data);
-    })
-
-    // Handle monitor events
-    myEmitter.on('dataWritten',function() {
-        io.sockets.emit('update', dataList0);
     });
 
     // Handle login events
@@ -121,6 +105,7 @@ io.on('connection', (socket) => {
         
     });
 });
+
 
 //HTTP reqs
 app.get('/', (req, res) => {
@@ -158,14 +143,14 @@ app.post('/post-test', function(req, res){
     req.setEncoding('utf8');
     req.on('data', chunk => {
       tempData = JSON.parse(chunk);
-      writeData = [Date.now(), tempData.temperature, tempData.pressure, tempData.altitude];
+      tempData["UNIX"]=Date.now();
       console.log(Date().toString(), "Received data: ", tempData);
       //sensor = tempData.sensor;
     });
     req.on('end', () => {
       console.log('*END OF DATA*');
-      myEmitter.emit('tempUpdate');
-    })
+      rxEmitter.emit('DBupdate');
+    });
     res.sendStatus(200);
     
 });
@@ -173,4 +158,18 @@ app.post('/post-test', function(req, res){
 app.get("/get-data", (req, res) => {
     console.log(Date().toString(), "Requested URL: ", req.url);
     res.json(measuredData);;
+});
+
+
+rxEmitter.on('DBupdate', function() {
+    sensorName = tempData.sensor;
+    delete tempData.sensor;
+    measuredData[sensorName].push(tempData);
+    
+    fs.writeFile(fileName, JSON.stringify(measuredData, null, 2), function writeJSON(err) {
+        if (err) return console.log(err);
+        
+        DBshiftpushToArray(measuredData[sensorName], sensorObjects[sensorName], 1);
+        txEmitter.emit('dataWritten');
+    });
 });
