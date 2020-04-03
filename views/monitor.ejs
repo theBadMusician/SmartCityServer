@@ -3,9 +3,13 @@
 
 <head>
     <%- include ('partials/head'); %>
+    <!-- More or less mandatory scripts -->
+    <%- include ('partials/scripts'); %>
+    <!-- Socket Scripts -->
+    <script src="assets\chartsTesting.js"></script>
 </head>
 
-<body>
+<body class="w3-light-grey">
     <!-- Top container -->
     <%- include ('partials/topContainer'); %>
 
@@ -20,21 +24,21 @@
         <h5><b><i class="fa fa-eye fa-fw"></i> Monitoring Center</b></h5>
     </header>
 
+    <div id="buttons"></div><br><br>
+    <div id="charts"></div>
+
+    <!-- 
     <div id="temperature_chart"></div>
 
     <div id="pressure_chart"></div>
 
     <div id="altitude_chart"></div>
+    -->
 
     <div>
         <!-- Footer -->
         <%- include ('partials/footer'); %>
     </div>
 </body>
-
-<!-- More or less mandatory scripts -->
-<%- include ('partials/scripts'); %>
-<!-- Socket Scripts -->
-<script src="assets\charts.js"></script>
 
 </html>

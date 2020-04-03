@@ -1,4252 +1,1314 @@
 {
-  "BMP280": [
+  "DHT22": [
     {
-      "temperature": 21.27,
-      "pressure": 99013.52,
-      "altitude": 258.1999,
-      "UNIX": 1585769002573
+      "Temperature[°C]": 21.1,
+      "Humidity[%]": 33.8,
+      "UNIX": 1585880520113
     },
     {
-      "temperature": 21.27,
-      "pressure": 99012.91,
-      "altitude": 258.2509,
-      "UNIX": 1585769007606
+      "Temperature[°C]": 21.1,
+      "Humidity[%]": 33.8,
+      "UNIX": 1585880550144
     },
     {
-      "temperature": 21.27,
-      "pressure": 99013.06,
-      "altitude": 258.238,
-      "UNIX": 1585769015535
+      "Temperature[°C]": 21.1,
+      "Humidity[%]": 33.9,
+      "UNIX": 1585880580191
     },
     {
-      "temperature": 21.27,
-      "pressure": 99013.06,
-      "altitude": 258.238,
-      "UNIX": 1585769020564
+      "Temperature[°C]": 21.1,
+      "Humidity[%]": 34,
+      "UNIX": 1585880610222
     },
     {
-      "temperature": 21.27,
-      "pressure": 99012.17,
-      "altitude": 258.3138,
-      "UNIX": 1585769025593
+      "Temperature[°C]": 21,
+      "Humidity[%]": 34.1,
+      "UNIX": 1585880640277
     },
     {
-      "temperature": 21.27,
-      "pressure": 99012.01,
-      "altitude": 258.3277,
-      "UNIX": 1585769030629
+      "Temperature[°C]": 21,
+      "Humidity[%]": 34.2,
+      "UNIX": 1585880670314
     },
     {
-      "temperature": 21.27,
-      "pressure": 99011.23,
-      "altitude": 258.3927,
-      "UNIX": 1585769035661
+      "Temperature[°C]": 21,
+      "Humidity[%]": 34.3,
+      "UNIX": 1585880700718
     },
     {
-      "temperature": 21.27,
-      "pressure": 99011.89,
-      "altitude": 258.3375,
-      "UNIX": 1585769040694
+      "Temperature[°C]": 21,
+      "Humidity[%]": 34.4,
+      "UNIX": 1585880730821
     },
     {
-      "temperature": 21.26,
-      "pressure": 99011.77,
-      "altitude": 258.3473,
-      "UNIX": 1585769045719
+      "Temperature[°C]": 21,
+      "Humidity[%]": 34.5,
+      "UNIX": 1585880760853
     },
     {
-      "temperature": 21.26,
-      "pressure": 99012.27,
-      "altitude": 258.3051,
-      "UNIX": 1585769050756
+      "Temperature[°C]": 21,
+      "Humidity[%]": 34.6,
+      "UNIX": 1585880790884
     },
     {
-      "temperature": 21.26,
-      "pressure": 99012.27,
-      "altitude": 258.3051,
-      "UNIX": 1585769055778
+      "Temperature[°C]": 21,
+      "Humidity[%]": 34.6,
+      "UNIX": 1585880820916
     },
     {
-      "temperature": 21.26,
-      "pressure": 99012.51,
-      "altitude": 258.2849,
-      "UNIX": 1585769060812
+      "Temperature[°C]": 21,
+      "Humidity[%]": 34.6,
+      "UNIX": 1585880850958
     },
     {
-      "temperature": 21.26,
-      "pressure": 99012.27,
-      "altitude": 258.3051,
-      "UNIX": 1585769065843
+      "Temperature[°C]": 21,
+      "Humidity[%]": 34.6,
+      "UNIX": 1585880881006
     },
     {
-      "temperature": 21.27,
-      "pressure": 99012.38,
-      "altitude": 258.2958,
-      "UNIX": 1585769070878
+      "Temperature[°C]": 21.1,
+      "Humidity[%]": 34.6,
+      "UNIX": 1585880911050
     },
     {
-      "temperature": 21.27,
-      "pressure": 99011.89,
-      "altitude": 258.3375,
-      "UNIX": 1585769075917
+      "Temperature[°C]": 21.1,
+      "Humidity[%]": 34.5,
+      "UNIX": 1585880941453
     },
     {
-      "temperature": 21.27,
-      "pressure": 99011.89,
-      "altitude": 258.3375,
-      "UNIX": 1585769080943
+      "Temperature[°C]": 21.2,
+      "Humidity[%]": 34.4,
+      "UNIX": 1585880971514
     },
     {
-      "temperature": 21.27,
-      "pressure": 99011.73,
-      "altitude": 258.3504,
-      "UNIX": 1585769085977
+      "Temperature[°C]": 21.1,
+      "Humidity[%]": 34.3,
+      "UNIX": 1585881001574
     },
     {
-      "temperature": 21.27,
-      "pressure": 99012.01,
-      "altitude": 258.3277,
-      "UNIX": 1585769091007
+      "Temperature[°C]": 21.1,
+      "Humidity[%]": 34.2,
+      "UNIX": 1585881031776
     },
     {
-      "temperature": 21.27,
-      "pressure": 99011.2,
-      "altitude": 258.3963,
-      "UNIX": 1585769096043
+      "Temperature[°C]": 21.1,
+      "Humidity[%]": 33.9,
+      "UNIX": 1585881061811
     },
     {
-      "temperature": 21.27,
-      "pressure": 99011.77,
-      "altitude": 258.3478,
-      "UNIX": 1585769101083
+      "Temperature[°C]": 21,
+      "Humidity[%]": 33.5,
+      "UNIX": 1585881091844
     },
     {
-      "temperature": 21.27,
-      "pressure": 99012.04,
-      "altitude": 258.3252,
-      "UNIX": 1585769106121
+      "Temperature[°C]": 21,
+      "Humidity[%]": 33.2,
+      "UNIX": 1585881121892
     },
     {
-      "temperature": 21.27,
-      "pressure": 99011.88,
-      "altitude": 258.3386,
-      "UNIX": 1585769111149
+      "Temperature[°C]": 21.1,
+      "Humidity[%]": 33.1,
+      "UNIX": 1585881151925
     },
     {
-      "temperature": 21.28,
-      "pressure": 99012.13,
-      "altitude": 258.3174,
-      "UNIX": 1585769116190
+      "Temperature[°C]": 21.1,
+      "Humidity[%]": 32.8,
+      "UNIX": 1585881181982
     },
     {
-      "temperature": 21.28,
-      "pressure": 99012.28,
-      "altitude": 258.304,
-      "UNIX": 1585769121209
+      "Temperature[°C]": 21.1,
+      "Humidity[%]": 32.7,
+      "UNIX": 1585881212022
     },
     {
-      "temperature": 21.28,
-      "pressure": 99012.73,
-      "altitude": 258.2659,
-      "UNIX": 1585769126239
+      "Temperature[°C]": 21.1,
+      "Humidity[%]": 32.8,
+      "UNIX": 1585881242056
     },
     {
-      "temperature": 21.28,
-      "pressure": 99012.52,
-      "altitude": 258.2839,
-      "UNIX": 1585769131273
+      "Temperature[°C]": 21.1,
+      "Humidity[%]": 33.2,
+      "UNIX": 1585881272115
     },
     {
-      "temperature": 21.28,
-      "pressure": 99011.87,
-      "altitude": 258.3396,
-      "UNIX": 1585769136301
+      "Temperature[°C]": 21,
+      "Humidity[%]": 33.6,
+      "UNIX": 1585881302417
     },
     {
-      "temperature": 21.28,
-      "pressure": 99002.66,
-      "altitude": 259.119,
-      "UNIX": 1585769388880
+      "Temperature[°C]": 21,
+      "Humidity[%]": 33.9,
+      "UNIX": 1585881332448
     },
     {
-      "temperature": 21.28,
-      "pressure": 99002.78,
-      "altitude": 259.1087,
-      "UNIX": 1585769406315
+      "Temperature[°C]": 21,
+      "Humidity[%]": 34.4,
+      "UNIX": 1585881362490
     },
     {
-      "temperature": 21.28,
-      "pressure": 98998,
-      "altitude": 259.5139,
-      "UNIX": 1585769520245
+      "Temperature[°C]": 21.1,
+      "Humidity[%]": 34.9,
+      "UNIX": 1585881392538
     },
     {
-      "temperature": 21.32,
-      "pressure": 98998.11,
-      "altitude": 259.5046,
-      "UNIX": 1585769560771
+      "Temperature[°C]": 21.1,
+      "Humidity[%]": 35.3,
+      "UNIX": 1585881422581
     },
     {
-      "temperature": 21.32,
-      "pressure": 98997.78,
-      "altitude": 259.5325,
-      "UNIX": 1585769565789
+      "Temperature[°C]": 21.1,
+      "Humidity[%]": 35.5,
+      "UNIX": 1585881452622
     },
     {
-      "temperature": 21.32,
-      "pressure": 98997.66,
-      "altitude": 259.5433,
-      "UNIX": 1585769570827
+      "Temperature[°C]": 21.1,
+      "Humidity[%]": 35.8,
+      "UNIX": 1585881482666
     },
     {
-      "temperature": 21.32,
-      "pressure": 98997.66,
-      "altitude": 259.5433,
-      "UNIX": 1585769575874
+      "Temperature[°C]": 21.1,
+      "Humidity[%]": 36.1,
+      "UNIX": 1585881512721
     },
     {
-      "temperature": 21.32,
-      "pressure": 98997.91,
-      "altitude": 259.5217,
-      "UNIX": 1585769581037
+      "Temperature[°C]": 21.1,
+      "Humidity[%]": 36.3,
+      "UNIX": 1585881542762
     },
     {
-      "temperature": 21.32,
-      "pressure": 98997.63,
-      "altitude": 259.5459,
-      "UNIX": 1585769586091
+      "Temperature[°C]": 21.1,
+      "Humidity[%]": 36.5,
+      "UNIX": 1585881572817
     },
     {
-      "temperature": 21.31,
-      "pressure": 98997.7,
-      "altitude": 259.5387,
-      "UNIX": 1585769591129
+      "Temperature[°C]": 21.2,
+      "Humidity[%]": 36.6,
+      "UNIX": 1585881602866
     },
     {
-      "temperature": 21.31,
-      "pressure": 98998.2,
-      "altitude": 259.4974,
-      "UNIX": 1585769596155
+      "Temperature[°C]": 21.2,
+      "Humidity[%]": 36.7,
+      "UNIX": 1585881633125
     },
     {
-      "temperature": 21.31,
-      "pressure": 98998.2,
-      "altitude": 259.4974,
-      "UNIX": 1585769601307
+      "Temperature[°C]": 21.2,
+      "Humidity[%]": 36.8,
+      "UNIX": 1585881663157
     },
     {
-      "temperature": 21.31,
-      "pressure": 98997.22,
-      "altitude": 259.5804,
-      "UNIX": 1585769606555
+      "Temperature[°C]": 21.2,
+      "Humidity[%]": 36.9,
+      "UNIX": 1585881693190
     },
     {
-      "temperature": 21.31,
-      "pressure": 98997.22,
-      "altitude": 259.5804,
-      "UNIX": 1585769612146
+      "Temperature[°C]": 21.3,
+      "Humidity[%]": 37.1,
+      "UNIX": 1585881723223
     },
     {
-      "temperature": 21.32,
-      "pressure": 98997.3,
-      "altitude": 259.5737,
-      "UNIX": 1585769617337
+      "Temperature[°C]": 21.3,
+      "Humidity[%]": 37.2,
+      "UNIX": 1585881753252
     },
     {
-      "temperature": 21.32,
-      "pressure": 98996.98,
-      "altitude": 259.6005,
-      "UNIX": 1585769622375
+      "Temperature[°C]": 21.2,
+      "Humidity[%]": 37.3,
+      "UNIX": 1585881783295
     },
     {
-      "temperature": 21.32,
-      "pressure": 98997.74,
-      "altitude": 259.5356,
-      "UNIX": 1585769627375
+      "Temperature[°C]": 21.3,
+      "Humidity[%]": 37.4,
+      "UNIX": 1585881813334
     },
     {
-      "temperature": 21.32,
-      "pressure": 98997.91,
-      "altitude": 259.5217,
-      "UNIX": 1585769632876
+      "Temperature[°C]": 21.2,
+      "Humidity[%]": 37.5,
+      "UNIX": 1585881843412
     },
     {
-      "temperature": 21.32,
-      "pressure": 98997.91,
-      "altitude": 259.5217,
-      "UNIX": 1585769637904
+      "Temperature[°C]": 21.3,
+      "Humidity[%]": 37.6,
+      "UNIX": 1585881873442
     },
     {
-      "temperature": 21.32,
-      "pressure": 98997.66,
-      "altitude": 259.5433,
-      "UNIX": 1585769642935
+      "Temperature[°C]": 21.3,
+      "Humidity[%]": 37.6,
+      "UNIX": 1585881903475
     },
     {
-      "temperature": 21.32,
-      "pressure": 98997.33,
-      "altitude": 259.5712,
-      "UNIX": 1585769648311
+      "Temperature[°C]": 21.3,
+      "Humidity[%]": 37.6,
+      "UNIX": 1585881933524
     },
     {
-      "temperature": 21.32,
-      "pressure": 98997.33,
-      "altitude": 259.5712,
-      "UNIX": 1585769654259
+      "Temperature[°C]": 21.3,
+      "Humidity[%]": 37.6,
+      "UNIX": 1585881963731
     },
     {
-      "temperature": 21.32,
-      "pressure": 98996.84,
-      "altitude": 259.6119,
-      "UNIX": 1585769659803
+      "Temperature[°C]": 21.3,
+      "Humidity[%]": 37.3,
+      "UNIX": 1585882048012
     },
     {
-      "temperature": 21.32,
-      "pressure": 98996.64,
-      "altitude": 259.6289,
-      "UNIX": 1585769664819
+      "Temperature[°C]": 21.2,
+      "Humidity[%]": 37.3,
+      "UNIX": 1585882078042
     },
     {
-      "temperature": 21.32,
-      "pressure": 98996.31,
-      "altitude": 259.6567,
-      "UNIX": 1585769669853
+      "Temperature[°C]": 21.2,
+      "Humidity[%]": 37.3,
+      "UNIX": 1585882108094
     },
     {
-      "temperature": 21.32,
-      "pressure": 98995.54,
-      "altitude": 259.7227,
-      "UNIX": 1585769674926
+      "Temperature[°C]": 21.1,
+      "Humidity[%]": 37.3,
+      "UNIX": 1585882138126
     },
     {
-      "temperature": 21.32,
-      "pressure": 98995.7,
-      "altitude": 259.7083,
-      "UNIX": 1585769679958
+      "Temperature[°C]": 21,
+      "Humidity[%]": 37.4,
+      "UNIX": 1585882168160
     },
     {
-      "temperature": 21.32,
-      "pressure": 98996.14,
-      "altitude": 259.6712,
-      "UNIX": 1585769684999
+      "Temperature[°C]": 21,
+      "Humidity[%]": 37.4,
+      "UNIX": 1585882198189
     },
     {
-      "temperature": 21.32,
-      "pressure": 98995.81,
-      "altitude": 259.699,
-      "UNIX": 1585769690026
+      "Temperature[°C]": 21,
+      "Humidity[%]": 37.5,
+      "UNIX": 1585882228223
     },
     {
-      "temperature": 21.32,
-      "pressure": 98995.22,
-      "altitude": 259.7495,
-      "UNIX": 1585769695064
+      "Temperature[°C]": 20.9,
+      "Humidity[%]": 37.6,
+      "UNIX": 1585882258256
     },
     {
-      "temperature": 21.32,
-      "pressure": 98995.54,
-      "altitude": 259.7227,
-      "UNIX": 1585769700134
+      "Temperature[°C]": 20.9,
+      "Humidity[%]": 37.6,
+      "UNIX": 1585882288282
     },
     {
-      "temperature": 21.32,
-      "pressure": 98995.87,
-      "altitude": 259.6944,
-      "UNIX": 1585769705158
+      "Temperature[°C]": 20.8,
+      "Humidity[%]": 37.7,
+      "UNIX": 1585882318331
     },
     {
-      "temperature": 21.32,
-      "pressure": 98995.87,
-      "altitude": 259.6944,
-      "UNIX": 1585769710196
+      "Temperature[°C]": 20.8,
+      "Humidity[%]": 37.8,
+      "UNIX": 1585882348363
     },
     {
-      "temperature": 21.32,
-      "pressure": 98994.64,
-      "altitude": 259.7985,
-      "UNIX": 1585769715221
+      "Temperature[°C]": 20.8,
+      "Humidity[%]": 37.8,
+      "UNIX": 1585882378397
     },
     {
-      "temperature": 21.32,
-      "pressure": 98995.05,
-      "altitude": 259.7645,
-      "UNIX": 1585769720255
+      "Temperature[°C]": 20.8,
+      "Humidity[%]": 37.9,
+      "UNIX": 1585882408427
     },
     {
-      "temperature": 21.32,
-      "pressure": 98994.89,
-      "altitude": 259.7774,
-      "UNIX": 1585769725279
+      "Temperature[°C]": 20.7,
+      "Humidity[%]": 38,
+      "UNIX": 1585882438468
     },
     {
-      "temperature": 21.32,
-      "pressure": 98994.4,
-      "altitude": 259.8191,
-      "UNIX": 1585769730312
+      "Temperature[°C]": 20.7,
+      "Humidity[%]": 38.1,
+      "UNIX": 1585882468499
     },
     {
-      "temperature": 21.32,
-      "pressure": 98994.23,
-      "altitude": 259.8331,
-      "UNIX": 1585769747258
+      "Temperature[°C]": 20.7,
+      "Humidity[%]": 38.1,
+      "UNIX": 1585882498529
     },
     {
-      "temperature": 21.32,
-      "pressure": 98993.75,
-      "altitude": 259.8738,
-      "UNIX": 1585769752294
+      "Temperature[°C]": 20.7,
+      "Humidity[%]": 38.2,
+      "UNIX": 1585882528562
     },
     {
-      "temperature": 21.32,
-      "pressure": 98993.09,
-      "altitude": 259.93,
-      "UNIX": 1585769757338
+      "Temperature[°C]": 20.7,
+      "Humidity[%]": 38.3,
+      "UNIX": 1585882558593
     },
     {
-      "temperature": 21.32,
-      "pressure": 98992.44,
-      "altitude": 259.9851,
-      "UNIX": 1585769762360
+      "Temperature[°C]": 20.7,
+      "Humidity[%]": 38.3,
+      "UNIX": 1585882588632
     },
     {
-      "temperature": 21.32,
-      "pressure": 98992.55,
-      "altitude": 259.9753,
-      "UNIX": 1585769767395
+      "Temperature[°C]": 20.7,
+      "Humidity[%]": 38.4,
+      "UNIX": 1585882618665
     },
     {
-      "temperature": 21.32,
-      "pressure": 98992.39,
-      "altitude": 259.9893,
-      "UNIX": 1585769772431
+      "Temperature[°C]": 20.7,
+      "Humidity[%]": 38.5,
+      "UNIX": 1585882648697
     },
     {
-      "temperature": 20.87,
-      "pressure": 98966.09,
-      "altitude": 262.2173,
-      "UNIX": 1585770694392
+      "Temperature[°C]": 20.6,
+      "Humidity[%]": 38.5,
+      "UNIX": 1585882678727
     },
     {
-      "temperature": 21.4,
-      "pressure": 98923.34,
-      "altitude": 265.8411,
-      "UNIX": 1585772834314
+      "Temperature[°C]": 20.6,
+      "Humidity[%]": 38.5,
+      "UNIX": 1585882708758
     },
     {
-      "temperature": 21.4,
-      "pressure": 98922.48,
-      "altitude": 265.9138,
-      "UNIX": 1585772839945
+      "Temperature[°C]": 20.6,
+      "Humidity[%]": 38.5,
+      "UNIX": 1585882738790
     },
     {
-      "temperature": 21.4,
-      "pressure": 98922.55,
-      "altitude": 265.9076,
-      "UNIX": 1585772844980
+      "Temperature[°C]": 20.7,
+      "Humidity[%]": 38.5,
+      "UNIX": 1585882768819
     },
     {
-      "temperature": 21.4,
-      "pressure": 98921.74,
-      "altitude": 265.9762,
-      "UNIX": 1585772852962
+      "Temperature[°C]": 20.7,
+      "Humidity[%]": 38.6,
+      "UNIX": 1585882798857
     },
     {
-      "temperature": 21.41,
-      "pressure": 98920.72,
-      "altitude": 266.0629,
-      "UNIX": 1585772858080
+      "Temperature[°C]": 20.6,
+      "Humidity[%]": 38.6,
+      "UNIX": 1585882828893
     },
     {
-      "temperature": 21.41,
-      "pressure": 98919.66,
-      "altitude": 266.1532,
-      "UNIX": 1585772863318
+      "Temperature[°C]": 20.7,
+      "Humidity[%]": 38.6,
+      "UNIX": 1585882858936
     },
     {
-      "temperature": 21.41,
-      "pressure": 98918.67,
-      "altitude": 266.2368,
-      "UNIX": 1585772868347
+      "Temperature[°C]": 20.7,
+      "Humidity[%]": 38.6,
+      "UNIX": 1585882888967
     },
     {
-      "temperature": 21.41,
-      "pressure": 98919.28,
-      "altitude": 266.1846,
-      "UNIX": 1585772873381
+      "Temperature[°C]": 20.7,
+      "Humidity[%]": 38.7,
+      "UNIX": 1585882918997
     },
     {
-      "temperature": 21.41,
-      "pressure": 98918.63,
-      "altitude": 266.2404,
-      "UNIX": 1585772878412
+      "Temperature[°C]": 20.7,
+      "Humidity[%]": 38.7,
+      "UNIX": 1585882949028
     },
     {
-      "temperature": 21.41,
-      "pressure": 98917.32,
-      "altitude": 266.3508,
-      "UNIX": 1585772883447
+      "Temperature[°C]": 20.7,
+      "Humidity[%]": 38.7,
+      "UNIX": 1585882979059
     },
     {
-      "temperature": 21.41,
-      "pressure": 98917.44,
-      "altitude": 266.3409,
-      "UNIX": 1585772888481
+      "Temperature[°C]": 20.7,
+      "Humidity[%]": 38.8,
+      "UNIX": 1585883009092
     },
     {
-      "temperature": 21.41,
-      "pressure": 98916.95,
-      "altitude": 266.3817,
-      "UNIX": 1585772893512
+      "Temperature[°C]": 20.7,
+      "Humidity[%]": 38.8,
+      "UNIX": 1585883039122
     },
     {
-      "temperature": 21.41,
-      "pressure": 98917,
-      "altitude": 266.3781,
-      "UNIX": 1585772898628
+      "Temperature[°C]": 20.7,
+      "Humidity[%]": 38.8,
+      "UNIX": 1585883069159
     },
     {
-      "temperature": 21.41,
-      "pressure": 98917.16,
-      "altitude": 266.3647,
-      "UNIX": 1585772903850
+      "Temperature[°C]": 20.6,
+      "Humidity[%]": 38.8,
+      "UNIX": 1585883099186
     },
     {
-      "temperature": 21.41,
-      "pressure": 98916.83,
-      "altitude": 266.3925,
-      "UNIX": 1585772909047
+      "Temperature[°C]": 20.6,
+      "Humidity[%]": 38.8,
+      "UNIX": 1585883129225
     },
     {
-      "temperature": 21.41,
-      "pressure": 98916.67,
-      "altitude": 266.4054,
-      "UNIX": 1585772914081
+      "Temperature[°C]": 20.7,
+      "Humidity[%]": 38.8,
+      "UNIX": 1585883159257
     },
     {
-      "temperature": 21.41,
-      "pressure": 98916.34,
-      "altitude": 266.4338,
-      "UNIX": 1585772919608
+      "Temperature[°C]": 20.7,
+      "Humidity[%]": 38.9,
+      "UNIX": 1585883189292
     },
     {
-      "temperature": 21.41,
-      "pressure": 98916.88,
-      "altitude": 266.3884,
-      "UNIX": 1585772925038
+      "Temperature[°C]": 20.7,
+      "Humidity[%]": 38.9,
+      "UNIX": 1585883219325
     },
     {
-      "temperature": 21.41,
-      "pressure": 98916.14,
-      "altitude": 266.4514,
-      "UNIX": 1585772930064
+      "Temperature[°C]": 20.6,
+      "Humidity[%]": 38.9,
+      "UNIX": 1585883249354
     },
     {
-      "temperature": 21.41,
-      "pressure": 98916.14,
-      "altitude": 266.4514,
-      "UNIX": 1585772935483
+      "Temperature[°C]": 20.7,
+      "Humidity[%]": 38.9,
+      "UNIX": 1585883279388
     },
     {
-      "temperature": 21.41,
-      "pressure": 98916.47,
-      "altitude": 266.4235,
-      "UNIX": 1585772940713
+      "Temperature[°C]": 20.7,
+      "Humidity[%]": 38.9,
+      "UNIX": 1585883309421
     },
     {
-      "temperature": 21.41,
-      "pressure": 98915.33,
-      "altitude": 266.52,
-      "UNIX": 1585772945748
+      "Temperature[°C]": 20.7,
+      "Humidity[%]": 38.9,
+      "UNIX": 1585883339452
     },
     {
-      "temperature": 21.41,
-      "pressure": 98914.52,
-      "altitude": 266.5891,
-      "UNIX": 1585772951151
+      "Temperature[°C]": 20.6,
+      "Humidity[%]": 38.9,
+      "UNIX": 1585883369484
     },
     {
-      "temperature": 21.41,
-      "pressure": 98914.52,
-      "altitude": 266.5891,
-      "UNIX": 1585772956677
+      "Temperature[°C]": 20.6,
+      "Humidity[%]": 38.8,
+      "UNIX": 1585883399520
     },
     {
-      "temperature": 21.41,
-      "pressure": 98914.76,
-      "altitude": 266.5679,
-      "UNIX": 1585772962107
+      "Temperature[°C]": 20.6,
+      "Humidity[%]": 38.8,
+      "UNIX": 1585883429554
     },
     {
-      "temperature": 21.41,
-      "pressure": 98913.78,
-      "altitude": 266.651,
-      "UNIX": 1585772967432
+      "Temperature[°C]": 20.6,
+      "Humidity[%]": 38.8,
+      "UNIX": 1585883459585
     },
     {
-      "temperature": 21.41,
-      "pressure": 98913.3,
-      "altitude": 266.6918,
-      "UNIX": 1585772972861
+      "Temperature[°C]": 20.6,
+      "Humidity[%]": 38.8,
+      "UNIX": 1585883489619
     },
     {
-      "temperature": 21.41,
-      "pressure": 98913.08,
-      "altitude": 266.7103,
-      "UNIX": 1585772978389
+      "Temperature[°C]": 20.6,
+      "Humidity[%]": 38.9,
+      "UNIX": 1585883519649
     },
     {
-      "temperature": 21.41,
-      "pressure": 98913.69,
-      "altitude": 266.6588,
-      "UNIX": 1585772983561
+      "Temperature[°C]": 20.6,
+      "Humidity[%]": 38.9,
+      "UNIX": 1585883549690
     },
     {
-      "temperature": 21.41,
-      "pressure": 98914.01,
-      "altitude": 266.6319,
-      "UNIX": 1585772988592
+      "Temperature[°C]": 20.6,
+      "Humidity[%]": 38.9,
+      "UNIX": 1585883579728
     },
     {
-      "temperature": 21.41,
-      "pressure": 98913.36,
-      "altitude": 266.6866,
-      "UNIX": 1585772993622
+      "Temperature[°C]": 20.6,
+      "Humidity[%]": 39,
+      "UNIX": 1585883609755
     },
     {
-      "temperature": 21.41,
-      "pressure": 98913.36,
-      "altitude": 266.6866,
-      "UNIX": 1585772998653
+      "Temperature[°C]": 20.6,
+      "Humidity[%]": 39,
+      "UNIX": 1585883639784
     },
     {
-      "temperature": 21.42,
-      "pressure": 98913.44,
-      "altitude": 266.6799,
-      "UNIX": 1585773003686
+      "Temperature[°C]": 20.6,
+      "Humidity[%]": 39,
+      "UNIX": 1585883669819
     },
     {
-      "temperature": 21.42,
-      "pressure": 98913.6,
-      "altitude": 266.6665,
-      "UNIX": 1585773008730
+      "Temperature[°C]": 20.6,
+      "Humidity[%]": 39,
+      "UNIX": 1585883699849
     },
     {
-      "temperature": 21.42,
-      "pressure": 98913.44,
-      "altitude": 266.6799,
-      "UNIX": 1585773013745
+      "Temperature[°C]": 20.6,
+      "Humidity[%]": 39.1,
+      "UNIX": 1585883729879
     },
     {
-      "temperature": 21.56,
-      "pressure": 98843.26,
-      "altitude": 272.6315,
-      "UNIX": 1585776537753
+      "Temperature[°C]": 20.6,
+      "Humidity[%]": 39.1,
+      "UNIX": 1585883759915
     },
     {
-      "temperature": 21.56,
-      "pressure": 98843.26,
-      "altitude": 272.6315,
-      "UNIX": 1585776542993
+      "Temperature[°C]": 20.6,
+      "Humidity[%]": 39.1,
+      "UNIX": 1585883789939
     },
     {
-      "temperature": 21.56,
-      "pressure": 98843.26,
-      "altitude": 272.6315,
-      "UNIX": 1585776548067
+      "Temperature[°C]": 20.6,
+      "Humidity[%]": 39.2,
+      "UNIX": 1585883819973
     },
     {
-      "temperature": 21.56,
-      "pressure": 98842.03,
-      "altitude": 272.7353,
-      "UNIX": 1585776553086
+      "Temperature[°C]": 20.6,
+      "Humidity[%]": 39.2,
+      "UNIX": 1585883850005
     },
     {
-      "temperature": 21.56,
-      "pressure": 98842.25,
-      "altitude": 272.7167,
-      "UNIX": 1585776558131
+      "Temperature[°C]": 20.6,
+      "Humidity[%]": 39.2,
+      "UNIX": 1585883880034
     },
     {
-      "temperature": 21.56,
-      "pressure": 98843.06,
-      "altitude": 272.648,
-      "UNIX": 1585776563171
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98841.89,
-      "altitude": 272.7471,
-      "UNIX": 1585776568210
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98842.22,
-      "altitude": 272.7192,
-      "UNIX": 1585776573691
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98841.94,
-      "altitude": 272.743,
-      "UNIX": 1585776579120
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98841.73,
-      "altitude": 272.7616,
-      "UNIX": 1585776584478
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98841.4,
-      "altitude": 272.7889,
-      "UNIX": 1585776589772
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98840.86,
-      "altitude": 272.8349,
-      "UNIX": 1585776594802
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98841.02,
-      "altitude": 272.821,
-      "UNIX": 1585776599872
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98841.02,
-      "altitude": 272.821,
-      "UNIX": 1585776604902
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98840.91,
-      "altitude": 272.8307,
-      "UNIX": 1585776609943
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98840.42,
-      "altitude": 272.8715,
-      "UNIX": 1585776614979
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98840.25,
-      "altitude": 272.886,
-      "UNIX": 1585776620014
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98839.44,
-      "altitude": 272.9557,
-      "UNIX": 1585776625517
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98839.56,
-      "altitude": 272.9448,
-      "UNIX": 1585776630452
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98839.27,
-      "altitude": 272.9691,
-      "UNIX": 1585776635952
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98839.06,
-      "altitude": 272.9872,
-      "UNIX": 1585776641284
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98837.92,
-      "altitude": 273.0837,
-      "UNIX": 1585776646342
-    },
-    {
-      "temperature": 21.56,
-      "pressure": 98837.52,
-      "altitude": 273.1183,
-      "UNIX": 1585776651374
-    },
-    {
-      "temperature": 21.56,
-      "pressure": 98836.7,
-      "altitude": 273.1875,
-      "UNIX": 1585776656456
-    },
-    {
-      "temperature": 21.56,
-      "pressure": 98835.06,
-      "altitude": 273.3263,
-      "UNIX": 1585776661484
-    },
-    {
-      "temperature": 21.56,
-      "pressure": 98834.41,
-      "altitude": 273.3816,
-      "UNIX": 1585776666979
-    },
-    {
-      "temperature": 21.56,
-      "pressure": 98834.25,
-      "altitude": 273.395,
-      "UNIX": 1585776672307
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98834.33,
-      "altitude": 273.3888,
-      "UNIX": 1585776677403
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98832.96,
-      "altitude": 273.5049,
-      "UNIX": 1585776682751
-    },
-    {
-      "temperature": 21.54,
-      "pressure": 98832.6,
-      "altitude": 273.5354,
-      "UNIX": 1585776688077
-    },
-    {
-      "temperature": 21.54,
-      "pressure": 98832.25,
-      "altitude": 273.5648,
-      "UNIX": 1585776693116
-    },
-    {
-      "temperature": 21.54,
-      "pressure": 98831.8,
-      "altitude": 273.603,
-      "UNIX": 1585776698622
-    },
-    {
-      "temperature": 21.54,
-      "pressure": 98831.75,
-      "altitude": 273.6071,
-      "UNIX": 1585776703954
-    },
-    {
-      "temperature": 21.54,
-      "pressure": 98831.67,
-      "altitude": 273.6139,
-      "UNIX": 1585776709138
-    },
-    {
-      "temperature": 21.54,
-      "pressure": 98831.09,
-      "altitude": 273.6634,
-      "UNIX": 1585776714200
-    },
-    {
-      "temperature": 21.54,
-      "pressure": 98830.66,
-      "altitude": 273.7001,
-      "UNIX": 1585776719262
-    },
-    {
-      "temperature": 21.54,
-      "pressure": 98830.01,
-      "altitude": 273.7553,
-      "UNIX": 1585776724293
-    },
-    {
-      "temperature": 21.54,
-      "pressure": 98829.63,
-      "altitude": 273.7868,
-      "UNIX": 1585776729363
-    },
-    {
-      "temperature": 21.54,
-      "pressure": 98828.33,
-      "altitude": 273.8978,
-      "UNIX": 1585776734872
-    },
-    {
-      "temperature": 21.54,
-      "pressure": 98827.92,
-      "altitude": 273.9319,
-      "UNIX": 1585776740005
-    },
-    {
-      "temperature": 21.54,
-      "pressure": 98827.22,
-      "altitude": 273.9918,
-      "UNIX": 1585776745231
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98827.34,
-      "altitude": 273.9814,
-      "UNIX": 1585776750263
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98826.77,
-      "altitude": 274.0305,
-      "UNIX": 1585776755300
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98826.44,
-      "altitude": 274.0579,
-      "UNIX": 1585776760779
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98825.73,
-      "altitude": 274.1177,
-      "UNIX": 1585776766106
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98825.36,
-      "altitude": 274.1492,
-      "UNIX": 1585776771633
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98824.88,
-      "altitude": 274.1905,
-      "UNIX": 1585776777063
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98824.22,
-      "altitude": 274.2463,
-      "UNIX": 1585776782396
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98823.61,
-      "altitude": 274.2979,
-      "UNIX": 1585776787445
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98823.5,
-      "altitude": 274.3072,
-      "UNIX": 1585776792731
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98823.09,
-      "altitude": 274.3418,
-      "UNIX": 1585776798177
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98822.6,
-      "altitude": 274.3836,
-      "UNIX": 1585776803686
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98822.6,
-      "altitude": 274.3836,
-      "UNIX": 1585776808933
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98822.36,
-      "altitude": 274.4043,
-      "UNIX": 1585776814167
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98821.87,
-      "altitude": 274.4456,
-      "UNIX": 1585776819666
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98822.14,
-      "altitude": 274.4223,
-      "UNIX": 1585776825157
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98821.7,
-      "altitude": 274.4595,
-      "UNIX": 1585776830142
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98821.63,
-      "altitude": 274.4662,
-      "UNIX": 1585776835341
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98822.2,
-      "altitude": 274.4182,
-      "UNIX": 1585776840763
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98822.36,
-      "altitude": 274.4043,
-      "UNIX": 1585776845805
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98822.84,
-      "altitude": 274.363,
-      "UNIX": 1585776850843
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98822.96,
-      "altitude": 274.3531,
-      "UNIX": 1585776855902
-    },
-    {
-      "temperature": 21.55,
-      "pressure": 98822.59,
-      "altitude": 274.3852,
-      "UNIX": 1585776860933
-    },
-    {
-      "temperature": 21.56,
-      "pressure": 98822.02,
-      "altitude": 274.4332,
-      "UNIX": 1585776865968
-    },
-    {
-      "temperature": 21.56,
-      "pressure": 98822.18,
-      "altitude": 274.4193,
-      "UNIX": 1585776871486
-    },
-    {
-      "temperature": 21.56,
-      "pressure": 98822.29,
-      "altitude": 274.4099,
-      "UNIX": 1585776876902
-    },
-    {
-      "temperature": 21.56,
-      "pressure": 98822.02,
-      "altitude": 274.4332,
-      "UNIX": 1585776882229
-    },
-    {
-      "temperature": 21.56,
-      "pressure": 98821.69,
-      "altitude": 274.4611,
-      "UNIX": 1585776887756
-    },
-    {
-      "temperature": 21.56,
-      "pressure": 98822.18,
-      "altitude": 274.4193,
-      "UNIX": 1585776893183
-    },
-    {
-      "temperature": 21.56,
-      "pressure": 98821.8,
-      "altitude": 274.4513,
-      "UNIX": 1585776898318
-    },
-    {
-      "temperature": 21.56,
-      "pressure": 98821.48,
-      "altitude": 274.4786,
-      "UNIX": 1585776903836
-    },
-    {
-      "temperature": 21.56,
-      "pressure": 98821.15,
-      "altitude": 274.5065,
-      "UNIX": 1585776908770
-    },
-    {
-      "temperature": 21.56,
-      "pressure": 98821.88,
-      "altitude": 274.4445,
-      "UNIX": 1585776913809
-    },
-    {
-      "temperature": 21.56,
-      "pressure": 98822.16,
-      "altitude": 274.4213,
-      "UNIX": 1585776919031
-    },
-    {
-      "temperature": 21.56,
-      "pressure": 98822,
-      "altitude": 274.4347,
-      "UNIX": 1585776925256
-    },
-    {
-      "temperature": 21.57,
-      "pressure": 98822.11,
-      "altitude": 274.4254,
-      "UNIX": 1585776930186
-    },
-    {
-      "temperature": 21.57,
-      "pressure": 98822.44,
-      "altitude": 274.3976,
-      "UNIX": 1585776935388
-    },
-    {
-      "temperature": 21.57,
-      "pressure": 98822.84,
-      "altitude": 274.363,
-      "UNIX": 1585776940612
-    },
-    {
-      "temperature": 21.57,
-      "pressure": 98823.34,
-      "altitude": 274.3211,
-      "UNIX": 1585776945833
-    },
-    {
-      "temperature": 21.57,
-      "pressure": 98823.61,
-      "altitude": 274.2979,
-      "UNIX": 1585776951532
-    },
-    {
-      "temperature": 21.57,
-      "pressure": 98823.61,
-      "altitude": 274.2979,
-      "UNIX": 1585776956560
-    },
-    {
-      "temperature": 21.57,
-      "pressure": 98823.86,
-      "altitude": 274.2767,
-      "UNIX": 1585776961592
-    },
-    {
-      "temperature": 21.57,
-      "pressure": 98823.53,
-      "altitude": 274.3046,
-      "UNIX": 1585776966627
-    },
-    {
-      "temperature": 21.58,
-      "pressure": 98823.48,
-      "altitude": 274.3082,
-      "UNIX": 1585776971663
-    },
-    {
-      "temperature": 21.58,
-      "pressure": 98824.09,
-      "altitude": 274.2566,
-      "UNIX": 1585776976715
-    },
-    {
-      "temperature": 21.58,
-      "pressure": 98824.25,
-      "altitude": 274.2437,
-      "UNIX": 1585776981780
-    },
-    {
-      "temperature": 21.58,
-      "pressure": 98824.66,
-      "altitude": 274.2091,
-      "UNIX": 1585776987289
-    },
-    {
-      "temperature": 21.58,
-      "pressure": 98825.15,
-      "altitude": 274.1678,
-      "UNIX": 1585776992230
-    },
-    {
-      "temperature": 21.58,
-      "pressure": 98825.15,
-      "altitude": 274.1678,
-      "UNIX": 1585776997735
-    },
-    {
-      "temperature": 21.58,
-      "pressure": 98825.31,
-      "altitude": 274.1534,
-      "UNIX": 1585777003163
-    },
-    {
-      "temperature": 21.58,
-      "pressure": 98825.75,
-      "altitude": 274.1162,
-      "UNIX": 1585777008103
-    },
-    {
-      "temperature": 21.58,
-      "pressure": 98825.59,
-      "altitude": 274.1296,
-      "UNIX": 1585777013213
-    },
-    {
-      "temperature": 21.59,
-      "pressure": 98825.22,
-      "altitude": 274.1616,
-      "UNIX": 1585777018629
-    },
-    {
-      "temperature": 21.59,
-      "pressure": 98825.22,
-      "altitude": 274.1616,
-      "UNIX": 1585777023681
-    },
-    {
-      "temperature": 21.58,
-      "pressure": 98824.61,
-      "altitude": 274.2133,
-      "UNIX": 1585777029174
-    },
-    {
-      "temperature": 21.58,
-      "pressure": 98824.77,
-      "altitude": 274.1993,
-      "UNIX": 1585777034601
-    },
-    {
-      "temperature": 21.58,
-      "pressure": 98824.77,
-      "altitude": 274.1993,
-      "UNIX": 1585777040166
-    },
-    {
-      "temperature": 21.58,
-      "pressure": 98824.17,
-      "altitude": 274.2504,
-      "UNIX": 1585777045463
-    },
-    {
-      "temperature": 21.58,
-      "pressure": 98824,
-      "altitude": 274.2649,
-      "UNIX": 1585777050885
-    },
-    {
-      "temperature": 21.58,
-      "pressure": 98823.92,
-      "altitude": 274.2716,
-      "UNIX": 1585777056417
-    },
-    {
-      "temperature": 21.58,
-      "pressure": 98824.58,
-      "altitude": 274.2158,
-      "UNIX": 1585777061738
-    },
-    {
-      "temperature": 21.58,
-      "pressure": 98825.23,
-      "altitude": 274.1606,
-      "UNIX": 1585777067367
-    },
-    {
-      "temperature": 21.58,
-      "pressure": 98824.79,
-      "altitude": 274.1983,
-      "UNIX": 1585777073078
-    },
-    {
-      "temperature": 21.57,
-      "pressure": 98824.84,
-      "altitude": 274.1936,
-      "UNIX": 1585777078031
-    },
-    {
-      "temperature": 21.57,
-      "pressure": 98825.33,
-      "altitude": 274.1518,
-      "UNIX": 1585777083258
-    },
-    {
-      "temperature": 21.57,
-      "pressure": 98825.16,
-      "altitude": 274.1663,
-      "UNIX": 1585777088295
-    },
-    {
-      "temperature": 21.58,
-      "pressure": 98825.28,
-      "altitude": 274.1559,
-      "UNIX": 1585777093787
-    },
-    {
-      "temperature": 21.58,
-      "pressure": 98824.41,
-      "altitude": 274.2298,
-      "UNIX": 1585777099115
-    },
-    {
-      "temperature": 21.58,
-      "pressure": 98824.13,
-      "altitude": 274.254,
-      "UNIX": 1585777104150
-    },
-    {
-      "temperature": 21.59,
-      "pressure": 98824.32,
-      "altitude": 274.2375,
-      "UNIX": 1585777109181
-    },
-    {
-      "temperature": 21.59,
-      "pressure": 98824.35,
-      "altitude": 274.2349,
-      "UNIX": 1585777114381
-    },
-    {
-      "temperature": 21.6,
-      "pressure": 98823.65,
-      "altitude": 274.2943,
-      "UNIX": 1585777119416
-    },
-    {
-      "temperature": 21.6,
-      "pressure": 98823.33,
-      "altitude": 274.3217,
-      "UNIX": 1585777124917
-    },
-    {
-      "temperature": 21.6,
-      "pressure": 98824.09,
-      "altitude": 274.2566,
-      "UNIX": 1585777129854
-    },
-    {
-      "temperature": 21.6,
-      "pressure": 98823.92,
-      "altitude": 274.2716,
-      "UNIX": 1585777134883
-    },
-    {
-      "temperature": 21.6,
-      "pressure": 98824.17,
-      "altitude": 274.2504,
-      "UNIX": 1585777140379
-    },
-    {
-      "temperature": 21.6,
-      "pressure": 98823.47,
-      "altitude": 274.3098,
-      "UNIX": 1585777145909
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98823.22,
-      "altitude": 274.331,
-      "UNIX": 1585777151135
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98823.17,
-      "altitude": 274.3356,
-      "UNIX": 1585777156663
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98823.29,
-      "altitude": 274.3248,
-      "UNIX": 1585777162088
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98822.56,
-      "altitude": 274.3867,
-      "UNIX": 1585777167491
-    },
-    {
-      "temperature": 21.62,
-      "pressure": 98823.08,
-      "altitude": 274.3434,
-      "UNIX": 1585777172547
-    },
-    {
-      "temperature": 21.62,
-      "pressure": 98822.87,
-      "altitude": 274.3609,
-      "UNIX": 1585777177577
-    },
-    {
-      "temperature": 21.62,
-      "pressure": 98822.7,
-      "altitude": 274.3748,
-      "UNIX": 1585777182611
-    },
-    {
-      "temperature": 21.62,
-      "pressure": 98822.7,
-      "altitude": 274.3748,
-      "UNIX": 1585777187672
-    },
-    {
-      "temperature": 21.62,
-      "pressure": 98822.7,
-      "altitude": 274.3748,
-      "UNIX": 1585777192734
-    },
-    {
-      "temperature": 21.62,
-      "pressure": 98823.52,
-      "altitude": 274.3057,
-      "UNIX": 1585777197768
-    },
-    {
-      "temperature": 21.62,
-      "pressure": 98823.69,
-      "altitude": 274.2912,
-      "UNIX": 1585777202961
-    },
-    {
-      "temperature": 21.62,
-      "pressure": 98823.08,
-      "altitude": 274.3434,
-      "UNIX": 1585777208476
-    },
-    {
-      "temperature": 21.62,
-      "pressure": 98823.73,
-      "altitude": 274.2871,
-      "UNIX": 1585777213418
-    },
-    {
-      "temperature": 21.62,
-      "pressure": 98823.81,
-      "altitude": 274.2809,
-      "UNIX": 1585777218728
-    },
-    {
-      "temperature": 21.62,
-      "pressure": 98823.98,
-      "altitude": 274.2669,
-      "UNIX": 1585777223951
-    },
-    {
-      "temperature": 21.62,
-      "pressure": 98823.81,
-      "altitude": 274.2809,
-      "UNIX": 1585777228994
-    },
-    {
-      "temperature": 21.62,
-      "pressure": 98823.33,
-      "altitude": 274.3217,
-      "UNIX": 1585777234390
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98823.05,
-      "altitude": 274.3459,
-      "UNIX": 1585777239921
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98823.13,
-      "altitude": 274.3392,
-      "UNIX": 1585777245241
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98823.13,
-      "altitude": 274.3392,
-      "UNIX": 1585777252895
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98823.02,
-      "altitude": 274.3485,
-      "UNIX": 1585777257956
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98822.89,
-      "altitude": 274.3593,
-      "UNIX": 1585777262989
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98823.06,
-      "altitude": 274.3444,
-      "UNIX": 1585777268483
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98823.39,
-      "altitude": 274.3165,
-      "UNIX": 1585777273618
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98823.72,
-      "altitude": 274.2886,
-      "UNIX": 1585777278656
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98823.39,
-      "altitude": 274.3165,
-      "UNIX": 1585777283761
-    },
-    {
-      "temperature": 21.6,
-      "pressure": 98823.14,
-      "altitude": 274.3382,
-      "UNIX": 1585777288974
-    },
-    {
-      "temperature": 21.6,
-      "pressure": 98822.86,
-      "altitude": 274.3619,
-      "UNIX": 1585777294020
-    },
-    {
-      "temperature": 21.6,
-      "pressure": 98823.03,
-      "altitude": 274.3475,
-      "UNIX": 1585777299045
-    },
-    {
-      "temperature": 21.6,
-      "pressure": 98823.96,
-      "altitude": 274.268,
-      "UNIX": 1585777304326
-    },
-    {
-      "temperature": 21.6,
-      "pressure": 98824.61,
-      "altitude": 274.2133,
-      "UNIX": 1585777309357
-    },
-    {
-      "temperature": 21.6,
-      "pressure": 98824.01,
-      "altitude": 274.2643,
-      "UNIX": 1585777314875
-    },
-    {
-      "temperature": 21.6,
-      "pressure": 98824.01,
-      "altitude": 274.2643,
-      "UNIX": 1585777319909
-    },
-    {
-      "temperature": 21.6,
-      "pressure": 98824.17,
-      "altitude": 274.2504,
-      "UNIX": 1585777325123
-    },
-    {
-      "temperature": 21.6,
-      "pressure": 98824.17,
-      "altitude": 274.2504,
-      "UNIX": 1585777330348
-    },
-    {
-      "temperature": 21.6,
-      "pressure": 98823.8,
-      "altitude": 274.2819,
-      "UNIX": 1585777335863
-    },
-    {
-      "temperature": 21.6,
-      "pressure": 98823.47,
-      "altitude": 274.3098,
-      "UNIX": 1585777341001
-    },
-    {
-      "temperature": 21.6,
-      "pressure": 98823.47,
-      "altitude": 274.3098,
-      "UNIX": 1585777346413
-    },
-    {
-      "temperature": 21.6,
-      "pressure": 98823.47,
-      "altitude": 274.3098,
-      "UNIX": 1585777351940
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98823.22,
-      "altitude": 274.331,
-      "UNIX": 1585777357367
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98822.73,
-      "altitude": 274.3723,
-      "UNIX": 1585777362795
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98822.25,
-      "altitude": 274.4136,
-      "UNIX": 1585777367733
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98821.92,
-      "altitude": 274.4409,
-      "UNIX": 1585777372760
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98821.75,
-      "altitude": 274.4554,
-      "UNIX": 1585777378065
-    },
-    {
-      "temperature": 21.6,
-      "pressure": 98821.52,
-      "altitude": 274.4755,
-      "UNIX": 1585777383099
-    },
-    {
-      "temperature": 21.6,
-      "pressure": 98821.52,
-      "altitude": 274.4755,
-      "UNIX": 1585777388130
-    },
-    {
-      "temperature": 21.6,
-      "pressure": 98821.34,
-      "altitude": 274.49,
-      "UNIX": 1585777393520
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98821.59,
-      "altitude": 274.4688,
-      "UNIX": 1585777398945
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98820.94,
-      "altitude": 274.5251,
-      "UNIX": 1585777404177
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98820.73,
-      "altitude": 274.5426,
-      "UNIX": 1585777409596
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98821.33,
-      "altitude": 274.4915,
-      "UNIX": 1585777415123
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98820.02,
-      "altitude": 274.602,
-      "UNIX": 1585777420066
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98819.54,
-      "altitude": 274.6433,
-      "UNIX": 1585777425566
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98818.94,
-      "altitude": 274.6944,
-      "UNIX": 1585777430994
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98819.21,
-      "altitude": 274.6707,
-      "UNIX": 1585777435928
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98819.05,
-      "altitude": 274.6846,
-      "UNIX": 1585777441342
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98818.4,
-      "altitude": 274.7404,
-      "UNIX": 1585777446865
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98818.23,
-      "altitude": 274.7538,
-      "UNIX": 1585777452295
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98818.72,
-      "altitude": 274.713,
-      "UNIX": 1585777457226
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98817.8,
-      "altitude": 274.791,
-      "UNIX": 1585777462743
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98817.3,
-      "altitude": 274.8333,
-      "UNIX": 1585777467777
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98817.34,
-      "altitude": 274.8292,
-      "UNIX": 1585777472807
-    },
-    {
-      "temperature": 21.6,
-      "pressure": 98816.78,
-      "altitude": 274.8777,
-      "UNIX": 1585777478203
-    },
-    {
-      "temperature": 21.6,
-      "pressure": 98816.61,
-      "altitude": 274.8922,
-      "UNIX": 1585777483236
-    },
-    {
-      "temperature": 21.6,
-      "pressure": 98815.84,
-      "altitude": 274.9567,
-      "UNIX": 1585777488268
-    },
-    {
-      "temperature": 21.6,
-      "pressure": 98815.52,
-      "altitude": 274.9841,
-      "UNIX": 1585777493312
-    },
-    {
-      "temperature": 21.6,
-      "pressure": 98815.64,
-      "altitude": 274.9738,
-      "UNIX": 1585777498362
-    },
-    {
-      "temperature": 21.6,
-      "pressure": 98815.47,
-      "altitude": 274.9887,
-      "UNIX": 1585777503416
-    },
-    {
-      "temperature": 21.6,
-      "pressure": 98814.5,
-      "altitude": 275.0708,
-      "UNIX": 1585777508451
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98814.41,
-      "altitude": 275.078,
-      "UNIX": 1585777513522
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98813.77,
-      "altitude": 275.1333,
-      "UNIX": 1585777518559
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98813.55,
-      "altitude": 275.1514,
-      "UNIX": 1585777524076
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98813.06,
-      "altitude": 275.1927,
-      "UNIX": 1585777529028
-    },
-    {
-      "temperature": 21.62,
-      "pressure": 98813.52,
-      "altitude": 275.1544,
-      "UNIX": 1585777534257
-    },
-    {
-      "temperature": 21.64,
-      "pressure": 98813.29,
-      "altitude": 275.1736,
-      "UNIX": 1585777539317
-    },
-    {
-      "temperature": 21.65,
-      "pressure": 98813.88,
-      "altitude": 275.124,
-      "UNIX": 1585777544346
-    },
-    {
-      "temperature": 21.65,
-      "pressure": 98813.91,
-      "altitude": 275.1214,
-      "UNIX": 1585777549380
-    },
-    {
-      "temperature": 21.65,
-      "pressure": 98814.07,
-      "altitude": 275.1075,
-      "UNIX": 1585777554899
-    },
-    {
-      "temperature": 21.65,
-      "pressure": 98810.98,
-      "altitude": 275.3687,
-      "UNIX": 1585777559826
-    },
-    {
-      "temperature": 21.64,
-      "pressure": 98811.98,
-      "altitude": 275.2841,
-      "UNIX": 1585777565344
-    },
-    {
-      "temperature": 21.63,
-      "pressure": 98812.41,
-      "altitude": 275.2484,
-      "UNIX": 1585777570774
-    },
-    {
-      "temperature": 21.62,
-      "pressure": 98812.95,
-      "altitude": 275.202,
-      "UNIX": 1585777575901
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98812.69,
-      "altitude": 275.2247,
-      "UNIX": 1585777581123
-    },
-    {
-      "temperature": 21.61,
-      "pressure": 98812.52,
-      "altitude": 275.2391,
-      "UNIX": 1585777586631
-    },
-    {
-      "temperature": 21.62,
-      "pressure": 98812.75,
-      "altitude": 275.2195,
-      "UNIX": 1585777591775
-    },
-    {
-      "temperature": 21.63,
-      "pressure": 98812.6,
-      "altitude": 275.2319,
-      "UNIX": 1585777597007
-    },
-    {
-      "temperature": 21.65,
-      "pressure": 98812.45,
-      "altitude": 275.2448,
-      "UNIX": 1585777602420
-    },
-    {
-      "temperature": 21.66,
-      "pressure": 98813.41,
-      "altitude": 275.1638,
-      "UNIX": 1585777607453
-    },
-    {
-      "temperature": 21.67,
-      "pressure": 98813.63,
-      "altitude": 275.1441,
-      "UNIX": 1585777612666
-    },
-    {
-      "temperature": 21.68,
-      "pressure": 98813.94,
-      "altitude": 275.1183,
-      "UNIX": 1585777618084
-    },
-    {
-      "temperature": 21.68,
-      "pressure": 98814.41,
-      "altitude": 275.078,
-      "UNIX": 1585777623121
-    },
-    {
-      "temperature": 21.69,
-      "pressure": 98813.88,
-      "altitude": 275.124,
-      "UNIX": 1585777628156
-    },
-    {
-      "temperature": 21.69,
-      "pressure": 98814.04,
-      "altitude": 275.11,
-      "UNIX": 1585777633378
-    },
-    {
-      "temperature": 21.69,
-      "pressure": 98813.91,
-      "altitude": 275.1214,
-      "UNIX": 1585777638414
-    },
-    {
-      "temperature": 21.7,
-      "pressure": 98813.45,
-      "altitude": 275.1596,
-      "UNIX": 1585777643606
-    },
-    {
-      "temperature": 21.7,
-      "pressure": 98813.16,
-      "altitude": 275.1844,
-      "UNIX": 1585777648661
-    },
-    {
-      "temperature": 21.71,
-      "pressure": 98812.57,
-      "altitude": 275.2345,
-      "UNIX": 1585777653855
-    },
-    {
-      "temperature": 21.71,
-      "pressure": 98812.69,
-      "altitude": 275.2247,
-      "UNIX": 1585777659052
-    },
-    {
-      "temperature": 21.72,
-      "pressure": 98812.83,
-      "altitude": 275.2123,
-      "UNIX": 1585777664121
-    },
-    {
-      "temperature": 21.72,
-      "pressure": 98812.63,
-      "altitude": 275.2303,
-      "UNIX": 1585777669150
-    },
-    {
-      "temperature": 21.73,
-      "pressure": 98813.03,
-      "altitude": 275.1953,
-      "UNIX": 1585777674181
-    },
-    {
-      "temperature": 21.73,
-      "pressure": 98813.3,
-      "altitude": 275.172,
-      "UNIX": 1585777679234
-    },
-    {
-      "temperature": 21.73,
-      "pressure": 98813.09,
-      "altitude": 275.1901,
-      "UNIX": 1585777684295
-    },
-    {
-      "temperature": 21.73,
-      "pressure": 98812.77,
-      "altitude": 275.218,
-      "UNIX": 1585777689595
-    },
-    {
-      "temperature": 21.73,
-      "pressure": 98813.34,
-      "altitude": 275.1694,
-      "UNIX": 1585777695085
-    },
-    {
-      "temperature": 21.74,
-      "pressure": 98813.29,
-      "altitude": 275.1736,
-      "UNIX": 1585777700032
-    },
-    {
-      "temperature": 21.74,
-      "pressure": 98813.38,
-      "altitude": 275.1663,
-      "UNIX": 1585777705531
-    },
-    {
-      "temperature": 21.75,
-      "pressure": 98813.35,
-      "altitude": 275.1679,
-      "UNIX": 1585777710862
-    },
-    {
-      "temperature": 21.75,
-      "pressure": 98812.52,
-      "altitude": 275.2391,
-      "UNIX": 1585777716385
-    },
-    {
-      "temperature": 21.76,
-      "pressure": 98812.02,
-      "altitude": 275.2815,
-      "UNIX": 1585777721716
-    },
-    {
-      "temperature": 21.77,
-      "pressure": 98812.16,
-      "altitude": 275.2696,
-      "UNIX": 1585777726947
-    },
-    {
-      "temperature": 21.78,
-      "pressure": 98812.14,
-      "altitude": 275.2711,
-      "UNIX": 1585777732177
-    },
-    {
-      "temperature": 21.78,
-      "pressure": 98812.02,
-      "altitude": 275.2815,
-      "UNIX": 1585777737587
-    },
-    {
-      "temperature": 21.79,
-      "pressure": 98812.53,
-      "altitude": 275.2381,
-      "UNIX": 1585777743115
-    },
-    {
-      "temperature": 21.79,
-      "pressure": 98812.56,
-      "altitude": 275.2355,
-      "UNIX": 1585777748108
-    },
-    {
-      "temperature": 21.79,
-      "pressure": 98811.87,
-      "altitude": 275.2944,
-      "UNIX": 1585777753160
-    },
-    {
-      "temperature": 21.8,
-      "pressure": 98811.66,
-      "altitude": 275.312,
-      "UNIX": 1585777758383
-    },
-    {
-      "temperature": 21.8,
-      "pressure": 98811.9,
-      "altitude": 275.2918,
-      "UNIX": 1585777763624
-    },
-    {
-      "temperature": 21.8,
-      "pressure": 98811.03,
-      "altitude": 275.3651,
-      "UNIX": 1585777769024
-    },
-    {
-      "temperature": 21.8,
-      "pressure": 98810.88,
-      "altitude": 275.378,
-      "UNIX": 1585777774260
-    },
-    {
-      "temperature": 21.8,
-      "pressure": 98811.03,
-      "altitude": 275.3651,
-      "UNIX": 1585777779295
-    },
-    {
-      "temperature": 21.8,
-      "pressure": 98810.88,
-      "altitude": 275.378,
-      "UNIX": 1585777784327
-    },
-    {
-      "temperature": 21.8,
-      "pressure": 98810.88,
-      "altitude": 275.378,
-      "UNIX": 1585777789378
-    },
-    {
-      "temperature": 21.8,
-      "pressure": 98811.03,
-      "altitude": 275.3651,
-      "UNIX": 1585777794435
-    },
-    {
-      "temperature": 21.8,
-      "pressure": 98810.63,
-      "altitude": 275.3997,
-      "UNIX": 1585777799472
-    },
-    {
-      "temperature": 21.8,
-      "pressure": 98810.63,
-      "altitude": 275.3997,
-      "UNIX": 1585777804967
-    },
-    {
-      "temperature": 21.8,
-      "pressure": 98810.95,
-      "altitude": 275.3713,
-      "UNIX": 1585777810003
-    },
-    {
-      "temperature": 21.8,
-      "pressure": 98810.22,
-      "altitude": 275.4343,
-      "UNIX": 1585777815516
-    },
-    {
-      "temperature": 21.8,
-      "pressure": 98810.55,
-      "altitude": 275.4064,
-      "UNIX": 1585777820837
-    },
-    {
-      "temperature": 21.8,
-      "pressure": 98810.88,
-      "altitude": 275.378,
-      "UNIX": 1585777825875
-    },
-    {
-      "temperature": 21.8,
-      "pressure": 98810.88,
-      "altitude": 275.378,
-      "UNIX": 1585777831103
-    },
-    {
-      "temperature": 21.8,
-      "pressure": 98811.08,
-      "altitude": 275.361,
-      "UNIX": 1585777836604
-    },
-    {
-      "temperature": 21.8,
-      "pressure": 98810.92,
-      "altitude": 275.3744,
-      "UNIX": 1585777841541
-    },
-    {
-      "temperature": 21.8,
-      "pressure": 98810.27,
-      "altitude": 275.4302,
-      "UNIX": 1585777846864
-    },
-    {
-      "temperature": 21.8,
-      "pressure": 98809.45,
-      "altitude": 275.4988,
-      "UNIX": 1585777852277
-    },
-    {
-      "temperature": 21.8,
-      "pressure": 98809.41,
-      "altitude": 275.503,
-      "UNIX": 1585777857314
-    },
-    {
-      "temperature": 21.8,
-      "pressure": 98808.91,
-      "altitude": 275.5453,
-      "UNIX": 1585777862377
-    },
-    {
-      "temperature": 21.8,
-      "pressure": 98808.75,
-      "altitude": 275.5582,
-      "UNIX": 1585777867449
-    },
-    {
-      "temperature": 21.8,
-      "pressure": 98809.16,
-      "altitude": 275.5242,
-      "UNIX": 1585777872490
-    },
-    {
-      "temperature": 21.8,
-      "pressure": 98809.31,
-      "altitude": 275.5107,
-      "UNIX": 1585777877977
-    },
-    {
-      "temperature": 21.8,
-      "pressure": 98809.81,
-      "altitude": 275.4684,
-      "UNIX": 1585777883505
-    },
-    {
-      "temperature": 21.8,
-      "pressure": 98809.31,
-      "altitude": 275.5107,
-      "UNIX": 1585777888833
-    },
-    {
-      "temperature": 21.81,
-      "pressure": 98809.59,
-      "altitude": 275.487,
-      "UNIX": 1585777894361
-    },
-    {
-      "temperature": 21.81,
-      "pressure": 98809.44,
-      "altitude": 275.5004,
-      "UNIX": 1585777899303
-    },
-    {
-      "temperature": 21.81,
-      "pressure": 98809.39,
-      "altitude": 275.504,
-      "UNIX": 1585777904379
-    },
-    {
-      "temperature": 21.81,
-      "pressure": 98809.06,
-      "altitude": 275.5319,
-      "UNIX": 1585777910259
-    },
-    {
-      "temperature": 21.81,
-      "pressure": 98808.73,
-      "altitude": 275.5598,
-      "UNIX": 1585777915288
-    },
-    {
-      "temperature": 21.81,
-      "pressure": 98808.81,
-      "altitude": 275.5531,
-      "UNIX": 1585777920360
-    },
-    {
-      "temperature": 21.81,
-      "pressure": 98807.84,
-      "altitude": 275.6362,
-      "UNIX": 1585777925386
-    },
-    {
-      "temperature": 21.81,
-      "pressure": 98807.67,
-      "altitude": 275.6501,
-      "UNIX": 1585777930421
-    },
-    {
-      "temperature": 21.81,
-      "pressure": 98808.27,
-      "altitude": 275.599,
-      "UNIX": 1585777935655
-    },
-    {
-      "temperature": 21.81,
-      "pressure": 98807.13,
-      "altitude": 275.6956,
-      "UNIX": 1585777941058
-    },
-    {
-      "temperature": 21.81,
-      "pressure": 98807.46,
-      "altitude": 275.6682,
-      "UNIX": 1585777946141
-    },
-    {
-      "temperature": 21.81,
-      "pressure": 98807.63,
-      "altitude": 275.6543,
-      "UNIX": 1585777951213
-    },
-    {
-      "temperature": 21.81,
-      "pressure": 98807.63,
-      "altitude": 275.6543,
-      "UNIX": 1585777956263
-    },
-    {
-      "temperature": 21.81,
-      "pressure": 98807.95,
-      "altitude": 275.6269,
-      "UNIX": 1585777961640
-    },
-    {
-      "temperature": 21.81,
-      "pressure": 98807.78,
-      "altitude": 275.6408,
-      "UNIX": 1585777966730
-    },
-    {
-      "temperature": 21.81,
-      "pressure": 98806.86,
-      "altitude": 275.7188,
-      "UNIX": 1585777971792
-    },
-    {
-      "temperature": 21.81,
-      "pressure": 98806.2,
-      "altitude": 275.7751,
-      "UNIX": 1585777977047
-    },
-    {
-      "temperature": 21.81,
-      "pressure": 98806.36,
-      "altitude": 275.7617,
-      "UNIX": 1585777982050
-    },
-    {
-      "temperature": 21.81,
-      "pressure": 98806.8,
-      "altitude": 275.7234,
-      "UNIX": 1585777987079
-    },
-    {
-      "temperature": 21.81,
-      "pressure": 98806.16,
-      "altitude": 275.7787,
-      "UNIX": 1585777992270
-    },
-    {
-      "temperature": 21.82,
-      "pressure": 98807.22,
-      "altitude": 275.6884,
-      "UNIX": 1585777997294
-    },
-    {
-      "temperature": 21.82,
-      "pressure": 98806.89,
-      "altitude": 275.7162,
-      "UNIX": 1585778002429
-    },
-    {
-      "temperature": 21.82,
-      "pressure": 98806.39,
-      "altitude": 275.7591,
-      "UNIX": 1585778007450
-    },
-    {
-      "temperature": 21.82,
-      "pressure": 98806.19,
-      "altitude": 275.7761,
-      "UNIX": 1585778012503
-    },
-    {
-      "temperature": 21.82,
-      "pressure": 98805.7,
-      "altitude": 275.818,
-      "UNIX": 1585778017601
-    },
-    {
-      "temperature": 21.82,
-      "pressure": 98806.02,
-      "altitude": 275.7906,
-      "UNIX": 1585778022632
-    },
-    {
-      "temperature": 21.82,
-      "pressure": 98806.34,
-      "altitude": 275.7632,
-      "UNIX": 1585778027667
-    },
-    {
-      "temperature": 21.82,
-      "pressure": 98806.3,
-      "altitude": 275.7668,
-      "UNIX": 1585778032749
-    },
-    {
-      "temperature": 21.82,
-      "pressure": 98805.64,
-      "altitude": 275.8226,
-      "UNIX": 1585778038232
-    },
-    {
-      "temperature": 21.82,
-      "pressure": 98805.23,
-      "altitude": 275.8567,
-      "UNIX": 1585778043171
-    },
-    {
-      "temperature": 21.82,
-      "pressure": 98804.75,
-      "altitude": 275.898,
-      "UNIX": 1585778048381
-    },
-    {
-      "temperature": 21.83,
-      "pressure": 98804.05,
-      "altitude": 275.9579,
-      "UNIX": 1585778053801
-    },
-    {
-      "temperature": 21.83,
-      "pressure": 98804.81,
-      "altitude": 275.8928,
-      "UNIX": 1585778058838
-    },
-    {
-      "temperature": 21.83,
-      "pressure": 98804,
-      "altitude": 275.962,
-      "UNIX": 1585778064348
-    },
-    {
-      "temperature": 21.83,
-      "pressure": 98803.91,
-      "altitude": 275.9692,
-      "UNIX": 1585778069771
-    },
-    {
-      "temperature": 21.83,
-      "pressure": 98802.94,
-      "altitude": 276.0519,
-      "UNIX": 1585778075198
-    },
-    {
-      "temperature": 21.83,
-      "pressure": 98802.77,
-      "altitude": 276.0663,
-      "UNIX": 1585778080632
-    },
-    {
-      "temperature": 21.83,
-      "pressure": 98803.27,
-      "altitude": 276.024,
-      "UNIX": 1585778085762
-    },
-    {
-      "temperature": 21.83,
-      "pressure": 98802.61,
-      "altitude": 276.0792,
-      "UNIX": 1585778090791
-    },
-    {
-      "temperature": 21.83,
-      "pressure": 98802.2,
-      "altitude": 276.1143,
-      "UNIX": 1585778095817
-    },
-    {
-      "temperature": 21.83,
-      "pressure": 98802.45,
-      "altitude": 276.0932,
-      "UNIX": 1585778100866
-    },
-    {
-      "temperature": 21.83,
-      "pressure": 98802.28,
-      "altitude": 276.1076,
-      "UNIX": 1585778105936
-    },
-    {
-      "temperature": 21.83,
-      "pressure": 98802.45,
-      "altitude": 276.0932,
-      "UNIX": 1585778111170
-    },
-    {
-      "temperature": 21.83,
-      "pressure": 98801.91,
-      "altitude": 276.1396,
-      "UNIX": 1585778116275
-    },
-    {
-      "temperature": 21.83,
-      "pressure": 98801.42,
-      "altitude": 276.1805,
-      "UNIX": 1585778121310
-    },
-    {
-      "temperature": 21.83,
-      "pressure": 98800.6,
-      "altitude": 276.2496,
-      "UNIX": 1585778126515
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98800.19,
-      "altitude": 276.2853,
-      "UNIX": 1585778131933
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98799.54,
-      "altitude": 276.3405,
-      "UNIX": 1585778136973
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98799.48,
-      "altitude": 276.3447,
-      "UNIX": 1585778144865
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98798.88,
-      "altitude": 276.3958,
-      "UNIX": 1585778149928
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98798.4,
-      "altitude": 276.4366,
-      "UNIX": 1585778154975
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98798.56,
-      "altitude": 276.4232,
-      "UNIX": 1585778160056
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98799,
-      "altitude": 276.386,
-      "UNIX": 1585778165520
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98798.67,
-      "altitude": 276.4138,
-      "UNIX": 1585778170472
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98798.19,
-      "altitude": 276.4552,
-      "UNIX": 1585778175524
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98797.81,
-      "altitude": 276.4867,
-      "UNIX": 1585778180585
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98796.39,
-      "altitude": 276.607,
-      "UNIX": 1585778185656
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98796.02,
-      "altitude": 276.6395,
-      "UNIX": 1585778190827
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98795.84,
-      "altitude": 276.654,
-      "UNIX": 1585778196250
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98795.69,
-      "altitude": 276.6674,
-      "UNIX": 1585778201407
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98795.52,
-      "altitude": 276.6808,
-      "UNIX": 1585778206486
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98796.02,
-      "altitude": 276.6395,
-      "UNIX": 1585778211520
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98796.22,
-      "altitude": 276.6219,
-      "UNIX": 1585778216570
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98796.39,
-      "altitude": 276.607,
-      "UNIX": 1585778221648
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98796.22,
-      "altitude": 276.6219,
-      "UNIX": 1585778226683
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98795.78,
-      "altitude": 276.6591,
-      "UNIX": 1585778231741
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98796.27,
-      "altitude": 276.6173,
-      "UNIX": 1585778236815
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98795.95,
-      "altitude": 276.6452,
-      "UNIX": 1585778242319
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98796.39,
-      "altitude": 276.607,
-      "UNIX": 1585778247451
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98797.37,
-      "altitude": 276.5244,
-      "UNIX": 1585778252717
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98797.86,
-      "altitude": 276.483,
-      "UNIX": 1585778258097
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98798.46,
-      "altitude": 276.4314,
-      "UNIX": 1585778263147
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98799.2,
-      "altitude": 276.3694,
-      "UNIX": 1585778268371
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98799.36,
-      "altitude": 276.3555,
-      "UNIX": 1585778273419
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98799.2,
-      "altitude": 276.3694,
-      "UNIX": 1585778278471
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98798.7,
-      "altitude": 276.4108,
-      "UNIX": 1585778283500
-    },
-    {
-      "temperature": 21.85,
-      "pressure": 98798.66,
-      "altitude": 276.4149,
-      "UNIX": 1585778288915
-    },
-    {
-      "temperature": 21.85,
-      "pressure": 98798.17,
-      "altitude": 276.4567,
-      "UNIX": 1585778294003
-    },
-    {
-      "temperature": 21.85,
-      "pressure": 98798.33,
-      "altitude": 276.4428,
-      "UNIX": 1585778299103
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98798.05,
-      "altitude": 276.4665,
-      "UNIX": 1585778304290
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98798.05,
-      "altitude": 276.4665,
-      "UNIX": 1585778309317
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98798.38,
-      "altitude": 276.4386,
-      "UNIX": 1585778314349
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98797.2,
-      "altitude": 276.5383,
-      "UNIX": 1585778319838
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98797.7,
-      "altitude": 276.497,
-      "UNIX": 1585778324774
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98797.05,
-      "altitude": 276.5517,
-      "UNIX": 1585778330285
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98797.05,
-      "altitude": 276.5517,
-      "UNIX": 1585778335711
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98796.27,
-      "altitude": 276.6173,
-      "UNIX": 1585778340785
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98796.27,
-      "altitude": 276.6173,
-      "UNIX": 1585778345864
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98795.63,
-      "altitude": 276.6726,
-      "UNIX": 1585778350904
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98794.64,
-      "altitude": 276.7557,
-      "UNIX": 1585778355936
-    },
-    {
-      "temperature": 21.83,
-      "pressure": 98794.23,
-      "altitude": 276.7903,
-      "UNIX": 1585778360962
-    },
-    {
-      "temperature": 21.83,
-      "pressure": 98794.07,
-      "altitude": 276.8047,
-      "UNIX": 1585778366039
-    },
-    {
-      "temperature": 21.83,
-      "pressure": 98793.63,
-      "altitude": 276.8414,
-      "UNIX": 1585778371094
-    },
-    {
-      "temperature": 21.83,
-      "pressure": 98793.39,
-      "altitude": 276.8621,
-      "UNIX": 1585778376125
-    },
-    {
-      "temperature": 21.83,
-      "pressure": 98792.9,
-      "altitude": 276.9039,
-      "UNIX": 1585778381192
-    },
-    {
-      "temperature": 21.83,
-      "pressure": 98793.39,
-      "altitude": 276.8621,
-      "UNIX": 1585778386261
-    },
-    {
-      "temperature": 21.83,
-      "pressure": 98793.06,
-      "altitude": 276.89,
-      "UNIX": 1585778391329
-    },
-    {
-      "temperature": 21.83,
-      "pressure": 98792.57,
-      "altitude": 276.9313,
-      "UNIX": 1585778396842
-    },
-    {
-      "temperature": 21.83,
-      "pressure": 98792.61,
-      "altitude": 276.9282,
-      "UNIX": 1585778401975
-    },
-    {
-      "temperature": 21.83,
-      "pressure": 98791.95,
-      "altitude": 276.985,
-      "UNIX": 1585778407198
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98791.49,
-      "altitude": 277.0232,
-      "UNIX": 1585778412225
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98790.95,
-      "altitude": 277.0686,
-      "UNIX": 1585778417259
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98790.7,
-      "altitude": 277.0898,
-      "UNIX": 1585778422294
-    },
-    {
-      "temperature": 21.84,
-      "pressure": 98790.05,
-      "altitude": 277.1456,
-      "UNIX": 1585778427323
-    },
-    {
-      "temperature": 21.85,
-      "pressure": 98790.33,
-      "altitude": 277.1218,
-      "UNIX": 1585778432354
-    },
-    {
-      "temperature": 21.85,
-      "pressure": 98790.98,
-      "altitude": 277.0661,
-      "UNIX": 1585778437405
-    },
-    {
-      "temperature": 21.85,
-      "pressure": 98790.17,
-      "altitude": 277.1348,
-      "UNIX": 1585778442438
-    },
-    {
-      "temperature": 21.85,
-      "pressure": 98790.91,
-      "altitude": 277.0728,
-      "UNIX": 1585778447472
-    },
-    {
-      "temperature": 21.85,
-      "pressure": 98790.25,
-      "altitude": 277.1281,
-      "UNIX": 1585778452495
-    },
-    {
-      "temperature": 21.85,
-      "pressure": 98790.03,
-      "altitude": 277.1466,
-      "UNIX": 1585778457679
-    },
-    {
-      "temperature": 21.85,
-      "pressure": 98789.88,
-      "altitude": 277.1606,
-      "UNIX": 1585778462740
-    },
-    {
-      "temperature": 21.85,
-      "pressure": 98789.98,
-      "altitude": 277.1508,
-      "UNIX": 1585778467833
-    },
-    {
-      "temperature": 21.85,
-      "pressure": 98789.17,
-      "altitude": 277.22,
-      "UNIX": 1585778473043
-    },
-    {
-      "temperature": 21.85,
-      "pressure": 98788.68,
-      "altitude": 277.2618,
-      "UNIX": 1585778478080
-    },
-    {
-      "temperature": 21.85,
-      "pressure": 98788.44,
-      "altitude": 277.2819,
-      "UNIX": 1585778483478
-    },
-    {
-      "temperature": 21.85,
-      "pressure": 98788.27,
-      "altitude": 277.2959,
-      "UNIX": 1585778488509
-    },
-    {
-      "temperature": 21.85,
-      "pressure": 98788.11,
-      "altitude": 277.3098,
-      "UNIX": 1585778493539
-    },
-    {
-      "temperature": 21.85,
-      "pressure": 98787.78,
-      "altitude": 277.3382,
-      "UNIX": 1585778498575
-    },
-    {
-      "temperature": 21.86,
-      "pressure": 98788.23,
-      "altitude": 277.3,
-      "UNIX": 1585778503964
-    },
-    {
-      "temperature": 21.86,
-      "pressure": 98787.73,
-      "altitude": 277.3423,
-      "UNIX": 1585778508995
-    },
-    {
-      "temperature": 21.86,
-      "pressure": 98787.9,
-      "altitude": 277.3279,
-      "UNIX": 1585778514448
-    },
-    {
-      "temperature": 21.86,
-      "pressure": 98787.08,
-      "altitude": 277.3976,
-      "UNIX": 1585778519435
-    },
-    {
-      "temperature": 21.86,
-      "pressure": 98787.33,
-      "altitude": 277.3764,
-      "UNIX": 1585778524463
-    },
-    {
-      "temperature": 21.86,
-      "pressure": 98787.16,
-      "altitude": 277.3909,
-      "UNIX": 1585778529679
-    },
-    {
-      "temperature": 21.86,
-      "pressure": 98787.48,
-      "altitude": 277.3635,
-      "UNIX": 1585778535087
-    },
-    {
-      "temperature": 21.86,
-      "pressure": 98787.66,
-      "altitude": 277.3485,
-      "UNIX": 1585778540029
-    },
-    {
-      "temperature": 21.86,
-      "pressure": 98787.33,
-      "altitude": 277.3764,
-      "UNIX": 1585778545527
-    },
-    {
-      "temperature": 21.86,
-      "pressure": 98787.33,
-      "altitude": 277.3764,
-      "UNIX": 1585778550461
-    },
-    {
-      "temperature": 21.86,
-      "pressure": 98787.72,
-      "altitude": 277.3434,
-      "UNIX": 1585778555495
-    },
-    {
-      "temperature": 21.87,
-      "pressure": 98788.28,
-      "altitude": 277.2953,
-      "UNIX": 1585778560991
-    },
-    {
-      "temperature": 21.87,
-      "pressure": 98788.41,
-      "altitude": 277.285,
-      "UNIX": 1585778566418
-    },
-    {
-      "temperature": 21.87,
-      "pressure": 98788.28,
-      "altitude": 277.2953,
-      "UNIX": 1585778571845
-    },
-    {
-      "temperature": 21.86,
-      "pressure": 98788.38,
-      "altitude": 277.2876,
-      "UNIX": 1585778577273
-    },
-    {
-      "temperature": 21.86,
-      "pressure": 98788.75,
-      "altitude": 277.2556,
-      "UNIX": 1585778582604
-    },
-    {
-      "temperature": 21.86,
-      "pressure": 98787.98,
-      "altitude": 277.3207,
-      "UNIX": 1585778587640
-    },
-    {
-      "temperature": 21.86,
-      "pressure": 98787.58,
-      "altitude": 277.3553,
-      "UNIX": 1585778592673
-    },
-    {
-      "temperature": 21.86,
-      "pressure": 98787.9,
-      "altitude": 277.3279,
-      "UNIX": 1585778598161
-    },
-    {
-      "temperature": 21.86,
-      "pressure": 98788.14,
-      "altitude": 277.3073,
-      "UNIX": 1585778603096
-    },
-    {
-      "temperature": 21.86,
-      "pressure": 98787.25,
-      "altitude": 277.3831,
-      "UNIX": 1585778608606
-    },
-    {
-      "temperature": 21.86,
-      "pressure": 98788.14,
-      "altitude": 277.3073,
-      "UNIX": 1585778613737
-    },
-    {
-      "temperature": 21.86,
-      "pressure": 98787.81,
-      "altitude": 277.3356,
-      "UNIX": 1585778618766
-    },
-    {
-      "temperature": 21.86,
-      "pressure": 98787.33,
-      "altitude": 277.3764,
-      "UNIX": 1585778624274
-    },
-    {
-      "temperature": 21.86,
-      "pressure": 98787.61,
-      "altitude": 277.3527,
-      "UNIX": 1585778629500
-    },
-    {
-      "temperature": 21.86,
-      "pressure": 98787.11,
-      "altitude": 277.395,
-      "UNIX": 1585778635026
-    },
-    {
-      "temperature": 21.86,
-      "pressure": 98786.9,
-      "altitude": 277.4131,
-      "UNIX": 1585778639962
-    },
-    {
-      "temperature": 21.86,
-      "pressure": 98786.73,
-      "altitude": 277.4265,
-      "UNIX": 1585778645471
-    },
-    {
-      "temperature": 21.86,
-      "pressure": 98786.58,
-      "altitude": 277.44,
-      "UNIX": 1585778650405
-    },
-    {
-      "temperature": 21.87,
-      "pressure": 98787.63,
-      "altitude": 277.3367,
-      "UNIX": 1585778655916
-    },
-    {
-      "temperature": 21.87,
-      "pressure": 98788.23,
-      "altitude": 277.2995,
-      "UNIX": 1585778661048
-    },
-    {
-      "temperature": 21.87,
-      "pressure": 98787.14,
-      "altitude": 277.3925,
-      "UNIX": 1585778666075
-    },
-    {
-      "temperature": 21.87,
-      "pressure": 98787.3,
-      "altitude": 277.3785,
-      "UNIX": 1585778671584
-    },
-    {
-      "temperature": 21.87,
-      "pressure": 98787.14,
-      "altitude": 277.3925,
-      "UNIX": 1585778677012
-    },
-    {
-      "temperature": 21.87,
-      "pressure": 98786.16,
-      "altitude": 277.4751,
-      "UNIX": 1585778682438
-    },
-    {
-      "temperature": 21.87,
-      "pressure": 98786.12,
-      "altitude": 277.4792,
-      "UNIX": 1585778687766
-    },
-    {
-      "temperature": 21.87,
-      "pressure": 98785.41,
-      "altitude": 277.5391,
-      "UNIX": 1585778692811
-    },
-    {
-      "temperature": 21.87,
-      "pressure": 98785.09,
-      "altitude": 277.566,
-      "UNIX": 1585778697842
-    },
+      "Temperature[°C]": 20.6,
+      "Humidity[%]": 39.2,
+      "UNIX": 1585883910068
+    }
+  ],
+  "Light Sensor": [
     {
-      "temperature": 21.87,
-      "pressure": 98784.68,
-      "altitude": 277.6011,
-      "UNIX": 1585778702876
+      "Brightness[%]": 0,
+      "UNIX": 1585878426748
     },
     {
-      "temperature": 21.87,
-      "pressure": 98784.19,
-      "altitude": 277.6429,
-      "UNIX": 1585778707948
+      "Brightness[%]": 0,
+      "UNIX": 1585878431916
     },
     {
-      "temperature": 21.87,
-      "pressure": 98783.78,
-      "altitude": 277.677,
-      "UNIX": 1585778712980
+      "Brightness[%]": 0,
+      "UNIX": 1585878437437
     },
     {
-      "temperature": 21.87,
-      "pressure": 98783.78,
-      "altitude": 277.677,
-      "UNIX": 1585778718483
+      "Brightness[%]": 0,
+      "UNIX": 1585878442863
     },
     {
-      "temperature": 21.87,
-      "pressure": 98783.18,
-      "altitude": 277.7287,
-      "UNIX": 1585778723613
+      "Brightness[%]": 0,
+      "UNIX": 1585878447996
     },
     {
-      "temperature": 21.87,
-      "pressure": 98783.18,
-      "altitude": 277.7287,
-      "UNIX": 1585778728646
+      "Brightness[%]": 0,
+      "UNIX": 1585878453028
     },
     {
-      "temperature": 21.87,
-      "pressure": 98782.97,
-      "altitude": 277.7462,
-      "UNIX": 1585778734150
+      "Brightness[%]": 0,
+      "UNIX": 1585878458531
     },
     {
-      "temperature": 21.87,
-      "pressure": 98782.64,
-      "altitude": 277.7741,
-      "UNIX": 1585778739478
+      "Brightness[%]": 0,
+      "UNIX": 1585878463563
     },
     {
-      "temperature": 21.87,
-      "pressure": 98782.39,
-      "altitude": 277.7953,
-      "UNIX": 1585778744512
+      "Brightness[%]": 0,
+      "UNIX": 1585878469082
     },
     {
-      "temperature": 21.87,
-      "pressure": 98782.48,
-      "altitude": 277.7881,
-      "UNIX": 1585778750022
+      "Brightness[%]": 0,
+      "UNIX": 1585878474711
     },
     {
-      "temperature": 21.87,
-      "pressure": 98781.98,
-      "altitude": 277.8299,
-      "UNIX": 1585778755151
+      "Brightness[%]": 0,
+      "UNIX": 1585878479739
     },
     {
-      "temperature": 21.87,
-      "pressure": 98781.22,
-      "altitude": 277.895,
-      "UNIX": 1585778760182
+      "Brightness[%]": 0,
+      "UNIX": 1585878485553
     },
     {
-      "temperature": 21.87,
-      "pressure": 98781.44,
-      "altitude": 277.8764,
-      "UNIX": 1585778765590
+      "Brightness[%]": 0,
+      "UNIX": 1585878490389
     },
     {
-      "temperature": 21.86,
-      "pressure": 98781.19,
-      "altitude": 277.8975,
-      "UNIX": 1585778770821
+      "Brightness[%]": 0,
+      "UNIX": 1585878495517
     },
     {
-      "temperature": 21.86,
-      "pressure": 98780.86,
-      "altitude": 277.9254,
-      "UNIX": 1585778776052
+      "Brightness[%]": 0,
+      "UNIX": 1585878500546
     },
     {
-      "temperature": 21.86,
-      "pressure": 98780.2,
-      "altitude": 277.9812,
-      "UNIX": 1585778781464
+      "Brightness[%]": 0,
+      "UNIX": 1585878506148
     },
     {
-      "temperature": 21.86,
-      "pressure": 98780.2,
-      "altitude": 277.9812,
-      "UNIX": 1585778786994
+      "Brightness[%]": 0,
+      "UNIX": 1585878511472
     },
     {
-      "temperature": 21.86,
-      "pressure": 98780.53,
-      "altitude": 277.9533,
-      "UNIX": 1585778792358
+      "Brightness[%]": 0,
+      "UNIX": 1585878516800
     },
     {
-      "temperature": 21.86,
-      "pressure": 98781.03,
-      "altitude": 277.9109,
-      "UNIX": 1585778797844
+      "Brightness[%]": 0,
+      "UNIX": 1585878521835
     },
     {
-      "temperature": 21.87,
-      "pressure": 98781.92,
-      "altitude": 277.8351,
-      "UNIX": 1585778802976
+      "Brightness[%]": 0,
+      "UNIX": 1585878526867
     },
     {
-      "temperature": 21.86,
-      "pressure": 98781.41,
-      "altitude": 277.8789,
-      "UNIX": 1585778808007
+      "Brightness[%]": 0,
+      "UNIX": 1585878531899
     },
     {
-      "temperature": 21.86,
-      "pressure": 98780.88,
-      "altitude": 277.9239,
-      "UNIX": 1585778813035
+      "Brightness[%]": 0,
+      "UNIX": 1585878537390
     },
     {
-      "temperature": 21.85,
-      "pressure": 98780.92,
-      "altitude": 277.9203,
-      "UNIX": 1585778818064
+      "Brightness[%]": 0,
+      "UNIX": 1585878542316
     },
     {
-      "temperature": 21.85,
-      "pressure": 98780.92,
-      "altitude": 277.9203,
-      "UNIX": 1585778823095
+      "Brightness[%]": 0,
+      "UNIX": 1585878547824
     },
     {
-      "temperature": 21.85,
-      "pressure": 98781.01,
-      "altitude": 277.913,
-      "UNIX": 1585778828166
+      "Brightness[%]": 0,
+      "UNIX": 1585878552762
     },
     {
-      "temperature": 21.85,
-      "pressure": 98782.15,
-      "altitude": 277.8159,
-      "UNIX": 1585778833195
+      "Brightness[%]": 0,
+      "UNIX": 1585878558269
     },
     {
-      "temperature": 21.85,
-      "pressure": 98781.91,
-      "altitude": 277.8361,
-      "UNIX": 1585778838227
+      "Brightness[%]": 0,
+      "UNIX": 1585878563597
     },
     {
-      "temperature": 21.86,
-      "pressure": 98781.7,
-      "altitude": 277.8542,
-      "UNIX": 1585778843721
+      "Brightness[%]": -1,
+      "UNIX": 1585879072033
     },
     {
-      "temperature": 21.86,
-      "pressure": 98781.45,
-      "altitude": 277.8753,
-      "UNIX": 1585778849047
+      "Brightness[%]": -1,
+      "UNIX": 1585879102052
     },
     {
-      "temperature": 21.86,
-      "pressure": 98781.45,
-      "altitude": 277.8753,
-      "UNIX": 1585778854080
+      "Brightness[%]": -1,
+      "UNIX": 1585879132535
     },
     {
-      "temperature": 21.86,
-      "pressure": 98781.89,
-      "altitude": 277.8376,
-      "UNIX": 1585778859493
+      "Brightness[%]": -1,
+      "UNIX": 1585879162849
     },
     {
-      "temperature": 21.86,
-      "pressure": 98781.94,
-      "altitude": 277.8335,
-      "UNIX": 1585778865018
+      "Brightness[%]": -1,
+      "UNIX": 1585879192897
     },
     {
-      "temperature": 21.86,
-      "pressure": 98782.19,
-      "altitude": 277.8123,
-      "UNIX": 1585778869953
+      "Brightness[%]": -1,
+      "UNIX": 1585879222934
     },
     {
-      "temperature": 21.85,
-      "pressure": 98781.91,
-      "altitude": 277.8361,
-      "UNIX": 1585778875465
+      "Brightness[%]": -1,
+      "UNIX": 1585879252979
     },
     {
-      "temperature": 21.85,
-      "pressure": 98781.91,
-      "altitude": 277.8361,
-      "UNIX": 1585778880892
+      "Brightness[%]": -1,
+      "UNIX": 1585879283011
     },
     {
-      "temperature": 21.85,
-      "pressure": 98782.15,
-      "altitude": 277.8159,
-      "UNIX": 1585778886322
+      "Brightness[%]": -1,
+      "UNIX": 1585879313062
     },
     {
-      "temperature": 21.85,
-      "pressure": 98782.31,
-      "altitude": 277.802,
-      "UNIX": 1585778891745
+      "Brightness[%]": -1,
+      "UNIX": 1585879343634
     },
     {
-      "temperature": 21.85,
-      "pressure": 98782.48,
-      "altitude": 277.7881,
-      "UNIX": 1585778896679
+      "Brightness[%]": -1,
+      "UNIX": 1585879374001
     },
     {
-      "temperature": 21.85,
-      "pressure": 98782.39,
-      "altitude": 277.7953,
-      "UNIX": 1585778901708
+      "Brightness[%]": -1,
+      "UNIX": 1585879404409
     },
     {
-      "temperature": 21.85,
-      "pressure": 98782.07,
-      "altitude": 277.8227,
-      "UNIX": 1585778907209
+      "Brightness[%]": -1,
+      "UNIX": 1585879434822
     },
     {
-      "temperature": 21.86,
-      "pressure": 98782.84,
-      "altitude": 277.7576,
-      "UNIX": 1585778912635
+      "Brightness[%]": -1,
+      "UNIX": 1585879465237
     },
     {
-      "temperature": 21.85,
-      "pressure": 98782.39,
-      "altitude": 277.7953,
-      "UNIX": 1585778917598
+      "Brightness[%]": -1,
+      "UNIX": 1585879495650
     },
     {
-      "temperature": 21.85,
-      "pressure": 98782.56,
-      "altitude": 277.7808,
-      "UNIX": 1585778923096
+      "Brightness[%]": -1,
+      "UNIX": 1585879525869
     },
     {
-      "temperature": 21.85,
-      "pressure": 98782.8,
-      "altitude": 277.7602,
-      "UNIX": 1585778928212
+      "Brightness[%]": -1,
+      "UNIX": 1585879556373
     },
     {
-      "temperature": 21.85,
-      "pressure": 98783.45,
-      "altitude": 277.7054,
-      "UNIX": 1585778933277
+      "Brightness[%]": -1,
+      "UNIX": 1585879586490
     },
     {
-      "temperature": 21.85,
-      "pressure": 98783.67,
-      "altitude": 277.6868,
-      "UNIX": 1585778938334
+      "Brightness[%]": -1,
+      "UNIX": 1585879616522
     },
     {
-      "temperature": 21.85,
-      "pressure": 98783.88,
-      "altitude": 277.6687,
-      "UNIX": 1585778943368
+      "Brightness[%]": -1,
+      "UNIX": 1585879646998
     },
     {
-      "temperature": 21.85,
-      "pressure": 98784.7,
-      "altitude": 277.599,
-      "UNIX": 1585778948398
+      "Brightness[%]": -1,
+      "UNIX": 1585879677411
     },
     {
-      "temperature": 21.85,
-      "pressure": 98784.21,
-      "altitude": 277.6409,
-      "UNIX": 1585778953453
+      "Brightness[%]": -1,
+      "UNIX": 1585879707825
     },
     {
-      "temperature": 21.85,
-      "pressure": 98783.83,
-      "altitude": 277.6734,
-      "UNIX": 1585778958524
+      "Brightness[%]": -1,
+      "UNIX": 1585879738239
     },
     {
-      "temperature": 21.85,
-      "pressure": 98783.5,
-      "altitude": 277.7013,
-      "UNIX": 1585778963577
+      "Brightness[%]": -1,
+      "UNIX": 1585879768553
     },
     {
-      "temperature": 21.85,
-      "pressure": 98783.02,
-      "altitude": 277.7426,
-      "UNIX": 1585778969059
+      "Brightness[%]": -1,
+      "UNIX": 1585879798665
     },
     {
-      "temperature": 21.85,
-      "pressure": 98783.5,
-      "altitude": 277.7013,
-      "UNIX": 1585778974487
+      "Brightness[%]": -1,
+      "UNIX": 1585879828698
     },
     {
-      "temperature": 21.85,
-      "pressure": 98782.73,
-      "altitude": 277.7664,
-      "UNIX": 1585778979913
+      "Brightness[%]": -1,
+      "UNIX": 1585879858741
     },
     {
-      "temperature": 21.85,
-      "pressure": 98782.85,
-      "altitude": 277.7565,
-      "UNIX": 1585778985347
+      "Brightness[%]": -1,
+      "UNIX": 1585879888779
     },
     {
-      "temperature": 21.85,
-      "pressure": 98783.02,
-      "altitude": 277.7426,
-      "UNIX": 1585778990769
+      "Brightness[%]": -1,
+      "UNIX": 1585879918811
     },
     {
-      "temperature": 21.85,
-      "pressure": 98783.5,
-      "altitude": 277.7013,
-      "UNIX": 1585778995705
+      "Brightness[%]": -1,
+      "UNIX": 1585879948843
     },
     {
-      "temperature": 21.85,
-      "pressure": 98783.34,
-      "altitude": 277.7147,
-      "UNIX": 1585779001213
+      "Brightness[%]": -1,
+      "UNIX": 1585879978891
     },
     {
-      "temperature": 21.85,
-      "pressure": 98784,
-      "altitude": 277.6584,
-      "UNIX": 1585779006641
+      "Brightness[%]": -1,
+      "UNIX": 1585880008926
     },
     {
-      "temperature": 21.85,
-      "pressure": 98784.44,
-      "altitude": 277.6217,
-      "UNIX": 1585779011569
+      "Brightness[%]": -1,
+      "UNIX": 1585880039004
     },
     {
-      "temperature": 21.85,
-      "pressure": 98784.84,
-      "altitude": 277.5872,
-      "UNIX": 1585779017086
+      "Brightness[%]": -1,
+      "UNIX": 1585880069404
     },
     {
-      "temperature": 21.86,
-      "pressure": 98786.1,
-      "altitude": 277.4803,
-      "UNIX": 1585779022029
+      "Brightness[%]": -1,
+      "UNIX": 1585880099439
     },
     {
-      "temperature": 21.86,
-      "pressure": 98786.51,
-      "altitude": 277.4462,
-      "UNIX": 1585779027058
+      "Brightness[%]": -1,
+      "UNIX": 1585880129472
     },
     {
-      "temperature": 21.86,
-      "pressure": 98787.61,
-      "altitude": 277.3527,
-      "UNIX": 1585779032547
+      "Brightness[%]": -1,
+      "UNIX": 1585880159519
     },
     {
-      "temperature": 21.86,
-      "pressure": 98787.92,
-      "altitude": 277.3258,
-      "UNIX": 1585779037488
+      "Brightness[%]": -1,
+      "UNIX": 1585880189557
     },
     {
-      "temperature": 21.86,
-      "pressure": 98787.92,
-      "altitude": 277.3258,
-      "UNIX": 1585779042519
+      "Brightness[%]": -1,
+      "UNIX": 1585880219599
     },
     {
-      "temperature": 21.86,
-      "pressure": 98788.09,
-      "altitude": 277.3114,
-      "UNIX": 1585779047552
+      "Brightness[%]": -1,
+      "UNIX": 1585880249642
     },
     {
-      "temperature": 21.87,
-      "pressure": 98789.11,
-      "altitude": 277.2251,
-      "UNIX": 1585779052928
+      "Brightness[%]": -1,
+      "UNIX": 1585880279692
     },
     {
-      "temperature": 21.87,
-      "pressure": 98788.78,
-      "altitude": 277.253,
-      "UNIX": 1585779057962
+      "Brightness[%]": -1,
+      "UNIX": 1585880309728
     },
     {
-      "temperature": 21.87,
-      "pressure": 98789.05,
-      "altitude": 277.2437,
-      "UNIX": 1585779063374
+      "Brightness[%]": -1,
+      "UNIX": 1585880339772
     },
     {
-      "temperature": 21.87,
-      "pressure": 98788.56,
-      "altitude": 277.2716,
-      "UNIX": 1585779068492
+      "Brightness[%]": -1,
+      "UNIX": 1585880369959
     },
     {
-      "temperature": 21.87,
-      "pressure": 98788.08,
-      "altitude": 277.3124,
-      "UNIX": 1585779073536
+      "Brightness[%]": -1,
+      "UNIX": 1585880399990
     },
     {
-      "temperature": 21.87,
-      "pressure": 98787.42,
-      "altitude": 277.3687,
-      "UNIX": 1585779078561
+      "Brightness[%]": -1,
+      "UNIX": 1585880430021
     },
     {
-      "temperature": 21.87,
-      "pressure": 98787.53,
-      "altitude": 277.3594,
-      "UNIX": 1585779084056
+      "Brightness[%]": -1,
+      "UNIX": 1585880460054
     },
     {
-      "temperature": 21.87,
-      "pressure": 98787.21,
-      "altitude": 277.3863,
-      "UNIX": 1585779088990
+      "Brightness[%]": -1,
+      "UNIX": 1585880490082
     },
     {
-      "temperature": 21.87,
-      "pressure": 98786.72,
-      "altitude": 277.4281,
-      "UNIX": 1585779094500
+      "Brightness[%]": -1,
+      "UNIX": 1585880520113
     },
     {
-      "temperature": 21.87,
-      "pressure": 98786.39,
-      "altitude": 277.456,
-      "UNIX": 1585779099529
+      "Brightness[%]": -1,
+      "UNIX": 1585880550144
     },
     {
-      "temperature": 21.87,
-      "pressure": 98786.23,
-      "altitude": 277.4689,
-      "UNIX": 1585779104763
+      "Brightness[%]": -1,
+      "UNIX": 1585880580191
     },
     {
-      "temperature": 21.87,
-      "pressure": 98785.79,
-      "altitude": 277.5066,
-      "UNIX": 1585779109973
+      "Brightness[%]": -1,
+      "UNIX": 1585880610222
     },
     {
-      "temperature": 21.87,
-      "pressure": 98784.86,
-      "altitude": 277.5861,
-      "UNIX": 1585779115493
+      "Brightness[%]": -1,
+      "UNIX": 1585880640277
     },
     {
-      "temperature": 21.86,
-      "pressure": 98783.64,
-      "altitude": 277.6894,
-      "UNIX": 1585779120884
+      "Brightness[%]": -1,
+      "UNIX": 1585880670314
     },
     {
-      "temperature": 21.86,
-      "pressure": 98783.31,
-      "altitude": 277.7173,
-      "UNIX": 1585779126049
+      "Brightness[%]": -1,
+      "UNIX": 1585880700718
     },
     {
-      "temperature": 21.86,
-      "pressure": 98782.98,
-      "altitude": 277.7452,
-      "UNIX": 1585779131569
+      "Brightness[%]": -1,
+      "UNIX": 1585880730821
     },
     {
-      "temperature": 21.86,
-      "pressure": 98782.98,
-      "altitude": 277.7452,
-      "UNIX": 1585779136496
+      "Brightness[%]": -1,
+      "UNIX": 1585880760853
     },
     {
-      "temperature": 21.86,
-      "pressure": 98782.82,
-      "altitude": 277.7591,
-      "UNIX": 1585779141914
+      "Brightness[%]": -1,
+      "UNIX": 1585880790884
     },
     {
-      "temperature": 21.86,
-      "pressure": 98782.33,
-      "altitude": 277.8004,
-      "UNIX": 1585779147446
+      "Brightness[%]": -1,
+      "UNIX": 1585880820916
     },
     {
-      "temperature": 21.87,
-      "pressure": 98781.76,
-      "altitude": 277.849,
-      "UNIX": 1585779152572
+      "Brightness[%]": -1,
+      "UNIX": 1585880850958
     },
     {
-      "temperature": 21.87,
-      "pressure": 98781.83,
-      "altitude": 277.8428,
-      "UNIX": 1585779158091
+      "Brightness[%]": -1,
+      "UNIX": 1585880881006
     },
     {
-      "temperature": 21.87,
-      "pressure": 98781.25,
-      "altitude": 277.8924,
-      "UNIX": 1585779163421
+      "Brightness[%]": -1,
+      "UNIX": 1585880911050
     },
     {
-      "temperature": 21.87,
-      "pressure": 98779.95,
-      "altitude": 278.0029,
-      "UNIX": 1585779168650
+      "Brightness[%]": -1,
+      "UNIX": 1585880941453
     },
     {
-      "temperature": 21.88,
-      "pressure": 98780.06,
-      "altitude": 277.9931,
-      "UNIX": 1585779173678
+      "Brightness[%]": -1,
+      "UNIX": 1585880971514
     },
     {
-      "temperature": 21.88,
-      "pressure": 98780.14,
-      "altitude": 277.9864,
-      "UNIX": 1585779178708
+      "Brightness[%]": -1,
+      "UNIX": 1585881001574
     },
     {
-      "temperature": 21.88,
-      "pressure": 98779.77,
-      "altitude": 278.0179,
-      "UNIX": 1585779183915
+      "Brightness[%]": -1,
+      "UNIX": 1585881031776
     },
     {
-      "temperature": 21.88,
-      "pressure": 98778.95,
-      "altitude": 278.0871,
-      "UNIX": 1585779189436
+      "Brightness[%]": -1,
+      "UNIX": 1585881061811
     },
     {
-      "temperature": 21.88,
-      "pressure": 98778.63,
-      "altitude": 278.115,
-      "UNIX": 1585779194853
+      "Brightness[%]": -1,
+      "UNIX": 1585881091844
     },
     {
-      "temperature": 21.88,
-      "pressure": 98778.63,
-      "altitude": 278.115,
-      "UNIX": 1585779200281
+      "Brightness[%]": -1,
+      "UNIX": 1585881121892
     },
     {
-      "temperature": 21.88,
-      "pressure": 98778.63,
-      "altitude": 278.115,
-      "UNIX": 1585779205215
+      "Brightness[%]": -1,
+      "UNIX": 1585881151925
     },
     {
-      "temperature": 21.88,
-      "pressure": 98778.51,
-      "altitude": 278.1248,
-      "UNIX": 1585779210725
+      "Brightness[%]": -1,
+      "UNIX": 1585881181982
     },
     {
-      "temperature": 21.88,
-      "pressure": 98778.59,
-      "altitude": 278.1176,
-      "UNIX": 1585779215659
+      "Brightness[%]": -1,
+      "UNIX": 1585881212022
     },
     {
-      "temperature": 21.87,
-      "pressure": 98778.8,
-      "altitude": 278.1005,
-      "UNIX": 1585779220691
+      "Brightness[%]": -1,
+      "UNIX": 1585881242056
     },
     {
-      "temperature": 21.87,
-      "pressure": 98778.07,
-      "altitude": 278.162,
-      "UNIX": 1585779226089
+      "Brightness[%]": -1,
+      "UNIX": 1585881272115
     },
     {
-      "temperature": 21.87,
-      "pressure": 98776.81,
-      "altitude": 278.2689,
-      "UNIX": 1585779231122
+      "Brightness[%]": -1,
+      "UNIX": 1585881302417
     },
     {
-      "temperature": 21.87,
-      "pressure": 98776.32,
-      "altitude": 278.3107,
-      "UNIX": 1585779236152
+      "Brightness[%]": -1,
+      "UNIX": 1585881332448
     },
     {
-      "temperature": 21.87,
-      "pressure": 98776.44,
-      "altitude": 278.3004,
-      "UNIX": 1585779241650
+      "Brightness[%]": -1,
+      "UNIX": 1585881362490
     },
     {
-      "temperature": 21.87,
-      "pressure": 98776.59,
-      "altitude": 278.2875,
-      "UNIX": 1585779246585
+      "Brightness[%]": -1,
+      "UNIX": 1585881392538
     },
     {
-      "temperature": 21.87,
-      "pressure": 98776.11,
-      "altitude": 278.3283,
-      "UNIX": 1585779251996
+      "Brightness[%]": -1,
+      "UNIX": 1585881422581
     },
     {
-      "temperature": 21.87,
-      "pressure": 98776.19,
-      "altitude": 278.3216,
-      "UNIX": 1585779257423
+      "Brightness[%]": -1,
+      "UNIX": 1585881452622
     },
     {
-      "temperature": 21.88,
-      "pressure": 98776.14,
-      "altitude": 278.3257,
-      "UNIX": 1585779262851
+      "Brightness[%]": -1,
+      "UNIX": 1585881482666
     },
     {
-      "temperature": 21.88,
-      "pressure": 98775.98,
-      "altitude": 278.3396,
-      "UNIX": 1585779268377
+      "Brightness[%]": -1,
+      "UNIX": 1585881512721
     },
     {
-      "temperature": 21.87,
-      "pressure": 98775.54,
-      "altitude": 278.3768,
-      "UNIX": 1585779273717
+      "Brightness[%]": -1,
+      "UNIX": 1585881542762
     },
     {
-      "temperature": 21.87,
-      "pressure": 98776.52,
-      "altitude": 278.2942,
-      "UNIX": 1585779278740
+      "Brightness[%]": -1,
+      "UNIX": 1585881572817
     },
     {
-      "temperature": 21.87,
-      "pressure": 98776.52,
-      "altitude": 278.2942,
-      "UNIX": 1585779283767
+      "Brightness[%]": -1,
+      "UNIX": 1585881602866
     },
     {
-      "temperature": 21.87,
-      "pressure": 98776.35,
-      "altitude": 278.3081,
-      "UNIX": 1585779288798
+      "Brightness[%]": -1,
+      "UNIX": 1585881633125
     },
     {
-      "temperature": 21.87,
-      "pressure": 98776.11,
-      "altitude": 278.3283,
-      "UNIX": 1585779293829
+      "Brightness[%]": -1,
+      "UNIX": 1585881663157
     },
     {
-      "temperature": 21.87,
-      "pressure": 98777.09,
-      "altitude": 278.2451,
-      "UNIX": 1585779298869
+      "Brightness[%]": -1,
+      "UNIX": 1585881693190
     },
     {
-      "temperature": 21.87,
-      "pressure": 98776.65,
-      "altitude": 278.2828,
-      "UNIX": 1585779303898
+      "Brightness[%]": -1,
+      "UNIX": 1585881723223
     },
     {
-      "temperature": 21.87,
-      "pressure": 98777.14,
-      "altitude": 278.241,
-      "UNIX": 1585779308930
+      "Brightness[%]": -1,
+      "UNIX": 1585881753252
     },
     {
-      "temperature": 21.87,
-      "pressure": 98777.14,
-      "altitude": 278.241,
-      "UNIX": 1585779313960
+      "Brightness[%]": -1,
+      "UNIX": 1585881783295
     },
     {
-      "temperature": 21.87,
-      "pressure": 98776.77,
-      "altitude": 278.273,
-      "UNIX": 1585779319478
+      "Brightness[%]": -1,
+      "UNIX": 1585881813334
     },
     {
-      "temperature": 21.87,
-      "pressure": 98777.33,
-      "altitude": 278.2255,
-      "UNIX": 1585779324410
+      "Brightness[%]": -1,
+      "UNIX": 1585881843412
     },
     {
-      "temperature": 21.88,
-      "pressure": 98778.09,
-      "altitude": 278.1599,
-      "UNIX": 1585779329920
+      "Brightness[%]": -1,
+      "UNIX": 1585881873442
     },
     {
-      "temperature": 21.88,
-      "pressure": 98778.18,
-      "altitude": 278.1527,
-      "UNIX": 1585779335349
+      "Brightness[%]": -1,
+      "UNIX": 1585881903475
     },
     {
-      "temperature": 21.88,
-      "pressure": 98778.51,
-      "altitude": 278.1248,
-      "UNIX": 1585779340774
+      "Brightness[%]": -1,
+      "UNIX": 1585881933524
     },
     {
-      "temperature": 21.88,
-      "pressure": 98778.18,
-      "altitude": 278.1527,
-      "UNIX": 1585779346102
+      "Brightness[%]": -1,
+      "UNIX": 1585881963731
     },
     {
-      "temperature": 21.88,
-      "pressure": 98778.92,
-      "altitude": 278.0897,
-      "UNIX": 1585779351629
+      "Brightness[%]": -1,
+      "UNIX": 1585882048012
     },
     {
-      "temperature": 21.88,
-      "pressure": 98779.24,
-      "altitude": 278.0628,
-      "UNIX": 1585779357057
+      "Brightness[%]": -1,
+      "UNIX": 1585882078042
     },
     {
-      "temperature": 21.87,
-      "pressure": 98779.45,
-      "altitude": 278.0447,
-      "UNIX": 1585779362483
+      "Brightness[%]": -1,
+      "UNIX": 1585882108094
     },
     {
-      "temperature": 21.87,
-      "pressure": 98780.03,
-      "altitude": 277.9957,
-      "UNIX": 1585779367910
+      "Brightness[%]": -1,
+      "UNIX": 1585882138126
     },
     {
-      "temperature": 21.87,
-      "pressure": 98780.68,
-      "altitude": 277.9404,
-      "UNIX": 1585779372844
+      "Brightness[%]": -1,
+      "UNIX": 1585882168160
     },
     {
-      "temperature": 21.87,
-      "pressure": 98781.25,
-      "altitude": 277.8924,
-      "UNIX": 1585779378257
+      "Brightness[%]": -1,
+      "UNIX": 1585882198189
     },
     {
-      "temperature": 21.87,
-      "pressure": 98781.58,
-      "altitude": 277.8645,
-      "UNIX": 1585779383783
+      "Brightness[%]": -1,
+      "UNIX": 1585882228223
     },
     {
-      "temperature": 21.87,
-      "pressure": 98781.83,
-      "altitude": 277.8428,
-      "UNIX": 1585779389111
+      "Brightness[%]": -1,
+      "UNIX": 1585882258256
     },
     {
-      "temperature": 21.87,
-      "pressure": 98781.98,
-      "altitude": 277.8299,
-      "UNIX": 1585779394144
+      "Brightness[%]": -1,
+      "UNIX": 1585882288282
     },
     {
-      "temperature": 21.87,
-      "pressure": 98782.31,
-      "altitude": 277.802,
-      "UNIX": 1585779399173
+      "Brightness[%]": -1,
+      "UNIX": 1585882318331
     },
     {
-      "temperature": 21.87,
-      "pressure": 98782.39,
-      "altitude": 277.7953,
-      "UNIX": 1585779404228
+      "Brightness[%]": -1,
+      "UNIX": 1585882348363
     },
     {
-      "temperature": 21.88,
-      "pressure": 98782.67,
-      "altitude": 277.7715,
-      "UNIX": 1585779409258
+      "Brightness[%]": -1,
+      "UNIX": 1585882378397
     },
     {
-      "temperature": 21.88,
-      "pressure": 98783,
-      "altitude": 277.7436,
-      "UNIX": 1585779414310
+      "Brightness[%]": -1,
+      "UNIX": 1585882408427
     },
     {
-      "temperature": 21.88,
-      "pressure": 98784.17,
-      "altitude": 277.644,
-      "UNIX": 1585779419380
+      "Brightness[%]": -1,
+      "UNIX": 1585882438468
     },
     {
-      "temperature": 21.88,
-      "pressure": 98784.61,
-      "altitude": 277.6073,
-      "UNIX": 1585779424568
+      "Brightness[%]": -1,
+      "UNIX": 1585882468499
     },
     {
-      "temperature": 21.88,
-      "pressure": 98784.45,
-      "altitude": 277.6202,
-      "UNIX": 1585779429623
+      "Brightness[%]": -1,
+      "UNIX": 1585882498529
     },
     {
-      "temperature": 21.89,
-      "pressure": 98785.02,
-      "altitude": 277.5727,
-      "UNIX": 1585779434651
+      "Brightness[%]": -1,
+      "UNIX": 1585882528562
     },
     {
-      "temperature": 21.88,
-      "pressure": 98785.1,
-      "altitude": 277.5655,
-      "UNIX": 1585779439707
+      "Brightness[%]": -1,
+      "UNIX": 1585882558593
     },
     {
-      "temperature": 21.88,
-      "pressure": 98785.48,
-      "altitude": 277.5329,
-      "UNIX": 1585779445224
+      "Brightness[%]": -1,
+      "UNIX": 1585882588632
     },
     {
-      "temperature": 21.88,
-      "pressure": 98785.75,
-      "altitude": 277.5107,
-      "UNIX": 1585779450159
+      "Brightness[%]": -1,
+      "UNIX": 1585882618665
     },
     {
-      "temperature": 21.89,
-      "pressure": 98785.82,
-      "altitude": 277.504,
-      "UNIX": 1585779455669
+      "Brightness[%]": -1,
+      "UNIX": 1585882648697
     },
     {
-      "temperature": 21.9,
-      "pressure": 98786.09,
-      "altitude": 277.4808,
-      "UNIX": 1585779461096
+      "Brightness[%]": -1,
+      "UNIX": 1585882678727
     },
     {
-      "temperature": 21.88,
-      "pressure": 98785.97,
-      "altitude": 277.4916,
-      "UNIX": 1585779466226
+      "Brightness[%]": -1,
+      "UNIX": 1585882708758
     },
     {
-      "temperature": 21.87,
-      "pressure": 98786.49,
-      "altitude": 277.4472,
-      "UNIX": 1585779471746
+      "Brightness[%]": -1,
+      "UNIX": 1585882738790
     },
     {
-      "temperature": 21.85,
-      "pressure": 98785.95,
-      "altitude": 277.4926,
-      "UNIX": 1585779477173
+      "Brightness[%]": -1,
+      "UNIX": 1585882768819
     },
     {
-      "temperature": 21.84,
-      "pressure": 98785.01,
-      "altitude": 277.5732,
-      "UNIX": 1585779482570
+      "Brightness[%]": -1,
+      "UNIX": 1585882798857
     },
     {
-      "temperature": 21.82,
-      "pressure": 98784.64,
-      "altitude": 277.6042,
-      "UNIX": 1585779487731
+      "Brightness[%]": -1,
+      "UNIX": 1585882828893
     },
     {
-      "temperature": 21.8,
-      "pressure": 98784.39,
-      "altitude": 277.6254,
-      "UNIX": 1585779492780
+      "Brightness[%]": -1,
+      "UNIX": 1585882858936
     },
     {
-      "temperature": 21.77,
-      "pressure": 98783.81,
-      "altitude": 277.6744,
-      "UNIX": 1585779497802
+      "Brightness[%]": -1,
+      "UNIX": 1585882888967
     },
     {
-      "temperature": 21.73,
-      "pressure": 98783.3,
-      "altitude": 277.7178,
-      "UNIX": 1585779502888
+      "Brightness[%]": -1,
+      "UNIX": 1585882918997
     },
     {
-      "temperature": 21.7,
-      "pressure": 98783.38,
-      "altitude": 277.7121,
-      "UNIX": 1585779508410
+      "Brightness[%]": -1,
+      "UNIX": 1585882949028
     },
     {
-      "temperature": 21.66,
-      "pressure": 98782.8,
-      "altitude": 277.7602,
-      "UNIX": 1585779513365
+      "Brightness[%]": -1,
+      "UNIX": 1585882979059
     },
     {
-      "temperature": 21.64,
-      "pressure": 98782.2,
-      "altitude": 277.8113,
-      "UNIX": 1585779518851
+      "Brightness[%]": -1,
+      "UNIX": 1585883009092
     },
     {
-      "temperature": 21.61,
-      "pressure": 98781.59,
-      "altitude": 277.8634,
-      "UNIX": 1585779524178
+      "Brightness[%]": -1,
+      "UNIX": 1585883039122
     },
     {
-      "temperature": 21.59,
-      "pressure": 98781.41,
-      "altitude": 277.8789,
-      "UNIX": 1585779529408
+      "Brightness[%]": -1,
+      "UNIX": 1585883069159
     },
     {
-      "temperature": 21.56,
-      "pressure": 98781.58,
-      "altitude": 277.8645,
-      "UNIX": 1585779534437
+      "Brightness[%]": -1,
+      "UNIX": 1585883099186
     },
     {
-      "temperature": 21.53,
-      "pressure": 98780.91,
-      "altitude": 277.9213,
-      "UNIX": 1585779539466
+      "Brightness[%]": -1,
+      "UNIX": 1585883129225
     },
     {
-      "temperature": 21.49,
-      "pressure": 98779.47,
-      "altitude": 278.0437,
-      "UNIX": 1585779544499
+      "Brightness[%]": -1,
+      "UNIX": 1585883159257
     },
     {
-      "temperature": 21.46,
-      "pressure": 98778.48,
-      "altitude": 278.1273,
-      "UNIX": 1585779549527
+      "Brightness[%]": -1,
+      "UNIX": 1585883189292
     },
     {
-      "temperature": 21.43,
-      "pressure": 98777.97,
-      "altitude": 278.1707,
-      "UNIX": 1585779554563
+      "Brightness[%]": -1,
+      "UNIX": 1585883219325
     },
     {
-      "temperature": 21.4,
-      "pressure": 98777.38,
-      "altitude": 278.2209,
-      "UNIX": 1585779559587
+      "Brightness[%]": -1,
+      "UNIX": 1585883249354
     },
     {
-      "temperature": 21.37,
-      "pressure": 98777.46,
-      "altitude": 278.2141,
-      "UNIX": 1585779564638
+      "Brightness[%]": -1,
+      "UNIX": 1585883279388
     },
     {
-      "temperature": 21.35,
-      "pressure": 98775.92,
-      "altitude": 278.3443,
-      "UNIX": 1585779570153
+      "Brightness[%]": -1,
+      "UNIX": 1585883309421
     },
     {
-      "temperature": 21.33,
-      "pressure": 98775.73,
-      "altitude": 278.3608,
-      "UNIX": 1585779575088
+      "Brightness[%]": -1,
+      "UNIX": 1585883339452
     },
     {
-      "temperature": 21.31,
-      "pressure": 98775.48,
-      "altitude": 278.382,
-      "UNIX": 1585779580805
+      "Brightness[%]": -1,
+      "UNIX": 1585883369484
     },
     {
-      "temperature": 21.29,
-      "pressure": 98774.75,
-      "altitude": 278.444,
-      "UNIX": 1585779586136
+      "Brightness[%]": -1,
+      "UNIX": 1585883399520
     },
     {
-      "temperature": 21.27,
-      "pressure": 98774.13,
-      "altitude": 278.4966,
-      "UNIX": 1585779591387
+      "Brightness[%]": -1,
+      "UNIX": 1585883429554
     },
     {
-      "temperature": 21.26,
-      "pressure": 98774.38,
-      "altitude": 278.4749,
-      "UNIX": 1585779596880
+      "Brightness[%]": -1,
+      "UNIX": 1585883459585
     },
     {
-      "temperature": 21.26,
-      "pressure": 98774.11,
-      "altitude": 278.4982,
-      "UNIX": 1585779602215
+      "Brightness[%]": -1,
+      "UNIX": 1585883489619
     },
     {
-      "temperature": 21.25,
-      "pressure": 98773.88,
-      "altitude": 278.5178,
-      "UNIX": 1585779607735
+      "Brightness[%]": -1,
+      "UNIX": 1585883519649
     },
     {
-      "temperature": 21.22,
-      "pressure": 98773.23,
-      "altitude": 278.5726,
-      "UNIX": 1585779613162
+      "Brightness[%]": -1,
+      "UNIX": 1585883549690
     },
     {
-      "temperature": 21.2,
-      "pressure": 98772.71,
-      "altitude": 278.617,
-      "UNIX": 1585779618291
+      "Brightness[%]": -1,
+      "UNIX": 1585883579728
     },
     {
-      "temperature": 21.18,
-      "pressure": 98772.3,
-      "altitude": 278.6521,
-      "UNIX": 1585779623322
+      "Brightness[%]": -1,
+      "UNIX": 1585883609755
     },
     {
-      "temperature": 21.17,
-      "pressure": 98772.59,
-      "altitude": 278.6268,
-      "UNIX": 1585779628730
+      "Brightness[%]": -1,
+      "UNIX": 1585883639784
     },
     {
-      "temperature": 21.17,
-      "pressure": 98772.43,
-      "altitude": 278.6407,
-      "UNIX": 1585779634256
+      "Brightness[%]": -1,
+      "UNIX": 1585883669819
     },
     {
-      "temperature": 21.18,
-      "pressure": 98772.37,
-      "altitude": 278.6459,
-      "UNIX": 1585779639588
+      "Brightness[%]": -1,
+      "UNIX": 1585883699849
     },
     {
-      "temperature": 21.19,
-      "pressure": 98771.38,
-      "altitude": 278.7301,
-      "UNIX": 1585779644619
+      "Brightness[%]": -1,
+      "UNIX": 1585883729879
     },
     {
-      "temperature": 21.2,
-      "pressure": 98772.39,
-      "altitude": 278.6444,
-      "UNIX": 1585779649648
+      "Brightness[%]": -1,
+      "UNIX": 1585883759915
     },
     {
-      "temperature": 21.2,
-      "pressure": 98771.81,
-      "altitude": 278.6929,
-      "UNIX": 1585779654676
+      "Brightness[%]": -1,
+      "UNIX": 1585883789939
     },
     {
-      "temperature": 21.21,
-      "pressure": 98771.75,
-      "altitude": 278.6981,
-      "UNIX": 1585779659708
+      "Brightness[%]": -1,
+      "UNIX": 1585883819973
     },
     {
-      "temperature": 21.22,
-      "pressure": 98771.61,
-      "altitude": 278.7105,
-      "UNIX": 1585779664736
+      "Brightness[%]": -1,
+      "UNIX": 1585883850005
     },
     {
-      "temperature": 21.24,
-      "pressure": 98772.06,
-      "altitude": 278.6718,
-      "UNIX": 1585779669802
+      "Brightness[%]": -1,
+      "UNIX": 1585883880034
     },
     {
-      "temperature": 21.25,
-      "pressure": 98772.66,
-      "altitude": 278.6216,
-      "UNIX": 1585779674830
+      "Brightness[%]": -1,
+      "UNIX": 1585883910068
     }
   ]
 }

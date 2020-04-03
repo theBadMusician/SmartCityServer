@@ -1,15 +1,16 @@
-// Initialize variables
-var tables = {
-    temperature: [
-        ['Time', 'Temperature [°C]']
-    ],
-    pressure: [
-        ['Time', 'Pressure [hPa]']
-    ],
-    altitude: [
-        ['Time', 'Pressure [hPa]']
-    ]
+// Initialize variables/objects
+var chartHeight         = 600,
+    chartAreaLeftDash   = 375,
+    chartAreaLeftNoDash = 50,
+    chartAreaTop        = 20,
+    chartAreaRight      = 35;    
+
+var sensorTables = {
 }
+
+var measurementList = [];
+var chartList = {};
+var chartNameList = [];
 
 function UNIXtoHHMMSS(UnixTimeStampInMillis) {
     var date = new Date(UnixTimeStampInMillis);
@@ -24,151 +25,163 @@ function UNIXtoHHMMSS(UnixTimeStampInMillis) {
     return hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
 }
 
-// Make connection
-var socket = io.connect('http://88.91.42.155:80');
+function DBpushToArray(device, array, numItems) {
+    if (numItems > device.length) throw RangeError("'numItems' is out of bounds for the 'array'.");
 
-// Query DOM
-var mySidebar = document.getElementById("mySidebar");
+    for (var i = numItems; i > 0; i--) array.push(device[device.length - i]);
+}
+
+function DBshiftpushToArray(device, array, numItems) {
+    if (numItems > device.length) throw RangeError("'numItems' is out of bounds for the 'array'.");
+
+    for (var i = numItems; i > 0; i--) {
+        array.shift();
+        array.push(device[device.length - i]);
+    }
+}
+
+function drawCharts() {
+    Object.getOwnPropertyNames(chartList).forEach(func => {
+        chartList[func]();
+    })
+}
 
 //google.charts.load('current', {packages:['corechart']});
 
 google.charts.load('current', {
     callback: function () {
-        drawTempChart();
-        drawHumidityChart();
-        drawLightChart();
-        window.addEventListener('resize', () => {
-            drawTempChart();
-            drawHumidityChart();
-            drawLightChart();
-        }, false);
+        console.log("Google charts loaded!");
     },
     packages:['corechart']});
 
 
 // Set a callback to run when the Google Visualization API is loaded.
-// google.charts.setOnLoadCallback(drawPieChart);
-google.charts.setOnLoadCallback(drawTempChart);
-google.charts.setOnLoadCallback(drawHumidityChart);
-google.charts.setOnLoadCallback(drawLightChart);
+google.charts.setOnLoadCallback(drawCharts);
+
+// Make connection
+const socket = io.connect('http://88.91.42.155:80');
 
 window.addEventListener('resize', function () {
     if (window.innerWidth >= 976) window.dash_open = true;
     else window.dash_open = false;
+    google.charts.setOnLoadCallback(drawCharts);
+    repositionButtons();
 });
 
-// Callback that creates and populates a data table,
-// instantiates the pie chart, passes in the data and
-// draws it.
-function drawTempChart() {
-    var data = google.visualization.arrayToDataTable(tempTable);
+setTimeout(() => {
+    repositionButtons();
+}, 1000);
 
-    var options = {
-      title: 'Temperature [°C]',
-      curveType: '',
-      legend: { position: 'none' },
-      explorer: {
-        actions: ['dragToZoom', 'rightClickToReset'],
-        axis: 'horizontal',
-        keepInBounds: true,
-        maxZoomIn: 4.0
-      },
-      height: 600,
-      width: window.innerWidth,
-      chartArea:{
-        left: 350,
-        top: 20,
-        right: 35,
-        width: '100%'
+// Param. examples:
+// measurementArray = sensorTables.BMP280.temperature.slice();
+// title = 'Temperature [°C]';
+function drawAutomatedLineChart(measurementArray, title) {   
+    return function (){
+        var chartName = title + '_chart';
+        if (!document.getElementById("charts").innerHTML.includes(chartName)) {
+            document.getElementById("charts").innerHTML += "<div id=" + chartName + "></div>";
+            chartNameList.push(title + "_button");
+            document.getElementById("buttons").innerHTML += "<button id='" + title + "_button' onclick=chartToggle('" + title + "')> Toggle " + title + " Chart </button><br>";
         }
-    };
-
-    if (window.dash_open == false) {
-        options.chartArea.left = 50;
-    }
-    else {
-        options.chartArea.left = 350;
-    };
-
-    var chart = new google.visualization.LineChart(document.getElementById('temp_chart'));
-
-    chart.draw(data, options);
-};
-
-function drawHumidityChart() {
-    var data = google.visualization.arrayToDataTable(humidityTable);
-
-    var options = {
-      title: 'Humidity [g/m³]',
-      curveType: '',
-      legend: { position: 'none' },
-      explorer: {
-        actions: ['dragToZoom', 'rightClickToReset'],
-        axis: 'horizontal',
-        keepInBounds: true,
-        maxZoomIn: 4.0
-      },
-      height: 600,
-      width: window.innerWidth,
-      chartArea:{
-        left: 350,
-        top: 20,
-        right: 35,
-        width: '100%'
+        var dataArray = measurementArray;
+        if (dataArray[0][0] != "Time") {
+            dataArray.unshift(['Time', title]);
         }
-    };
 
-    if (window.dash_open == false) {
-        options.chartArea.left = 50;
-    }
-    else {
-        options.chartArea.left = 350;
-    };
+        var data = google.visualization.arrayToDataTable(dataArray);
 
-    var chart = new google.visualization.LineChart(document.getElementById('humidity_chart'));
+        var options = {
+            title: title,
+            curveType: '',
+            legend: { position: 'none' },
+            explorer: {
+                actions: ['dragToZoom', 'rightClickToReset'],
+                axis: 'horizontal',
+                keepInBounds: true,
+                maxZoomIn: 4.0
+            },
+            height: chartHeight,
+            width: window.innerWidth,
+            chartArea:{
+                left: chartAreaLeftDash,
+                top: chartAreaTop,
+                right: chartAreaRight,
+                width: '100%'
+            }
+        };
 
-    chart.draw(data, options);
-};
-
-function drawLightChart() {
-    var data = google.visualization.arrayToDataTable(lightTable);
-
-    var options = {
-      title: 'Light [lx]',
-      curveType: '',
-      legend: { position: 'none' },
-      explorer: {
-        actions: ['dragToZoom', 'rightClickToReset'],
-        axis: 'horizontal',
-        keepInBounds: true,
-        maxZoomIn: 4.0
-      },
-      height: 600,
-      width: window.innerWidth,
-      chartArea:{
-        left: 350,
-        top: 20,
-        right: 35,
-        width: '100%'
+        if (window.dash_open == false) {
+            options.chartArea.left = chartAreaLeftNoDash;
         }
-    };
+        else {
+            options.chartArea.left = chartAreaLeftDash;
+        };
 
-    if (window.dash_open == false) {
-        options.chartArea.left = 50;
+        var chart = new google.visualization.LineChart(document.getElementById(chartName));
+
+        chart.draw(data, options);
     }
-    else {
-        options.chartArea.left = 350;
-    };
+}
 
-    var chart = new google.visualization.LineChart(document.getElementById('light_chart'));
-
-    chart.draw(data, options);
-};
 
 // Listen for events
-socket.on('update', function(data){
-    data.unshift(['Time', 'Temperature [°C]']);
-    tempTable = data;
-    //if (tempTable.length >= 51) tempTable.splice(1, 51);
-    drawTempChart();
+socket.on('update', function(sensorData){
+    console.log("Update received.");
+    
+    Object.getOwnPropertyNames(sensorData).forEach(sensorName => {
+        // ["BMP280", "MQ-7", ...]
+        //if (sensorArray.length < 50) return;
+        var sensorArray = sensorData[sensorName];
+
+        if (!sensorTables.hasOwnProperty(sensorName)) sensorTables[sensorName] = {};
+
+        for (var dataUnitIdx = 0; dataUnitIdx < sensorArray.length; dataUnitIdx++) {
+            var dataUnit = sensorArray[dataUnitIdx];
+            var timeStamp = UNIXtoHHMMSS(dataUnit.UNIX);
+            delete dataUnit.UNIX;
+            
+            Object.getOwnPropertyNames(dataUnit).forEach(measurement => {
+                // ["temperature", "pressure", ...]
+                if (!measurementList.includes(measurement)) measurementList.push(measurement);
+                
+                if (!sensorTables[sensorName].hasOwnProperty(measurement)) sensorTables[sensorName][measurement] = [];
+                else if (sensorTables[sensorName][measurement].length >= 50) sensorTables[sensorName][measurement] = [];
+                sensorTables[sensorName][measurement].push([timeStamp, dataUnit[measurement]]);
+            });
+        }
+    });
+    
+    var sensorList = Object.getOwnPropertyNames(sensorData).slice();
+
+    sensorList.forEach(sensor => {
+        measurementList.forEach(measurement => {
+            var funcName = sensor + measurement;
+
+            if (sensorTables[sensor].hasOwnProperty(measurement)) {
+                chartList[funcName] = drawAutomatedLineChart(sensorTables[sensor][measurement], measurement);
+            }
+        });
+    });
+
+    google.charts.setOnLoadCallback(drawCharts);
+    
 });
+
+function chartToggle(title) {
+    if (document.getElementById(title + "_chart").style.display === 'block') {
+        document.getElementById(title + "_chart").style.display = 'none';
+    } else {
+        document.getElementById(title + "_chart").style.display = 'block';
+    }
+}
+
+function repositionButtons() {
+    for (var button = 0; button < chartNameList.length; button++) {
+        if (dash_open) {
+            document.getElementById(String(chartNameList[button]))['style']['margin-left'] = chartAreaLeftDash + "px";
+        }
+        else {
+            document.getElementById(String(chartNameList[button]))['style']['margin-left'] = chartAreaLeftNoDash + "px";
+        }
+    }
+}

@@ -13,20 +13,20 @@ window.addEventListener('resize', function () {
 
 // Toggle between showing and hiding the sidebar, and add overlay effect
 function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-    overlayBg.style.display = "none";
+  if (dash_open) {
+    document.getElementById("mySidebar").style.display = 'none';
+    document.getElementById("myOverlay").style.display = "none";
     dash_open = false;
   } else {
-    mySidebar.style.display = 'block';
-    overlayBg.style.display = "block";
+    document.getElementById("mySidebar").style.display = 'block';
+    document.getElementById("myOverlay").style.display = "block";
     dash_open = true;
   };
 }
 
 // Close the sidebar with the close button
 function w3_close() {
-  mySidebar.style.display = "none";
-  overlayBg.style.display = "none";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
   dash_open = false;
 }

@@ -13,10 +13,6 @@ var sensorTables = {
     }
 }
 
-var sensorObjs = {};
-var counter0 = 0;
-var counter1 = 0;
-
 function UNIXtoHHMMSS(UnixTimeStampInMillis) {
     var date = new Date(UnixTimeStampInMillis);
     // Hours part from the timestamp
@@ -45,35 +41,31 @@ function DBshiftpushToArray(device, array, numItems) {
     }
 }
 
-// Make connection
-const socket = io.connect('http://88.91.42.155:80');
-
-// Query DOM
-var mySidebar = document.getElementById("mySidebar");
+function drawCharts() {
+    drawTemperatureChart();
+    drawPressureChart();
+    drawAltitudeChart();
+}
 
 //google.charts.load('current', {packages:['corechart']});
 
 google.charts.load('current', {
     callback: function () {
-        drawTemperatureChart();
-        drawPressureChart();
-        drawAltitudeChart();
-        window.addEventListener('resize', () => {
-            drawTemperatureChart();
-            drawPressureChart();
-            drawAltitudeChart();
-        }, false);
+        drawCharts;
     },
     packages:['corechart']});
 
 
 // Set a callback to run when the Google Visualization API is loaded.
-google.charts.setOnLoadCallback(drawTemperatureChart);
+google.charts.setOnLoadCallback(drawCharts);
 
+// Make connection
+const socket = io.connect('http://88.91.42.155:80');
 
 window.addEventListener('resize', function () {
     if (window.innerWidth >= 976) window.dash_open = true;
     else window.dash_open = false;
+    drawCharts();
 });
 
 // Callback that creates and populates a data table,
@@ -83,6 +75,7 @@ function drawTemperatureChart() {
     var dataArray = sensorTables.BMP280.temperature.slice();
     var beginning = ['Time', 'Temperature [°C]'];
     dataArray.unshift(beginning);
+    
     var data = google.visualization.arrayToDataTable(dataArray);
 
     var options = {
@@ -193,8 +186,7 @@ function drawAltitudeChart() {
 
 // Listen for events
 socket.on('update', function(sensorData){
-    counter0 += 1;
-    //console.log("update received", counter0, sensorData);
+    console.log("Update received.");
     
     Object.getOwnPropertyNames(sensorData).forEach(sensorName => {
         // ["BMP280", "MQ-7", ...]
@@ -212,9 +204,9 @@ socket.on('update', function(sensorData){
             });
         }
     });
-    counter1 = 0;
-    drawTemperatureChart();
-    drawPressureChart();
-    drawAltitudeChart();
-    console.log(sensorTables);
+    google.charts.setOnLoadCallback(drawCharts);
+});
+
+$(window).on('beforeunload', function(){
+    socket.close();
 });

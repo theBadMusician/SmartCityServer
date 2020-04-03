@@ -42,10 +42,12 @@ function DBshiftpushToArray(device, array, numItems) {
 
 // Read/Write JSON measurements
 var tempData;
-var sensorObjects = {BMP280: []};
-var sensorName;
-sensorObjects.BMP280 = measuredData.BMP280.slice(-50);
-// DBpushToArray(measuredData.BMP280, sensorObjects.BMP280, 50);
+var sensorObjects = {};
+
+Object.getOwnPropertyNames(measuredData).forEach(sensor => {
+    if (measuredData[sensor].length < 50) sensorObjects[sensor] = measuredData[sensor].slice(-measuredData[sensor].length);
+    else sensorObjects[sensor] = measuredData[sensor].slice(-50);
+});
 
 // App setup
 const port = 80;
@@ -68,13 +70,6 @@ var server = app.listen(port, function(){
 
 // Socket setup & pass server
 var io = socket(server);
-
-// Handle monitor events
-txEmitter.on('dataWritten', function () {
-    console.log("dataWritten received!", sensorName);
-
-    io.emit('update', sensorObjects);
-});
 
 io.on('connection', (socket) => {
     // socket.removeAllListeners();
@@ -105,6 +100,15 @@ io.on('connection', (socket) => {
         
     });
 });
+
+// Handle monitor events
+txEmitter.on('dataWritten', function () {
+    io.emit('update', sensorObjects);
+    // Object.getOwnPropertyNames(sensorObjects).forEach(sensor =>{
+    //     console.log(sensorObjects[sensor].length);
+    // }); 
+});
+
 
 
 //HTTP reqs
@@ -142,14 +146,16 @@ app.get(randomID, (req, res) => {
 app.post('/post-test', function(req, res){
     req.setEncoding('utf8');
     req.on('data', chunk => {
-      tempData = JSON.parse(chunk);
-      tempData["UNIX"]=Date.now();
-      console.log(Date().toString(), "Received data: ", tempData);
-      //sensor = tempData.sensor;
+        tempData = chunk;
     });
     req.on('end', () => {
-      console.log('*END OF DATA*');
-      rxEmitter.emit('DBupdate');
+        tempData = JSON.parse(tempData);
+        Object.getOwnPropertyNames(tempData).forEach(sensor => {
+            tempData[sensor]["UNIX"] = Date.now();
+        });
+        console.log(Date().toString(), "Received data: ", tempData);
+        
+        rxEmitter.emit('DBupdate');
     });
     res.sendStatus(200);
     
@@ -162,14 +168,32 @@ app.get("/get-data", (req, res) => {
 
 
 rxEmitter.on('DBupdate', function() {
-    sensorName = tempData.sensor;
-    delete tempData.sensor;
-    measuredData[sensorName].push(tempData);
+    Object.getOwnPropertyNames(tempData).forEach(sensor => {
+
+
+        if (measuredData.hasOwnProperty(sensor)) measuredData[sensor].push(tempData[sensor]);
+        else {
+            measuredData[sensor] = {};
+            measuredData[sensor] = [tempData[sensor]];
+        }
+
+        // In case of receiving new sensor data
+        if (!sensorObjects.hasOwnProperty(sensor)) {
+            sensorObjects[sensor] = {};
+            sensorObjects[sensor] = tempData[sensor];
+        }
+            // If DB doesnt yet have 50 measurements
+        else if (measuredData[sensor].length <= 50) DBpushToArray(measuredData[sensor], sensorObjects[sensor], 1);
+        // Normal behaviour
+        else DBshiftpushToArray(measuredData[sensor], sensorObjects[sensor], 1);
+
+    });
     
     fs.writeFile(fileName, JSON.stringify(measuredData, null, 2), function writeJSON(err) {
         if (err) return console.log(err);
         
-        DBshiftpushToArray(measuredData[sensorName], sensorObjects[sensorName], 1);
+        
         txEmitter.emit('dataWritten');
+        //console.log(sensorObjects);
     });
 });
