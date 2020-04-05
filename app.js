@@ -3,11 +3,47 @@ var socket = require('socket.io');
 var secrets = require('./SECRETS.js');
 var bodyParser = require('body-parser');
 var events = require('events');
+
 var uuid = require('node-uuid');
 var fs = require('fs');
 
+//var JSONStream = require('JSONStream');
+//var es = require('event-stream');
+
+const readline = require("readline");
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+const { exec } = require('child_process');
+//>>>--------------------------------------------<::>>>
+
 var fileName = './measuredData.json';
 var measuredData = require('./measuredData.json');
+
+var yourscript = exec('sh CPUtemp.sh',
+        (error, stdout, stderr) => {
+            console.log(stdout);
+            console.log(stderr);
+            if (error !== null) {
+                console.log(`exec error: ${error}`);
+            }
+        });
+
+// var getStream = function () {
+//     var jsonData = 'measuredData.json';
+//     var stream = fs.createReadStream(jsonData, { encoding: 'utf8' });
+//     var parser = JSONStream.parse('*.*.*');
+//     return stream.pipe(parser);
+// };
+
+// getStream()
+//     .pipe(es.mapSync(function (data) {
+//         console.log(data);
+//         console.count();
+//         console.log(">>--------------------------------------<<>>");
+//     }));
 
 //Initializing variables/objects
 var urlencodedParser = bodyParser.urlencoded({ extended: true });
@@ -25,29 +61,73 @@ setInterval(() => {
 }, 10000);
 */
 
-function DBpushToArray(device, array, numItems) {
-    if (numItems > device.length) throw RangeError("'numItems' is out of bounds for the 'array'.");
-
-    for (var i = numItems; i > 0; i--) array.push(device[device.length - i]);
-}
-
-function DBshiftpushToArray(device, array, numItems) {
-    if (numItems > device.length) throw RangeError("'numItems' is out of bounds for the 'array'.");
-
-    for (var i = numItems; i > 0; i--) {
-        array.shift();
-        array.push(device[device.length - i]);
-    }
-}
-
 // Read/Write JSON measurements
 var tempData;
 var sensorObjects = {};
 
 Object.getOwnPropertyNames(measuredData).forEach(sensor => {
+    console.log(sensor, " has ", measuredData[sensor].length, " number of records.");
     if (measuredData[sensor].length < 50) sensorObjects[sensor] = measuredData[sensor].slice(-measuredData[sensor].length);
     else sensorObjects[sensor] = measuredData[sensor].slice(-50);
 });
+
+// process.stdin.resume();
+// process.stdin.setEncoding('utf8');
+
+rl.on('line', function (text) {
+    switch(text.trim()) {
+        case 'quit':
+            process.exit();
+
+        case 'del db --entries': 
+            Object.getOwnPropertyNames(measuredData).forEach(sensor => {
+                console.log(sensor, " has ", measuredData[sensor].length, " number of records.");
+            })
+
+            rl.question("Sensor: ", function (sensor) {
+                rl.question("Number of entries: ", function (entries) {
+                    // console.log('  sensor: ' + sensor);
+                    // console.log('  number of entries: ' + entries);
+
+                    if (entries === 'all') delete measuredData[sensor];
+                    else if (entries === 'none') return;
+                    else if (entries < 0) measuredData[sensor].splice(entries);
+                    else measuredData[sensor].splice(0, entries);
+
+                    fs.writeFile(fileName, JSON.stringify(measuredData, null, 2), function writeJSON(err) {
+                        if (err) return console.log(err);
+                    });
+
+                    Object.getOwnPropertyNames(measuredData).forEach(sensor => {
+                        console.log(sensor, " has ", measuredData[sensor].length, " number of records.");
+                    });
+                });
+            });
+            console.log("\n");
+            break;
+
+        case 'show db --sensors':
+            Object.getOwnPropertyNames(measuredData).forEach(sensor => {
+                console.log(sensor, " has ", measuredData[sensor].length, " entries.");
+            });
+            console.log("\n");
+            break;
+
+        case 'show db --entries':
+            var entries = 0;
+            Object.getOwnPropertyNames(measuredData).forEach(sensor => {
+                entries += (Object.keys(measuredData[sensor][0]).length) * measuredData[sensor].length;
+            });
+            console.log("Database has a total of ", entries, "entries.")
+            console.log("\n");
+            break;
+
+        case 'show mem':
+            console.log('The script uses approximately ', (process.memoryUsage().heapUsed / 1024 / 1024),' MB RAM.\n');
+            break;  
+    };
+});
+
 
 // App setup
 const port = 80;
@@ -56,8 +136,6 @@ var app = express();
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({ extended: true }));
-//app.use(bodyParser.json());
-//app.use(bodyParser.raw());
 
 // Static files
 app.use('/assets', express.static('assets'));
@@ -170,8 +248,10 @@ app.get("/get-data", (req, res) => {
 rxEmitter.on('DBupdate', function() {
     Object.getOwnPropertyNames(tempData).forEach(sensor => {
 
-
-        if (measuredData.hasOwnProperty(sensor)) measuredData[sensor].push(tempData[sensor]);
+        if (measuredData.hasOwnProperty(sensor)) {
+            measuredData[sensor].push(tempData[sensor]);
+            if (measuredData[sensor].length > 15000) measuredData[sensor].splice(0, 5000);
+        }
         else {
             measuredData[sensor] = {};
             measuredData[sensor] = [tempData[sensor]];
@@ -180,20 +260,26 @@ rxEmitter.on('DBupdate', function() {
         // In case of receiving new sensor data
         if (!sensorObjects.hasOwnProperty(sensor)) {
             sensorObjects[sensor] = {};
-            sensorObjects[sensor] = tempData[sensor];
+            sensorObjects[sensor] = [tempData[sensor]];
         }
             // If DB doesnt yet have 50 measurements
-        else if (measuredData[sensor].length <= 50) DBpushToArray(measuredData[sensor], sensorObjects[sensor], 1);
-        // Normal behaviour
-        else DBshiftpushToArray(measuredData[sensor], sensorObjects[sensor], 1);
-
+        else if (measuredData[sensor].length <= 50) {
+            sensorObjects[sensor] = {};
+            sensorObjects[sensor] = measuredData[sensor].slice();
+            //sensorObjects[sensor].push(measuredData[sensor][measuredData[sensor].length - 1]);
+        }// Normal behaviour
+        else {
+            sensorObjects[sensor].push(measuredData[sensor].slice(-1)[0]);
+            sensorObjects[sensor].shift();
+            //DBshiftpushToArray(measuredData[sensor], sensorObjects[sensor], 1);
+        }
     });
-    
+
+
     fs.writeFile(fileName, JSON.stringify(measuredData, null, 2), function writeJSON(err) {
         if (err) return console.log(err);
         
         
         txEmitter.emit('dataWritten');
-        //console.log(sensorObjects);
     });
 });

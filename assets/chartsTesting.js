@@ -79,6 +79,7 @@ function drawAutomatedLineChart(measurementArray, title) {
     return function (){
         var chartName = title + '_chart';
         if (!document.getElementById("charts").innerHTML.includes(chartName)) {
+            document.getElementById("charts").innerHTML += "<br><h2 class='chartheader'>" + title + "</h2><br>";
             document.getElementById("charts").innerHTML += "<div id=" + chartName + "></div>";
             chartNameList.push(title + "_button");
             document.getElementById("buttons").innerHTML += "<button id='" + title + "_button' onclick=chartToggle('" + title + "')> Toggle " + title + " Chart </button><br>";
@@ -91,6 +92,7 @@ function drawAutomatedLineChart(measurementArray, title) {
         var data = google.visualization.arrayToDataTable(dataArray);
 
         var options = {
+            titlePosition: 'none',
             title: title,
             curveType: '',
             legend: { position: 'none' },
@@ -127,6 +129,7 @@ function drawAutomatedLineChart(measurementArray, title) {
 // Listen for events
 socket.on('update', function(sensorData){
     console.log("Update received.");
+    var flag = 0;
     
     Object.getOwnPropertyNames(sensorData).forEach(sensorName => {
         // ["BMP280", "MQ-7", ...]
@@ -142,10 +145,18 @@ socket.on('update', function(sensorData){
             
             Object.getOwnPropertyNames(dataUnit).forEach(measurement => {
                 // ["temperature", "pressure", ...]
+
                 if (!measurementList.includes(measurement)) measurementList.push(measurement);
                 
-                if (!sensorTables[sensorName].hasOwnProperty(measurement)) sensorTables[sensorName][measurement] = [];
-                else if (sensorTables[sensorName][measurement].length >= 50) sensorTables[sensorName][measurement] = [];
+                
+                if (!sensorTables[sensorName].hasOwnProperty(measurement)) {
+                    sensorTables[sensorName][measurement] = [];
+                }
+                else if (sensorTables[sensorName][measurement].length >= 50) {
+                    sensorTables[sensorName][measurement] = [];
+                }
+                else if (dataUnitIdx == 0) sensorTables[sensorName][measurement] = [];
+
                 sensorTables[sensorName][measurement].push([timeStamp, dataUnit[measurement]]);
             });
         }
@@ -176,12 +187,20 @@ function chartToggle(title) {
 }
 
 function repositionButtons() {
-    for (var button = 0; button < chartNameList.length; button++) {
-        if (dash_open) {
-            document.getElementById(String(chartNameList[button]))['style']['margin-left'] = chartAreaLeftDash + "px";
+    if (dash_open) {
+        document.getElementsByClassName("fa fa-eye fa-fw")[1]['style']['margin-left'] = (chartAreaLeftDash - 50) + "px";
+        document.getElementsByClassName("w3-container w3-padding-16 w3-light-grey")[0]['style']['margin-left'] = (chartAreaLeftDash - 75) + "px";
+        for (var IDX = 0; IDX < chartNameList.length; IDX++) {
+            document.getElementById(String(chartNameList[IDX]))['style']['margin-left'] = chartAreaLeftDash + "px";
+            document.getElementsByClassName('chartheader')[IDX]['style']['margin-left'] = chartAreaLeftDash + "px";
         }
-        else {
-            document.getElementById(String(chartNameList[button]))['style']['margin-left'] = chartAreaLeftNoDash + "px";
+    }
+    else {
+        document.getElementsByClassName("fa fa-eye fa-fw")[1]['style']['margin-left'] = chartAreaLeftNoDash + "px";
+        document.getElementsByClassName("w3-container w3-padding-16 w3-light-grey")[0]['style']['margin-left'] = "0px";
+        for (var IDX = 0; IDX < chartNameList.length; IDX++) {
+            document.getElementById(String(chartNameList[IDX]))['style']['margin-left'] = chartAreaLeftNoDash + "px";
+            document.getElementsByClassName('chartheader')[IDX]['style']['margin-left'] = chartAreaLeftNoDash + "px";
         }
     }
 }
