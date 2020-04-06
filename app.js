@@ -17,20 +17,22 @@ const rl = readline.createInterface({
 });
 
 const { exec } = require('child_process');
+
+var nodeCleanup = require('node-cleanup');
 //>>>--------------------------------------------<::>>>
 
 var fileName = './measuredData.json';
 var measuredData = require('./measuredData.json');
 
-var yourscript = exec('sh CPUtemp.sh',
-        (error, stdout, stderr) => {
-            console.log(stdout);
-            console.log(stderr);
+var CPUtemp = 0;
+var checkTemp = exec('bash CPUtemp.sh',
+        (error, output, stderr) => {
+	    CPUtemp = output;
+	    console.log(stderr);
             if (error !== null) {
                 console.log(`exec error: ${error}`);
             }
         });
-
 // var getStream = function () {
 //     var jsonData = 'measuredData.json';
 //     var stream = fs.createReadStream(jsonData, { encoding: 'utf8' });
@@ -51,7 +53,12 @@ var jsonParser = bodyParser.json();
 var rxEmitter = new events.EventEmitter();
 var txEmitter = new events.EventEmitter();
 
-let visitCounter = 0;
+let visitCounter = require('./visitCounter.json').visitCounter;
+nodeCleanup(function (exitCode, signal) {
+    var count = {visitCounter: visitCounter};
+    fs.writeFileSync("visitCounter.json", JSON.stringify(count));
+});
+
 
 var randomID = '/'+uuid.v4();
 /*
@@ -65,12 +72,20 @@ setInterval(() => {
 var tempData;
 var sensorObjects = {};
 
+var checkTemp = exec('bash CPUtemp.sh',
+        (error, output, stderr) => {
+	    CPUtemp = output;
+	    console.log(stderr);
+            if (error !== null) {
+                console.log(`exec error: ${error}`);
+            }
+        });
+console.log("CPU temperature [degrees C]:", CPUtemp);
 Object.getOwnPropertyNames(measuredData).forEach(sensor => {
     console.log(sensor, " has ", measuredData[sensor].length, " number of records.");
     if (measuredData[sensor].length < 50) sensorObjects[sensor] = measuredData[sensor].slice(-measuredData[sensor].length);
     else sensorObjects[sensor] = measuredData[sensor].slice(-50);
 });
-
 // process.stdin.resume();
 // process.stdin.setEncoding('utf8');
 
@@ -123,8 +138,20 @@ rl.on('line', function (text) {
             break;
 
         case 'show mem':
-            console.log('The script uses approximately ', (process.memoryUsage().heapUsed / 1024 / 1024),' MB RAM.\n');
-            break;  
+            console.log('The script uses approximately ', (process.memoryUsage().heapUsed / 1024 / 1024),' MB of RAM.\n');
+            break;
+
+	case 'show temp':
+	    var checkTemp = exec('bash CPUtemp.sh',
+        (error, output, stderr) => {
+	    CPUtemp = output;
+	    console.log(stderr);
+            if (error !== null) {
+                console.log(`exec error: ${error}`);
+            }
+        });
+	    console.log("CPU temperature [degrees C]:", CPUtemp);
+	    break;
     };
 });
 
@@ -192,7 +219,7 @@ txEmitter.on('dataWritten', function () {
 //HTTP reqs
 app.get('/', (req, res) => {
     visitCounter += 1;
-    console.log(Date().toString(), "Requested URL: ", req.url, "Request number ", visitCounter);
+    console.log(Date().toString(), "Requested URL: ", req.url, "Request IP: ", req.ip, "Total requests: ", visitCounter);
     res.render('index');
 });
 
@@ -283,3 +310,4 @@ rxEmitter.on('DBupdate', function() {
         txEmitter.emit('dataWritten');
     });
 });
+
