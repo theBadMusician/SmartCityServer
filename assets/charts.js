@@ -6,12 +6,11 @@ var chartHeight         = 600,
     chartAreaRight      = 35;    
 
 var sensorTables = {
-    BMP280: {
-        temperature: [],
-        pressure: [],
-        altitude: []
-    }
 }
+
+var measurementList = [];
+var chartList = {};
+var chartNameList = [];
 
 function UNIXtoHHMMSS(UnixTimeStampInMillis) {
     var date = new Date(UnixTimeStampInMillis);
@@ -42,16 +41,16 @@ function DBshiftpushToArray(device, array, numItems) {
 }
 
 function drawCharts() {
-    drawTemperatureChart();
-    drawPressureChart();
-    drawAltitudeChart();
+    Object.getOwnPropertyNames(chartList).forEach(func => {
+        chartList[func]();
+    })
 }
 
 //google.charts.load('current', {packages:['corechart']});
 
 google.charts.load('current', {
     callback: function () {
-        drawCharts;
+        console.log("Google charts loaded!");
     },
     packages:['corechart']});
 
@@ -65,148 +64,143 @@ const socket = io.connect('http://88.91.42.155:80');
 window.addEventListener('resize', function () {
     if (window.innerWidth >= 976) window.dash_open = true;
     else window.dash_open = false;
-    drawCharts();
+    google.charts.setOnLoadCallback(drawCharts);
+    repositionButtons();
 });
 
-// Callback that creates and populates a data table,
-// instantiates the pie chart, passes in the data and
-// draws it.
-function drawTemperatureChart() {
-    var dataArray = sensorTables.BMP280.temperature.slice();
-    var beginning = ['Time', 'Temperature [°C]'];
-    dataArray.unshift(beginning);
-    
-    var data = google.visualization.arrayToDataTable(dataArray);
+setTimeout(() => {
+    repositionButtons();
+}, 1000);
 
-    var options = {
-        title: 'Temperature [°C]',
-        curveType: '',
-        legend: { position: 'none' },
-        explorer: {
-            actions: ['dragToZoom', 'rightClickToReset'],
-            axis: 'horizontal',
-            keepInBounds: true,
-            maxZoomIn: 4.0
-        },
-        height: chartHeight,
-        width: window.innerWidth,
-        chartArea:{
-            left: chartAreaLeftDash,
-            top: chartAreaTop,
-            right: chartAreaRight,
-            width: '100%'
+// Param. examples:
+// measurementArray = sensorTables.BMP280.temperature.slice();
+// title = 'Temperature [°C]';
+function drawAutomatedLineChart(measurementArray, title) {   
+    return function (){
+        var chartName = title + '_chart';
+        if (!document.getElementById("charts").innerHTML.includes(chartName)) {
+            document.getElementById("charts").innerHTML += "<br><h2 class='chartheader'>" + title + "</h2><br>";
+            document.getElementById("charts").innerHTML += "<div id=" + chartName + "></div>";
+            chartNameList.push(title + "_button");
+            document.getElementById("buttons").innerHTML += "<button id='" + title + "_button' onclick=chartToggle('" + title + "')> Toggle " + title + " Chart </button><br>";
         }
-    };
-
-    if (window.dash_open == false) {
-        options.chartArea.left = chartAreaLeftNoDash;
-    }
-    else {
-        options.chartArea.left = chartAreaLeftDash;
-    };
-
-    var chart = new google.visualization.LineChart(document.getElementById('temperature_chart'));
-
-    chart.draw(data, options);
-};
-
-function drawPressureChart() {
-    var dataArray = sensorTables.BMP280.pressure.slice();
-    dataArray.unshift(['Time', 'Pressure [hPa]']);
-    var data = google.visualization.arrayToDataTable(dataArray);
-
-    var options = {
-        title: 'Pressure [hPa]',
-        curveType: '',
-        legend: { position: 'none' },
-        explorer: {
-            actions: ['dragToZoom', 'rightClickToReset'],
-            axis: 'horizontal',
-            keepInBounds: true,
-            maxZoomIn: 4.0
-        },
-        height: chartHeight,
-        width: window.innerWidth,
-        chartArea:{
-            left: chartAreaLeftDash,
-            top: chartAreaTop,
-            right: chartAreaRight,
-            width: '100%'
+        var dataArray = measurementArray;
+        if (dataArray[0][0] != "Time") {
+            dataArray.unshift(['Time', title]);
         }
-    };
 
-    if (window.dash_open == false) {
-        options.chartArea.left = chartAreaLeftNoDash;
-    }
-    else {
-        options.chartArea.left = chartAreaLeftDash;
-    };
+        var data = google.visualization.arrayToDataTable(dataArray);
 
-    var chart = new google.visualization.LineChart(document.getElementById('pressure_chart'));
+        var options = {
+            titlePosition: 'none',
+            title: title,
+            curveType: '',
+            legend: { position: 'none' },
+            explorer: {
+                actions: ['dragToZoom', 'rightClickToReset'],
+                axis: 'horizontal',
+                keepInBounds: true,
+                maxZoomIn: 4.0
+            },
+            height: chartHeight,
+            width: window.innerWidth,
+            chartArea:{
+                left: chartAreaLeftDash,
+                top: chartAreaTop,
+                right: chartAreaRight,
+                width: '100%'
+            }
+        };
 
-    chart.draw(data, options);
-};
-
-function drawAltitudeChart() {
-    var dataArray = sensorTables.BMP280.altitude.slice();
-    dataArray.unshift(['Time', 'Altitude [m]']);
-    var data = google.visualization.arrayToDataTable(dataArray);
-
-    var options = {
-        title: 'Altitude [m]',
-        curveType: '',
-        legend: { position: 'none' },
-        explorer: {
-            actions: ['dragToZoom', 'rightClickToReset'],
-            axis: 'horizontal',
-            keepInBounds: true,
-            maxZoomIn: 4.0
-        },
-        height: chartHeight,
-        width: window.innerWidth,
-        chartArea:{
-            left: chartAreaLeftDash,
-            top: chartAreaTop,
-            right: chartAreaRight,
-            width: '100%'
+        if (window.dash_open == false) {
+            options.chartArea.left = chartAreaLeftNoDash;
         }
-    };
+        else {
+            options.chartArea.left = chartAreaLeftDash;
+        };
 
-    if (window.dash_open == false) {
-        options.chartArea.left = chartAreaLeftNoDash;
+        var chart = new google.visualization.LineChart(document.getElementById(chartName));
+
+        chart.draw(data, options);
     }
-    else {
-        options.chartArea.left = chartAreaLeftDash;
-    };
+}
 
-    var chart = new google.visualization.LineChart(document.getElementById('altitude_chart'));
-
-    chart.draw(data, options);
-};
 
 // Listen for events
 socket.on('update', function(sensorData){
     console.log("Update received.");
+    var flag = 0;
     
     Object.getOwnPropertyNames(sensorData).forEach(sensorName => {
         // ["BMP280", "MQ-7", ...]
+        //if (sensorArray.length < 50) return;
         var sensorArray = sensorData[sensorName];
+
+        if (!sensorTables.hasOwnProperty(sensorName)) sensorTables[sensorName] = {};
 
         for (var dataUnitIdx = 0; dataUnitIdx < sensorArray.length; dataUnitIdx++) {
             var dataUnit = sensorArray[dataUnitIdx];
             var timeStamp = UNIXtoHHMMSS(dataUnit.UNIX);
             delete dataUnit.UNIX;
-
+            
             Object.getOwnPropertyNames(dataUnit).forEach(measurement => {
                 // ["temperature", "pressure", ...]
-                if (sensorTables[sensorName][measurement].length >= 50) sensorTables[sensorName][measurement] = [];
+
+                if (!measurementList.includes(measurement)) measurementList.push(measurement);
+                
+                
+                if (!sensorTables[sensorName].hasOwnProperty(measurement)) {
+                    sensorTables[sensorName][measurement] = [];
+                }
+                else if (sensorTables[sensorName][measurement].length >= 50) {
+                    sensorTables[sensorName][measurement] = [];
+                }
+                else if (dataUnitIdx == 0) sensorTables[sensorName][measurement] = [];
+
                 sensorTables[sensorName][measurement].push([timeStamp, dataUnit[measurement]]);
             });
         }
     });
+    
+    var sensorList = Object.getOwnPropertyNames(sensorData).slice();
+
+    sensorList.forEach(sensor => {
+        measurementList.forEach(measurement => {
+            var funcName = sensor + measurement;
+
+            if (sensorTables[sensor].hasOwnProperty(measurement)) {
+                chartList[funcName] = drawAutomatedLineChart(sensorTables[sensor][measurement], measurement);
+            }
+        });
+    });
+
     google.charts.setOnLoadCallback(drawCharts);
+    
 });
 
-$(window).on('beforeunload', function(){
-    socket.close();
-});
+function chartToggle(title) {
+    if (document.getElementById(title + "_chart").style.display === 'block') {
+        document.getElementById(title + "_chart").style.display = 'none';
+    } else {
+        document.getElementById(title + "_chart").style.display = 'block';
+    }
+}
+
+function repositionButtons() {
+    if (dash_open) {
+        document.getElementsByClassName("fa fa-eye fa-fw")[1]['style']['margin-left'] = (chartAreaLeftDash - 50) + "px";
+        document.getElementsByClassName("w3-container w3-padding-16 w3-light-grey")[0]['style']['margin-left'] = (chartAreaLeftDash - 75) + "px";
+        for (var IDX = 0; IDX < chartNameList.length; IDX++) {
+            document.getElementById(String(chartNameList[IDX]))['style']['margin-left'] = chartAreaLeftDash + "px";
+            document.getElementsByClassName('chartheader')[IDX]['style']['margin-left'] = chartAreaLeftDash + "px";
+        }
+    }
+    else {
+        document.getElementsByClassName("fa fa-eye fa-fw")[1]['style']['margin-left'] = chartAreaLeftNoDash + "px";
+        document.getElementsByClassName("w3-container w3-padding-16 w3-light-grey")[0]['style']['margin-left'] = "0px";
+        for (var IDX = 0; IDX < chartNameList.length; IDX++) {
+            document.getElementById(String(chartNameList[IDX]))['style']['margin-left'] = chartAreaLeftNoDash + "px";
+            document.getElementsByClassName('chartheader')[IDX]['style']['margin-left'] = chartAreaLeftNoDash + "px";
+        }
+    }
+}
