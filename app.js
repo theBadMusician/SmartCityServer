@@ -16,23 +16,14 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-const { exec } = require('child_process');
-
 var nodeCleanup = require('node-cleanup');
+
+var si = require('systeminformation');
 //>>>--------------------------------------------<::>>>
 
 var fileName = './measuredData.json';
 var measuredData = require('./measuredData.json');
 
-var CPUtemp = 0;
-var checkTemp = exec('bash CPUtemp.sh',
-        (error, output, stderr) => {
-	    CPUtemp = output;
-	    console.log(stderr);
-            if (error !== null) {
-                console.log(`exec error: ${error}`);
-            }
-        });
 // var getStream = function () {
 //     var jsonData = 'measuredData.json';
 //     var stream = fs.createReadStream(jsonData, { encoding: 'utf8' });
@@ -72,15 +63,6 @@ setInterval(() => {
 var tempData;
 var sensorObjects = {};
 
-var checkTemp = exec('bash CPUtemp.sh',
-        (error, output, stderr) => {
-	    CPUtemp = output;
-	    console.log(stderr);
-            if (error !== null) {
-                console.log(`exec error: ${error}`);
-            }
-        });
-console.log("CPU temperature [degrees C]:", CPUtemp);
 Object.getOwnPropertyNames(measuredData).forEach(sensor => {
     console.log(sensor, " has ", measuredData[sensor].length, " number of records.");
     if (measuredData[sensor].length < 50) sensorObjects[sensor] = measuredData[sensor].slice(-measuredData[sensor].length);
@@ -137,22 +119,40 @@ rl.on('line', function (text) {
             console.log("\n");
             break;
 
-        case 'show mem':
+        case 'show memuse':
             console.log('The script uses approximately ', (process.memoryUsage().heapUsed / 1024 / 1024),' MB of RAM.\n');
             break;
 
-	case 'show temp':
-	    var checkTemp = exec('bash CPUtemp.sh',
-        (error, output, stderr) => {
-	    CPUtemp = output;
-	    console.log(stderr);
-            if (error !== null) {
-                console.log(`exec error: ${error}`);
-            }
-        });
-	    console.log("CPU temperature [degrees C]:", CPUtemp);
-	    break;
+        case 'show mem --total':
+            si.mem().then(data => console.log("Total RAM: ", data.total / 1024 / 1024, "MB"));
+            break;
+
+        case 'show mem --free':
+            si.mem().then(data => console.log("Free RAM: ", data.free / 1024 / 1024, "MB"));
+            break;
+            
+        case 'show mem --used':
+            si.mem().then(data => console.log("Total used RAM: ", data.used / 1024 / 1024, "MB"));
+            break;
+
+        case 'show cpu --load':
+            si.currentLoad().then(data => console.log("Current load on CPU: ", data.currentload, "%"));
+            break;
+
+	    case 'show cpu --temp':
+            si.cpuTemperature().then(data => {
+                if (data.main == -1) {
+                    console.log("ERROR! Cannot read CPU temperature.");
+                    return;
+                }
+                else console.log("CPU core temeperature: ", data.main, "°C")});
+            break;
+            
+        case 'show cpu --speed':
+            si.cpuCurrentspeed().then(data => console.log("Server avg. CPU core speed: ", data.avg, "GHz across ", data.cores.length, "cores"));
+            break;
     };
+
 });
 
 
