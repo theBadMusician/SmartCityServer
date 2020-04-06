@@ -1,9 +1,9 @@
 // Initialize variables/objects
-var chartHeight         = 600,
-    chartAreaLeftDash   = 375,
+var chartHeight = 600,
+    chartAreaLeftDash = 375,
     chartAreaLeftNoDash = 50,
-    chartAreaTop        = 20,
-    chartAreaRight      = 35;    
+    chartAreaTop = 20,
+    chartAreaRight = 35;
 
 var sensorTables = {
 }
@@ -20,24 +20,9 @@ function UNIXtoHHMMSS(UnixTimeStampInMillis) {
     var minutes = "0" + date.getMinutes();
     // Seconds part from the timestamp
     var seconds = "0" + date.getSeconds();
-    
+
     // Will display time in 10:30:23 format
     return hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
-}
-
-function DBpushToArray(device, array, numItems) {
-    if (numItems > device.length) throw RangeError("'numItems' is out of bounds for the 'array'.");
-
-    for (var i = numItems; i > 0; i--) array.push(device[device.length - i]);
-}
-
-function DBshiftpushToArray(device, array, numItems) {
-    if (numItems > device.length) throw RangeError("'numItems' is out of bounds for the 'array'.");
-
-    for (var i = numItems; i > 0; i--) {
-        array.shift();
-        array.push(device[device.length - i]);
-    }
 }
 
 function drawCharts() {
@@ -52,7 +37,8 @@ google.charts.load('current', {
     callback: function () {
         console.log("Google charts loaded!");
     },
-    packages:['corechart']});
+    packages: ['corechart']
+});
 
 
 // Set a callback to run when the Google Visualization API is loaded.
@@ -75,8 +61,8 @@ setTimeout(() => {
 // Param. examples:
 // measurementArray = sensorTables.BMP280.temperature.slice();
 // title = 'Temperature [°C]';
-function drawAutomatedLineChart(measurementArray, title) {   
-    return function (){
+function drawAutomatedLineChart(measurementArray, title) {
+    return function () {
         var chartName = title + '_chart';
         if (!document.getElementById("charts").innerHTML.includes(chartName)) {
             document.getElementById("charts").innerHTML += "<br><h2 class='chartheader'>" + title + "</h2><br>";
@@ -97,14 +83,14 @@ function drawAutomatedLineChart(measurementArray, title) {
             curveType: '',
             legend: { position: 'none' },
             explorer: {
-                actions: ['dragToZoom', 'rightClickToReset'],
+                actions: ['dragToPan', 'rightClickToReset'],
                 axis: 'horizontal',
                 keepInBounds: true,
                 maxZoomIn: 4.0
             },
             height: chartHeight,
             width: window.innerWidth,
-            chartArea:{
+            chartArea: {
                 left: chartAreaLeftDash,
                 top: chartAreaTop,
                 right: chartAreaRight,
@@ -127,10 +113,10 @@ function drawAutomatedLineChart(measurementArray, title) {
 
 
 // Listen for events
-socket.on('update', function(sensorData){
+socket.on('updateCharts', function (sensorData) {
     console.log("Update received.");
     var flag = 0;
-    
+
     Object.getOwnPropertyNames(sensorData).forEach(sensorName => {
         // ["BMP280", "MQ-7", ...]
         //if (sensorArray.length < 50) return;
@@ -142,13 +128,13 @@ socket.on('update', function(sensorData){
             var dataUnit = sensorArray[dataUnitIdx];
             var timeStamp = UNIXtoHHMMSS(dataUnit.UNIX);
             delete dataUnit.UNIX;
-            
+
             Object.getOwnPropertyNames(dataUnit).forEach(measurement => {
                 // ["temperature", "pressure", ...]
 
                 if (!measurementList.includes(measurement)) measurementList.push(measurement);
-                
-                
+
+
                 if (!sensorTables[sensorName].hasOwnProperty(measurement)) {
                     sensorTables[sensorName][measurement] = [];
                 }
@@ -161,7 +147,7 @@ socket.on('update', function(sensorData){
             });
         }
     });
-    
+
     var sensorList = Object.getOwnPropertyNames(sensorData).slice();
 
     sensorList.forEach(sensor => {
@@ -175,7 +161,7 @@ socket.on('update', function(sensorData){
     });
 
     google.charts.setOnLoadCallback(drawCharts);
-    
+
 });
 
 function chartToggle(title) {

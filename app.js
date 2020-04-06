@@ -1,3 +1,4 @@
+//>>>- Modules ---------------------------------------<::>>>
 var express = require('express');
 var socket = require('socket.io');
 var secrets = require('./SECRETS.js');
@@ -19,8 +20,9 @@ const rl = readline.createInterface({
 var nodeCleanup = require('node-cleanup');
 
 var si = require('systeminformation');
-//>>>--------------------------------------------<::>>>
+//>>>-------------------------------------------------<::>>>
 
+//>>>- JSON ------------------------------------------<::>>>
 var fileName = './measuredData.json';
 var measuredData = require('./measuredData.json');
 
@@ -35,10 +37,11 @@ var measuredData = require('./measuredData.json');
 //     .pipe(es.mapSync(function (data) {
 //         console.log(data);
 //         console.count();
-//         console.log(">>--------------------------------------<<>>");
+//         console.log(">>-<<>>");
 //     }));
+//>>>-------------------------------------------------<::>>>
 
-//Initializing variables/objects
+//>>>- variables/objects -----------------------------<::>>>
 var urlencodedParser = bodyParser.urlencoded({ extended: true });
 var jsonParser = bodyParser.json();
 var rxEmitter = new events.EventEmitter();
@@ -62,15 +65,17 @@ setInterval(() => {
 // Read/Write JSON measurements
 var tempData;
 var sensorObjects = {};
+//>>>-------------------------------------------------<::>>>
 
+//>>>- Check database at startup ---------------------<::>>>
 Object.getOwnPropertyNames(measuredData).forEach(sensor => {
     console.log(sensor, " has ", measuredData[sensor].length, " number of records.");
     if (measuredData[sensor].length < 50) sensorObjects[sensor] = measuredData[sensor].slice(-measuredData[sensor].length);
     else sensorObjects[sensor] = measuredData[sensor].slice(-50);
 });
-// process.stdin.resume();
-// process.stdin.setEncoding('utf8');
+//>>>-------------------------------------------------<::>>>
 
+//>>>- Console commands ------------------------------<::>>>
 rl.on('line', function (text) {
     switch(text.trim()) {
         case 'quit':
@@ -154,9 +159,9 @@ rl.on('line', function (text) {
     };
 
 });
+//>>>-------------------------------------------------<::>>>
 
-
-// App setup
+//>>>- Express app setup -----------------------------<::>>>
 const port = 80;
 
 var app = express();
@@ -171,9 +176,9 @@ app.use('/assets', express.static('assets'));
 var server = app.listen(port, function(){
     console.log('%s Listening for requests on port %d...', Date().toString(), port);
 });
+//>>>-------------------------------------------------<::>>>
 
-
-// Socket setup & pass server
+//>>>- Socket setup & pass server --------------------<::>>>
 var io = socket(server);
 
 io.on('connection', (socket) => {
@@ -181,7 +186,8 @@ io.on('connection', (socket) => {
 
     console.log(Date().toString(), 'Made a socket connection. Socket ID:', socket.id);
     io.sockets.emit('visitCounter', visitCounter);
-    io.sockets.emit('update', sensorObjects);
+    io.sockets.emit('updateCharts', sensorObjects);
+    io.sockets.emit('updateCompResources', compResources);
   
 
     // Handle chat events
@@ -208,15 +214,23 @@ io.on('connection', (socket) => {
 
 // Handle monitor events
 txEmitter.on('dataWritten', function () {
-    io.emit('update', sensorObjects);
-    // Object.getOwnPropertyNames(sensorObjects).forEach(sensor =>{
-    //     console.log(sensorObjects[sensor].length);
-    // }); 
+    io.emit('updateCharts', sensorObjects);
 });
 
+si.cpuTemperature().then(data => compResources.CPUtemp = data.main);
+si.currentLoad().then(data => compResources.CPUload = data.currentload);
+si.mem().then(data => compResources.memuse = data.used / 1024 / 1024);
+io.emit('updateCompResources', compResources);
+var compResources = {};
+setInterval(() => {
+    si.cpuTemperature().then(data => compResources.CPUtemp = data.main);
+    si.currentLoad().then(data => compResources.CPUload = data.currentload);
+    si.mem().then(data => compResources.memuse = data.used / 1024 / 1024);
+    io.emit('updateCompResources', compResources);
+}, 600000);
+//>>>-------------------------------------------------<::>>>
 
-
-//HTTP reqs
+//>>>- HTTP reqs -------------------------------------<::>>>
 app.get('/', (req, res) => {
     visitCounter += 1;
     console.log(Date().toString(), "Requested URL: ", req.url, "Request IP: ", req.ip, "Total requests: ", visitCounter);
@@ -270,8 +284,9 @@ app.get("/get-data", (req, res) => {
     console.log(Date().toString(), "Requested URL: ", req.url);
     res.json(measuredData);;
 });
+//>>>-------------------------------------------------<::>>>
 
-
+//>>>- Handle data intake and process it to database -<::>>>
 rxEmitter.on('DBupdate', function() {
     Object.getOwnPropertyNames(tempData).forEach(sensor => {
 
@@ -310,4 +325,4 @@ rxEmitter.on('DBupdate', function() {
         txEmitter.emit('dataWritten');
     });
 });
-
+//>>>-------------------------------------------------<::>>>
