@@ -227,7 +227,7 @@ setInterval(() => {
     si.currentLoad().then(data => compResources.CPUload = data.currentload);
     si.mem().then(data => compResources.memuse = data.used / 1024 / 1024);
     io.emit('updateCompResources', compResources);
-}, 600000);
+}, 60000);
 //>>>-------------------------------------------------<::>>>
 
 //>>>- HTTP reqs -------------------------------------<::>>>
