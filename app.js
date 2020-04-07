@@ -20,6 +20,8 @@ const rl = readline.createInterface({
 var nodeCleanup = require('node-cleanup');
 
 var si = require('systeminformation');
+
+var log4js = require('log4js');
 //>>>-------------------------------------------------<::>>>
 
 //>>>- JSON ------------------------------------------<::>>>
@@ -46,6 +48,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: true });
 var jsonParser = bodyParser.json();
 var rxEmitter = new events.EventEmitter();
 var txEmitter = new events.EventEmitter();
+var consoleEmitter = new events.EventEmitter();
 
 let visitCounter = require('./visitCounter.json').visitCounter;
 nodeCleanup(function (exitCode, signal) {
@@ -156,6 +159,9 @@ rl.on('line', function (text) {
         case 'show cpu --speed':
             si.cpuCurrentspeed().then(data => console.log("Server avg. CPU core speed: ", data.avg, "GHz across ", data.cores.length, "cores"));
             break;
+        
+        case 'show server --uptime':
+            console.log(secs2HHMMSS(process.uptime()));
     };
 
 });
@@ -187,8 +193,8 @@ io.on('connection', (socket) => {
     console.log(Date().toString(), 'Made a socket connection. Socket ID:', socket.id);
     io.sockets.emit('visitCounter', visitCounter);
     io.sockets.emit('updateCharts', sensorObjects);
-    io.sockets.emit('updateCompResources', compResources);
-  
+    io.sockets.emit('updateCompResources', compResources)
+    io.sockets.emit('updateUptime', secs2HHMMSS(process.uptime()));
 
     // Handle chat events
     socket.on('chat', function(data){
@@ -212,22 +218,45 @@ io.on('connection', (socket) => {
     });
 });
 
-// Handle monitor events
+// Update charts
 txEmitter.on('dataWritten', function () {
     io.emit('updateCharts', sensorObjects);
 });
 
-si.cpuTemperature().then(data => compResources.CPUtemp = data.main);
-si.currentLoad().then(data => compResources.CPUload = data.currentload);
-si.mem().then(data => compResources.memuse = data.used / 1024 / 1024);
-io.emit('updateCompResources', compResources);
-var compResources = {};
-setInterval(() => {
+// Update sys info
+function checkSysInfo() {
     si.cpuTemperature().then(data => compResources.CPUtemp = data.main);
     si.currentLoad().then(data => compResources.CPUload = data.currentload);
     si.mem().then(data => compResources.memuse = data.used / 1024 / 1024);
     io.emit('updateCompResources', compResources);
-}, 60000);
+}
+var compResources = {};
+// Check at startup
+checkSysInfo();
+
+setInterval(() => {
+    checkSysInfo();
+}, 5000);
+
+// Update server uptime
+function secs2HHMMSS (seconds) {
+    var hours   = Math.floor(seconds / 3600);
+    var minutes = Math.floor((seconds - (hours * 3600)) / 60);
+    var secs = Math.floor(seconds - (hours * 3600) - (minutes * 60));
+
+    var padding = function (num) {return (num < 10) ? ("0" + num) : num}
+
+    var time = padding(hours) + ':' + padding(minutes) + ':' + padding(secs);
+    return time;
+}
+
+setInterval(() => {
+    io.emit('updateUptime', secs2HHMMSS(process.uptime()));
+}, 1000);
+
+// Redirect console log
+
+
 //>>>-------------------------------------------------<::>>>
 
 //>>>- HTTP reqs -------------------------------------<::>>>

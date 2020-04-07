@@ -7,6 +7,7 @@ var socket = io.connect('http://88.91.42.155:80');
 
 // Query DOM
 let visitCounter = document.getElementById('visit-counter');
+let serverUptime = document.getElementById('server-uptime');
 let gaugeCharts = document.getElementsByClassName('gauge');
 
 for (var chart = 0; chart < gaugeCharts.length; chart++) {
@@ -19,7 +20,11 @@ window.addEventListener('resize', function () {
     google.charts.setOnLoadCallback(drawGaugeCharts);
 });
 
-// Emit events
+socket.on('updateUptime', function (data) {
+    serverUptime.innerHTML = data;
+});
+
+// RX socket event
 socket.on('visitCounter', function (data) {
     visitCounter.innerHTML = data;
 });

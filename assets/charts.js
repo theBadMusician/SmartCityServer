@@ -174,7 +174,7 @@ function chartToggle(title) {
 
 function repositionButtons() {
     if (dash_open) {
-        document.getElementsByClassName("fa fa-eye fa-fw")[1]['style']['margin-left'] = (chartAreaLeftDash - 50) + "px";
+        document.getElementsByClassName("fa fa-line-chart fa-fw")[1]['style']['margin-left'] = (chartAreaLeftDash - 50) + "px";
         document.getElementsByClassName("w3-container w3-padding-16 w3-light-grey")[0]['style']['margin-left'] = (chartAreaLeftDash - 75) + "px";
         for (var IDX = 0; IDX < chartNameList.length; IDX++) {
             document.getElementById(String(chartNameList[IDX]))['style']['margin-left'] = chartAreaLeftDash + "px";
@@ -182,7 +182,7 @@ function repositionButtons() {
         }
     }
     else {
-        document.getElementsByClassName("fa fa-eye fa-fw")[1]['style']['margin-left'] = chartAreaLeftNoDash + "px";
+        document.getElementsByClassName("fa fa-line-chart fa-fw")[1]['style']['margin-left'] = chartAreaLeftNoDash + "px";
         document.getElementsByClassName("w3-container w3-padding-16 w3-light-grey")[0]['style']['margin-left'] = "0px";
         for (var IDX = 0; IDX < chartNameList.length; IDX++) {
             document.getElementById(String(chartNameList[IDX]))['style']['margin-left'] = chartAreaLeftNoDash + "px";
