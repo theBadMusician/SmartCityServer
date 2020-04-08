@@ -34,6 +34,8 @@ socket.on('updateCompResources', function (data) {
     compResources.CPUtemp = data.CPUtemp;
     compResources.CPUload = data.CPUload;
     compResources.memuse = data.memuse;
+    compResources.heapUsed = data.heapUsed;
+    compResources.heapTotal = Math.round((data.heapTotal + Number.EPSILON) * 100) / 100;
     console.log(compResources);
     google.charts.setOnLoadCallback(drawGaugeCharts);
 });
@@ -51,9 +53,13 @@ var drawGaugeCharts = function () {
         ['Label', 'Value'],
         ['Memory [MB]', Math.round(compResources.memuse)]
     ]);
+    var heapuse = google.visualization.arrayToDataTable([
+        ['Label', 'Value'],
+        ['Heap [MB]', Math.round((compResources.heapUsed + Number.EPSILON) * 100) / 100]
+    ]);
 
     var optionsCPUload = {
-        width: window.innerWidth/4, height: window.innerWidth/4,
+        width: window.innerWidth/6, height: window.innerWidth/6,
         redFrom: 90, redTo: 100,
         yellowFrom: 75, yellowTo: 90,
         minorTicks: 5,
@@ -61,25 +67,35 @@ var drawGaugeCharts = function () {
     };
 
     var optionsCPUtemp = {
-        width: window.innerWidth/4, height: window.innerWidth/4,
+        width: window.innerWidth/6, height: window.innerWidth/6,
         redFrom: 75, redTo: 100,
         yellowFrom: 65, yellowTo: 75,
         minorTicks: 5
     };
 
     var optionsMemuse = {
-        width: window.innerWidth/4, height: window.innerWidth/4,
+        width: window.innerWidth/6, height: window.innerWidth/6,
         max: 1024,
         redFrom: 818, redTo: 1024,
         yellowFrom: 612, yellowTo: 818,
         minorTicks: 5
     };
 
+    var optionsHeapuse = {
+        width: window.innerWidth/6, height: window.innerWidth/6,
+        max: compResources.heapTotal,
+        redFrom: compResources.heapTotal * 0.8, redTo: compResources.heapTotal,
+        yellowFrom: compResources.heapTotal * 0.6, yellowTo: compResources.heapTotal * 0.8,
+        minorTicks: 5
+    };
+
     var chartCPUload = new google.visualization.Gauge(document.getElementById('chart_CPUload'));
     var chartCPUtemp = new google.visualization.Gauge(document.getElementById('chart_CPUtemp'));
     var chartMemuse = new google.visualization.Gauge(document.getElementById('chart_memuse'));
+    var chartHeapuse = new google.visualization.Gauge(document.getElementById('chart_heapuse'));
 
     chartCPUload.draw(CPUload, optionsCPUload);
     chartCPUtemp.draw(CPUtemp, optionsCPUtemp);
     chartMemuse.draw(memuse, optionsMemuse);
+    chartHeapuse.draw(heapuse, optionsHeapuse);
 }
