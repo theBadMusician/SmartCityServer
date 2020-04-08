@@ -24,7 +24,7 @@ var si = require('systeminformation');
 var gitlog = require('gitlog');
 const options = {
     repo: secrets.repoDir,
-    number: 7,
+    number: 10,
     fields: ["abbrevHash", "subject", "authorDateRel"],
     execOptions: { maxBuffer: 1000 * 1024 }
   };
@@ -76,6 +76,12 @@ setInterval(() => {
 // Read/Write JSON measurements
 var tempData;
 var sensorObjects = {};
+
+// Check git commit log
+var gitcommits;
+gitlog.default(options, function (error, commits) {
+    gitcommits = commits;
+});
 //>>>-------------------------------------------------<::>>>
 
 //>>>- Check database at startup ---------------------<::>>>
@@ -203,10 +209,8 @@ io.on('connection', (socket) => {
     io.sockets.emit('updateCharts', sensorObjects);
     io.sockets.emit('updateCompResources', compResources)
     io.sockets.emit('updateUptime', secs2HHMMSS(process.uptime()));
-    
-    gitlog.default(options, function (error, commits) {
-        io.sockets.emit('gitlog', commits)
-    });
+    io.sockets.emit('gitlog', gitcommits);
+
 
     // Handle chat events
     socket.on('chat', function(data){
@@ -241,6 +245,7 @@ function checkSysInfo() {
     si.cpuTemperature().then(data => compResources.CPUtemp = data.main);
     si.currentLoad().then(data => compResources.CPUload = data.currentload);
     si.mem().then(data => compResources.memuse = data.used / 1024 / 1024);
+    si.mem().then(data => compResources.memtotal = data.total / 1024 / 1024);
     compResources.heapUsed = process.memoryUsage().heapUsed / 1024 / 1024;
     compResources.heapTotal = process.memoryUsage().heapTotal / 1024 / 1024;
     io.emit('updateCompResources', compResources);

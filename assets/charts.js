@@ -90,6 +90,7 @@ function drawAutomatedLineChart(measurementArray, title) {
             },
             height: chartHeight,
             width: window.innerWidth,
+            backgroundColor: 'transparent',
             chartArea: {
                 left: chartAreaLeftDash,
                 top: chartAreaTop,

@@ -1,6 +1,9 @@
 // Load google charts
-google.charts.load('current', { 'packages': ['gauge'] });
+google.charts.load('current', {
+    'packages': ['gauge', 'corechart']
+});
 google.charts.setOnLoadCallback(drawGaugeCharts);
+google.charts.setOnLoadCallback(drawPieChart);
 
 // Make connection
 var socket = io.connect('http://88.91.42.155:80');
@@ -14,10 +17,13 @@ for (var chart = 0; chart < gaugeCharts.length; chart++) {
     gaugeCharts[chart]['style']['display'] = 'inline-block';
 }
 
+var thirdWidth = (window.innerWidth > 567) ? (window.innerWidth / 3.7) : window.innerWidth;
 window.addEventListener('resize', function () {
     if (window.innerWidth >= 976) window.dash_open = true;
     else window.dash_open = false;
     google.charts.setOnLoadCallback(drawGaugeCharts);
+    thirdWidth = (window.innerWidth > 567) ? (window.innerWidth / 3.7) : window.innerWidth;
+    google.charts.setOnLoadCallback(drawPieChart);
 });
 
 socket.on('updateUptime', function (data) {
@@ -33,9 +39,16 @@ socket.on('gitlog', function (data) {
     var gitlog = document.getElementsByClassName('w3-table-all');
     gitlog[0].innerHTML = '';
     for (var log = 0; log < data.length; log++) {
-        gitlog[0].innerHTML += "<tr><td>" + data[log].abbrevHash + "</td><td>"
-                            + data[log].subject + "</td><td><i>"
-                            + data[log].authorDateRel + "</i></td></tr>";
+        if (log % 2 == 0) {
+            gitlog[0].innerHTML += "<tr><td>" + data[log].abbrevHash + "</td><td>"
+                                + data[log].subject + "</td><td><i>"
+                                + data[log].authorDateRel + "</i></td></tr>";
+        }
+        else {
+            gitlog[0].innerHTML += "<tr style='background-color:#f2f2f2'><td>" + data[log].abbrevHash + "</td><td>"
+                                + data[log].subject + "</td><td><i>"
+                                + data[log].authorDateRel + "</i></td></tr>";
+        }
     }
 });
 
@@ -44,9 +57,9 @@ socket.on('updateCompResources', function (data) {
     compResources.CPUtemp = data.CPUtemp;
     compResources.CPUload = data.CPUload;
     compResources.memuse = data.memuse;
+    compResources.memtotal = Math.floor(data.memtotal);
     compResources.heapUsed = data.heapUsed;
     compResources.heapTotal = Math.round((data.heapTotal + Number.EPSILON) * 100) / 100;
-    console.log(compResources);
     google.charts.setOnLoadCallback(drawGaugeCharts);
 });
 
@@ -68,8 +81,10 @@ var drawGaugeCharts = function () {
         ['Heap [MB]', Math.round((compResources.heapUsed + Number.EPSILON) * 100) / 100]
     ]);
 
+    var gaugeWidthHeight = (window.innerWidth > 567) ? window.innerWidth/5.25 : window.innerWidth/2.3;
+
     var optionsCPUload = {
-        width: window.innerWidth/6, height: window.innerWidth/6,
+        width: gaugeWidthHeight, height: gaugeWidthHeight,
         redFrom: 90, redTo: 100,
         yellowFrom: 75, yellowTo: 90,
         minorTicks: 5,
@@ -77,22 +92,22 @@ var drawGaugeCharts = function () {
     };
 
     var optionsCPUtemp = {
-        width: window.innerWidth/6, height: window.innerWidth/6,
+        width: gaugeWidthHeight, height: gaugeWidthHeight,
         redFrom: 75, redTo: 100,
         yellowFrom: 65, yellowTo: 75,
         minorTicks: 5
     };
 
     var optionsMemuse = {
-        width: window.innerWidth/6, height: window.innerWidth/6,
-        max: 1024,
-        redFrom: 818, redTo: 1024,
-        yellowFrom: 612, yellowTo: 818,
+        width: gaugeWidthHeight, height: gaugeWidthHeight,
+        max: compResources.memtotal,
+        redFrom: compResources.memtotal * 0.8, redTo: compResources.memtotal,
+        yellowFrom: compResources.memtotal * 0.6, yellowTo: compResources.memtotal * 0.8,
         minorTicks: 5
     };
 
     var optionsHeapuse = {
-        width: window.innerWidth/6, height: window.innerWidth/6,
+        width: gaugeWidthHeight, height: gaugeWidthHeight,
         max: compResources.heapTotal,
         redFrom: compResources.heapTotal * 0.8, redTo: compResources.heapTotal,
         yellowFrom: compResources.heapTotal * 0.6, yellowTo: compResources.heapTotal * 0.8,
@@ -108,4 +123,32 @@ var drawGaugeCharts = function () {
     chartCPUtemp.draw(CPUtemp, optionsCPUtemp);
     chartMemuse.draw(memuse, optionsMemuse);
     chartHeapuse.draw(heapuse, optionsHeapuse);
+}
+
+function drawPieChart () {
+    var data = google.visualization.arrayToDataTable([
+        ['City', 'Visits'],
+        ['Work',     11],
+        ['Eat',      2],
+        ['Commute',  2],
+        ['Watch TV', 2],
+        ['Sleep',    7]
+    ]);
+
+    var options = {
+        title: 'Visits by City',
+        titlePosition: 'none',
+        width: thirdWidth,
+        height: thirdWidth,
+        backgroundColor: 'transparent',
+        is3D: true,
+        chartArea: {
+            width: '100%',
+            height: '100%'
+        }
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('visit-chart'));
+
+    chart.draw(data, options);
 }
