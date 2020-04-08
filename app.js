@@ -20,6 +20,14 @@ const rl = readline.createInterface({
 var nodeCleanup = require('node-cleanup');
 
 var si = require('systeminformation');
+
+var gitlog = require('gitlog');
+const options = {
+    repo: secrets.repoDir,
+    number: 7,
+    fields: ["abbrevHash", "subject", "authorDateRel"],
+    execOptions: { maxBuffer: 1000 * 1024 }
+  };
 //>>>-------------------------------------------------<::>>>
 
 //>>>- JSON ------------------------------------------<::>>>
@@ -195,6 +203,10 @@ io.on('connection', (socket) => {
     io.sockets.emit('updateCharts', sensorObjects);
     io.sockets.emit('updateCompResources', compResources)
     io.sockets.emit('updateUptime', secs2HHMMSS(process.uptime()));
+    
+    gitlog.default(options, function (error, commits) {
+        io.sockets.emit('gitlog', commits)
+    });
 
     // Handle chat events
     socket.on('chat', function(data){
@@ -255,10 +267,6 @@ function secs2HHMMSS (seconds) {
 setInterval(() => {
     io.emit('updateUptime', secs2HHMMSS(process.uptime()));
 }, 1000);
-
-// Redirect console log
-
-
 //>>>-------------------------------------------------<::>>>
 
 //>>>- HTTP reqs -------------------------------------<::>>>
@@ -314,6 +322,11 @@ app.post('/post-test', function(req, res){
 app.get("/get-data", (req, res) => {
     console.log(Date().toString(), "Requested URL: ", req.url);
     res.json(measuredData);;
+});
+
+app.get('/projectTasks', (req, res) => {
+    console.log(Date().toString(), "Requested URL: ", req.url);
+    res.render('projectTasks');
 });
 //>>>-------------------------------------------------<::>>>
 

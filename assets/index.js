@@ -29,6 +29,16 @@ socket.on('visitCounter', function (data) {
     visitCounter.innerHTML = data;
 });
 
+socket.on('gitlog', function (data) {
+    var gitlog = document.getElementsByClassName('w3-table-all');
+    gitlog[0].innerHTML = '';
+    for (var log = 0; log < data.length; log++) {
+        gitlog[0].innerHTML += "<tr><td>" + data[log].abbrevHash + "</td><td>"
+                            + data[log].subject + "</td><td><i>"
+                            + data[log].authorDateRel + "</i></td></tr>";
+    }
+});
+
 var compResources = {};
 socket.on('updateCompResources', function (data) {
     compResources.CPUtemp = data.CPUtemp;
