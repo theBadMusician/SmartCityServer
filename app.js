@@ -20,8 +20,6 @@ const rl = readline.createInterface({
 var nodeCleanup = require('node-cleanup');
 
 var si = require('systeminformation');
-
-var log4js = require('log4js');
 //>>>-------------------------------------------------<::>>>
 
 //>>>- JSON ------------------------------------------<::>>>
@@ -46,10 +44,12 @@ var measuredData = require('./measuredData.json');
 //>>>- variables/objects -----------------------------<::>>>
 var urlencodedParser = bodyParser.urlencoded({ extended: true });
 var jsonParser = bodyParser.json();
+
 var rxEmitter = new events.EventEmitter();
 var txEmitter = new events.EventEmitter();
 var consoleEmitter = new events.EventEmitter();
 
+// Save visit counter on exit
 let visitCounter = require('./visitCounter.json').visitCounter;
 nodeCleanup(function (exitCode, signal) {
     var count = {visitCounter: visitCounter};
@@ -128,7 +128,7 @@ rl.on('line', function (text) {
             break;
 
         case 'show memuse':
-            console.log('The script uses approximately ', (process.memoryUsage().heapUsed / 1024 / 1024),' MB of RAM.\n');
+            console.log('The script uses approximately ', (process.memoryUsage().heapUsed / 1024 / 1024),' MB of the', process.memoryUsage().heapTotal / 1024 / 1024, 'heap.\n');
             break;
 
         case 'show mem --total':
@@ -224,13 +224,16 @@ txEmitter.on('dataWritten', function () {
 });
 
 // Update sys info
+var compResources = {};
 function checkSysInfo() {
     si.cpuTemperature().then(data => compResources.CPUtemp = data.main);
     si.currentLoad().then(data => compResources.CPUload = data.currentload);
     si.mem().then(data => compResources.memuse = data.used / 1024 / 1024);
+    compResources.heapUsed = process.memoryUsage().heapUsed / 1024 / 1024;
+    compResources.heapTotal = process.memoryUsage().heapTotal / 1024 / 1024;
+    console.log(compResources);
     io.emit('updateCompResources', compResources);
 }
-var compResources = {};
 // Check at startup
 checkSysInfo();
 
