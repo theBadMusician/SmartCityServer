@@ -231,7 +231,6 @@ function checkSysInfo() {
     si.mem().then(data => compResources.memuse = data.used / 1024 / 1024);
     compResources.heapUsed = process.memoryUsage().heapUsed / 1024 / 1024;
     compResources.heapTotal = process.memoryUsage().heapTotal / 1024 / 1024;
-    console.log(compResources);
     io.emit('updateCompResources', compResources);
 }
 // Check at startup
