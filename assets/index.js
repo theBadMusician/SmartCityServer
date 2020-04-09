@@ -42,12 +42,12 @@ socket.on('gitlog', function (data) {
         if (log % 2 == 0) {
             gitlog[0].innerHTML += "<tr><td>" + data[log].abbrevHash + "</td><td>"
                                 + data[log].subject + "</td><td><i>"
-                                + data[log].authorDateRel + "</i></td></tr>";
+                                + data[log].authorDate + "</i></td></tr>";
         }
         else {
             gitlog[0].innerHTML += "<tr style='background-color:#f2f2f2'><td>" + data[log].abbrevHash + "</td><td>"
                                 + data[log].subject + "</td><td><i>"
-                                + data[log].authorDateRel + "</i></td></tr>";
+                                + data[log].authorDate + "</i></td></tr>";
         }
     }
 });
@@ -131,7 +131,6 @@ socket.on('updateGeo', function (data) {
     Object.getOwnPropertyNames(data).forEach(city => {
         cityArray.push([city, data[city]]);
     });
-    console.log(cityArray);
     google.charts.setOnLoadCallback(drawPieChart);
 });
 
