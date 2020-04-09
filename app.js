@@ -24,7 +24,7 @@ var si = require('systeminformation');
 var gitlog = require('gitlog');
 const options = {
     repo: secrets.repoDir,
-    number: 50,
+    number: 100,
     fields: ["hash", "abbrevHash", "subject", "authorDate", "authorName"],
     execOptions: { maxBuffer: 1000 * 1024 }
   };
