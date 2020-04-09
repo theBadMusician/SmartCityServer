@@ -24,8 +24,8 @@ var si = require('systeminformation');
 var gitlog = require('gitlog');
 const options = {
     repo: secrets.repoDir,
-    number: 10,
-    fields: ["abbrevHash", "subject", "authorDate"],
+    number: 50,
+    fields: ["hash", "abbrevHash", "subject", "authorDate", "authorName"],
     execOptions: { maxBuffer: 1000 * 1024 }
   };
 
@@ -343,6 +343,11 @@ app.get("/get-data", (req, res) => {
 app.get('/projectTasks', (req, res) => {
     console.log(Date().toString(), "Requested URL: ", req.url);
     res.render('projectTasks');
+});
+
+app.get('/history', (req, res) => {
+    console.log(Date().toString(), "Requested URL: ", req.url);
+    res.render('history');
 });
 //>>>-------------------------------------------------<::>>>
 

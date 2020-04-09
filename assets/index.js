@@ -36,9 +36,10 @@ socket.on('visitCounter', function (data) {
 });
 
 socket.on('gitlog', function (data) {
+    var length = 10;
     var gitlog = document.getElementsByClassName('w3-table-all');
     gitlog[0].innerHTML = '';
-    for (var log = 0; log < data.length; log++) {
+    for (var log = 0; log < length; log++) {
         if (log % 2 == 0) {
             gitlog[0].innerHTML += "<tr><td>" + data[log].abbrevHash + "</td><td>"
                                 + data[log].subject + "</td><td><i>"
