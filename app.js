@@ -28,6 +28,8 @@ const options = {
     fields: ["abbrevHash", "subject", "authorDateRel"],
     execOptions: { maxBuffer: 1000 * 1024 }
   };
+
+var geoip = require('geoip-lite');
 //>>>-------------------------------------------------<::>>>
 
 //>>>- JSON ------------------------------------------<::>>>
@@ -59,9 +61,11 @@ var consoleEmitter = new events.EventEmitter();
 
 // Save visit counter on exit
 let visitCounter = require('./visitCounter.json').visitCounter;
+let visitCities = require('./visitCities.json');
 nodeCleanup(function (exitCode, signal) {
     var count = {visitCounter: visitCounter};
     fs.writeFileSync("visitCounter.json", JSON.stringify(count));
+    fs.writeFileSync("visitCities.json", JSON.stringify(visitCities));
 });
 
 
@@ -210,7 +214,7 @@ io.on('connection', (socket) => {
     io.sockets.emit('updateCompResources', compResources)
     io.sockets.emit('updateUptime', secs2HHMMSS(process.uptime()));
     io.sockets.emit('gitlog', gitcommits);
-
+    io.sockets.emit('updateGeo', visitCities);
 
     // Handle chat events
     socket.on('chat', function(data){
@@ -279,6 +283,13 @@ app.get('/', (req, res) => {
     visitCounter += 1;
     console.log(Date().toString(), "Requested URL: ", req.url, "Request IP: ", req.ip, "Total requests: ", visitCounter);
     res.render('index');
+
+    var geo = geoip.lookup(req.ip);
+    if (geo.city == '') geo.city = geo.timezone;
+    
+    if (visitCities.hasOwnProperty(geo.city)) visitCities[geo.city] += 1;
+    else visitCities[geo.city] = 1;
+    io.emit('updateGeo', visitCities);
 });
 
 app.get('/chat', (req, res) => {

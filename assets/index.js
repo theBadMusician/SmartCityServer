@@ -125,15 +125,18 @@ var drawGaugeCharts = function () {
     chartHeapuse.draw(heapuse, optionsHeapuse);
 }
 
+var cityArray = [['City', 'Visits']];
+socket.on('updateGeo', function (data) {
+    cityArray = [['City', 'Visits']];
+    Object.getOwnPropertyNames(data).forEach(city => {
+        cityArray.push([city, data[city]]);
+    });
+    console.log(cityArray);
+    google.charts.setOnLoadCallback(drawPieChart);
+});
+
 function drawPieChart () {
-    var data = google.visualization.arrayToDataTable([
-        ['City', 'Visits'],
-        ['Work',     11],
-        ['Eat',      2],
-        ['Commute',  2],
-        ['Watch TV', 2],
-        ['Sleep',    7]
-    ]);
+    var data = google.visualization.arrayToDataTable(cityArray);
 
     var options = {
         title: 'Visits by City',
@@ -143,6 +146,7 @@ function drawPieChart () {
         backgroundColor: 'transparent',
         is3D: true,
         chartArea: {
+            left: 20,
             width: '100%',
             height: '100%'
         }
