@@ -8,9 +8,6 @@ var events = require('events');
 var uuid = require('node-uuid');
 var fs = require('fs');
 
-//var JSONStream = require('JSONStream');
-//var es = require('event-stream');
-
 const readline = require("readline");
 const rl = readline.createInterface({
     input: process.stdin,
@@ -36,19 +33,6 @@ var geoip = require('geoip-lite');
 var fileName = './measuredData.json';
 var measuredData = require('./measuredData.json');
 
-// var getStream = function () {
-//     var jsonData = 'measuredData.json';
-//     var stream = fs.createReadStream(jsonData, { encoding: 'utf8' });
-//     var parser = JSONStream.parse('*.*.*');
-//     return stream.pipe(parser);
-// };
-
-// getStream()
-//     .pipe(es.mapSync(function (data) {
-//         console.log(data);
-//         console.count();
-//         console.log(">>-<<>>");
-//     }));
 //>>>-------------------------------------------------<::>>>
 
 //>>>- variables/objects -----------------------------<::>>>
