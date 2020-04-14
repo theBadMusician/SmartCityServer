@@ -4,3 +4,5 @@ measuredData.json
 .vscode/
 node_modules/
 visitCounter.json
+selfsigned.key
+selfsigned.crt

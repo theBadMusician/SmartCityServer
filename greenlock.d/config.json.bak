@@ -1,0 +1,35 @@
+{
+  "sites": [
+    {
+      "subject": "ubrukeligrobot.com",
+      "altnames": [
+        "www.ubrukeligrobot.com",
+        "ubrukeligrobot.com"
+      ],
+      "renewAt": 1590638516234
+    },
+    {
+      "subject": "ubrukeligrobot.no",
+      "altnames": [
+        "www.ubrukeligrobot.no",
+        "ubrukeligrobot.no"
+      ],
+      "renewAt": 1590698335642
+    }
+  ],
+  "defaults": {
+    "store": {
+      "module": "greenlock-store-fs"
+    },
+    "challenges": {
+      "http-01": {
+        "module": "acme-http-01-standalone"
+      }
+    },
+    "renewOffset": "-45d",
+    "renewStagger": "3d",
+    "accountKeyType": "EC-P256",
+    "serverKeyType": "RSA-2048",
+    "subscriberEmail": "thebadmusician@gmail.com"
+  }
+}

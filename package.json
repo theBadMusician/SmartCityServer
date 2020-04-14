@@ -40,6 +40,8 @@
     "fs": "0.0.1-security",
     "geoip-lite": "^1.4.1",
     "gitlog": "^3.3.5",
+    "greenlock-express": "^4.0.3",
+    "greenlock-store-fs": "^3.2.2",
     "node-cleanup": "^2.1.2",
     "node-uuid": "^1.4.8",
     "prompt": "^1.0.0",

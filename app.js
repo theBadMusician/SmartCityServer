@@ -1,5 +1,8 @@
+"use strict";
 //>>>- Modules ---------------------------------------<::>>>
 var express = require('express');
+var http = require('http');
+var https = require('https');
 var socket = require('socket.io');
 var secrets = require('./SECRETS.js');
 var bodyParser = require('body-parser');
@@ -186,7 +189,15 @@ rl.on('line', function (text) {
 //>>>-------------------------------------------------<::>>>
 
 //>>>- Express app setup -----------------------------<::>>>
-const port = 80;
+// var privateKey = fs.readFileSync(__dirname + '/selfsigned.key');
+// var certificate = fs.readFileSync(__dirname + '/selfsigned.crt');
+// var credentials = {
+//   key: privateKey,
+//   cert: certificate
+// };
+
+// const httpPort = 80;
+// const httpsPort = 443;
 
 var app = express();
 app.set('view engine', 'ejs');
@@ -196,10 +207,35 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Static files
 app.use('/assets', express.static('assets'));
 
+
+// var httpServer = http.createServer(app);
+// var httpsServer = https.createServer(credentials, app);
+
 // Start listening
-var server = app.listen(port, function(){
-    console.log('%s Listening for requests on port %d...', Date().toString(), port);
-});
+// httpServer.listen(httpPort, function () {
+//     console.log('%s Listening for requests on port %d...', Date().toString(), httpPort);
+// });
+// httpsServer.listen(httpsPort, function () {
+//     console.log('%s Listening for requests on port %d...', Date().toString(), httpsPort);
+// });
+
+// var server = app.listen(httpsPort, function(){
+//     console.log('%s Listening for requests on port %d...', Date().toString(), httpsPort);
+// });
+var server = require("greenlock-express")
+    .init({
+        packageRoot: __dirname,
+
+        // contact for security and critical bug notices
+        configDir: "./greenlock.d",
+        maintainerEmail: "thebadmusician@gmail.com",
+
+        // whether or not to run at cloudscale
+        cluster: false
+    })
+    // Serves on 80 and 443
+    // Get's SSL certificates magically!
+    .serve(app);
 //>>>-------------------------------------------------<::>>>
 
 //>>>- Socket setup & pass server --------------------<::>>>

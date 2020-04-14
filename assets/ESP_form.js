@@ -2,7 +2,7 @@ var pwd = document.getElementById('pwd'),
       btn = document.getElementById('send');
 
 function check(form) {
-    var socket = io.connect('http://88.91.42.155:80');
+    const socket = io.connect('https://ubrukeligrobot.com:443', {secure: true});
     socket.emit('ESP32login', {
         userid: form.userid.value,
         password: form.pwd.value

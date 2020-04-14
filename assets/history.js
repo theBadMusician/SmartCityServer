@@ -6,7 +6,7 @@ google.charts.load('current', {
 // google.charts.setOnLoadCallback(drawPieChart);
 
 // Make connection
-var socket = io.connect('http://88.91.42.155:80');
+const socket = io.connect('https://ubrukeligrobot.com:443', {secure: true});
 
 window.addEventListener('resize', function () {
     if (window.innerWidth >= 976) window.dash_open = true;

@@ -1,5 +1,5 @@
 // Make connection
-var socket = io.connect('http://88.91.42.155:80');
+const socket = io.connect('https://ubrukeligrobot.com:443', {secure: true});
 
 // Query DOM
 var message = document.getElementById('message'),

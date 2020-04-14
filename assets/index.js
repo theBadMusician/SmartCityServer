@@ -6,7 +6,7 @@ google.charts.setOnLoadCallback(drawGaugeCharts);
 google.charts.setOnLoadCallback(drawPieChart);
 
 // Make connection
-var socket = io.connect('http://88.91.42.155:80');
+const socket = io.connect('https://ubrukeligrobot.com');
 
 // Query DOM
 let visitCounter = document.getElementById('visit-counter');
