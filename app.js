@@ -344,6 +344,10 @@ app.get('/project-readings', (req, res) => {
     res.render('projectReadings');
 });
 
+app.get('/project-dashboard', (req, res) => {
+    console.log(Date().toString(), "Requested URL: ", req.url);
+    res.render('projectDashboard');
+});
 
 //>>>-------------------------------------------------<::>>>
 
