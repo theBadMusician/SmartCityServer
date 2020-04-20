@@ -24,9 +24,13 @@ const options = {
     number: 100,
     fields: ["hash", "abbrevHash", "subject", "authorDate", "authorName"],
     execOptions: { maxBuffer: 1000 * 1024 }
-  };
+};
 
 var geoip = require('geoip-lite');
+
+var os = require('os');
+var networkInterfaces = os.networkInterfaces();
+console.log(networkInterfaces.wlan0[0]);
 //>>>-------------------------------------------------<::>>>
 
 //>>>- JSON ------------------------------------------<::>>>
@@ -46,14 +50,14 @@ var consoleEmitter = new events.EventEmitter();
 // Save visit counter on exit
 let visitCounter = require('./visitCounter.json').visitCounter;
 let visitCities = require('./visitCities.json');
-nodeCleanup(function (exitCode, signal) {
-    var count = {visitCounter: visitCounter};
+nodeCleanup(function(exitCode, signal) {
+    var count = { visitCounter: visitCounter };
     fs.writeFileSync("visitCounter.json", JSON.stringify(count));
     fs.writeFileSync("visitCities.json", JSON.stringify(visitCities));
 });
 
 
-var randomID = '/'+uuid.v4();
+var randomID = '/' + uuid.v4();
 /*
 setInterval(() => {
     randomID = '/'+uuid.v4();
@@ -67,7 +71,7 @@ var sensorObjects = {};
 
 // Check git commit log
 var gitcommits;
-gitlog.default(options, function (error, commits) {
+gitlog.default(options, function(error, commits) {
     gitcommits = commits;
 });
 //>>>-------------------------------------------------<::>>>
@@ -81,18 +85,18 @@ Object.getOwnPropertyNames(measuredData).forEach(sensor => {
 //>>>-------------------------------------------------<::>>>
 
 //>>>- Console commands ------------------------------<::>>>
-rl.on('line', function (text) {
-    switch(text.trim()) {
+rl.on('line', function(text) {
+    switch (text.trim()) {
         case 'quit':
             process.exit();
 
-        case 'del db --entries': 
+        case 'del db --entries':
             Object.getOwnPropertyNames(measuredData).forEach(sensor => {
                 console.log(sensor, " has ", measuredData[sensor].length, " number of records.");
             })
 
-            rl.question("Sensor: ", function (sensor) {
-                rl.question("Number of entries: ", function (entries) {
+            rl.question("Sensor: ", function(sensor) {
+                rl.question("Number of entries: ", function(entries) {
                     // console.log('  sensor: ' + sensor);
                     // console.log('  number of entries: ' + entries);
 
@@ -130,7 +134,7 @@ rl.on('line', function (text) {
             break;
 
         case 'show memuse':
-            console.log('The script uses approximately ', (process.memoryUsage().heapUsed / 1024 / 1024),' MB of the', process.memoryUsage().heapTotal / 1024 / 1024, 'heap.\n');
+            console.log('The script uses approximately ', (process.memoryUsage().heapUsed / 1024 / 1024), ' MB of the', process.memoryUsage().heapTotal / 1024 / 1024, 'heap.\n');
             break;
 
         case 'show mem --total':
@@ -140,7 +144,7 @@ rl.on('line', function (text) {
         case 'show mem --free':
             si.mem().then(data => console.log("Free RAM: ", data.free / 1024 / 1024, "MB"));
             break;
-            
+
         case 'show mem --used':
             si.mem().then(data => console.log("Total used RAM: ", data.used / 1024 / 1024, "MB"));
             break;
@@ -149,19 +153,19 @@ rl.on('line', function (text) {
             si.currentLoad().then(data => console.log("Current load on CPU: ", data.currentload, "%"));
             break;
 
-	    case 'show cpu --temp':
+        case 'show cpu --temp':
             si.cpuTemperature().then(data => {
                 if (data.main == -1) {
                     console.log("ERROR! Cannot read CPU temperature.");
                     return;
-                }
-                else console.log("CPU core temeperature: ", data.main, "°C")});
+                } else console.log("CPU core temeperature: ", data.main, "°C")
+            });
             break;
-            
+
         case 'show cpu --speed':
             si.cpuCurrentspeed().then(data => console.log("Server avg. CPU core speed: ", data.avg, "GHz across ", data.cores.length, "cores"));
             break;
-        
+
         case 'show server --uptime':
             console.log(secs2HHMMSS(process.uptime()));
     };
@@ -181,7 +185,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/assets', express.static('assets'));
 
 // Start listening
-var server = app.listen(port, function(){
+var server = app.listen(port, function() {
     console.log('%s Listening for requests on port %d...', Date().toString(), port);
 });
 //>>>-------------------------------------------------<::>>>
@@ -201,17 +205,17 @@ io.on('connection', (socket) => {
     io.sockets.emit('updateGeo', visitCities);
 
     // Handle chat events
-    socket.on('chat', function(data){
+    socket.on('chat', function(data) {
         console.log(Date().toString(), data);
         io.sockets.emit('chat', data);
     });
 
-    socket.on('typing', function(data){
-      socket.broadcast.emit('typing', data);
+    socket.on('typing', function(data) {
+        socket.broadcast.emit('typing', data);
     });
 
     // Handle login events
-    socket.on('ESP32login', function(data){
+    socket.on('ESP32login', function(data) {
         console.log("Login submitted.", randomID)
         if (data.userid == secrets.ESP32_userid && data.password == secrets.ESP32_pwd) {
             socket.emit('correct', '/redirect');
@@ -223,12 +227,13 @@ io.on('connection', (socket) => {
 });
 
 // Update charts
-txEmitter.on('dataWritten', function () {
+txEmitter.on('dataWritten', function() {
     io.emit('updateCharts', sensorObjects);
 });
 
 // Update sys info
 var compResources = {};
+
 function checkSysInfo() {
     si.cpuTemperature().then(data => compResources.CPUtemp = data.main);
     si.currentLoad().then(data => compResources.CPUload = data.currentload);
@@ -246,12 +251,12 @@ setInterval(() => {
 }, 5000);
 
 // Update server uptime
-function secs2HHMMSS (seconds) {
-    var hours   = Math.floor(seconds / 3600);
+function secs2HHMMSS(seconds) {
+    var hours = Math.floor(seconds / 3600);
     var minutes = Math.floor((seconds - (hours * 3600)) / 60);
     var secs = Math.floor(seconds - (hours * 3600) - (minutes * 60));
 
-    var padding = function (num) {return (num < 10) ? ("0" + num) : num}
+    var padding = function(num) { return (num < 10) ? ("0" + num) : num }
 
     var time = padding(hours) + ':' + padding(minutes) + ':' + padding(secs);
     return time;
@@ -270,7 +275,7 @@ app.get('/', (req, res) => {
 
     var geo = geoip.lookup(req.ip);
     if (geo.city == '') geo.city = geo.timezone;
-    
+
     if (visitCities.hasOwnProperty(geo.city)) visitCities[geo.city] += 1;
     else visitCities[geo.city] = 1;
     io.emit('updateGeo', visitCities);
@@ -301,7 +306,7 @@ app.get(randomID, (req, res) => {
     res.render('esp_upload');
 });
 
-app.post('/post-test', function(req, res){
+app.post('/post-test', function(req, res) {
     req.setEncoding('utf8');
     req.on('data', chunk => {
         tempData = chunk;
@@ -312,11 +317,11 @@ app.post('/post-test', function(req, res){
             tempData[sensor]["UNIX"] = Date.now();
         });
         console.log(Date().toString(), "Received data: ", tempData);
-        
+
         rxEmitter.emit('DBupdate');
     });
     res.sendStatus(200);
-    
+
 });
 
 app.get("/get-data", (req, res) => {
@@ -342,8 +347,7 @@ rxEmitter.on('DBupdate', function() {
         if (measuredData.hasOwnProperty(sensor)) {
             measuredData[sensor].push(tempData[sensor]);
             if (measuredData[sensor].length > 15000) measuredData[sensor].splice(0, 5000);
-        }
-        else {
+        } else {
             measuredData[sensor] = {};
             measuredData[sensor] = [tempData[sensor]];
         }
@@ -353,12 +357,12 @@ rxEmitter.on('DBupdate', function() {
             sensorObjects[sensor] = {};
             sensorObjects[sensor] = [tempData[sensor]];
         }
-            // If DB doesnt yet have 50 measurements
+        // If DB doesnt yet have 50 measurements
         else if (measuredData[sensor].length <= 50) {
             sensorObjects[sensor] = {};
             sensorObjects[sensor] = measuredData[sensor].slice();
             //sensorObjects[sensor].push(measuredData[sensor][measuredData[sensor].length - 1]);
-        }// Normal behaviour
+        } // Normal behaviour
         else {
             sensorObjects[sensor].push(measuredData[sensor].slice(-1)[0]);
             sensorObjects[sensor].shift();
@@ -369,8 +373,8 @@ rxEmitter.on('DBupdate', function() {
 
     fs.writeFile(fileName, JSON.stringify(measuredData, null, 2), function writeJSON(err) {
         if (err) return console.log(err);
-        
-        
+
+
         txEmitter.emit('dataWritten');
     });
 });
