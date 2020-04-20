@@ -329,15 +329,22 @@ app.get("/get-data", (req, res) => {
     res.json(measuredData);;
 });
 
-app.get('/projectTasks', (req, res) => {
-    console.log(Date().toString(), "Requested URL: ", req.url);
-    res.render('projectTasks');
-});
-
 app.get('/history', (req, res) => {
     console.log(Date().toString(), "Requested URL: ", req.url);
     res.render('history');
 });
+
+app.get('/project-tasks', (req, res) => {
+    console.log(Date().toString(), "Requested URL: ", req.url);
+    res.render('projectTasks');
+});
+
+app.get('/project-readings', (req, res) => {
+    console.log(Date().toString(), "Requested URL: ", req.url);
+    res.render('projectReadings');
+});
+
+
 //>>>-------------------------------------------------<::>>>
 
 //>>>- Handle data intake and process it to database -<::>>>

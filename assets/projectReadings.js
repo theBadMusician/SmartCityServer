@@ -36,7 +36,7 @@ google.charts.load('current', {
     callback: function() {
         console.log("Google charts loaded!");
     },
-    packages: ['corechart']
+    packages: ['corechart', 'gauge']
 });
 
 
@@ -110,6 +110,73 @@ function drawAutomatedLineChart(measurementArray, title) {
     }
 }
 
+function drawAutomatedGaugeChart(measurementArray, title) {
+    return function() {
+        var chartName = title + '_gauge';
+        if (!document.getElementById("charts").innerHTML.includes(chartName)) {
+            document.getElementById("charts").innerHTML += "<div id=" + chartName + "></div>";
+        }
+
+        var dataArray = [
+            [title, measurementArray[measurementArray.length - 1][1]]
+        ];
+        if (dataArray[0][0] != 'Label') {
+            dataArray.unshift(['Label', 'Value']);
+        }
+
+        var data = google.visualization.arrayToDataTable(dataArray);
+
+        var options = {
+            width: 400,
+            height: 400,
+            redFrom: 90,
+            redTo: 100,
+            yellowFrom: 75,
+            yellowTo: 90,
+            minorTicks: 5,
+            backgroundColor: 'transparent'
+        };
+
+        document.getElementById(chartName)['style']['position'] = 'relative';
+        if (window.dash_open == false) {
+            document.getElementById(chartName)['style']['left'] = chartAreaLeftNoDash + 'px';
+        } else {
+            document.getElementById(chartName)['style']['left'] = chartAreaLeftDash + 'px';
+        };
+
+        var chart = new google.visualization.Gauge(document.getElementById(chartName));
+
+        chart.draw(data, options);
+    }
+}
+
+function drawLabeledValue(measurementArray, title) {
+    return function() {
+        var chartName = title + '_value';
+        var name = title.slice(0, title.indexOf('['));
+        var value = measurementArray[measurementArray.length - 1][1];
+        var label = title.slice(title.indexOf('[') + 1, title.indexOf(']'));
+
+        if (!document.getElementById("charts").innerHTML.includes(chartName)) {
+            document.getElementById("charts").innerHTML += "<div id=" + chartName + " style='width:500px'>" +
+                "<div class='w3-card-4'><header class='w3-container w3-red'>" +
+                "<h3>" + name + "</h3></header>" +
+                "<div class='w3-container w3-xxlarge'>" + value + " " + label + "</div></div></div>";
+        } else {
+            document.getElementById(chartName).innerHTML = "<div class='w3-card-4'><header class='w3-container w3-red'>" +
+                "<h3>" + name + "</h3></header>" +
+                "<div class='w3-container w3-xxlarge'>" + value + " " + label + "</div></div>";
+        }
+
+        document.getElementById(chartName)['style']['position'] = 'relative';
+        if (window.dash_open == false) {
+            document.getElementById(chartName)['style']['left'] = chartAreaLeftNoDash + 'px';
+        } else {
+            document.getElementById(chartName)['style']['left'] = chartAreaLeftDash + 'px';
+        };
+    }
+}
+
 
 // Listen for events
 socket.on('updateCharts', function(sensorData) {
@@ -152,7 +219,9 @@ socket.on('updateCharts', function(sensorData) {
             var funcName = sensor + measurement;
 
             if (sensorTables[sensor].hasOwnProperty(measurement)) {
-                chartList[funcName] = drawAutomatedLineChart(sensorTables[sensor][measurement], measurement);
+                chartList[funcName + 'value'] = drawLabeledValue(sensorTables[sensor][measurement], measurement);
+                chartList[funcName + 'gauge'] = drawAutomatedGaugeChart(sensorTables[sensor][measurement], measurement);
+                chartList[funcName + 'line'] = drawAutomatedLineChart(sensorTables[sensor][measurement], measurement);
             }
         });
     });
@@ -164,12 +233,14 @@ socket.on('updateCharts', function(sensorData) {
 function chartToggle(title) {
     if (document.getElementById(title + "_chart").style.display === 'block') {
         document.getElementById(title + "_chart").style.display = 'none';
+        document.getElementById(title + "_gauge").style.display = 'none';
+        document.getElementById(title + "_value").style.display = 'none';
         document.getElementById(title + "_header").style.display = 'none';
-
     } else {
         document.getElementById(title + "_chart").style.display = 'block';
+        document.getElementById(title + "_gauge").style.display = 'block';
+        document.getElementById(title + "_value").style.display = 'block';
         document.getElementById(title + "_header").style.display = 'block';
-
     }
 }
 

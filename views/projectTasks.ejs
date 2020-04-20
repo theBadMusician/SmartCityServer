@@ -3,7 +3,7 @@
 
 <head>
     <!-- Chat CSS -->
-    <link href="assets\styles.css" rel="stylesheet" type="text/css"/>
+    <link href="assets\styles.css" rel="stylesheet" type="text/css" />
     <%- include ('partials/head'); %>
 </head>
 
@@ -11,42 +11,61 @@
     <!-- Top container -->
     <%- include ('partials/topContainer'); %>
 
-    <!-- Sidebar/menu -->
-    <%- include ('partials/navbar'); %>
+        <!-- Sidebar/menu -->
+        <%- include ('partials/navbar'); %>
 
-    <!-- !PAGE CONTENT! -->
-    <div class="w3-main" style="margin-left:300px;margin-top:43px;">
+            <!-- !PAGE CONTENT! -->
+            <div class="w3-main" style="margin-left:300px;margin-top:43px;">
 
-    <!-- Header -->
-    <header class="w3-container" style="padding-top:22px">
-        <h5><b><i class="fa fa-graduation-cap fa-fw"></i> Project Tasks</b></h5>
-    </header>
-    
-    <div class="w3-half">
-        <h1 class="w3-center">ESP32 Sensor Node</h1>
-        <ul class="w3-ul w3-center">
-            <li><a href="/" class="w3-button w3-red w3-border w3-border-black w3-large" style="width:50%";></i>Sensor Readings</a></li><br>
-            <li><a href="/" class="w3-button w3-red w3-border w3-border-black w3-large" style="width:50%"></i>Dashboard</a></li><br>
-            <li><a href="/" class="w3-button w3-red w3-border w3-border-black w3-large" style="width:50%"></i>Average Value</a></li><br>
-            <li><a href="/" class="w3-button w3-red w3-border w3-border-black w3-large" style="width:50%"></i>Min/Max Alarm</a></li><br>
-            <li><a href="/" class="w3-button w3-red w3-border w3-border-black w3-large" style="width:50%"></i>Servo</a></li>    
-        </ul>
-    </div>
-    <div class="w3-half">
-        <h1 class="w3-center">Zumo32U4 Control</h1>
-        <ul class="w3-ul w3-center">
-            <li><a href="/" class="w3-button w3-blue w3-border w3-border-black w3-large" style="width:50%";></i>Pattern Driving</a></li><br>
-            <li><a href="/" class="w3-button w3-blue w3-border w3-border-black w3-large" style="width:50%"></i>Line Following</a></li><br>
-            <li><a href="/" class="w3-button w3-blue w3-border w3-border-black w3-large" style="width:50%"></i>Sensor Show</a></li><br>
-            <li><a href="/" class="w3-button w3-blue w3-border w3-border-black w3-large" style="width:50%"></i>RF Control</a></li><br>  
-        </ul>
-    </div>    
+                <!-- Header -->
+                <header class="w3-container" style="padding-top:22px">
+                    <h5><b><i class="fa fa-graduation-cap fa-fw"></i> Project Tasks</b></h5>
+                </header>
 
-    <!-- Footer -->
-    <%- include ('partials/footer'); %>
-    </div>
+                <div class="w3-half">
+                    <h1 class="w3-center">ESP32 Sensor Node</h1>
+                    <ul class="w3-ul w3-center">
+                        <li>
+                            <a href="/project-readings" class="w3-button w3-red w3-border w3-border-black w3-large" style="width:50%" ;></i>Sensor Readings</a>
+                        </li><br>
+                        <li>
+                            <a href="/" class="w3-button w3-red w3-border w3-border-black w3-large" style="width:50%"></i>Dashboard</a>
+                        </li><br>
+                        <li>
+                            <a href="/" class="w3-button w3-red w3-border w3-border-black w3-large" style="width:50%"></i>Average Value</a>
+                        </li><br>
+                        <li>
+                            <a href="/" class="w3-button w3-red w3-border w3-border-black w3-large" style="width:50%"></i>Min/Max Alarm</a>
+                        </li><br>
+                        <li>
+                            <a href="/" class="w3-button w3-red w3-border w3-border-black w3-large" style="width:50%"></i>Servo</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w3-half">
+                    <h1 class="w3-center">Zumo32U4 Control</h1>
+                    <ul class="w3-ul w3-center">
+                        <li>
+                            <a href="/" class="w3-button w3-blue w3-border w3-border-black w3-large" style="width:50%" ;></i>Pattern Driving</a>
+                        </li><br>
+                        <li>
+                            <a href="/" class="w3-button w3-blue w3-border w3-border-black w3-large" style="width:50%"></i>Line Following</a>
+                        </li><br>
+                        <li>
+                            <a href="/" class="w3-button w3-blue w3-border w3-border-black w3-large" style="width:50%"></i>Sensor Show</a>
+                        </li><br>
+                        <li>
+                            <a href="/" class="w3-button w3-blue w3-border w3-border-black w3-large" style="width:50%"></i>RF Control</a>
+                        </li><br>
+                    </ul>
+                </div>
+
+                <!-- Footer -->
+                <%- include ('partials/footer'); %>
+            </div>
 </body>
 <!-- More or less mandatory scripts -->
 <%- include ('partials/scripts'); %>
-<!-- Socket Scripts -->
+    <!-- Socket Scripts -->
+
 </html>
