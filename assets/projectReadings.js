@@ -118,7 +118,7 @@ function drawAutomatedGaugeChart(measurementArray, title) {
         }
 
         var dataArray = [
-            [title, measurementArray[measurementArray.length - 1][1]]
+            [title.replace(/_/, ' '), measurementArray[measurementArray.length - 1][1]]
         ];
         if (dataArray[0][0] != 'Label') {
             dataArray.unshift(['Label', 'Value']);
@@ -153,7 +153,7 @@ function drawAutomatedGaugeChart(measurementArray, title) {
 function drawLabeledValue(measurementArray, title) {
     return function() {
         var chartName = title + '_value';
-        var name = title.slice(0, title.indexOf('['));
+        var name = title.slice(0, title.indexOf('[')).replace(/_/, ' ');
         var value = measurementArray[measurementArray.length - 1][1];
         var label = title.slice(title.indexOf('[') + 1, title.indexOf(']'));
 

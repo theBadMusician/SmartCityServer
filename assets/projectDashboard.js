@@ -154,20 +154,23 @@ socket.on('updateCharts', function(sensorData) {
         place = new Array;
     }
     chartArray[0].push("Time");
+
     sensorList.forEach(sensor => {
         measurementList.forEach(measurement => {
             if (sensorTables[sensor].hasOwnProperty(measurement)) {
                 if (!chartArray[0].includes(measurement)) chartArray[0].push(measurement);
+                let sensorMeas = sensorTables[sensor][measurement];
 
-                for (var index = 1; index < sensorTables[sensor][measurement].length; index++) {
-                    if (chartArray[index][0] != sensorTables[sensor][measurement][index][0] && updateUNIX == true)
-                        chartArray[index].unshift(sensorTables[sensor][measurement][index][0]);
-                    chartArray[index].push(sensorTables[sensor][measurement][index][1]);
+                for (var index = 1; index < sensorMeas.length; index++) {
+                    if (chartArray[index][0] != sensorMeas[index][0] && typeof chartArray[index][0] !== 'string') {
+                        chartArray[index].unshift(sensorMeas[index][0]);
+                    }
+                    chartArray[index].push(sensorMeas[index][1]);
                 }
             }
         });
     });
-
+    console.log(sensorTables);
     chartArray = chartArray.filter(function(array) {
         return array.length != 0 && array.length >= measurementList.length - 1;
     });
