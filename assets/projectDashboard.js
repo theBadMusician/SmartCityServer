@@ -12,6 +12,8 @@ var chartList = {};
 var chartNameList = [];
 
 var chartArray = [];
+var currentUNIX = 0;
+var updateUNIX = false;
 
 function UNIXtoHHMMSS(UnixTimeStampInMillis) {
     var date = new Date(UnixTimeStampInMillis);
@@ -108,6 +110,10 @@ function drawDashboardChart() {
 
 // Listen for events
 socket.on('updateCharts', function(sensorData) {
+    if (Date.now() - currentUNIX >= 30000) {
+        updateUNIX = true;
+        currentUNIX = Date.now();
+    }
     console.log("Update received.");
     var flag = 0;
 
@@ -117,6 +123,7 @@ socket.on('updateCharts', function(sensorData) {
         var sensorArray = sensorData[sensorName];
 
         if (!sensorTables.hasOwnProperty(sensorName)) sensorTables[sensorName] = {};
+
 
         for (var dataUnitIdx = 0; dataUnitIdx < sensorArray.length; dataUnitIdx++) {
             var dataUnit = sensorArray[dataUnitIdx];
@@ -153,7 +160,7 @@ socket.on('updateCharts', function(sensorData) {
                 if (!chartArray[0].includes(measurement)) chartArray[0].push(measurement);
 
                 for (var index = 1; index < sensorTables[sensor][measurement].length; index++) {
-                    if (chartArray[index][0] != sensorTables[sensor][measurement][index][0])
+                    if (chartArray[index][0] != sensorTables[sensor][measurement][index][0] && updateUNIX == true)
                         chartArray[index].unshift(sensorTables[sensor][measurement][index][0]);
                     chartArray[index].push(sensorTables[sensor][measurement][index][1]);
                 }
@@ -162,8 +169,9 @@ socket.on('updateCharts', function(sensorData) {
     });
 
     chartArray = chartArray.filter(function(array) {
-        return array.length != 0;
+        return array.length != 0 && array.length >= measurementList.length - 1;
     });
+    updateUNIX = false;
     google.charts.setOnLoadCallback(drawDashboardChart);
 
 });
