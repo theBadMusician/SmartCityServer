@@ -3,7 +3,7 @@
 
 <head>
     <!-- Chat CSS -->
-    <link href="assets\styles.css" rel="stylesheet" type="text/css"/>
+    <link href="assets\chatStyle.css" rel="stylesheet" type="text/css" />
     <%- include ('partials/head'); %>
 </head>
 
@@ -11,35 +11,35 @@
     <!-- Top container -->
     <%- include ('partials/topContainer'); %>
 
-    <!-- Sidebar/menu -->
-    <%- include ('partials/navbar'); %>
+        <!-- Sidebar/menu -->
+        <%- include ('partials/navbar'); %>
 
-    <!-- !PAGE CONTENT! -->
-    <div class="w3-main" style="margin-left:300px;margin-top:43px;">
+            <!-- !PAGE CONTENT! -->
+            <div class="w3-main" style="margin-left:300px;margin-top:43px;">
 
-    <!-- Header -->
-    <header class="w3-container" style="padding-top:22px">
-        <h5><b><i class="fa fa-users fa-fw"></i> Communications Center</b></h5>
-    </header>
-    
-    <div id="mario-chat">
-        <h2><strong>Smart City Chat</strong></h2>
-        <div id="chat-window">
-            <div id="output"></div>
-            <div id="feedback"></div>
-        </div>
-        <input id="handle" type="text" placeholder="User" />
-        <input id="message" type="text" placeholder="Message" />
-        <button id="send">Send</button>
-    </div>
-    <div>
-    <!-- Footer -->
-    <%- include ('partials/footer'); %>
-    </div>
+                <!-- Header -->
+                <header class="w3-container" style="padding-top:22px">
+                    <h5><b><i class="fa fa-users fa-fw"></i> Communications Center</b></h5>
+                </header>
+
+                <div id="mario-chat">
+                    <h2><strong>Smart City Chat</strong></h2>
+                    <div id="chat-window">
+                        <div id="output"></div>
+                        <div id="feedback"></div>
+                    </div>
+                    <input id="handle" type="text" placeholder="User" />
+                    <input id="message" type="text" placeholder="Message" />
+                    <button id="send">Send</button>
+                </div>
+                <div>
+                    <!-- Footer -->
+                    <%- include ('partials/footer'); %>
+                </div>
 </body>
 <!-- More or less mandatory scripts -->
 <%- include ('partials/scripts'); %>
-<!-- Socket Scripts -->
-<script src="assets\chat.js"></script>
+    <!-- Socket Scripts -->
+    <script src="assets\chat.js"></script>
 
 </html>

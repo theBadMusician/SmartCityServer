@@ -79,8 +79,8 @@ gitlog.default(options, function(error, commits) {
 //>>>- Check database at startup ---------------------<::>>>
 Object.getOwnPropertyNames(measuredData).forEach(sensor => {
     console.log(sensor, " has ", measuredData[sensor].length, " number of records.");
-    if (measuredData[sensor].length < 50) sensorObjects[sensor] = measuredData[sensor].slice(-measuredData[sensor].length);
-    else sensorObjects[sensor] = measuredData[sensor].slice(-50);
+    if (measuredData[sensor].length < 100) sensorObjects[sensor] = measuredData[sensor].slice(-measuredData[sensor].length);
+    else sensorObjects[sensor] = measuredData[sensor].slice(-100);
 });
 //>>>-------------------------------------------------<::>>>
 
@@ -349,6 +349,10 @@ app.get('/project-dashboard', (req, res) => {
     res.render('projectDashboard');
 });
 
+app.get('/project-avgval', (req, res) => {
+    console.log(Date().toString(), "Requested URL: ", req.url);
+    res.render('projectAverageValue');
+});
 //>>>-------------------------------------------------<::>>>
 
 //>>>- Handle data intake and process it to database -<::>>>
@@ -369,7 +373,7 @@ rxEmitter.on('DBupdate', function() {
             sensorObjects[sensor] = [tempData[sensor]];
         }
         // If DB doesnt yet have 50 measurements
-        else if (measuredData[sensor].length <= 50) {
+        else if (measuredData[sensor].length <= 100) {
             sensorObjects[sensor] = {};
             sensorObjects[sensor] = measuredData[sensor].slice();
             //sensorObjects[sensor].push(measuredData[sensor][measuredData[sensor].length - 1]);
