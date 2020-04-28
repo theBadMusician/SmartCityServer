@@ -15,8 +15,6 @@ var chartArray = [];
 var currentUNIX = 0;
 var updateUNIX = false;
 
-var averageArray = [];
-
 function UNIXtoHHMMSS(UnixTimeStampInMillis) {
     var date = new Date(UnixTimeStampInMillis);
     // Hours part from the timestamp
@@ -42,31 +40,6 @@ function createArray(length) {
     return arr;
 }
 
-function calcAveragesInMatrix(array, value) {
-    var valueArray = createArray(array[0].length - 1, 0);
-    var arr = createArray(array[0].length - 1, 0);
-
-    for (var IDX = 0; IDX < valueArray.length; IDX++) {
-        valueArray[IDX].push(array[0][IDX + 1]);
-        arr[IDX].push(array[0][IDX + 1]);
-    }
-    for (var row = array.length - 1; row > array.length - value - 1; row--) {
-        for (var elem = 1; elem < array[row].length; elem++) {
-            valueArray[elem - 1].push(array[row][elem]);
-        }
-    }
-
-    for (var row = 0; row < valueArray.length; row++) {
-        var sum = 0;
-        for (var i = 1; i < valueArray[row].length; i++) {
-            sum += valueArray[row][i];
-        }
-        var avg = sum / value;
-        arr[row].push(Math.round(avg * 1000) / 1000);
-    }
-    return arr;
-}
-
 //google.charts.load('current', {packages:['corechart']});
 
 google.charts.load('current', {
@@ -76,13 +49,9 @@ google.charts.load('current', {
     packages: ['corechart']
 });
 
-function drawCharts() {
-    drawDashboardChart();
-    drawAverageChart();
-}
 
 // Set a callback to run when the Google Visualization API is loaded.
-google.charts.setOnLoadCallback(drawCharts);
+google.charts.setOnLoadCallback(drawDashboardChart);
 
 // Make connection
 const socket = io.connect('http://88.91.42.155:80');
@@ -90,7 +59,7 @@ const socket = io.connect('http://88.91.42.155:80');
 window.addEventListener('resize', function() {
     if (window.innerWidth >= 976) window.dash_open = true;
     else window.dash_open = false;
-    google.charts.setOnLoadCallback(drawCharts);
+    google.charts.setOnLoadCallback(drawDashboardChart);
     repositionButtons();
 });
 
@@ -98,26 +67,17 @@ setTimeout(() => {
     repositionButtons();
 }, 1000);
 
-var slider = document.getElementById("myRange");
-var text = document.getElementById("value");
-var output = document.getElementById("output");
-output.innerHTML = slider.value; // Display the default slider value
-
-// Update the current slider value (each time you drag the slider handle)
-slider.oninput = function() {
-    output.innerHTML = this.value;
-    drawAverageChart();
-}
-
 // Param. examples:
 // measurementArray = sensorTables.BMP280.temperature.slice();
 // title = 'Temperature [°C]';
 function drawDashboardChart() {
+    document.getElementById("dashboard-chart").innerHTML += "<br><h2 id='header' class='chartheader'>" + 'Dashboard' + "</h2><br>";
+
     var data = google.visualization.arrayToDataTable(chartArray);
 
     var options = {
         title: 'Dashboard',
-        curveType: '',
+        titlePosition: 'top',
         legend: { position: 'bottom' },
         explorer: {
             actions: ['dragToPan', 'rightClickToReset'],
@@ -145,50 +105,25 @@ function drawDashboardChart() {
     var chart = new google.visualization.LineChart(document.getElementById('dashboard-chart'));
 
     chart.draw(data, options);
-
 }
 
-function drawAverageChart() {
-    averageArray = calcAveragesInMatrix(chartArray, slider.value);
-    var dataArray = averageArray.slice();
-    dataArray.unshift(["Measurememnt", "Average"]);
+function drawMaxVals() {
+    var maxVals = document.getElementById('max-vals');
+    Object.getOwnPropertyNames(sensorTables).slice().forEach(sensor => {
+        measurementList.forEach(measurement => {
+            if (sensorTables[sensor].hasOwnProperty(measurement)) {
+                let sensorMeas = sensorTables[sensor][measurement];
+                let maxValue = 0;
+                for (var index = 1; index < sensorMeas.length; index++) {
+                    if (maxValue < sensorMeas[index][1]) maxValue = sensorMeas[index][1];
+                }
 
-    var data = google.visualization.arrayToDataTable(dataArray);
-
-    var view = new google.visualization.DataView(data);
-    view.setColumns([0, 1,
-        {
-            calc: "stringify",
-            sourceColumn: 1,
-            type: "string",
-            role: "annotation"
-        }
-    ]);
-
-    var options = {
-        title: "Averages of the Measurements",
-        bar: { groupWidth: "50%" },
-        height: chartHeight,
-        width: window.innerWidth,
-        backgroundColor: 'transparent',
-        chartArea: {
-            left: chartAreaLeftDash,
-            top: '50px',
-            right: chartAreaRight,
-            width: '100%'
-        }
-
-    };
-
-    if (window.dash_open == false) {
-        options.chartArea.left = chartAreaLeftNoDash;
-    } else {
-        options.chartArea.left = chartAreaLeftDash;
-    };
-
-    var chart = new google.visualization.ColumnChart(document.getElementById("average-chart"));
-    chart.draw(view, options);
-
+                var maxValHTML = "<div class='max-values' id='" + sensor + measurement + "'>" + measurement.replace(/_/, " ") + " Max Value: " + maxValue + "</div>"
+                if (!maxVals.innerHTML.includes(maxValHTML)) maxVals.innerHTML += maxValHTML;
+                else maxVals.getElementById(sensor + measurement).innerHTML = measurement.replace(/_/, " ") + " Max Value: " + maxValue;
+            }
+        });
+    });
 }
 
 // Listen for events
@@ -221,7 +156,7 @@ socket.on('updateCharts', function(sensorData) {
 
                 if (!sensorTables[sensorName].hasOwnProperty(measurement)) {
                     sensorTables[sensorName][measurement] = [];
-                } else if (sensorTables[sensorName][measurement].length >= 100) {
+                } else if (sensorTables[sensorName][measurement].length >= 50) {
                     sensorTables[sensorName][measurement] = [];
                 } else if (dataUnitIdx == 0) sensorTables[sensorName][measurement] = [];
 
@@ -232,7 +167,7 @@ socket.on('updateCharts', function(sensorData) {
     });
 
     var sensorList = Object.getOwnPropertyNames(sensorData).slice();
-    chartArray = createArray(101, 0);
+    chartArray = createArray(51, 0);
     for (place in chartArray) {
         place = new Array;
     }
@@ -253,31 +188,25 @@ socket.on('updateCharts', function(sensorData) {
             }
         });
     });
-
     chartArray = chartArray.filter(function(array) {
         return array.length != 0 && array.length >= measurementList.length - 1;
     });
-
+    if (updateUNIX) drawMaxVals();
     updateUNIX = false;
-    google.charts.setOnLoadCallback(drawCharts);
+    google.charts.setOnLoadCallback(drawDashboardChart);
 
 });
-
-
 
 function repositionButtons() {
     if (dash_open) {
         document.getElementsByClassName("fa fa-line-chart fa-fw")[1]['style']['margin-left'] = (chartAreaLeftDash - 50) + "px";
         document.getElementsByClassName("w3-container w3-padding-16 w3-light-grey")[0]['style']['margin-left'] = (chartAreaLeftDash - 75) + "px";
-        document.getElementsByClassName("slidecontainer")[0]['style']['margin-left'] = (chartAreaLeftDash - 50) + "px";
-        document.getElementsByClassName("slidecontainer")[0]['style']['width'] = "80%";
-        text['style']['margin-left'] = (chartAreaLeftDash - 50) + "px";
-        output['style']['margin-left'] = (chartAreaLeftDash - 50) + "px";
+        document.getElementById('max-vals')['style']['margin-left'] = chartAreaLeftDash + "px";
+
     } else {
         document.getElementsByClassName("fa fa-line-chart fa-fw")[1]['style']['margin-left'] = chartAreaLeftNoDash + "px";
         document.getElementsByClassName("w3-container w3-padding-16 w3-light-grey")[0]['style']['margin-left'] = "0px";
-        document.getElementsByClassName("slidecontainer")[0]['style']['margin-left'] = chartAreaLeftNoDash + "px";
-        text['style']['margin-left'] = "50px"
-        output['style']['margin-left'] = "50px";
+        document.getElementById('max-vals')['style']['margin-left'] = chartAreaLeftNoDash + "px";
+
     }
 }

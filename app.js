@@ -47,15 +47,20 @@ var rxEmitter = new events.EventEmitter();
 var txEmitter = new events.EventEmitter();
 var consoleEmitter = new events.EventEmitter();
 
+var maxValues = {};
+var num_of_thresholds = 2;
+var valAlarm = false;
+
 // Save visit counter on exit
 let visitCounter = require('./visitCounter.json').visitCounter;
 let visitCities = require('./visitCities.json');
+let maxValueThresholds = require('./thresholds.json');
 nodeCleanup(function(exitCode, signal) {
     var count = { visitCounter: visitCounter };
     fs.writeFileSync("visitCounter.json", JSON.stringify(count));
     fs.writeFileSync("visitCities.json", JSON.stringify(visitCities));
+    fs.writeFileSync("thresholds.json", JSON.stringify(maxValueThresholds));
 });
-
 
 var randomID = '/' + uuid.v4();
 /*
@@ -82,14 +87,23 @@ Object.getOwnPropertyNames(measuredData).forEach(sensor => {
     if (measuredData[sensor].length < 100) sensorObjects[sensor] = measuredData[sensor].slice(-measuredData[sensor].length);
     else sensorObjects[sensor] = measuredData[sensor].slice(-100);
 });
+calcMaxValue();
 //>>>-------------------------------------------------<::>>>
 
 //>>>- Console commands ------------------------------<::>>>
+var requestOutput = true,
+    alarmOutput = false;
 rl.on('line', function(text) {
     switch (text.trim()) {
+
+        // Exit server
         case 'quit':
             process.exit();
 
+        case 'q':
+            process.exit();
+
+            // Delete database entries
         case 'del db --entries':
             Object.getOwnPropertyNames(measuredData).forEach(sensor => {
                 console.log(sensor, " has ", measuredData[sensor].length, " number of records.");
@@ -117,6 +131,7 @@ rl.on('line', function(text) {
             console.log("\n");
             break;
 
+            // Show various information
         case 'show db --sensors':
             Object.getOwnPropertyNames(measuredData).forEach(sensor => {
                 console.log(sensor, " has ", measuredData[sensor].length, " entries.");
@@ -168,6 +183,58 @@ rl.on('line', function(text) {
 
         case 'show server --uptime':
             console.log(secs2HHMMSS(process.uptime()));
+            break;
+
+        case 'show thres --max':
+            console.log("Currently set maximum thresholds: ")
+            for (let [key, value] of Object.entries(maxValueThresholds)) {
+                console.log(key, ": ", value);
+            }
+            break;
+
+        case 'show val --max':
+            console.log("Currently set maximum thresholds: ")
+            for (let [key, value] of Object.entries(maxValues)) {
+                console.log(key, ": ", value);
+            }
+            break;
+
+            // Toggle output
+        case 'toggle output --req':
+            requestOutput = !requestOutput;
+            alarmOutput = !requestOutput;
+            if (requestOutput) console.log("Server request output is ON!");
+            else console.log("Server request output is OFF!");
+            break;
+
+        case 'toggle output --alarm':
+            alarmOutput = !alarmOutput;
+            if (alarmOutput) console.log("Server alarm request output is ON!");
+            else console.log("Server alarm request output is OFF!");
+            break;
+
+            // Change settings
+        case 'change thres --max':
+            console.log("Currently set maximum thresholds: ")
+            for (let [key, value] of Object.entries(maxValueThresholds)) {
+                console.log(key, ": ", value);
+            }
+            console.log("\n");
+
+            rl.question("Measurement: ", function(measurement) {
+                rl.question("Threshold: ", function(threshold) {
+                    maxValueThresholds[measurement] = threshold;
+
+                    console.log("\nNew maximum thresholds: ")
+                    for (let [key, value] of Object.entries(maxValueThresholds)) {
+                        console.log(key, ": ", value);
+                    }
+
+                    calcMaxValue();
+                });
+            });
+            break;
+
     };
 
 });
@@ -229,6 +296,8 @@ io.on('connection', (socket) => {
 // Update charts
 txEmitter.on('dataWritten', function() {
     io.emit('updateCharts', sensorObjects);
+
+    calcMaxValue();
 });
 
 // Update sys info
@@ -265,12 +334,14 @@ function secs2HHMMSS(seconds) {
 setInterval(() => {
     io.emit('updateUptime', secs2HHMMSS(process.uptime()));
 }, 1000);
+
+// Get and handle max values
 //>>>-------------------------------------------------<::>>>
 
 //>>>- HTTP reqs -------------------------------------<::>>>
 app.get('/', (req, res) => {
     visitCounter += 1;
-    console.log(Date().toString(), "Requested URL: ", req.url, "Request IP: ", req.ip, "Total requests: ", visitCounter);
+    if (requestOutput) console.log(Date().toString(), "Requested URL: ", req.url, "Request IP: ", req.ip, "Total requests: ", visitCounter);
     res.render('index');
 
     var geo = geoip.lookup(req.ip);
@@ -282,27 +353,27 @@ app.get('/', (req, res) => {
 });
 
 app.get('/chat', (req, res) => {
-    console.log(Date().toString(), "Requested URL: ", req.url);
+    if (requestOutput) console.log(Date().toString(), "Requested URL: ", req.url);
     res.render('chat');
 });
 
 app.get('/monitor', (req, res) => {
-    console.log(Date().toString(), "Requested URL: ", req.url);
+    if (requestOutput) console.log(Date().toString(), "Requested URL: ", req.url);
     res.render('monitor');
 });
 
 app.get('/esp-login', (req, res) => {
-    console.log(Date().toString(), "Requested URL: ", req.url);
+    if (requestOutput) console.log(Date().toString(), "Requested URL: ", req.url);
     res.render('esp_login');
 });
 
 app.get('/redirect', (req, res) => {
-    console.log("REDIRECT", randomID);
+    if (requestOutput) console.log("REDIRECT", randomID);
     res.redirect(randomID);
 });
 
 app.get(randomID, (req, res) => {
-    console.log(Date().toString(), "Requested URL: ", req.url);
+    if (requestOutput) console.log(Date().toString(), "Requested URL: ", req.url);
     res.render('esp_upload');
 });
 
@@ -316,7 +387,7 @@ app.post('/post-test', function(req, res) {
         Object.getOwnPropertyNames(tempData).forEach(sensor => {
             tempData[sensor]["UNIX"] = Date.now();
         });
-        console.log(Date().toString(), "Received data: ", tempData);
+        if (requestOutput) console.log(Date().toString(), "Received data: ", tempData);
 
         rxEmitter.emit('DBupdate');
     });
@@ -325,33 +396,43 @@ app.post('/post-test', function(req, res) {
 });
 
 app.get("/get-data", (req, res) => {
-    console.log(Date().toString(), "Requested URL: ", req.url);
+    if (requestOutput) console.log(Date().toString(), "Requested URL: ", req.url);
     res.json(measuredData);;
 });
 
 app.get('/history', (req, res) => {
-    console.log(Date().toString(), "Requested URL: ", req.url);
+    if (requestOutput) console.log(Date().toString(), "Requested URL: ", req.url);
     res.render('history');
 });
 
 app.get('/project-tasks', (req, res) => {
-    console.log(Date().toString(), "Requested URL: ", req.url);
+    if (requestOutput) console.log(Date().toString(), "Requested URL: ", req.url);
     res.render('projectTasks');
 });
 
 app.get('/project-readings', (req, res) => {
-    console.log(Date().toString(), "Requested URL: ", req.url);
+    if (requestOutput) console.log(Date().toString(), "Requested URL: ", req.url);
     res.render('projectReadings');
 });
 
 app.get('/project-dashboard', (req, res) => {
-    console.log(Date().toString(), "Requested URL: ", req.url);
+    if (requestOutput) console.log(Date().toString(), "Requested URL: ", req.url);
     res.render('projectDashboard');
 });
 
 app.get('/project-avgval', (req, res) => {
-    console.log(Date().toString(), "Requested URL: ", req.url);
+    if (requestOutput) console.log(Date().toString(), "Requested URL: ", req.url);
     res.render('projectAverageValue');
+});
+
+app.get('/project-min-max', (req, res) => {
+    if (requestOutput) console.log(Date().toString(), "Requested URL: ", req.url);
+    res.render('projectMinMax');
+});
+
+app.get('/alarm-check', (req, res) => {
+    if (requestOutput && alarmOutput) console.log(Date().toString(), "Requested URL: ", req.url);
+    res.send(valAlarm);
 });
 //>>>-------------------------------------------------<::>>>
 
@@ -394,3 +475,32 @@ rxEmitter.on('DBupdate', function() {
     });
 });
 //>>>-------------------------------------------------<::>>>
+
+//>>>-------------------------------------------------<::>>>
+function calcMaxValue() {
+    let overThresholds = 0;
+
+    Object.getOwnPropertyNames(sensorObjects).forEach(sensorName => {
+        let maxVal = 0;
+        let measurementName = '';
+        Object.getOwnPropertyNames(sensorObjects[sensorName]).forEach(measurementSet => {
+            let measurement = sensorObjects[sensorName][measurementSet];
+
+            for (let [key, value] of Object.entries(measurement)) {
+                // console.log(`${key}: ${value}`);
+                if (key != 'UNIX' && value > maxVal) {
+                    measurementName = key;
+                    // console.log(key, " max value: ", maxVal);
+
+                    maxVal = value;
+                    maxValues[key] = maxVal;
+                }
+            }
+        })
+    })
+    for (let [key, value] of Object.entries(maxValues)) {
+        if (maxValues[key] > maxValueThresholds[key]) overThresholds++;
+    }
+    if (overThresholds >= num_of_thresholds) valAlarm = true;
+    else valAlarm = false;
+}
