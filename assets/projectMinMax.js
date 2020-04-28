@@ -119,8 +119,8 @@ function drawMaxVals() {
                 }
 
                 var maxValHTML = "<div class='max-values' id='" + sensor + measurement + "'>" + measurement.replace(/_/, " ") + " Max Value: " + maxValue + "</div>"
-                if (!maxVals.innerHTML.includes(maxValHTML)) maxVals.innerHTML += maxValHTML;
-                else maxVals.getElementById(sensor + measurement).innerHTML = measurement.replace(/_/, " ") + " Max Value: " + maxValue;
+                if (!document.getElementById(sensor + measurement)) maxVals.innerHTML += maxValHTML;
+                else document.getElementById(sensor + measurement).innerHTML = measurement.replace(/_/, " ") + " Max Value: " + maxValue;
             }
         });
     });
@@ -191,7 +191,7 @@ socket.on('updateCharts', function(sensorData) {
     chartArray = chartArray.filter(function(array) {
         return array.length != 0 && array.length >= measurementList.length - 1;
     });
-    if (updateUNIX) drawMaxVals();
+    drawMaxVals();
     updateUNIX = false;
     google.charts.setOnLoadCallback(drawDashboardChart);
 

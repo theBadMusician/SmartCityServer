@@ -51,6 +51,11 @@ var maxValues = {};
 var num_of_thresholds = 2;
 var valAlarm = false;
 
+var testServoUNIX = 0;
+var testServoFlag = 0;
+
+if (testServoFlag) valAlarm = "test";
+
 // Save visit counter on exit
 let visitCounter = require('./visitCounter.json').visitCounter;
 let visitCities = require('./visitCities.json');
@@ -73,6 +78,7 @@ setInterval(() => {
 // Read/Write JSON measurements
 var tempData;
 var sensorObjects = {};
+var lastSaveUNIX = {};
 
 // Check git commit log
 var gitcommits;
@@ -87,12 +93,13 @@ Object.getOwnPropertyNames(measuredData).forEach(sensor => {
     if (measuredData[sensor].length < 100) sensorObjects[sensor] = measuredData[sensor].slice(-measuredData[sensor].length);
     else sensorObjects[sensor] = measuredData[sensor].slice(-100);
 });
-calcMaxValue();
+checkMaxValue();
 //>>>-------------------------------------------------<::>>>
 
 //>>>- Console commands ------------------------------<::>>>
 var requestOutput = true,
-    alarmOutput = false;
+    alarmOutput = false,
+    measurementOutput = false;
 rl.on('line', function(text) {
     switch (text.trim()) {
 
@@ -202,7 +209,8 @@ rl.on('line', function(text) {
             // Toggle output
         case 'toggle output --req':
             requestOutput = !requestOutput;
-            alarmOutput = !requestOutput;
+            alarmOutput = requestOutput;
+            measurementOutput = requestOutput;
             if (requestOutput) console.log("Server request output is ON!");
             else console.log("Server request output is OFF!");
             break;
@@ -211,6 +219,12 @@ rl.on('line', function(text) {
             alarmOutput = !alarmOutput;
             if (alarmOutput) console.log("Server alarm request output is ON!");
             else console.log("Server alarm request output is OFF!");
+            break;
+
+        case 'toggle output --data':
+            measurementOutput = !measurementOutput;
+            if (measurementOutput) console.log("Server data request output is ON!");
+            else console.log("Server data request output is OFF!");
             break;
 
             // Change settings
@@ -230,7 +244,7 @@ rl.on('line', function(text) {
                         console.log(key, ": ", value);
                     }
 
-                    calcMaxValue();
+                    checkMaxValue();
                 });
             });
             break;
@@ -297,7 +311,7 @@ io.on('connection', (socket) => {
 txEmitter.on('dataWritten', function() {
     io.emit('updateCharts', sensorObjects);
 
-    calcMaxValue();
+    checkMaxValue();
 });
 
 // Update sys info
@@ -387,7 +401,7 @@ app.post('/post-test', function(req, res) {
         Object.getOwnPropertyNames(tempData).forEach(sensor => {
             tempData[sensor]["UNIX"] = Date.now();
         });
-        if (requestOutput) console.log(Date().toString(), "Received data: ", tempData);
+        if (requestOutput && measurementOutput) console.log(Date().toString(), "Received data: ", tempData);
 
         rxEmitter.emit('DBupdate');
     });
@@ -432,16 +446,42 @@ app.get('/project-min-max', (req, res) => {
 
 app.get('/alarm-check', (req, res) => {
     if (requestOutput && alarmOutput) console.log(Date().toString(), "Requested URL: ", req.url);
-    res.send(valAlarm);
+    if (testServoFlag) res.send("test");
+    else res.send(valAlarm);
+});
+
+app.post('/test-servo', (req, res) => {
+    if (requestOutput && alarmOutput) console.log(Date().toString(), "Requested URL: ", req.url);
+    req.setEncoding('utf8');
+    req.on('data', chunk => {
+        let rxUNIX = parseInt(chunk);
+        if (rxUNIX - testServoUNIX > 5000) {
+            testServoUNIX = rxUNIX;
+
+            testServoFlag = 1;
+            setTimeout(() => {
+                testServoFlag = 0;
+            }, 4999);
+        }
+    });
+
+    res.sendStatus(200);
 });
 //>>>-------------------------------------------------<::>>>
 
 //>>>- Handle data intake and process it to database -<::>>>
 rxEmitter.on('DBupdate', function() {
     Object.getOwnPropertyNames(tempData).forEach(sensor => {
+        let saveToDB = 0;
+        // Last save data
+        if (tempData[sensor]["UNIX"] - lastSaveUNIX[sensor] > 60000 || !lastSaveUNIX.hasOwnProperty(sensor)) {
+            lastSaveUNIX[sensor] = tempData[sensor]["UNIX"];
+            saveToDB = 1;
+        }
 
+        // Add newest measurement to DB
         if (measuredData.hasOwnProperty(sensor)) {
-            measuredData[sensor].push(tempData[sensor]);
+            if (saveToDB) measuredData[sensor].push(tempData[sensor]);
             if (measuredData[sensor].length > 15000) measuredData[sensor].splice(0, 5000);
         } else {
             measuredData[sensor] = {};
@@ -453,14 +493,14 @@ rxEmitter.on('DBupdate', function() {
             sensorObjects[sensor] = {};
             sensorObjects[sensor] = [tempData[sensor]];
         }
-        // If DB doesnt yet have 50 measurements
+        // If DB doesnt yet have 100 measurements
         else if (measuredData[sensor].length <= 100) {
             sensorObjects[sensor] = {};
             sensorObjects[sensor] = measuredData[sensor].slice();
             //sensorObjects[sensor].push(measuredData[sensor][measuredData[sensor].length - 1]);
         } // Normal behaviour
         else {
-            sensorObjects[sensor].push(measuredData[sensor].slice(-1)[0]);
+            sensorObjects[sensor].push(tempData[sensor]);
             sensorObjects[sensor].shift();
             //DBshiftpushToArray(measuredData[sensor], sensorObjects[sensor], 1);
         }
@@ -503,4 +543,22 @@ function calcMaxValue() {
     }
     if (overThresholds >= num_of_thresholds) valAlarm = true;
     else valAlarm = false;
+}
+
+function checkMaxValue() {
+    let overThresholds = 0;
+
+    Object.getOwnPropertyNames(sensorObjects).forEach(sensorName => {
+        let sensorArray = sensorObjects[sensorName];
+
+        for (let [key, value] of Object.entries(sensorArray[sensorArray.length - 1])) {
+            if (maxValueThresholds[key] < value) overThresholds++;
+        }
+    })
+    if (overThresholds >= num_of_thresholds && valAlarm == false) {
+        valAlarm = true;
+        setTimeout(() => {
+            valAlarm = false;
+        }, 10000);
+    }
 }
