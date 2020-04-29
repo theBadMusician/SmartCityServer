@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Chat CSS -->
+    <script defer src="assets\projectZumoPatterns.js"></script>
+    <link href="assets\styles.css" rel="stylesheet" type="text/css" />
+    <%- include ('partials/head'); %>
+</head>
+
+<body class="w3-light-grey">
+    <!-- Top container -->
+    <%- include ('partials/topContainer'); %>
+
+        <!-- Sidebar/menu -->
+        <%- include ('partials/navbar'); %>
+
+            <!-- !PAGE CONTENT! -->
+            <div class="w3-main" style="margin-left:300px;margin-top:43px;">
+
+                <!-- Header -->
+                <header class="w3-container" style="padding-top:22px">
+                    <h5><b><i class="fa fa-graduation-cap fa-fw"></i> Zumo Control</b></h5>
+                </header>
+
+                <h1 class="w3-center">Patterns</h1>
+                <div class="w3-center">
+                    <button onclick="driveSquareReq()" class="w3-button w3-red w3-border w3-border-black w3-large" style="width:10vw;height:10vw;" </i>Square</button>
+                    <button onclick="driveCircleReq()" class="w3-button w3-red w3-border w3-border-black w3-large" style="width:10vw;height:10vw;" </i>Circle</button>
+                    <button onclick="driveLineReq()" class="w3-button w3-red w3-border w3-border-black w3-large" style="width:10vw;height:10vw;" </i>Line</button>
+                    <button onclick="driveSnakeReq()" class="w3-button w3-red w3-border w3-border-black w3-large" style="width:10vw;height:10vw;" </i>Snake</button>
+                </div>
+
+                <!-- Footer -->
+                <%- include ('partials/footer'); %>
+            </div>
+</body>
+<!-- More or less mandatory scripts -->
+<%- include ('partials/scripts'); %>
+    <!-- Socket Scripts -->
+
+</html>

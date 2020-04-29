@@ -56,6 +56,9 @@ var testServoFlag = 0;
 
 if (testServoFlag) valAlarm = "test";
 
+var zumoCommandUNIX = 0;
+var zumoDrivingFlag = 0;
+
 // Save visit counter on exit
 let visitCounter = require('./visitCounter.json').visitCounter;
 let visitCities = require('./visitCities.json');
@@ -444,6 +447,11 @@ app.get('/project-min-max', (req, res) => {
     res.render('projectMinMax');
 });
 
+app.get('/project-zumo-patterns', (req, res) => {
+    if (requestOutput) console.log(Date().toString(), "Requested URL: ", req.url);
+    res.render('projectZumoPatterns');
+});
+
 app.get('/alarm-check', (req, res) => {
     if (requestOutput && alarmOutput) console.log(Date().toString(), "Requested URL: ", req.url);
     if (testServoFlag) res.send("test");
@@ -451,7 +459,7 @@ app.get('/alarm-check', (req, res) => {
 });
 
 app.post('/test-servo', (req, res) => {
-    if (requestOutput && alarmOutput) console.log(Date().toString(), "Requested URL: ", req.url);
+    if (requestOutput) console.log(Date().toString(), "Requested URL: ", req.url);
     req.setEncoding('utf8');
     req.on('data', chunk => {
         let rxUNIX = parseInt(chunk);
@@ -466,6 +474,44 @@ app.post('/test-servo', (req, res) => {
     });
 
     res.sendStatus(200);
+});
+
+app.get('/zumo-control', (req, res) => {
+    if (requestOutput && alarmOutput) console.log(Date().toString(), "Requested URL: ", req.url);
+    res.send(zumoCommand);
+});
+
+var zumoCommand = 'standby';
+app.post('/zumo-control-post', (req, res) => {
+    if (requestOutput) console.log(Date().toString(), "Requested URL: ", req.url);
+    req.setEncoding('utf8');
+    req.on('data', chunk => {
+        let rxJSON = JSON.parse(chunk);
+        let rxUNIX = parseInt(rxJSON.UNIX);
+
+        if (rxUNIX - zumoCommandUNIX > 5000) {
+
+            zumoCommandUNIX = rxUNIX;
+
+            switch (rxJSON.COMMAND_TYPE) {
+                case "PATTERN":
+                    zumoCommand = rxJSON.COMMAND;
+                    setTimeout(() => {
+                        zumoCommand = 'standby';
+                    }, 4999);
+                    break;
+
+                default:
+                    break;
+            }
+        }
+    });
+    res.sendStatus(200);
+});
+
+app.get('/control-center', (req, res) => {
+    if (requestOutput) console.log(Date().toString(), "Requested URL: ", req.url);
+    res.send("NOT FINISHED MATE!");
 });
 //>>>-------------------------------------------------<::>>>
 
