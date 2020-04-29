@@ -56,9 +56,6 @@ var testServoFlag = 0;
 
 if (testServoFlag) valAlarm = "test";
 
-var zumoCommandUNIX = 0;
-var zumoDrivingFlag = 0;
-
 // Save visit counter on exit
 let visitCounter = require('./visitCounter.json').visitCounter;
 let visitCities = require('./visitCities.json');
@@ -482,6 +479,9 @@ app.get('/zumo-control', (req, res) => {
 });
 
 var zumoCommand = 'standby';
+var zumoCommandUNIX = 0;
+
+var lineFollowerToggle = 0;
 app.post('/zumo-control-post', (req, res) => {
     if (requestOutput) console.log(Date().toString(), "Requested URL: ", req.url);
     req.setEncoding('utf8');
@@ -499,6 +499,19 @@ app.post('/zumo-control-post', (req, res) => {
                     setTimeout(() => {
                         zumoCommand = 'standby';
                     }, 4999);
+                    break;
+
+                case "LINEFOLLOWER":
+                    if (rxJSON.COMMAND == "followerToggle") lineFollowerToggle = !lineFollowerToggle;
+
+                    if (!lineFollowerToggle) zumoCommand = "startLineFollower";
+                    else {
+                        zumoCommand = "stop";
+                        setTimeout(() => {
+                            zumoCommand = 'standby';
+                        }, 4999);
+                    }
+
                     break;
 
                 default:
