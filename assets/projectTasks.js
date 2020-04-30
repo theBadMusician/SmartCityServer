@@ -13,3 +13,9 @@ function lineFollowerReq() {
     xhttp.setRequestHeader("Content-Type", "application/json");
     xhttp.send(JSON.stringify({ "COMMAND_TYPE": "LINEFOLLOWER", "COMMAND": "followerToggle", "UNIX": Date.now() }));
 }
+
+function RCControlReq() {
+    xhttp.open("POST", urlZumo, true);
+    xhttp.setRequestHeader("Content-Type", "application/json");
+    xhttp.send(JSON.stringify({ "COMMAND_TYPE": "RCCONTROL", "COMMAND": "RCControlToggle", "UNIX": Date.now() }));
+}

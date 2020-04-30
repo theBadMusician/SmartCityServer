@@ -482,6 +482,8 @@ var zumoCommand = 'standby';
 var zumoCommandUNIX = 0;
 
 var lineFollowerToggle = 0;
+var RCControlToggle = 0;
+
 app.post('/zumo-control-post', (req, res) => {
     if (requestOutput) console.log(Date().toString(), "Requested URL: ", req.url);
     req.setEncoding('utf8');
@@ -504,14 +506,31 @@ app.post('/zumo-control-post', (req, res) => {
                 case "LINEFOLLOWER":
                     if (rxJSON.COMMAND == "followerToggle") lineFollowerToggle = !lineFollowerToggle;
 
-                    if (!lineFollowerToggle) zumoCommand = "startLineFollower";
+                    if (lineFollowerToggle) zumoCommand = "startLineFollower";
                     else {
                         zumoCommand = "stop";
                         setTimeout(() => {
                             zumoCommand = 'standby';
                         }, 4999);
                     }
+                    console.log(lineFollowerToggle);
+                    break;
 
+                case "RCCONTROL":
+                    if (rxJSON.COMMAND == "RCControlToggle") RCControlToggle = !RCControlToggle;
+
+                    if (RCControlToggle) {
+                        zumoCommand = "startRCControl";
+                        setTimeout(() => {
+                            zumoCommand = 'standby';
+                        }, 4800);
+                    } else {
+                        zumoCommand = "stop";
+                        setTimeout(() => {
+                            zumoCommand = 'standby';
+                        }, 4999);
+                    }
+                    console.log(RCControlToggle);
                     break;
 
                 default:
