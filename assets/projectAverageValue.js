@@ -85,7 +85,8 @@ function drawCharts() {
 google.charts.setOnLoadCallback(drawCharts);
 
 // Make connection
-const socket = io.connect('http://88.91.42.155:80');
+// const socket = io.connect('http://88.91.42.155:80');
+const socket = io('/charts');
 
 window.addEventListener('resize', function() {
     if (window.innerWidth >= 976) window.dash_open = true;

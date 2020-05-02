@@ -6,7 +6,8 @@ google.charts.setOnLoadCallback(drawGaugeCharts);
 google.charts.setOnLoadCallback(drawPieChart);
 
 // Make connection
-var socket = io.connect('http://88.91.42.155:80');
+// var socket = io.connect('http://88.91.42.155:80');
+const socket = io('/index');
 
 // Query DOM
 let visitCounter = document.getElementById('visit-counter');
@@ -18,7 +19,7 @@ for (var chart = 0; chart < gaugeCharts.length; chart++) {
 }
 
 var thirdWidth = (window.innerWidth > 567) ? (window.innerWidth / 3.7) : window.innerWidth;
-window.addEventListener('resize', function () {
+window.addEventListener('resize', function() {
     if (window.innerWidth >= 976) window.dash_open = true;
     else window.dash_open = false;
     google.charts.setOnLoadCallback(drawGaugeCharts);
@@ -26,35 +27,34 @@ window.addEventListener('resize', function () {
     google.charts.setOnLoadCallback(drawPieChart);
 });
 
-socket.on('updateUptime', function (data) {
+socket.on('updateUptime', function(data) {
     serverUptime.innerHTML = data;
 });
 
 // RX socket event
-socket.on('visitCounter', function (data) {
+socket.on('visitCounter', function(data) {
     visitCounter.innerHTML = data;
 });
 
-socket.on('gitlog', function (data) {
+socket.on('gitlog', function(data) {
     var length = 10;
     var gitlog = document.getElementsByClassName('w3-table-all');
     gitlog[0].innerHTML = '';
     for (var log = 0; log < length; log++) {
         if (log % 2 == 0) {
-            gitlog[0].innerHTML += "<tr><td>" + data[log].abbrevHash + "</td><td>"
-                                + data[log].subject + "</td><td><i>"
-                                + data[log].authorDate + "</i></td></tr>";
-        }
-        else {
-            gitlog[0].innerHTML += "<tr style='background-color:#f2f2f2'><td>" + data[log].abbrevHash + "</td><td>"
-                                + data[log].subject + "</td><td><i>"
-                                + data[log].authorDate + "</i></td></tr>";
+            gitlog[0].innerHTML += "<tr><td>" + data[log].abbrevHash + "</td><td>" +
+                data[log].subject + "</td><td><i>" +
+                data[log].authorDate + "</i></td></tr>";
+        } else {
+            gitlog[0].innerHTML += "<tr style='background-color:#f2f2f2'><td>" + data[log].abbrevHash + "</td><td>" +
+                data[log].subject + "</td><td><i>" +
+                data[log].authorDate + "</i></td></tr>";
         }
     }
 });
 
 var compResources = {};
-socket.on('updateCompResources', function (data) {
+socket.on('updateCompResources', function(data) {
     compResources.CPUtemp = data.CPUtemp;
     compResources.CPUload = data.CPUload;
     compResources.memuse = data.memuse;
@@ -64,7 +64,7 @@ socket.on('updateCompResources', function (data) {
     google.charts.setOnLoadCallback(drawGaugeCharts);
 });
 
-var drawGaugeCharts = function () {
+var drawGaugeCharts = function() {
     var CPUload = google.visualization.arrayToDataTable([
         ['Label', 'Value'],
         ['CPU [%]', Math.round((compResources.CPUload + Number.EPSILON) * 100) / 100]
@@ -82,36 +82,48 @@ var drawGaugeCharts = function () {
         ['Heap [MB]', Math.round((compResources.heapUsed + Number.EPSILON) * 100) / 100]
     ]);
 
-    var gaugeWidthHeight = (window.innerWidth > 567) ? window.innerWidth/5.25 : window.innerWidth/2.3;
+    var gaugeWidthHeight = (window.innerWidth > 567) ? window.innerWidth / 5.25 : window.innerWidth / 2.3;
 
     var optionsCPUload = {
-        width: gaugeWidthHeight, height: gaugeWidthHeight,
-        redFrom: 90, redTo: 100,
-        yellowFrom: 75, yellowTo: 90,
+        width: gaugeWidthHeight,
+        height: gaugeWidthHeight,
+        redFrom: 90,
+        redTo: 100,
+        yellowFrom: 75,
+        yellowTo: 90,
         minorTicks: 5,
-        animation: {duration: 600}
+        animation: { duration: 600 }
     };
 
     var optionsCPUtemp = {
-        width: gaugeWidthHeight, height: gaugeWidthHeight,
-        redFrom: 75, redTo: 100,
-        yellowFrom: 65, yellowTo: 75,
+        width: gaugeWidthHeight,
+        height: gaugeWidthHeight,
+        redFrom: 75,
+        redTo: 100,
+        yellowFrom: 65,
+        yellowTo: 75,
         minorTicks: 5
     };
 
     var optionsMemuse = {
-        width: gaugeWidthHeight, height: gaugeWidthHeight,
+        width: gaugeWidthHeight,
+        height: gaugeWidthHeight,
         max: compResources.memtotal,
-        redFrom: compResources.memtotal * 0.8, redTo: compResources.memtotal,
-        yellowFrom: compResources.memtotal * 0.6, yellowTo: compResources.memtotal * 0.8,
+        redFrom: compResources.memtotal * 0.8,
+        redTo: compResources.memtotal,
+        yellowFrom: compResources.memtotal * 0.6,
+        yellowTo: compResources.memtotal * 0.8,
         minorTicks: 5
     };
 
     var optionsHeapuse = {
-        width: gaugeWidthHeight, height: gaugeWidthHeight,
+        width: gaugeWidthHeight,
+        height: gaugeWidthHeight,
         max: compResources.heapTotal,
-        redFrom: compResources.heapTotal * 0.8, redTo: compResources.heapTotal,
-        yellowFrom: compResources.heapTotal * 0.6, yellowTo: compResources.heapTotal * 0.8,
+        redFrom: compResources.heapTotal * 0.8,
+        redTo: compResources.heapTotal,
+        yellowFrom: compResources.heapTotal * 0.6,
+        yellowTo: compResources.heapTotal * 0.8,
         minorTicks: 5
     };
 
@@ -126,16 +138,20 @@ var drawGaugeCharts = function () {
     chartHeapuse.draw(heapuse, optionsHeapuse);
 }
 
-var cityArray = [['City', 'Visits']];
-socket.on('updateGeo', function (data) {
-    cityArray = [['City', 'Visits']];
+var cityArray = [
+    ['City', 'Visits']
+];
+socket.on('updateGeo', function(data) {
+    cityArray = [
+        ['City', 'Visits']
+    ];
     Object.getOwnPropertyNames(data).forEach(city => {
         cityArray.push([city, data[city]]);
     });
     google.charts.setOnLoadCallback(drawPieChart);
 });
 
-function drawPieChart () {
+function drawPieChart() {
     var data = google.visualization.arrayToDataTable(cityArray);
 
     var options = {

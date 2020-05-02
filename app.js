@@ -277,13 +277,9 @@ var io = socket(server);
 io.on('connection', (socket) => {
     // socket.removeAllListeners();
 
-    console.log(Date().toString(), 'Made a socket connection. Socket ID:', socket.id);
-    io.sockets.emit('visitCounter', visitCounter);
-    io.sockets.emit('updateCharts', sensorObjects);
-    io.sockets.emit('updateCompResources', compResources)
-    io.sockets.emit('updateUptime', secs2HHMMSS(process.uptime()));
-    io.sockets.emit('gitlog', gitcommits);
-    io.sockets.emit('updateGeo', visitCities);
+    socket.emit('lineFollowerBtnUpdate', lineFollowerBtnFlag);
+    socket.emit('RCControlBtnUpdate', RCControlBtnFlag);
+    socket.emit('directControlBtnUpdate', directControlBtnFlag);
 
     // Handle chat events
     socket.on('chat', function(data) {
@@ -303,13 +299,49 @@ io.on('connection', (socket) => {
         } else {
             socket.emit('incorrect');
         }
-
     });
+
+    // Zumo Direct Control Events
+    socket.on('zumoDirectControl', function(data) {
+        if (zumoDirectControl) {
+            let directControlState = 0;
+            console.log(data);
+            if ((!data.UP && !data.DOWN && !data.LEFT && !data.RIGHT) || (data.UP && data.DOWN && !data.LEFT && !data.RIGHT)) directControlState = 0;
+            else if (data.UP && !data.DOWN && !data.LEFT && !data.RIGHT) directControlState = 1;
+            else if (!data.UP && data.DOWN && !data.LEFT && !data.RIGHT) directControlState = 2;
+            else if (!data.UP && !data.DOWN && data.LEFT && !data.RIGHT) directControlState = 3;
+            else if (!data.UP && !data.DOWN && !data.LEFT && data.RIGHT) directControlState = 4;
+            else if (data.UP && !data.DOWN && data.LEFT && !data.RIGHT) directControlState = 5;
+            else if (data.UP && !data.DOWN && !data.LEFT && data.RIGHT) directControlState = 6;
+            else if (!data.UP && data.DOWN && data.LEFT && !data.RIGHT) directControlState = 7;
+            else if (!data.UP && data.DOWN && !data.LEFT && data.RIGHT) directControlState = 8;
+            else directControlState = 9;
+            // console.log(directControlState);
+            socket.broadcast.emit('zumoDirectControlCommand', directControlState);
+        }
+    });
+});
+
+// Socket.io Custom Namespaces
+const nspIndex = io.of('/index');
+nspIndex.on('connection', function(socket) {
+    console.log(Date().toString(), 'Made a socket connection. Socket ID:', socket.id);
+    socket.emit('visitCounter', visitCounter);
+    socket.emit('updateCompResources', compResources)
+    socket.emit('updateUptime', secs2HHMMSS(process.uptime()));
+    socket.emit('gitlog', gitcommits);
+    socket.emit('updateGeo', visitCities);
+});
+
+const nspCharts = io.of('/charts');
+nspCharts.on('connection', function(socket) {
+    console.log(Date().toString(), 'Made a socket connection. Socket ID:', socket.id);
+    socket.emit('updateCharts', sensorObjects);
 });
 
 // Update charts
 txEmitter.on('dataWritten', function() {
-    io.emit('updateCharts', sensorObjects);
+    nspCharts.emit('updateCharts', sensorObjects);
 
     checkMaxValue();
 });
@@ -324,7 +356,7 @@ function checkSysInfo() {
     si.mem().then(data => compResources.memtotal = data.total / 1024 / 1024);
     compResources.heapUsed = process.memoryUsage().heapUsed / 1024 / 1024;
     compResources.heapTotal = process.memoryUsage().heapTotal / 1024 / 1024;
-    io.emit('updateCompResources', compResources);
+    nspIndex.emit('updateCompResources', compResources);
 }
 // Check at startup
 checkSysInfo();
@@ -346,7 +378,7 @@ function secs2HHMMSS(seconds) {
 }
 
 setInterval(() => {
-    io.emit('updateUptime', secs2HHMMSS(process.uptime()));
+    nspIndex.emit('updateUptime', secs2HHMMSS(process.uptime()));
 }, 1000);
 
 // Get and handle max values
@@ -363,7 +395,7 @@ app.get('/', (req, res) => {
 
     if (visitCities.hasOwnProperty(geo.city)) visitCities[geo.city] += 1;
     else visitCities[geo.city] = 1;
-    io.emit('updateGeo', visitCities);
+    nspIndex.emit('updateGeo', visitCities);
 });
 
 app.get('/chat', (req, res) => {
@@ -480,9 +512,11 @@ app.get('/zumo-control', (req, res) => {
 
 var zumoCommand = 'standby';
 var zumoCommandUNIX = 0;
+var zumoDirectControl = 0;
 
-var lineFollowerToggle = 0;
-var RCControlToggle = 0;
+var lineFollowerBtnFlag = 0;
+var RCControlBtnFlag = 0;
+var directControlBtnFlag = 0;
 
 app.post('/zumo-control-post', (req, res) => {
     if (requestOutput) console.log(Date().toString(), "Requested URL: ", req.url);
@@ -491,47 +525,67 @@ app.post('/zumo-control-post', (req, res) => {
         let rxJSON = JSON.parse(chunk);
         let rxUNIX = parseInt(rxJSON.UNIX);
 
-        if (rxUNIX - zumoCommandUNIX > 5000) {
+        if (rxUNIX - zumoCommandUNIX > 3000) {
 
             zumoCommandUNIX = rxUNIX;
+            console.log(rxJSON);
 
             switch (rxJSON.COMMAND_TYPE) {
                 case "PATTERN":
                     zumoCommand = rxJSON.COMMAND;
                     setTimeout(() => {
                         zumoCommand = 'standby';
-                    }, 4999);
+                    }, 2999);
                     break;
 
                 case "LINEFOLLOWER":
-                    if (rxJSON.COMMAND == "followerToggle") lineFollowerToggle = !lineFollowerToggle;
-
-                    if (lineFollowerToggle) zumoCommand = "startLineFollower";
-                    else {
+                    if (rxJSON.COMMAND == "followerStart") {
+                        zumoCommand = "startLineFollower";
+                        lineFollowerBtnFlag = 1;
+                    } else if (rxJSON.COMMAND == "followerStop") {
                         zumoCommand = "stop";
+                        lineFollowerBtnFlag = 0;
                         setTimeout(() => {
                             zumoCommand = 'standby';
-                        }, 4999);
+                        }, 2999);
                     }
-                    console.log(lineFollowerToggle);
+                    io.emit('lineFollowerBtnUpdate', lineFollowerBtnFlag);
                     break;
 
                 case "RCCONTROL":
-                    if (rxJSON.COMMAND == "RCControlToggle") RCControlToggle = !RCControlToggle;
-
-                    if (RCControlToggle) {
+                    if (rxJSON.COMMAND == "RCControlStart") {
                         zumoCommand = "startRCControl";
+                        RCControlBtnFlag = 1;
                         setTimeout(() => {
                             zumoCommand = 'standby';
-                        }, 4800);
-                    } else {
+                        }, 2000);
+                    } else if (rxJSON.COMMAND == "RCControlStop") {
                         zumoCommand = "stop";
+                        RCControlBtnFlag = 0;
                         setTimeout(() => {
                             zumoCommand = 'standby';
-                        }, 4999);
+                        }, 2000);
                     }
-                    console.log(RCControlToggle);
+                    io.emit('RCControlBtnUpdate', RCControlBtnFlag);
                     break;
+
+                case "DIRECTCONTROL":
+                    if (rxJSON.COMMAND == "directControlStart") {
+                        zumoCommand = "startDirectControl";
+                        directControlBtnFlag = 1;
+                        zumoDirectControl = 1;
+                        setTimeout(() => {
+                            zumoCommand = 'standby';
+                        }, 2000);
+                    } else if (rxJSON.COMMAND == "directControlStop") {
+                        zumoCommand = "stop";
+                        directControlBtnFlag = 0;
+                        zumoDirectControl = 0;
+                        setTimeout(() => {
+                            zumoCommand = 'standby';
+                        }, 2000);
+                    }
+                    io.emit('directControlBtnUpdate', directControlBtnFlag);
 
                 default:
                     break;
@@ -541,9 +595,11 @@ app.post('/zumo-control-post', (req, res) => {
     res.sendStatus(200);
 });
 
-app.get('/control-center', (req, res) => {
+
+
+app.get('/control', (req, res) => {
     if (requestOutput) console.log(Date().toString(), "Requested URL: ", req.url);
-    res.send("NOT FINISHED MATE!");
+    res.render('zumoControl');
 });
 //>>>-------------------------------------------------<::>>>
 

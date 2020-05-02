@@ -4,7 +4,6 @@
 <head>
     <!-- Chat CSS -->
     <script defer src="assets\projectTasks.js"></script>
-    <link href="assets\styles.css" rel="stylesheet" type="text/css" />
     <%- include ('partials/head'); %>
 </head>
 
@@ -50,13 +49,13 @@
                             <a href="/project-zumo-patterns" class="w3-button w3-blue w3-border w3-border-black w3-large" style="width:50%" ;></i>Pattern Driving</a>
                         </li><br>
                         <li>
-                            <button onclick="lineFollowerReq()" class="w3-button w3-blue w3-border w3-border-black w3-large" style="width:50%"></i>Line Follower Toggle</button>
+                            <button id="lineFollowerButton" onclick="lineFollowerReq()" class="w3-button w3-blue w3-border w3-border-black w3-large" style="width:50%;"></i>Line Follower Toggle</button>
                         </li><br>
                         <li>
-                            <button onclick="RCControlReq()" class="w3-button w3-blue w3-border w3-border-black w3-large" style="width:50%"></i>RC Control Toggle</button>
+                            <button id="RCControlButton" onclick="RCControlReq()" class="w3-button w3-blue w3-border w3-border-black w3-large" style="width:50%"></i>RC Control Toggle</button>
                         </li><br>
                         <li>
-                            <a href="/control-center" class="w3-button w3-blue w3-border w3-border-black w3-large" style="width:50%"></i>Direct Control</a>
+                            <a href="/control" class="w3-button w3-blue w3-border w3-border-black w3-large" style="width:50%"></i>Direct Control</a>
                         </li><br>
                     </ul>
                 </div>

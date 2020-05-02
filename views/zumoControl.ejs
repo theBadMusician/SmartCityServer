@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Chat CSS -->
+    <script defer src="assets\zumoControl.js"></script>
+    <link href="assets\arrowKeys.css" rel="stylesheet" type="text/css" />
+    <%- include ('partials/head'); %>
+</head>
+
+<body class="w3-light-grey">
+    <!-- Top container -->
+    <%- include ('partials/topContainer'); %>
+
+        <!-- Sidebar/menu -->
+        <%- include ('partials/navbar'); %>
+
+            <!-- !PAGE CONTENT! -->
+            <div class="w3-main" style="margin-left:300px;margin-top:43px;">
+
+                <!-- Header -->
+                <header class="w3-container" style="padding-top:22px">
+                    <h5><b><i class="fa fa-graduation-cap fa-fw"></i> Zumo Control</b></h5>
+                </header>
+
+                <div class="w3-half">
+                    <div class="keys">
+                        <div class="up arr"><i class="fa fa-arrow-up"></i></div>
+                        <br />
+                        <div class="left arr"><i class="fa fa-arrow-left"></i></div>
+                        <div class="down arr"><i class="fa fa-arrow-down"></i></div>
+                        <div class="right arr"><i class="fa fa-arrow-right"></i></div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <div class="w3-half">
+                    <h1 class="w3-center"></h1>
+                    <div class="w3-center">
+                        <button id="toggleControl" onclick="toggleControl()" class="w3-button w3-red w3-border w3-border-black w3-large" style="width:10vw;height:10vw;" </i>Toggle Control</button>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+
+                <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+                <!-- Footer -->
+
+                <%- include ('partials/footer'); %>
+            </div>
+</body>
+<!-- More or less mandatory scripts -->
+<%- include ('partials/scripts'); %>
+    <!-- Socket Scripts -->
+
+</html>
