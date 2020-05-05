@@ -1,4 +1,4 @@
-const socket = io.connect('http://88.91.42.155:80');
+var socket = io.connect('/');
 
 const xhttp = new XMLHttpRequest();
 const urlServo = "/test-servo";
