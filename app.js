@@ -30,11 +30,7 @@ var geoip = require('geoip-lite');
 
 var os = require('os');
 var networkInterfaces = os.networkInterfaces();
-try {
-    console.log(networkInterfaces.wlan0[0]);
-} catch (error) {
-    console.log(networkInterfaces.eth[0]);
-}
+console.log(networkInterfaces);
 
 //>>>-------------------------------------------------<::>>>
 
