@@ -1,9 +1,5 @@
 // Make connection
-<<<<<<< HEAD
-var socket = io.connect('http://192.168.0.225:80');
-=======
 var socket = io.connect('/');
->>>>>>> 3ed148f44362d908a102f6b37365f3e1ac959ec4
 
 // Query DOM
 var message = document.getElementById('message'),
