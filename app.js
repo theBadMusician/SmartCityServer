@@ -30,9 +30,9 @@ const secrets = require('./SECRETS.js');            // API keys, IP addresses, d
 const si = require('systeminformation');            // System information
 const os = require('os');                           // OS information
 const networkInterfaces = os.networkInterfaces();   // Network interface information
-if (networkInterfaces[wlan0][1] != null) console.log(networkInterfaces[wlan0][1]);
-else if (networkInterfaces[WiFi][1] != null) console.log(networkInterfaces[WiFi][1]);
-else if (networkInterfaces['Wi-Fi'][1] != null) console.log(networkInterfaces['Wi-Fi'][1]);
+if (networkInterfaces['wlan0'] != null) console.log(networkInterfaces['wlan0'][1]);
+else if (networkInterfaces['WiFi'] != null) console.log(networkInterfaces['WiFi'][1]);
+else if (networkInterfaces['Wi-Fi'] != null) console.log(networkInterfaces['Wi-Fi'][1]);
 else console.log(networkInterfaces);
 //>>>-------------------------------------------------<::>>>
 
