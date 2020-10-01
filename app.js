@@ -27,18 +27,11 @@ const geoip = require('geoip-lite');                // IP address geoloacation
 
 const secrets = require('./SECRETS.js');            // API keys, IP addresses, dir trees
 
-<<<<<<< HEAD
 const si = require('systeminformation');            // System information
 const os = require('os');                           // OS information
 const networkInterfaces = os.networkInterfaces();   // Network interface information
 if (networkInterfaces.WiFi[1] !== undefined) console.log(networkInterfaces.WiFi[1]);
 else console.log(networkInterfaces.wlan0[1]);
-=======
-var os = require('os');
-var networkInterfaces = os.networkInterfaces();
-console.log(networkInterfaces);
-
->>>>>>> 3ed148f44362d908a102f6b37365f3e1ac959ec4
 //>>>-------------------------------------------------<::>>>
 
 //>>>- JSON files ------------------------------------<::>>>
