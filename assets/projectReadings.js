@@ -51,11 +51,11 @@ window.addEventListener('resize', function() {
     if (window.innerWidth >= 976) window.dash_open = true;
     else window.dash_open = false;
     google.charts.setOnLoadCallback(drawCharts);
-    repositionButtons();
+    repositionElements();
 });
 
 setTimeout(() => {
-    repositionButtons();
+    repositionElements();
 }, 1000);
 
 // Param. examples:
@@ -245,7 +245,7 @@ function chartToggle(title) {
     }
 }
 
-function repositionButtons() {
+function repositionElements() {
     if (dash_open) {
         document.getElementsByClassName("fa fa-line-chart fa-fw")[1]['style']['margin-left'] = (chartAreaLeftDash - 50) + "px";
         document.getElementsByClassName("w3-container w3-padding-16 w3-light-grey")[0]['style']['margin-left'] = (chartAreaLeftDash - 75) + "px";
