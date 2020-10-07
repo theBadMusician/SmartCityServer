@@ -30,10 +30,57 @@ const secrets = require('./SECRETS.js');            // API keys, IP addresses, d
 const si = require('systeminformation');            // System information
 const os = require('os');                           // OS information
 const networkInterfaces = os.networkInterfaces();   // Network interface information
-if (networkInterfaces['wlan0'] != null) console.log(networkInterfaces['wlan0'][1]);
+if (networkInterfaces['wlan0'] != null) console.log(networkInterfaces['wlan0'][0]);
 else if (networkInterfaces['WiFi'] != null) console.log(networkInterfaces['WiFi'][1]);
 else if (networkInterfaces['Wi-Fi'] != null) console.log(networkInterfaces['Wi-Fi'][1]);
 else console.log(networkInterfaces);
+
+var nodemailer = require('nodemailer');
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: secrets.gmail_id,
+    pass: secrets.gmail_pwd
+  }
+});
+var mailOptions = {
+    from: secrets.gmail_id,
+    to: secrets.recv_email_id,
+    subject: 'placeholder',
+    text: 'placeholder'
+};
+
+setInterval(() => {
+    let sendEmail = false
+    if (compResources.CPUtemp > 60.0) {
+        mailOptions.subject = "CPU temperature is over limit!"
+        mailOptions.text = "CPU temperature is at " + String(compResources.CPUtemp) + ". Turn off the RasPi or lessen the load."
+        sendEmail = true
+    }
+    if (compResources.CPUload > 90.0) {
+        mailOptions.subject = "CPU load is over limit!"
+        mailOptions.text = "CPU load is at " + String(compResources.CPUload) + ". Turn off the RasPi or lessen the load."
+        sendEmail = true
+    }
+    if (compResources.memuse > 890) {
+        mailOptions.subject = "RAM usage is over limit!"
+        mailOptions.text = "RAM usage is at " + String(compResources.memuse) + ". Turn off the RasPi or enable garbage collection."
+        sendEmail = true
+    }
+    if (sendEmail == true) {
+        transporter.sendMail(mailOptions, function (error, info) {
+            if (error) {
+                console.log(error);
+            } else {
+                console.log(Date().toString() + ' Email sent to: ' + secrets.recv_email_id + ' Server Response: ' + info.response);
+            }
+        sendEmail = false
+        });
+    }
+}, 6000);
+
+
+
 //>>>-------------------------------------------------<::>>>
 
 //>>>- JSON files ------------------------------------<::>>>
@@ -193,6 +240,7 @@ rl.on('line', function(text) {
                     console.log("ERROR! Cannot read CPU temperature.");
                     return;
                 } else console.log("CPU core temeperature: ", data.main, "°C")
+                
             });
             break;
 
