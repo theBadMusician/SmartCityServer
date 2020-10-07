@@ -63,6 +63,9 @@ setInterval(() => {
 	    prevCPUtemp = compResources.CPUtemp;
 	}
     }
+    else {
+	prevCPUtemp = 100;
+    }
     if (compResources.CPUload > 90.0) {
         mailOptions.subject = "CPU load is over limit!"
         mailOptions.text = "CPU load is at " + String(compResources.CPUload) + ". Turn off the RasPi or lessen the load."
@@ -83,7 +86,7 @@ setInterval(() => {
         sendEmail = false
         });
     }
-}, 6000);
+}, 60000 * 1);
 
 
 
