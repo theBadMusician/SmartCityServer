@@ -49,13 +49,19 @@ var mailOptions = {
     subject: 'placeholder',
     text: 'placeholder'
 };
-
+var prevCPUtemp = 100;
 setInterval(() => {
     let sendEmail = false
     if (compResources.CPUtemp > 60.0) {
         mailOptions.subject = "CPU temperature is over limit!"
         mailOptions.text = "CPU temperature is at " + String(compResources.CPUtemp) + ". Turn off the RasPi or lessen the load."
-        sendEmail = true
+        if (compResources.CPUtemp > prevCPUtemp) {
+	    prevCPUtemp = 100;
+	    sendEmail = true
+	}
+	if (compResources.CPUtemp < prevCPUtemp) {
+	    prevCPUtemp = compResources.CPUtemp;
+	}
     }
     if (compResources.CPUload > 90.0) {
         mailOptions.subject = "CPU load is over limit!"

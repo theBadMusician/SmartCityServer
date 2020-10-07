@@ -1,0 +1,6832 @@
+{
+  "DHT22": [
+    {
+      "Temperature[C]": 20.9,
+      "Humidity[%]": 44.7,
+      "UNIX": 1586105450861
+    },
+    {
+      "Temperature[C]": 20.9,
+      "Humidity[%]": 44.7,
+      "UNIX": 1586105480892
+    },
+    {
+      "Temperature[C]": 20.9,
+      "Humidity[%]": 44.6,
+      "UNIX": 1586105510924
+    },
+    {
+      "Temperature[C]": 20.9,
+      "Humidity[%]": 44.5,
+      "UNIX": 1586105540959
+    },
+    {
+      "Temperature[C]": 20.9,
+      "Humidity[%]": 44.4,
+      "UNIX": 1586105570989
+    },
+    {
+      "Temperature[C]": 20.9,
+      "Humidity[%]": 44.3,
+      "UNIX": 1586105601031
+    },
+    {
+      "Temperature[C]": 20.9,
+      "Humidity[%]": 44.2,
+      "UNIX": 1586105631067
+    },
+    {
+      "Temperature[C]": 20.9,
+      "Humidity[%]": 44,
+      "UNIX": 1586105703115
+    },
+    {
+      "Temperature[C]": 20.9,
+      "Humidity[%]": 44,
+      "UNIX": 1586105733150
+    },
+    {
+      "Temperature[C]": 20.9,
+      "Humidity[%]": 44,
+      "UNIX": 1586105763180
+    },
+    {
+      "Temperature[C]": 20.9,
+      "Humidity[%]": 44,
+      "UNIX": 1586105793218
+    },
+    {
+      "Temperature[C]": 20.9,
+      "Humidity[%]": 44,
+      "UNIX": 1586105823249
+    },
+    {
+      "Temperature[C]": 20.9,
+      "Humidity[%]": 44,
+      "UNIX": 1586105853282
+    },
+    {
+      "Temperature[C]": 20.9,
+      "Humidity[%]": 44.1,
+      "UNIX": 1586105883315
+    },
+    {
+      "Temperature[C]": 20.9,
+      "Humidity[%]": 44.2,
+      "UNIX": 1586105913346
+    },
+    {
+      "Temperature[C]": 20.9,
+      "Humidity[%]": 44.3,
+      "UNIX": 1586105943378
+    },
+    {
+      "Temperature[C]": 20.9,
+      "Humidity[%]": 44.4,
+      "UNIX": 1586105973410
+    },
+    {
+      "Temperature[C]": 20.9,
+      "Humidity[%]": 44.5,
+      "UNIX": 1586106003444
+    },
+    {
+      "Temperature[C]": 21,
+      "Humidity[%]": 44.6,
+      "UNIX": 1586106033475
+    },
+    {
+      "Temperature[C]": 21,
+      "Humidity[%]": 44.7,
+      "UNIX": 1586106063509
+    },
+    {
+      "Temperature[C]": 21,
+      "Humidity[%]": 44.7,
+      "UNIX": 1586106093539
+    },
+    {
+      "Temperature[C]": 21,
+      "Humidity[%]": 44.7,
+      "UNIX": 1586106123570
+    },
+    {
+      "Temperature[C]": 21,
+      "Humidity[%]": 44.7,
+      "UNIX": 1586106153640
+    },
+    {
+      "Temperature[C]": 21,
+      "Humidity[%]": 44.7,
+      "UNIX": 1586106183674
+    },
+    {
+      "Temperature[C]": 21,
+      "Humidity[%]": 44.7,
+      "UNIX": 1586106213706
+    },
+    {
+      "Temperature[C]": 21,
+      "Humidity[%]": 44.7,
+      "UNIX": 1586106243741
+    },
+    {
+      "Temperature[C]": 21,
+      "Humidity[%]": 44.7,
+      "UNIX": 1586106273771
+    },
+    {
+      "Temperature[C]": 21,
+      "Humidity[%]": 44.7,
+      "UNIX": 1586106303805
+    },
+    {
+      "Temperature[C]": 21.1,
+      "Humidity[%]": 44.5,
+      "UNIX": 1586106513967
+    },
+    {
+      "Temperature[C]": 21.1,
+      "Humidity[%]": 44.5,
+      "UNIX": 1586106543996
+    },
+    {
+      "Temperature[C]": 21.1,
+      "Humidity[%]": 44.5,
+      "UNIX": 1586106574028
+    },
+    {
+      "Temperature[C]": 21.1,
+      "Humidity[%]": 44.6,
+      "UNIX": 1586106604065
+    },
+    {
+      "Temperature[C]": 21.1,
+      "Humidity[%]": 44.7,
+      "UNIX": 1586106634093
+    },
+    {
+      "Temperature[C]": 21.1,
+      "Humidity[%]": 44.7,
+      "UNIX": 1586106664124
+    },
+    {
+      "Temperature[C]": 21,
+      "Humidity[%]": 44.6,
+      "UNIX": 1586106694157
+    },
+    {
+      "Temperature[C]": 21.1,
+      "Humidity[%]": 44.5,
+      "UNIX": 1586106724189
+    },
+    {
+      "Temperature[C]": 21.2,
+      "Humidity[%]": 44.5,
+      "UNIX": 1586106754223
+    },
+    {
+      "Temperature[C]": 21.2,
+      "Humidity[%]": 44.5,
+      "UNIX": 1586106784254
+    },
+    {
+      "Temperature[C]": 21.2,
+      "Humidity[%]": 44.5,
+      "UNIX": 1586106814285
+    },
+    {
+      "Temperature[C]": 21.2,
+      "Humidity[%]": 44.5,
+      "UNIX": 1586106844319
+    },
+    {
+      "Temperature[C]": 21.4,
+      "Humidity[%]": 44.7,
+      "UNIX": 1586107264587
+    },
+    {
+      "Temperature[C]": 21.4,
+      "Humidity[%]": 44.7,
+      "UNIX": 1586107324717
+    },
+    {
+      "Temperature[C]": 21.5,
+      "Humidity[%]": 44.7,
+      "UNIX": 1586107444917
+    },
+    {
+      "Temperature[C]": 21.5,
+      "Humidity[%]": 44.7,
+      "UNIX": 1586107474953
+    },
+    {
+      "Temperature[C]": 21.5,
+      "Humidity[%]": 44.7,
+      "UNIX": 1586107625090
+    },
+    {
+      "Temperature[C]": 21.6,
+      "Humidity[%]": 44.2,
+      "UNIX": 1586108375513
+    },
+    {
+      "Temperature[C]": 21.5,
+      "Humidity[%]": 43.2,
+      "UNIX": 1586108465666
+    },
+    {
+      "Temperature[C]": 21.5,
+      "Humidity[%]": 43.1,
+      "UNIX": 1586108525813
+    },
+    {
+      "Temperature[C]": 21.7,
+      "Humidity[%]": 44.7,
+      "UNIX": 1586111376694
+    },
+    {
+      "Temperature[C]": 21.7,
+      "Humidity[%]": 44.9,
+      "UNIX": 1586112397478
+    },
+    {
+      "Temperature[C]": 21.6,
+      "Humidity[%]": 44.9,
+      "UNIX": 1586112427507
+    },
+    {
+      "Temperature[C]": 21.6,
+      "Humidity[%]": 44.9,
+      "UNIX": 1586112457537
+    },
+    {
+      "Temperature[C]": 21.7,
+      "Humidity[%]": 44.3,
+      "UNIX": 1586113568122
+    },
+    {
+      "Temperature[C]": 21.7,
+      "Humidity[%]": 44.2,
+      "UNIX": 1586113598151
+    },
+    {
+      "Temperature[C]": 21.7,
+      "Humidity[%]": 44.2,
+      "UNIX": 1586114108484
+    },
+    {
+      "Temperature[C]": 21.7,
+      "Humidity[%]": 44.2,
+      "UNIX": 1586114138515
+    },
+    {
+      "Temperature[C]": 21.7,
+      "Humidity[%]": 44.2,
+      "UNIX": 1586114168544
+    },
+    {
+      "Temperature[C]": 21.6,
+      "Humidity[%]": 44.2,
+      "UNIX": 1586114228591
+    },
+    {
+      "Temperature[C]": 21.6,
+      "Humidity[%]": 44.2,
+      "UNIX": 1586114258623
+    },
+    {
+      "Temperature[C]": 21.5,
+      "Humidity[%]": 44.3,
+      "UNIX": 1586114438730
+    },
+    {
+      "Temperature[C]": 21.6,
+      "Humidity[%]": 44.4,
+      "UNIX": 1586114468762
+    },
+    {
+      "Temperature[C]": 21.6,
+      "Humidity[%]": 44.4,
+      "UNIX": 1586114618853
+    },
+    {
+      "Temperature[C]": 21.6,
+      "Humidity[%]": 44.3,
+      "UNIX": 1586114678900
+    },
+    {
+      "Temperature[C]": 21.6,
+      "Humidity[%]": 44.4,
+      "UNIX": 1586114949060
+    },
+    {
+      "Temperature[C]": 21.6,
+      "Humidity[%]": 44.4,
+      "UNIX": 1586114979089
+    },
+    {
+      "Temperature[C]": 21.6,
+      "Humidity[%]": 44.4,
+      "UNIX": 1586115009121
+    },
+    {
+      "Temperature[C]": 21.6,
+      "Humidity[%]": 44.4,
+      "UNIX": 1586115039157
+    },
+    {
+      "Temperature[C]": 21.6,
+      "Humidity[%]": 44.4,
+      "UNIX": 1586115069188
+    },
+    {
+      "Temperature[C]": 21.6,
+      "Humidity[%]": 44.2,
+      "UNIX": 1586115339345
+    },
+    {
+      "Temperature[C]": 21.6,
+      "Humidity[%]": 44.2,
+      "UNIX": 1586115429408
+    },
+    {
+      "Temperature[C]": 21.6,
+      "Humidity[%]": 44.2,
+      "UNIX": 1586115489455
+    },
+    {
+      "Temperature[C]": 21.6,
+      "Humidity[%]": 44.2,
+      "UNIX": 1586115669562
+    },
+    {
+      "Temperature[C]": 21.6,
+      "Humidity[%]": 44.1,
+      "UNIX": 1586115729609
+    },
+    {
+      "Temperature[C]": 21.6,
+      "Humidity[%]": 44.2,
+      "UNIX": 1586115849685
+    },
+    {
+      "Temperature[C]": 21.6,
+      "Humidity[%]": 44.3,
+      "UNIX": 1586116179869
+    },
+    {
+      "Temperature[C]": 21.6,
+      "Humidity[%]": 44.3,
+      "UNIX": 1586116209899
+    },
+    {
+      "Temperature[C]": 21.6,
+      "Humidity[%]": 44.3,
+      "UNIX": 1586116239934
+    },
+    {
+      "Temperature[C]": 21.6,
+      "Humidity[%]": 44.3,
+      "UNIX": 1586116269967
+    },
+    {
+      "Temperature[C]": 21.6,
+      "Humidity[%]": 44.2,
+      "UNIX": 1586116390046
+    },
+    {
+      "Temperature[C]": 21.6,
+      "Humidity[%]": 43.9,
+      "UNIX": 1586116420074
+    },
+    {
+      "Temperature[C]": 21.6,
+      "Humidity[%]": 43.6,
+      "UNIX": 1586116450105
+    },
+    {
+      "Temperature[C]": 21.5,
+      "Humidity[%]": 43.5,
+      "UNIX": 1586116480137
+    },
+    {
+      "Temperature[C]": 21.5,
+      "Humidity[%]": 43.7,
+      "UNIX": 1586116510171
+    },
+    {
+      "Temperature[C]": 21.6,
+      "Humidity[%]": 43.7,
+      "UNIX": 1586116540199
+    },
+    {
+      "Temperature[C]": 21.6,
+      "Humidity[%]": 43.7,
+      "UNIX": 1586116570231
+    },
+    {
+      "Temperature[C]": 21.7,
+      "Humidity[%]": 44,
+      "UNIX": 1586116600267
+    },
+    {
+      "Temperature[C]": 21.6,
+      "Humidity[%]": 44.4,
+      "UNIX": 1586116630295
+    },
+    {
+      "Temperature[C]": 21.7,
+      "Humidity[%]": 44.6,
+      "UNIX": 1586116660327
+    },
+    {
+      "Temperature[C]": 21.7,
+      "Humidity[%]": 44.6,
+      "UNIX": 1586116690358
+    },
+    {
+      "Temperature[C]": 21.7,
+      "Humidity[%]": 44.6,
+      "UNIX": 1586116720392
+    },
+    {
+      "Temperature[C]": 21.7,
+      "Humidity[%]": 44.5,
+      "UNIX": 1586116750424
+    },
+    {
+      "Temperature[C]": 21.7,
+      "Humidity[%]": 44.5,
+      "UNIX": 1586116780459
+    },
+    {
+      "Temperature[C]": 21.7,
+      "Humidity[%]": 44.6,
+      "UNIX": 1586116810489
+    },
+    {
+      "Temperature[C]": 21.7,
+      "Humidity[%]": 44.6,
+      "UNIX": 1586116840522
+    },
+    {
+      "Temperature[C]": 21.7,
+      "Humidity[%]": 44.6,
+      "UNIX": 1586116870555
+    },
+    {
+      "Temperature[C]": 21.8,
+      "Humidity[%]": 44.7,
+      "UNIX": 1586116900584
+    },
+    {
+      "Temperature[C]": 21.8,
+      "Humidity[%]": 44.7,
+      "UNIX": 1586116930617
+    },
+    {
+      "Temperature[C]": 21.8,
+      "Humidity[%]": 44.7,
+      "UNIX": 1586116960651
+    },
+    {
+      "Temperature[C]": 21.8,
+      "Humidity[%]": 44.8,
+      "UNIX": 1586116990684
+    },
+    {
+      "Temperature[C]": 21.8,
+      "Humidity[%]": 44.8,
+      "UNIX": 1586117020715
+    },
+    {
+      "Temperature[C]": 21.8,
+      "Humidity[%]": 44.8,
+      "UNIX": 1586117050759
+    },
+    {
+      "Temperature[C]": 21.8,
+      "Humidity[%]": 44.8,
+      "UNIX": 1586117080789
+    },
+    {
+      "Temperature[C]": 21.8,
+      "Humidity[%]": 44.8,
+      "UNIX": 1586117110821
+    },
+    {
+      "Temperature[C]": 21.8,
+      "Humidity[%]": 44.8,
+      "UNIX": 1586117140853
+    },
+    {
+      "Temperature[C]": 21.8,
+      "Humidity[%]": 44.8,
+      "UNIX": 1586117170886
+    },
+    {
+      "Temperature[C]": 21.8,
+      "Humidity[%]": 44.8,
+      "UNIX": 1586117200916
+    },
+    {
+      "Temperature[C]": 21.8,
+      "Humidity[%]": 44.8,
+      "UNIX": 1586117230947
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 44.8,
+      "UNIX": 1586117260980
+    },
+    {
+      "Temperature[C]": 21.8,
+      "Humidity[%]": 44.8,
+      "UNIX": 1586117291011
+    },
+    {
+      "Temperature[C]": 21.8,
+      "Humidity[%]": 44.9,
+      "UNIX": 1586117321042
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 44.9,
+      "UNIX": 1586117351077
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 44.9,
+      "UNIX": 1586117381107
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 45,
+      "UNIX": 1586117411140
+    },
+    {
+      "Temperature[C]": 21.8,
+      "Humidity[%]": 45,
+      "UNIX": 1586117441171
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 45,
+      "UNIX": 1586117471204
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 45,
+      "UNIX": 1586117501236
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 45,
+      "UNIX": 1586117531269
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 45,
+      "UNIX": 1586117561300
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 44.9,
+      "UNIX": 1586117591332
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 45,
+      "UNIX": 1586117621364
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 44.9,
+      "UNIX": 1586117651396
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 45,
+      "UNIX": 1586117681429
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 45,
+      "UNIX": 1586117711460
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 45,
+      "UNIX": 1586117741495
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 45,
+      "UNIX": 1586117771523
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 45,
+      "UNIX": 1586117801557
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 45,
+      "UNIX": 1586117831588
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 45,
+      "UNIX": 1586117861621
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 45,
+      "UNIX": 1586117891655
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 45,
+      "UNIX": 1586117921685
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 45,
+      "UNIX": 1586117951717
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 45,
+      "UNIX": 1586117981748
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 45,
+      "UNIX": 1586118011784
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 45,
+      "UNIX": 1586118041816
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 45,
+      "UNIX": 1586118071850
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 45,
+      "UNIX": 1586118101879
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 45,
+      "UNIX": 1586118131911
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 45,
+      "UNIX": 1586118161944
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 45,
+      "UNIX": 1586118191976
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 45,
+      "UNIX": 1586118222008
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 45,
+      "UNIX": 1586118252042
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 45,
+      "UNIX": 1586118282073
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 45.1,
+      "UNIX": 1586118312102
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 45.1,
+      "UNIX": 1586118342135
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 45.1,
+      "UNIX": 1586118372170
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 45.1,
+      "UNIX": 1586118402203
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 45.1,
+      "UNIX": 1586118432237
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 45.1,
+      "UNIX": 1586118462267
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 45.2,
+      "UNIX": 1586118492302
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 45.2,
+      "UNIX": 1586118522330
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 45.2,
+      "UNIX": 1586118552364
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 45.2,
+      "UNIX": 1586118582398
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 45.1,
+      "UNIX": 1586118612429
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.2,
+      "UNIX": 1586118642460
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.2,
+      "UNIX": 1586118672493
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.2,
+      "UNIX": 1586118702528
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.2,
+      "UNIX": 1586118732564
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.2,
+      "UNIX": 1586118762602
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.2,
+      "UNIX": 1586118792633
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.3,
+      "UNIX": 1586118822666
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.3,
+      "UNIX": 1586118852708
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.3,
+      "UNIX": 1586118882743
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.3,
+      "UNIX": 1586118912774
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.3,
+      "UNIX": 1586118942810
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.3,
+      "UNIX": 1586118972837
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.3,
+      "UNIX": 1586119002870
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.2,
+      "UNIX": 1586119032901
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.2,
+      "UNIX": 1586119062934
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.2,
+      "UNIX": 1586119092964
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.2,
+      "UNIX": 1586119122996
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.2,
+      "UNIX": 1586119153028
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.2,
+      "UNIX": 1586119183059
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.2,
+      "UNIX": 1586119213091
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.3,
+      "UNIX": 1586119243168
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.3,
+      "UNIX": 1586119273192
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.3,
+      "UNIX": 1586119303223
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.4,
+      "UNIX": 1586119333254
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.4,
+      "UNIX": 1586119363284
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.3,
+      "UNIX": 1586119393316
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.4,
+      "UNIX": 1586119423361
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.4,
+      "UNIX": 1586119453389
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.4,
+      "UNIX": 1586119483421
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.4,
+      "UNIX": 1586119513453
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.4,
+      "UNIX": 1586119543487
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.3,
+      "UNIX": 1586119573516
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.2,
+      "UNIX": 1586119603547
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.1,
+      "UNIX": 1586119633580
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45,
+      "UNIX": 1586119663612
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45,
+      "UNIX": 1586119693644
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45,
+      "UNIX": 1586119723697
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.1,
+      "UNIX": 1586119753720
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.1,
+      "UNIX": 1586119783752
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.3,
+      "UNIX": 1586119813783
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.3,
+      "UNIX": 1586119843814
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 45.4,
+      "UNIX": 1586119873865
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.4,
+      "UNIX": 1586119903879
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.4,
+      "UNIX": 1586119933911
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.4,
+      "UNIX": 1586119963944
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.4,
+      "UNIX": 1586119993976
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.4,
+      "UNIX": 1586120024008
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.4,
+      "UNIX": 1586120054039
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.4,
+      "UNIX": 1586120084071
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.4,
+      "UNIX": 1586120114103
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.4,
+      "UNIX": 1586120144134
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.5,
+      "UNIX": 1586120174166
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.5,
+      "UNIX": 1586120204201
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.5,
+      "UNIX": 1586120234232
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.5,
+      "UNIX": 1586120264263
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.5,
+      "UNIX": 1586120294295
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.5,
+      "UNIX": 1586120324328
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.5,
+      "UNIX": 1586120354361
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.5,
+      "UNIX": 1586120384393
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.5,
+      "UNIX": 1586120414424
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.5,
+      "UNIX": 1586120444457
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.5,
+      "UNIX": 1586120474488
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.6,
+      "UNIX": 1586120504520
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.6,
+      "UNIX": 1586120534554
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.7,
+      "UNIX": 1586120564586
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.7,
+      "UNIX": 1586120594618
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.7,
+      "UNIX": 1586120624650
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.7,
+      "UNIX": 1586120654680
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.6,
+      "UNIX": 1586120684713
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.6,
+      "UNIX": 1586120714746
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.5,
+      "UNIX": 1586120744779
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.5,
+      "UNIX": 1586120774816
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.5,
+      "UNIX": 1586120804853
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.5,
+      "UNIX": 1586120834884
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.5,
+      "UNIX": 1586120864917
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.6,
+      "UNIX": 1586120894948
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.7,
+      "UNIX": 1586120924979
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.8,
+      "UNIX": 1586120955013
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.8,
+      "UNIX": 1586120985044
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.8,
+      "UNIX": 1586121015076
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586121045107
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586121075140
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586121105171
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586121135203
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586121165234
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586121195267
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586121225299
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 46,
+      "UNIX": 1586121255330
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 46,
+      "UNIX": 1586121285367
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586121315395
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586121345429
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586121375459
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586121405491
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586121435522
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586121465553
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586121495588
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586121525619
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586121555651
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46,
+      "UNIX": 1586121585686
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46,
+      "UNIX": 1586121615717
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 46,
+      "UNIX": 1586121645750
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46,
+      "UNIX": 1586121675781
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 46.1,
+      "UNIX": 1586121705815
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 46.1,
+      "UNIX": 1586121735847
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 46,
+      "UNIX": 1586121765881
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 46,
+      "UNIX": 1586121795914
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.1,
+      "UNIX": 1586121825948
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.1,
+      "UNIX": 1586121855979
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.1,
+      "UNIX": 1586121886014
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.1,
+      "UNIX": 1586121916047
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.1,
+      "UNIX": 1586121946082
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 46.2,
+      "UNIX": 1586121976118
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.2,
+      "UNIX": 1586122006224
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.2,
+      "UNIX": 1586122036276
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.2,
+      "UNIX": 1586122066332
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.2,
+      "UNIX": 1586122096366
+    },
+    {
+      "Temperature[C]": null,
+      "Humidity[%]": null,
+      "UNIX": 1586122126401
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.2,
+      "UNIX": 1586122156442
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.2,
+      "UNIX": 1586122186471
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.2,
+      "UNIX": 1586122216515
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.2,
+      "UNIX": 1586122246546
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.2,
+      "UNIX": 1586122276577
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.2,
+      "UNIX": 1586122306622
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.2,
+      "UNIX": 1586122336652
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.2,
+      "UNIX": 1586122366704
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.2,
+      "UNIX": 1586122396742
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.2,
+      "UNIX": 1586122426962
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.2,
+      "UNIX": 1586122456997
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.2,
+      "UNIX": 1586122487033
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.3,
+      "UNIX": 1586122517070
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.3,
+      "UNIX": 1586122547102
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.4,
+      "UNIX": 1586122577134
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.4,
+      "UNIX": 1586122607168
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.4,
+      "UNIX": 1586122637200
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.4,
+      "UNIX": 1586122667905
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.4,
+      "UNIX": 1586122697884
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.3,
+      "UNIX": 1586122727915
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.3,
+      "UNIX": 1586122757945
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.3,
+      "UNIX": 1586122787991
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.3,
+      "UNIX": 1586122818043
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.3,
+      "UNIX": 1586122848084
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.3,
+      "UNIX": 1586122878124
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.3,
+      "UNIX": 1586122908161
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.3,
+      "UNIX": 1586122938207
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.3,
+      "UNIX": 1586122968287
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.3,
+      "UNIX": 1586122998359
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.3,
+      "UNIX": 1586123028459
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.3,
+      "UNIX": 1586123058483
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.3,
+      "UNIX": 1586123088521
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.3,
+      "UNIX": 1586123118564
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.4,
+      "UNIX": 1586123148603
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.4,
+      "UNIX": 1586123178639
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.4,
+      "UNIX": 1586123208669
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.4,
+      "UNIX": 1586123238710
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.4,
+      "UNIX": 1586123268743
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.4,
+      "UNIX": 1586123298783
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.4,
+      "UNIX": 1586123328826
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.4,
+      "UNIX": 1586123358864
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.4,
+      "UNIX": 1586123388912
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586123418959
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586123449017
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586123479057
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586123509096
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586123539137
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586123569172
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586123599230
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586123629276
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586123659330
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586123689406
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586123719450
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586123749575
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586123779638
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586123809671
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586123839716
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586123869760
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586123899802
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 46.4,
+      "UNIX": 1586123929852
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586123959970
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586123990013
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586124020133
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586124050171
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586124080192
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.6,
+      "UNIX": 1586124110239
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586124140272
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586124170296
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 46.4,
+      "UNIX": 1586124200339
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 46.4,
+      "UNIX": 1586124230396
+    },
+    {
+      "Temperature[C]": 22.6,
+      "Humidity[%]": 46.3,
+      "UNIX": 1586124260435
+    },
+    {
+      "Temperature[C]": 22.6,
+      "Humidity[%]": 46.3,
+      "UNIX": 1586124290475
+    },
+    {
+      "Temperature[C]": 22.6,
+      "Humidity[%]": 46.2,
+      "UNIX": 1586124320588
+    },
+    {
+      "Temperature[C]": 22.6,
+      "Humidity[%]": 46.3,
+      "UNIX": 1586124350637
+    },
+    {
+      "Temperature[C]": 22.6,
+      "Humidity[%]": 46.3,
+      "UNIX": 1586124380678
+    },
+    {
+      "Temperature[C]": 22.6,
+      "Humidity[%]": 46,
+      "UNIX": 1586124410714
+    },
+    {
+      "Temperature[C]": 22.6,
+      "Humidity[%]": 45.2,
+      "UNIX": 1586124440790
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 44.9,
+      "UNIX": 1586124470827
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 44.5,
+      "UNIX": 1586124500858
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 44,
+      "UNIX": 1586124530929
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 43.9,
+      "UNIX": 1586124560958
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 43.7,
+      "UNIX": 1586124591000
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 43.9,
+      "UNIX": 1586124621037
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 44.1,
+      "UNIX": 1586124651129
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 44.2,
+      "UNIX": 1586124681305
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 44.5,
+      "UNIX": 1586124711601
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 44.7,
+      "UNIX": 1586124741638
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 44.9,
+      "UNIX": 1586124771988
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 45,
+      "UNIX": 1586124802024
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 45.2,
+      "UNIX": 1586124832056
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 45.2,
+      "UNIX": 1586124862094
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 45.3,
+      "UNIX": 1586124892187
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 45.3,
+      "UNIX": 1586124922228
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 45.3,
+      "UNIX": 1586124952354
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 45.4,
+      "UNIX": 1586124982423
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 45.4,
+      "UNIX": 1586125012453
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586125042493
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46,
+      "UNIX": 1586125072521
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46,
+      "UNIX": 1586125102554
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.1,
+      "UNIX": 1586125132586
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.1,
+      "UNIX": 1586125162619
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.1,
+      "UNIX": 1586125192652
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586125222686
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586125252719
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586125282752
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586125312781
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586125342816
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586125372849
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586125402881
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586125432913
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586125462946
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586125492978
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586125523012
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46,
+      "UNIX": 1586125553045
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46,
+      "UNIX": 1586125583086
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.1,
+      "UNIX": 1586125613118
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.1,
+      "UNIX": 1586125643151
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.2,
+      "UNIX": 1586125673185
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.2,
+      "UNIX": 1586125703215
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.1,
+      "UNIX": 1586125733248
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 46.1,
+      "UNIX": 1586125763280
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 46,
+      "UNIX": 1586125793313
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 46,
+      "UNIX": 1586125823345
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586125853384
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 45.8,
+      "UNIX": 1586125883414
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 45.8,
+      "UNIX": 1586125913445
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 45.8,
+      "UNIX": 1586125943479
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586125973511
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586126003545
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 46,
+      "UNIX": 1586126033577
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 46.1,
+      "UNIX": 1586126063610
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 46.2,
+      "UNIX": 1586126093642
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 46.2,
+      "UNIX": 1586126123676
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 46.2,
+      "UNIX": 1586126153709
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 46.2,
+      "UNIX": 1586126183974
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 46.2,
+      "UNIX": 1586126214006
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 46.2,
+      "UNIX": 1586126244040
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 46.2,
+      "UNIX": 1586126274071
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 46.2,
+      "UNIX": 1586126304105
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.2,
+      "UNIX": 1586126334138
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.2,
+      "UNIX": 1586126364179
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 46.3,
+      "UNIX": 1586126394214
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 46.3,
+      "UNIX": 1586126424245
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.3,
+      "UNIX": 1586126454279
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.3,
+      "UNIX": 1586126484313
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.3,
+      "UNIX": 1586126514359
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.4,
+      "UNIX": 1586126544390
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.4,
+      "UNIX": 1586126574425
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.4,
+      "UNIX": 1586126604454
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586126634487
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586126664532
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586126694565
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586126724597
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586126754634
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586126784666
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586126814697
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586126844734
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.6,
+      "UNIX": 1586126874763
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.6,
+      "UNIX": 1586126904797
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.7,
+      "UNIX": 1586126934829
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.7,
+      "UNIX": 1586126964864
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.7,
+      "UNIX": 1586126994900
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.7,
+      "UNIX": 1586127024932
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.6,
+      "UNIX": 1586127054962
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.6,
+      "UNIX": 1586127084997
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.6,
+      "UNIX": 1586127115032
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.7,
+      "UNIX": 1586127145061
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.7,
+      "UNIX": 1586127175095
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 46.7,
+      "UNIX": 1586127205129
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 46.8,
+      "UNIX": 1586127235163
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.8,
+      "UNIX": 1586127265195
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.9,
+      "UNIX": 1586127295233
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.9,
+      "UNIX": 1586127325266
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.9,
+      "UNIX": 1586127355297
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.9,
+      "UNIX": 1586127385329
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.9,
+      "UNIX": 1586127415363
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.9,
+      "UNIX": 1586127445396
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.9,
+      "UNIX": 1586127475430
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.9,
+      "UNIX": 1586127505602
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 47,
+      "UNIX": 1586127535815
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 47,
+      "UNIX": 1586127565867
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 47,
+      "UNIX": 1586127595902
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 47.1,
+      "UNIX": 1586127625931
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 47.1,
+      "UNIX": 1586127655974
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 47.1,
+      "UNIX": 1586127686007
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 47.1,
+      "UNIX": 1586127716285
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 47,
+      "UNIX": 1586127746318
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 47,
+      "UNIX": 1586127776351
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 47,
+      "UNIX": 1586127806384
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.9,
+      "UNIX": 1586127836418
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.8,
+      "UNIX": 1586127866450
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.7,
+      "UNIX": 1586127896488
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 46.7,
+      "UNIX": 1586127926516
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.6,
+      "UNIX": 1586127956551
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 46.7,
+      "UNIX": 1586127986587
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 46.7,
+      "UNIX": 1586128016623
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.7,
+      "UNIX": 1586128046655
+    },
+    {
+      "Temperature[C]": 22.5,
+      "Humidity[%]": 46.7,
+      "UNIX": 1586128076686
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.8,
+      "UNIX": 1586128106721
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.9,
+      "UNIX": 1586128136754
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.9,
+      "UNIX": 1586128166787
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 46.9,
+      "UNIX": 1586128196819
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 47,
+      "UNIX": 1586128226854
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 47,
+      "UNIX": 1586128256889
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 47,
+      "UNIX": 1586128286920
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 47,
+      "UNIX": 1586128317149
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 47.1,
+      "UNIX": 1586128347184
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 47.1,
+      "UNIX": 1586128377215
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 47.2,
+      "UNIX": 1586128407251
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 47.2,
+      "UNIX": 1586128437289
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 47.2,
+      "UNIX": 1586128467324
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 47.2,
+      "UNIX": 1586128497357
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 47.2,
+      "UNIX": 1586128527411
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 47.2,
+      "UNIX": 1586128557443
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 47.3,
+      "UNIX": 1586128587478
+    },
+    {
+      "Temperature[C]": 22.4,
+      "Humidity[%]": 47.2,
+      "UNIX": 1586128617514
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 47.2,
+      "UNIX": 1586128647555
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 47.2,
+      "UNIX": 1586128677588
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 47.2,
+      "UNIX": 1586128707622
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 47.2,
+      "UNIX": 1586128737655
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 47.2,
+      "UNIX": 1586128767686
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 47.3,
+      "UNIX": 1586128797719
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 47.3,
+      "UNIX": 1586128827754
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 47.4,
+      "UNIX": 1586128857787
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 47.4,
+      "UNIX": 1586128887829
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 47.4,
+      "UNIX": 1586128917857
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 47.4,
+      "UNIX": 1586128947887
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 47.3,
+      "UNIX": 1586128977919
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 47.3,
+      "UNIX": 1586129007951
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 47.1,
+      "UNIX": 1586129037984
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 46.7,
+      "UNIX": 1586129068018
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 46.6,
+      "UNIX": 1586129098058
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 46.4,
+      "UNIX": 1586129128090
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 46.3,
+      "UNIX": 1586129158124
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 46.2,
+      "UNIX": 1586129188156
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 46.3,
+      "UNIX": 1586129218193
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 46.6,
+      "UNIX": 1586129248221
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 46.7,
+      "UNIX": 1586129278255
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 46.9,
+      "UNIX": 1586129308287
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47,
+      "UNIX": 1586129338320
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47,
+      "UNIX": 1586129368354
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.1,
+      "UNIX": 1586129398402
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.1,
+      "UNIX": 1586129428435
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.1,
+      "UNIX": 1586129458467
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.1,
+      "UNIX": 1586129488501
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.1,
+      "UNIX": 1586129518539
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 47.1,
+      "UNIX": 1586129548571
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 47.1,
+      "UNIX": 1586129578610
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 47,
+      "UNIX": 1586129608643
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 47,
+      "UNIX": 1586129638674
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.9,
+      "UNIX": 1586129668709
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 46.9,
+      "UNIX": 1586129698740
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 46.8,
+      "UNIX": 1586129728770
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.7,
+      "UNIX": 1586129758805
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.7,
+      "UNIX": 1586129788838
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.7,
+      "UNIX": 1586129818877
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.6,
+      "UNIX": 1586129848914
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.6,
+      "UNIX": 1586129878953
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.6,
+      "UNIX": 1586129908984
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.6,
+      "UNIX": 1586129939017
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.6,
+      "UNIX": 1586129969052
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586129999080
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586130029111
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586130059145
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.5,
+      "UNIX": 1586130089180
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.6,
+      "UNIX": 1586130119212
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.7,
+      "UNIX": 1586130149255
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.7,
+      "UNIX": 1586130179291
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.8,
+      "UNIX": 1586130209322
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 46.8,
+      "UNIX": 1586130239357
+    },
+    {
+      "Temperature[C]": 22.3,
+      "Humidity[%]": 46.9,
+      "UNIX": 1586130269390
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 46.9,
+      "UNIX": 1586130299424
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 46.9,
+      "UNIX": 1586130329457
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 46.9,
+      "UNIX": 1586130359490
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 46.9,
+      "UNIX": 1586130389573
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 47,
+      "UNIX": 1586130419608
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 47,
+      "UNIX": 1586130449661
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 47,
+      "UNIX": 1586130479700
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 47,
+      "UNIX": 1586130509733
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47,
+      "UNIX": 1586130539761
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.1,
+      "UNIX": 1586130569793
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 47.1,
+      "UNIX": 1586130599825
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.1,
+      "UNIX": 1586130629859
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 47.1,
+      "UNIX": 1586130659891
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 47.1,
+      "UNIX": 1586130689925
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.2,
+      "UNIX": 1586130719956
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.2,
+      "UNIX": 1586130749990
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.2,
+      "UNIX": 1586130780024
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.2,
+      "UNIX": 1586130810058
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.3,
+      "UNIX": 1586130840091
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.3,
+      "UNIX": 1586130870126
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.3,
+      "UNIX": 1586130900158
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.3,
+      "UNIX": 1586130930191
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.2,
+      "UNIX": 1586130960227
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.2,
+      "UNIX": 1586130990259
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.2,
+      "UNIX": 1586131020295
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.3,
+      "UNIX": 1586131050334
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.2,
+      "UNIX": 1586131080365
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.3,
+      "UNIX": 1586131110399
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.3,
+      "UNIX": 1586131140434
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.4,
+      "UNIX": 1586131170464
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.4,
+      "UNIX": 1586131200496
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.4,
+      "UNIX": 1586131230530
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.5,
+      "UNIX": 1586131260561
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.5,
+      "UNIX": 1586131290602
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 47.5,
+      "UNIX": 1586131320636
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 47.5,
+      "UNIX": 1586131350671
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.5,
+      "UNIX": 1586131380704
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.5,
+      "UNIX": 1586131410741
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.5,
+      "UNIX": 1586131440777
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.5,
+      "UNIX": 1586131470807
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.6,
+      "UNIX": 1586131500839
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.5,
+      "UNIX": 1586131530870
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.6,
+      "UNIX": 1586131560907
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.6,
+      "UNIX": 1586131590943
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.6,
+      "UNIX": 1586131620974
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.6,
+      "UNIX": 1586131651009
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.5,
+      "UNIX": 1586131681042
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.4,
+      "UNIX": 1586131711080
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.3,
+      "UNIX": 1586131741118
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 47.2,
+      "UNIX": 1586131771156
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 47.2,
+      "UNIX": 1586131801191
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 47.1,
+      "UNIX": 1586131831223
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 47.2,
+      "UNIX": 1586131861260
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 47.2,
+      "UNIX": 1586131891290
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 47.2,
+      "UNIX": 1586131921324
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 47.2,
+      "UNIX": 1586131951357
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 47.3,
+      "UNIX": 1586131981390
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 47.3,
+      "UNIX": 1586132011423
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.4,
+      "UNIX": 1586132041456
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.4,
+      "UNIX": 1586132071494
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 47.4,
+      "UNIX": 1586132101524
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.5,
+      "UNIX": 1586132131558
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.5,
+      "UNIX": 1586132161593
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 47.5,
+      "UNIX": 1586132191627
+    },
+    {
+      "Temperature[C]": 22.2,
+      "Humidity[%]": 47.6,
+      "UNIX": 1586132221661
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.6,
+      "UNIX": 1586132251696
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.6,
+      "UNIX": 1586132281729
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.6,
+      "UNIX": 1586132311762
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.6,
+      "UNIX": 1586132341797
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.6,
+      "UNIX": 1586132371839
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.6,
+      "UNIX": 1586132401875
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.7,
+      "UNIX": 1586132431909
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.7,
+      "UNIX": 1586132461942
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.8,
+      "UNIX": 1586132491976
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.8,
+      "UNIX": 1586132522008
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.8,
+      "UNIX": 1586132552045
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.9,
+      "UNIX": 1586132582075
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.9,
+      "UNIX": 1586132612109
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 47.9,
+      "UNIX": 1586132642141
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 47.9,
+      "UNIX": 1586132672175
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 48,
+      "UNIX": 1586132702209
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 48,
+      "UNIX": 1586132732243
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 48,
+      "UNIX": 1586132762279
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 48,
+      "UNIX": 1586132792311
+    },
+    {
+      "Temperature[C]": 22.1,
+      "Humidity[%]": 48,
+      "UNIX": 1586132822344
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 48,
+      "UNIX": 1586132852378
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 48,
+      "UNIX": 1586132882411
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 48,
+      "UNIX": 1586132912443
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 47.9,
+      "UNIX": 1586132942476
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 48,
+      "UNIX": 1586132972510
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 48,
+      "UNIX": 1586133002543
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 48,
+      "UNIX": 1586133032591
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 48,
+      "UNIX": 1586133062608
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 48,
+      "UNIX": 1586133092641
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 48.1,
+      "UNIX": 1586133122672
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 48.1,
+      "UNIX": 1586133152706
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 48.2,
+      "UNIX": 1586133182741
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 47.8,
+      "UNIX": 1586133212777
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 46.7,
+      "UNIX": 1586133242807
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 46.4,
+      "UNIX": 1586133272845
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 45.9,
+      "UNIX": 1586133302884
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 45.6,
+      "UNIX": 1586133332915
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 45.7,
+      "UNIX": 1586133362947
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 45.7,
+      "UNIX": 1586133392984
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 46,
+      "UNIX": 1586133423017
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 46.3,
+      "UNIX": 1586133453048
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 46.6,
+      "UNIX": 1586133483087
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 46.9,
+      "UNIX": 1586133513131
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 47.1,
+      "UNIX": 1586133543151
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 47.2,
+      "UNIX": 1586133573512
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 47.3,
+      "UNIX": 1586133603513
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 47.5,
+      "UNIX": 1586133633544
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 47.7,
+      "UNIX": 1586133663579
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 47.7,
+      "UNIX": 1586133693639
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 47.8,
+      "UNIX": 1586133723673
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 47.9,
+      "UNIX": 1586133753704
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 48,
+      "UNIX": 1586133783739
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 47.9,
+      "UNIX": 1586133813771
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 48,
+      "UNIX": 1586133843813
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 48.1,
+      "UNIX": 1586133873862
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 48.2,
+      "UNIX": 1586133903897
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 48.1,
+      "UNIX": 1586133933925
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 48.1,
+      "UNIX": 1586133963959
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 48.1,
+      "UNIX": 1586133993990
+    },
+    {
+      "Temperature[C]": 21.8,
+      "Humidity[%]": 48,
+      "UNIX": 1586134024022
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 47.9,
+      "UNIX": 1586134054057
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 47.9,
+      "UNIX": 1586134084107
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 47.9,
+      "UNIX": 1586134114170
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 47.9,
+      "UNIX": 1586134144204
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 47.9,
+      "UNIX": 1586134174234
+    },
+    {
+      "Temperature[C]": 21.8,
+      "Humidity[%]": 47.9,
+      "UNIX": 1586134204267
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 47.9,
+      "UNIX": 1586134234302
+    },
+    {
+      "Temperature[C]": 21.8,
+      "Humidity[%]": 47.9,
+      "UNIX": 1586134264336
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 48,
+      "UNIX": 1586134294374
+    },
+    {
+      "Temperature[C]": 21.8,
+      "Humidity[%]": 48,
+      "UNIX": 1586134324409
+    },
+    {
+      "Temperature[C]": 21.8,
+      "Humidity[%]": 47.9,
+      "UNIX": 1586134354439
+    },
+    {
+      "Temperature[C]": 21.8,
+      "Humidity[%]": 48,
+      "UNIX": 1586134384471
+    },
+    {
+      "Temperature[C]": 21.8,
+      "Humidity[%]": 48,
+      "UNIX": 1586134414505
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 47.9,
+      "UNIX": 1586134444541
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 47.9,
+      "UNIX": 1586134474572
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 48,
+      "UNIX": 1586134504606
+    },
+    {
+      "Temperature[C]": 21.3,
+      "Humidity[%]": 49.8,
+      "UNIX": 1586358679531
+    },
+    {
+      "Temperature[C]": 21.3,
+      "Humidity[%]": 49.8,
+      "UNIX": 1586358709564
+    },
+    {
+      "Temperature[C]": 21.3,
+      "Humidity[%]": 49.9,
+      "UNIX": 1586358739589
+    },
+    {
+      "Temperature[C]": 21.3,
+      "Humidity[%]": 50,
+      "UNIX": 1586358769624
+    },
+    {
+      "Temperature[C]": 21.3,
+      "Humidity[%]": 50.1,
+      "UNIX": 1586358799655
+    },
+    {
+      "Temperature[C]": 21.3,
+      "Humidity[%]": 50.2,
+      "UNIX": 1586358829690
+    },
+    {
+      "Temperature[C]": 21.3,
+      "Humidity[%]": 50.2,
+      "UNIX": 1586358859720
+    },
+    {
+      "Temperature[C]": 21.3,
+      "Humidity[%]": 50.3,
+      "UNIX": 1586358889754
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 50.2,
+      "UNIX": 1586370565029
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 50.2,
+      "UNIX": 1586370595055
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 50.3,
+      "UNIX": 1586370625087
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 50.3,
+      "UNIX": 1586370655119
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 50.2,
+      "UNIX": 1586370685152
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 50.2,
+      "UNIX": 1586370715196
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 50.2,
+      "UNIX": 1586370745233
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 50.3,
+      "UNIX": 1586370775277
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 50.3,
+      "UNIX": 1586370805303
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 50.3,
+      "UNIX": 1586370835335
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 50.3,
+      "UNIX": 1586370865371
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 50.4,
+      "UNIX": 1586370895404
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 50.4,
+      "UNIX": 1586370925439
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 50.4,
+      "UNIX": 1586370955477
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 50.4,
+      "UNIX": 1586370985509
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 50.4,
+      "UNIX": 1586371015540
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 50.3,
+      "UNIX": 1586371045639
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 50.3,
+      "UNIX": 1586371075662
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 50.3,
+      "UNIX": 1586371105695
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 50.3,
+      "UNIX": 1586371135730
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 50.3,
+      "UNIX": 1586371165772
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 50.3,
+      "UNIX": 1586371195805
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 50.3,
+      "UNIX": 1586371225846
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 50,
+      "UNIX": 1586371255890
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 49.6,
+      "UNIX": 1586371285922
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 49.2,
+      "UNIX": 1586371315951
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 48.6,
+      "UNIX": 1586371345989
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 48.1,
+      "UNIX": 1586371376020
+    },
+    {
+      "Temperature[C]": 22,
+      "Humidity[%]": 47.7,
+      "UNIX": 1586371406058
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 47.5,
+      "UNIX": 1586371436086
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 47.5,
+      "UNIX": 1586371466454
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 47.5,
+      "UNIX": 1586371496490
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 47.7,
+      "UNIX": 1586371526518
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 47.8,
+      "UNIX": 1586371556555
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 47.8,
+      "UNIX": 1586371586589
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 47.8,
+      "UNIX": 1586371616616
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 47.8,
+      "UNIX": 1586371646650
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 47.6,
+      "UNIX": 1586371676687
+    },
+    {
+      "Temperature[C]": 21.8,
+      "Humidity[%]": 47.5,
+      "UNIX": 1586371706714
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 47.3,
+      "UNIX": 1586371736746
+    },
+    {
+      "Temperature[C]": 21.9,
+      "Humidity[%]": 47.3,
+      "UNIX": 1586371766779
+    },
+    {
+      "Temperature[C]": 21.8,
+      "Humidity[%]": 47.2,
+      "UNIX": 1586371796814
+    },
+    {
+      "Temperature[C]": 21.8,
+      "Humidity[%]": 47.1,
+      "UNIX": 1586371826845
+    },
+    {
+      "Temperature[C]": 21.8,
+      "Humidity[%]": 47.1,
+      "UNIX": 1586371856876
+    }
+  ],
+  "Light_Sensor": [
+    {
+      "Brightness[%]": 30,
+      "UNIX": 1586105450861
+    },
+    {
+      "Brightness[%]": 26,
+      "UNIX": 1586105480892
+    },
+    {
+      "Brightness[%]": 25,
+      "UNIX": 1586105510924
+    },
+    {
+      "Brightness[%]": 20,
+      "UNIX": 1586105540959
+    },
+    {
+      "Brightness[%]": 18,
+      "UNIX": 1586105570989
+    },
+    {
+      "Brightness[%]": 18,
+      "UNIX": 1586105601031
+    },
+    {
+      "Brightness[%]": 18,
+      "UNIX": 1586105631067
+    },
+    {
+      "Brightness[%]": 18.8,
+      "UNIX": 1586105703115
+    },
+    {
+      "Brightness[%]": 19.33333,
+      "UNIX": 1586105733150
+    },
+    {
+      "Brightness[%]": 19.83333,
+      "UNIX": 1586105763180
+    },
+    {
+      "Brightness[%]": 18.66667,
+      "UNIX": 1586105793218
+    },
+    {
+      "Brightness[%]": 21.33333,
+      "UNIX": 1586105823249
+    },
+    {
+      "Brightness[%]": 33.66667,
+      "UNIX": 1586105853282
+    },
+    {
+      "Brightness[%]": 28.33333,
+      "UNIX": 1586105883315
+    },
+    {
+      "Brightness[%]": 30.33333,
+      "UNIX": 1586105913346
+    },
+    {
+      "Brightness[%]": 40.83333,
+      "UNIX": 1586105943378
+    },
+    {
+      "Brightness[%]": 48.5,
+      "UNIX": 1586105973410
+    },
+    {
+      "Brightness[%]": 46.66667,
+      "UNIX": 1586106003444
+    },
+    {
+      "Brightness[%]": 27.33333,
+      "UNIX": 1586106033475
+    },
+    {
+      "Brightness[%]": 63.83333,
+      "UNIX": 1586106063509
+    },
+    {
+      "Brightness[%]": 64.66666,
+      "UNIX": 1586106093539
+    },
+    {
+      "Brightness[%]": 25,
+      "UNIX": 1586106123570
+    },
+    {
+      "Brightness[%]": 20,
+      "UNIX": 1586106153641
+    },
+    {
+      "Brightness[%]": 19.5,
+      "UNIX": 1586106183674
+    },
+    {
+      "Brightness[%]": 53.83333,
+      "UNIX": 1586106213706
+    },
+    {
+      "Brightness[%]": 84,
+      "UNIX": 1586106243741
+    },
+    {
+      "Brightness[%]": 59.66667,
+      "UNIX": 1586106273771
+    },
+    {
+      "Brightness[%]": 58,
+      "UNIX": 1586106303805
+    },
+    {
+      "Brightness[%]": 64.33334,
+      "UNIX": 1586106513967
+    },
+    {
+      "Brightness[%]": 77.66666,
+      "UNIX": 1586106543996
+    },
+    {
+      "Brightness[%]": 78.83334,
+      "UNIX": 1586106574028
+    },
+    {
+      "Brightness[%]": 83,
+      "UNIX": 1586106604065
+    },
+    {
+      "Brightness[%]": 77.83334,
+      "UNIX": 1586106634093
+    },
+    {
+      "Brightness[%]": 70.66666,
+      "UNIX": 1586106664124
+    },
+    {
+      "Brightness[%]": 25,
+      "UNIX": 1586106694157
+    },
+    {
+      "Brightness[%]": 43.33333,
+      "UNIX": 1586106724189
+    },
+    {
+      "Brightness[%]": 44.33333,
+      "UNIX": 1586106754223
+    },
+    {
+      "Brightness[%]": 43.5,
+      "UNIX": 1586106784254
+    },
+    {
+      "Brightness[%]": 43.83333,
+      "UNIX": 1586106814285
+    },
+    {
+      "Brightness[%]": 44.16667,
+      "UNIX": 1586106844319
+    },
+    {
+      "Brightness[%]": 40.66667,
+      "UNIX": 1586107264587
+    },
+    {
+      "Brightness[%]": 42,
+      "UNIX": 1586107324717
+    },
+    {
+      "Brightness[%]": 41.16667,
+      "UNIX": 1586107444917
+    },
+    {
+      "Brightness[%]": 41.83333,
+      "UNIX": 1586107474953
+    },
+    {
+      "Brightness[%]": 41.66667,
+      "UNIX": 1586107625091
+    },
+    {
+      "Brightness[%]": 37.66667,
+      "UNIX": 1586108375513
+    },
+    {
+      "Brightness[%]": 38,
+      "UNIX": 1586108465666
+    },
+    {
+      "Brightness[%]": 38.16667,
+      "UNIX": 1586108525813
+    },
+    {
+      "Brightness[%]": 57,
+      "UNIX": 1586111376694
+    },
+    {
+      "Brightness[%]": 53.16667,
+      "UNIX": 1586112397478
+    },
+    {
+      "Brightness[%]": 52,
+      "UNIX": 1586112427507
+    },
+    {
+      "Brightness[%]": 50.5,
+      "UNIX": 1586112457537
+    },
+    {
+      "Brightness[%]": 53.16667,
+      "UNIX": 1586113568122
+    },
+    {
+      "Brightness[%]": 53.5,
+      "UNIX": 1586113598151
+    },
+    {
+      "Brightness[%]": 54.5,
+      "UNIX": 1586114108484
+    },
+    {
+      "Brightness[%]": 54,
+      "UNIX": 1586114138515
+    },
+    {
+      "Brightness[%]": 53,
+      "UNIX": 1586114168544
+    },
+    {
+      "Brightness[%]": 53.16667,
+      "UNIX": 1586114228591
+    },
+    {
+      "Brightness[%]": 54.16667,
+      "UNIX": 1586114258623
+    },
+    {
+      "Brightness[%]": 54.33333,
+      "UNIX": 1586114438730
+    },
+    {
+      "Brightness[%]": 52.16667,
+      "UNIX": 1586114468762
+    },
+    {
+      "Brightness[%]": 52.33333,
+      "UNIX": 1586114618853
+    },
+    {
+      "Brightness[%]": 54.16667,
+      "UNIX": 1586114678900
+    },
+    {
+      "Brightness[%]": 53.33333,
+      "UNIX": 1586114949060
+    },
+    {
+      "Brightness[%]": 52.16667,
+      "UNIX": 1586114979089
+    },
+    {
+      "Brightness[%]": 52.33333,
+      "UNIX": 1586115009121
+    },
+    {
+      "Brightness[%]": 51.5,
+      "UNIX": 1586115039157
+    },
+    {
+      "Brightness[%]": 53.66667,
+      "UNIX": 1586115069188
+    },
+    {
+      "Brightness[%]": 53,
+      "UNIX": 1586115339345
+    },
+    {
+      "Brightness[%]": 52.33333,
+      "UNIX": 1586115429408
+    },
+    {
+      "Brightness[%]": 52.33333,
+      "UNIX": 1586115489455
+    },
+    {
+      "Brightness[%]": 53.66667,
+      "UNIX": 1586115669562
+    },
+    {
+      "Brightness[%]": 54.33333,
+      "UNIX": 1586115729609
+    },
+    {
+      "Brightness[%]": 53.16667,
+      "UNIX": 1586115849685
+    },
+    {
+      "Brightness[%]": 54.5,
+      "UNIX": 1586116179869
+    },
+    {
+      "Brightness[%]": 53.66667,
+      "UNIX": 1586116209899
+    },
+    {
+      "Brightness[%]": 53,
+      "UNIX": 1586116239934
+    },
+    {
+      "Brightness[%]": 51.16667,
+      "UNIX": 1586116269967
+    },
+    {
+      "Brightness[%]": 48.33333,
+      "UNIX": 1586116390046
+    },
+    {
+      "Brightness[%]": 45.66667,
+      "UNIX": 1586116420074
+    },
+    {
+      "Brightness[%]": 47,
+      "UNIX": 1586116450105
+    },
+    {
+      "Brightness[%]": 53.33333,
+      "UNIX": 1586116480137
+    },
+    {
+      "Brightness[%]": 52.66667,
+      "UNIX": 1586116510171
+    },
+    {
+      "Brightness[%]": 51.66667,
+      "UNIX": 1586116540199
+    },
+    {
+      "Brightness[%]": 54.83333,
+      "UNIX": 1586116570231
+    },
+    {
+      "Brightness[%]": 55.66667,
+      "UNIX": 1586116600267
+    },
+    {
+      "Brightness[%]": 55.66667,
+      "UNIX": 1586116630295
+    },
+    {
+      "Brightness[%]": 55,
+      "UNIX": 1586116660327
+    },
+    {
+      "Brightness[%]": 54.33333,
+      "UNIX": 1586116690358
+    },
+    {
+      "Brightness[%]": 55.16667,
+      "UNIX": 1586116720392
+    },
+    {
+      "Brightness[%]": 54.5,
+      "UNIX": 1586116750424
+    },
+    {
+      "Brightness[%]": 53.66667,
+      "UNIX": 1586116780459
+    },
+    {
+      "Brightness[%]": 54.5,
+      "UNIX": 1586116810489
+    },
+    {
+      "Brightness[%]": 54.33333,
+      "UNIX": 1586116840522
+    },
+    {
+      "Brightness[%]": 55,
+      "UNIX": 1586116870555
+    },
+    {
+      "Brightness[%]": 55.83333,
+      "UNIX": 1586116900584
+    },
+    {
+      "Brightness[%]": 56.16667,
+      "UNIX": 1586116930617
+    },
+    {
+      "Brightness[%]": 55.33333,
+      "UNIX": 1586116960651
+    },
+    {
+      "Brightness[%]": 55.66667,
+      "UNIX": 1586116990684
+    },
+    {
+      "Brightness[%]": 57.16667,
+      "UNIX": 1586117020715
+    },
+    {
+      "Brightness[%]": 57.66667,
+      "UNIX": 1586117050759
+    },
+    {
+      "Brightness[%]": 55.66667,
+      "UNIX": 1586117080789
+    },
+    {
+      "Brightness[%]": 55.66667,
+      "UNIX": 1586117110821
+    },
+    {
+      "Brightness[%]": 56.5,
+      "UNIX": 1586117140853
+    },
+    {
+      "Brightness[%]": 55.5,
+      "UNIX": 1586117170886
+    },
+    {
+      "Brightness[%]": 58,
+      "UNIX": 1586117200916
+    },
+    {
+      "Brightness[%]": 53.66667,
+      "UNIX": 1586117230947
+    },
+    {
+      "Brightness[%]": 56.33333,
+      "UNIX": 1586117260980
+    },
+    {
+      "Brightness[%]": 55.33333,
+      "UNIX": 1586117291011
+    },
+    {
+      "Brightness[%]": 56.5,
+      "UNIX": 1586117321042
+    },
+    {
+      "Brightness[%]": 54.66667,
+      "UNIX": 1586117351077
+    },
+    {
+      "Brightness[%]": 55.83333,
+      "UNIX": 1586117381107
+    },
+    {
+      "Brightness[%]": 55,
+      "UNIX": 1586117411140
+    },
+    {
+      "Brightness[%]": 55.16667,
+      "UNIX": 1586117441171
+    },
+    {
+      "Brightness[%]": 56.5,
+      "UNIX": 1586117471204
+    },
+    {
+      "Brightness[%]": 53.83333,
+      "UNIX": 1586117501236
+    },
+    {
+      "Brightness[%]": 56.5,
+      "UNIX": 1586117531269
+    },
+    {
+      "Brightness[%]": 55.66667,
+      "UNIX": 1586117561300
+    },
+    {
+      "Brightness[%]": 54.66667,
+      "UNIX": 1586117591332
+    },
+    {
+      "Brightness[%]": 55.5,
+      "UNIX": 1586117621364
+    },
+    {
+      "Brightness[%]": 55.33333,
+      "UNIX": 1586117651396
+    },
+    {
+      "Brightness[%]": 54.16667,
+      "UNIX": 1586117681429
+    },
+    {
+      "Brightness[%]": 54,
+      "UNIX": 1586117711460
+    },
+    {
+      "Brightness[%]": 55.5,
+      "UNIX": 1586117741495
+    },
+    {
+      "Brightness[%]": 55.83333,
+      "UNIX": 1586117771523
+    },
+    {
+      "Brightness[%]": 53.83333,
+      "UNIX": 1586117801557
+    },
+    {
+      "Brightness[%]": 54.66667,
+      "UNIX": 1586117831588
+    },
+    {
+      "Brightness[%]": 56.5,
+      "UNIX": 1586117861621
+    },
+    {
+      "Brightness[%]": 53.16667,
+      "UNIX": 1586117891655
+    },
+    {
+      "Brightness[%]": 54,
+      "UNIX": 1586117921685
+    },
+    {
+      "Brightness[%]": 55.66667,
+      "UNIX": 1586117951717
+    },
+    {
+      "Brightness[%]": 54.66667,
+      "UNIX": 1586117981748
+    },
+    {
+      "Brightness[%]": 54.5,
+      "UNIX": 1586118011784
+    },
+    {
+      "Brightness[%]": 54.33333,
+      "UNIX": 1586118041816
+    },
+    {
+      "Brightness[%]": 54.16667,
+      "UNIX": 1586118071850
+    },
+    {
+      "Brightness[%]": 56.16667,
+      "UNIX": 1586118101879
+    },
+    {
+      "Brightness[%]": 54.66667,
+      "UNIX": 1586118131911
+    },
+    {
+      "Brightness[%]": 54.16667,
+      "UNIX": 1586118161944
+    },
+    {
+      "Brightness[%]": 56.16667,
+      "UNIX": 1586118191976
+    },
+    {
+      "Brightness[%]": 54.33333,
+      "UNIX": 1586118222008
+    },
+    {
+      "Brightness[%]": 53.5,
+      "UNIX": 1586118252042
+    },
+    {
+      "Brightness[%]": 54.66667,
+      "UNIX": 1586118282073
+    },
+    {
+      "Brightness[%]": 54.16667,
+      "UNIX": 1586118312102
+    },
+    {
+      "Brightness[%]": 53.66667,
+      "UNIX": 1586118342135
+    },
+    {
+      "Brightness[%]": 54.16667,
+      "UNIX": 1586118372170
+    },
+    {
+      "Brightness[%]": 54.33333,
+      "UNIX": 1586118402203
+    },
+    {
+      "Brightness[%]": 55,
+      "UNIX": 1586118432237
+    },
+    {
+      "Brightness[%]": 55,
+      "UNIX": 1586118462267
+    },
+    {
+      "Brightness[%]": 56.16667,
+      "UNIX": 1586118492302
+    },
+    {
+      "Brightness[%]": 55,
+      "UNIX": 1586118522330
+    },
+    {
+      "Brightness[%]": 55.83333,
+      "UNIX": 1586118552364
+    },
+    {
+      "Brightness[%]": 55.33333,
+      "UNIX": 1586118582398
+    },
+    {
+      "Brightness[%]": 55.66667,
+      "UNIX": 1586118612429
+    },
+    {
+      "Brightness[%]": 55,
+      "UNIX": 1586118642460
+    },
+    {
+      "Brightness[%]": 56.33333,
+      "UNIX": 1586118672493
+    },
+    {
+      "Brightness[%]": 55,
+      "UNIX": 1586118702528
+    },
+    {
+      "Brightness[%]": 56.5,
+      "UNIX": 1586118732564
+    },
+    {
+      "Brightness[%]": 57.5,
+      "UNIX": 1586118762602
+    },
+    {
+      "Brightness[%]": 55.16667,
+      "UNIX": 1586118792633
+    },
+    {
+      "Brightness[%]": 57.33333,
+      "UNIX": 1586118822667
+    },
+    {
+      "Brightness[%]": 55,
+      "UNIX": 1586118852708
+    },
+    {
+      "Brightness[%]": 54.83333,
+      "UNIX": 1586118882743
+    },
+    {
+      "Brightness[%]": 55.5,
+      "UNIX": 1586118912774
+    },
+    {
+      "Brightness[%]": 56.33333,
+      "UNIX": 1586118942810
+    },
+    {
+      "Brightness[%]": 56.16667,
+      "UNIX": 1586118972837
+    },
+    {
+      "Brightness[%]": 55.5,
+      "UNIX": 1586119002870
+    },
+    {
+      "Brightness[%]": 55.16667,
+      "UNIX": 1586119032901
+    },
+    {
+      "Brightness[%]": 56,
+      "UNIX": 1586119062934
+    },
+    {
+      "Brightness[%]": 55.16667,
+      "UNIX": 1586119092964
+    },
+    {
+      "Brightness[%]": 55.5,
+      "UNIX": 1586119122996
+    },
+    {
+      "Brightness[%]": 56.16667,
+      "UNIX": 1586119153028
+    },
+    {
+      "Brightness[%]": 53.16667,
+      "UNIX": 1586119183059
+    },
+    {
+      "Brightness[%]": 54.83333,
+      "UNIX": 1586119213091
+    },
+    {
+      "Brightness[%]": 54.66667,
+      "UNIX": 1586119243168
+    },
+    {
+      "Brightness[%]": 56.83333,
+      "UNIX": 1586119273192
+    },
+    {
+      "Brightness[%]": 55.5,
+      "UNIX": 1586119303223
+    },
+    {
+      "Brightness[%]": 55.33333,
+      "UNIX": 1586119333254
+    },
+    {
+      "Brightness[%]": 53.83333,
+      "UNIX": 1586119363285
+    },
+    {
+      "Brightness[%]": 55.33333,
+      "UNIX": 1586119393316
+    },
+    {
+      "Brightness[%]": 57,
+      "UNIX": 1586119423361
+    },
+    {
+      "Brightness[%]": 56,
+      "UNIX": 1586119453389
+    },
+    {
+      "Brightness[%]": 54.33333,
+      "UNIX": 1586119483421
+    },
+    {
+      "Brightness[%]": 54.5,
+      "UNIX": 1586119513453
+    },
+    {
+      "Brightness[%]": 53.5,
+      "UNIX": 1586119543487
+    },
+    {
+      "Brightness[%]": 56,
+      "UNIX": 1586119573516
+    },
+    {
+      "Brightness[%]": 54.66667,
+      "UNIX": 1586119603547
+    },
+    {
+      "Brightness[%]": 55.66667,
+      "UNIX": 1586119633580
+    },
+    {
+      "Brightness[%]": 54.83333,
+      "UNIX": 1586119663612
+    },
+    {
+      "Brightness[%]": 55.33333,
+      "UNIX": 1586119693644
+    },
+    {
+      "Brightness[%]": 55.66667,
+      "UNIX": 1586119723697
+    },
+    {
+      "Brightness[%]": 56,
+      "UNIX": 1586119753720
+    },
+    {
+      "Brightness[%]": 54.5,
+      "UNIX": 1586119783752
+    },
+    {
+      "Brightness[%]": 55.66667,
+      "UNIX": 1586119813783
+    },
+    {
+      "Brightness[%]": 55.16667,
+      "UNIX": 1586119843814
+    },
+    {
+      "Brightness[%]": 54,
+      "UNIX": 1586119873865
+    },
+    {
+      "Brightness[%]": 54.83333,
+      "UNIX": 1586119903879
+    },
+    {
+      "Brightness[%]": 55.83333,
+      "UNIX": 1586119933911
+    },
+    {
+      "Brightness[%]": 55.66667,
+      "UNIX": 1586119963944
+    },
+    {
+      "Brightness[%]": 55.66667,
+      "UNIX": 1586119993976
+    },
+    {
+      "Brightness[%]": 56,
+      "UNIX": 1586120024008
+    },
+    {
+      "Brightness[%]": 56.16667,
+      "UNIX": 1586120054039
+    },
+    {
+      "Brightness[%]": 57.66667,
+      "UNIX": 1586120084071
+    },
+    {
+      "Brightness[%]": 56.16667,
+      "UNIX": 1586120114103
+    },
+    {
+      "Brightness[%]": 56.16667,
+      "UNIX": 1586120144134
+    },
+    {
+      "Brightness[%]": 56.33333,
+      "UNIX": 1586120174166
+    },
+    {
+      "Brightness[%]": 54,
+      "UNIX": 1586120204201
+    },
+    {
+      "Brightness[%]": 54.83333,
+      "UNIX": 1586120234232
+    },
+    {
+      "Brightness[%]": 53.83333,
+      "UNIX": 1586120264263
+    },
+    {
+      "Brightness[%]": 55.83333,
+      "UNIX": 1586120294295
+    },
+    {
+      "Brightness[%]": 55.5,
+      "UNIX": 1586120324328
+    },
+    {
+      "Brightness[%]": 56.33333,
+      "UNIX": 1586120354361
+    },
+    {
+      "Brightness[%]": 55.66667,
+      "UNIX": 1586120384393
+    },
+    {
+      "Brightness[%]": 55.16667,
+      "UNIX": 1586120414424
+    },
+    {
+      "Brightness[%]": 56,
+      "UNIX": 1586120444457
+    },
+    {
+      "Brightness[%]": 54.66667,
+      "UNIX": 1586120474488
+    },
+    {
+      "Brightness[%]": 54.66667,
+      "UNIX": 1586120504520
+    },
+    {
+      "Brightness[%]": 55.83333,
+      "UNIX": 1586120534554
+    },
+    {
+      "Brightness[%]": 54.66667,
+      "UNIX": 1586120564586
+    },
+    {
+      "Brightness[%]": 54.33333,
+      "UNIX": 1586120594618
+    },
+    {
+      "Brightness[%]": 56.16667,
+      "UNIX": 1586120624650
+    },
+    {
+      "Brightness[%]": 56,
+      "UNIX": 1586120654680
+    },
+    {
+      "Brightness[%]": 54.83333,
+      "UNIX": 1586120684713
+    },
+    {
+      "Brightness[%]": 55.66667,
+      "UNIX": 1586120714746
+    },
+    {
+      "Brightness[%]": 53.66667,
+      "UNIX": 1586120744779
+    },
+    {
+      "Brightness[%]": 53.33333,
+      "UNIX": 1586120774816
+    },
+    {
+      "Brightness[%]": 54.33333,
+      "UNIX": 1586120804853
+    },
+    {
+      "Brightness[%]": 56.83333,
+      "UNIX": 1586120834884
+    },
+    {
+      "Brightness[%]": 56,
+      "UNIX": 1586120864917
+    },
+    {
+      "Brightness[%]": 54,
+      "UNIX": 1586120894948
+    },
+    {
+      "Brightness[%]": 56.5,
+      "UNIX": 1586120924980
+    },
+    {
+      "Brightness[%]": 55.66667,
+      "UNIX": 1586120955013
+    },
+    {
+      "Brightness[%]": 55.33333,
+      "UNIX": 1586120985044
+    },
+    {
+      "Brightness[%]": 55.33333,
+      "UNIX": 1586121015076
+    },
+    {
+      "Brightness[%]": 55.33333,
+      "UNIX": 1586121045107
+    },
+    {
+      "Brightness[%]": 54.83333,
+      "UNIX": 1586121075140
+    },
+    {
+      "Brightness[%]": 56.83333,
+      "UNIX": 1586121105171
+    },
+    {
+      "Brightness[%]": 55.5,
+      "UNIX": 1586121135203
+    },
+    {
+      "Brightness[%]": 53.66667,
+      "UNIX": 1586121165234
+    },
+    {
+      "Brightness[%]": 56,
+      "UNIX": 1586121195267
+    },
+    {
+      "Brightness[%]": 55.5,
+      "UNIX": 1586121225299
+    },
+    {
+      "Brightness[%]": 56,
+      "UNIX": 1586121255330
+    },
+    {
+      "Brightness[%]": 54.66667,
+      "UNIX": 1586121285367
+    },
+    {
+      "Brightness[%]": 56.33333,
+      "UNIX": 1586121315395
+    },
+    {
+      "Brightness[%]": 54.5,
+      "UNIX": 1586121345429
+    },
+    {
+      "Brightness[%]": 55.33333,
+      "UNIX": 1586121375459
+    },
+    {
+      "Brightness[%]": 55.5,
+      "UNIX": 1586121405491
+    },
+    {
+      "Brightness[%]": 56,
+      "UNIX": 1586121435522
+    },
+    {
+      "Brightness[%]": 55.16667,
+      "UNIX": 1586121465553
+    },
+    {
+      "Brightness[%]": 55,
+      "UNIX": 1586121495588
+    },
+    {
+      "Brightness[%]": 56.16667,
+      "UNIX": 1586121525619
+    },
+    {
+      "Brightness[%]": 54.33333,
+      "UNIX": 1586121555651
+    },
+    {
+      "Brightness[%]": 55.66667,
+      "UNIX": 1586121585686
+    },
+    {
+      "Brightness[%]": 56,
+      "UNIX": 1586121615717
+    },
+    {
+      "Brightness[%]": 54.5,
+      "UNIX": 1586121645750
+    },
+    {
+      "Brightness[%]": 56.33333,
+      "UNIX": 1586121675781
+    },
+    {
+      "Brightness[%]": 56.33333,
+      "UNIX": 1586121705815
+    },
+    {
+      "Brightness[%]": 54.66667,
+      "UNIX": 1586121735847
+    },
+    {
+      "Brightness[%]": 55.16667,
+      "UNIX": 1586121765881
+    },
+    {
+      "Brightness[%]": 55.33333,
+      "UNIX": 1586121795914
+    },
+    {
+      "Brightness[%]": 55.66667,
+      "UNIX": 1586121825948
+    },
+    {
+      "Brightness[%]": 55.33333,
+      "UNIX": 1586121855979
+    },
+    {
+      "Brightness[%]": 55.16667,
+      "UNIX": 1586121886014
+    },
+    {
+      "Brightness[%]": 55.33333,
+      "UNIX": 1586121916047
+    },
+    {
+      "Brightness[%]": 56.83333,
+      "UNIX": 1586121946082
+    },
+    {
+      "Brightness[%]": 56,
+      "UNIX": 1586121976118
+    },
+    {
+      "Brightness[%]": 56.33333,
+      "UNIX": 1586122006224
+    },
+    {
+      "Brightness[%]": 56.5,
+      "UNIX": 1586122036276
+    },
+    {
+      "Brightness[%]": 55.5,
+      "UNIX": 1586122066332
+    },
+    {
+      "Brightness[%]": 55.33333,
+      "UNIX": 1586122096366
+    },
+    {
+      "Brightness[%]": 54.83333,
+      "UNIX": 1586122126401
+    },
+    {
+      "Brightness[%]": 56,
+      "UNIX": 1586122156442
+    },
+    {
+      "Brightness[%]": 54.83333,
+      "UNIX": 1586122186471
+    },
+    {
+      "Brightness[%]": 55.16667,
+      "UNIX": 1586122216515
+    },
+    {
+      "Brightness[%]": 54.33333,
+      "UNIX": 1586122246546
+    },
+    {
+      "Brightness[%]": 54.83333,
+      "UNIX": 1586122276577
+    },
+    {
+      "Brightness[%]": 54.66667,
+      "UNIX": 1586122306622
+    },
+    {
+      "Brightness[%]": 55.83333,
+      "UNIX": 1586122336652
+    },
+    {
+      "Brightness[%]": 56.16667,
+      "UNIX": 1586122366704
+    },
+    {
+      "Brightness[%]": 55.5,
+      "UNIX": 1586122396742
+    },
+    {
+      "Brightness[%]": 57.5,
+      "UNIX": 1586122426962
+    },
+    {
+      "Brightness[%]": 56.66667,
+      "UNIX": 1586122456997
+    },
+    {
+      "Brightness[%]": 56.33333,
+      "UNIX": 1586122487033
+    },
+    {
+      "Brightness[%]": 56.66667,
+      "UNIX": 1586122517070
+    },
+    {
+      "Brightness[%]": 55.16667,
+      "UNIX": 1586122547102
+    },
+    {
+      "Brightness[%]": 55.33333,
+      "UNIX": 1586122577134
+    },
+    {
+      "Brightness[%]": 57.16667,
+      "UNIX": 1586122607168
+    },
+    {
+      "Brightness[%]": 56.16667,
+      "UNIX": 1586122637200
+    },
+    {
+      "Brightness[%]": 57.33333,
+      "UNIX": 1586122667905
+    },
+    {
+      "Brightness[%]": 56,
+      "UNIX": 1586122697884
+    },
+    {
+      "Brightness[%]": 56,
+      "UNIX": 1586122727915
+    },
+    {
+      "Brightness[%]": 57.33333,
+      "UNIX": 1586122757945
+    },
+    {
+      "Brightness[%]": 57,
+      "UNIX": 1586122787991
+    },
+    {
+      "Brightness[%]": 56.16667,
+      "UNIX": 1586122818043
+    },
+    {
+      "Brightness[%]": 54.33333,
+      "UNIX": 1586122848084
+    },
+    {
+      "Brightness[%]": 54,
+      "UNIX": 1586122878124
+    },
+    {
+      "Brightness[%]": 55.16667,
+      "UNIX": 1586122908161
+    },
+    {
+      "Brightness[%]": 56.33333,
+      "UNIX": 1586122938207
+    },
+    {
+      "Brightness[%]": 54,
+      "UNIX": 1586122968287
+    },
+    {
+      "Brightness[%]": 55,
+      "UNIX": 1586122998359
+    },
+    {
+      "Brightness[%]": 56.33333,
+      "UNIX": 1586123028459
+    },
+    {
+      "Brightness[%]": 56.66667,
+      "UNIX": 1586123058483
+    },
+    {
+      "Brightness[%]": 54.83333,
+      "UNIX": 1586123088521
+    },
+    {
+      "Brightness[%]": 55.5,
+      "UNIX": 1586123118564
+    },
+    {
+      "Brightness[%]": 57.16667,
+      "UNIX": 1586123148603
+    },
+    {
+      "Brightness[%]": 55.16667,
+      "UNIX": 1586123178639
+    },
+    {
+      "Brightness[%]": 55.66667,
+      "UNIX": 1586123208669
+    },
+    {
+      "Brightness[%]": 55.5,
+      "UNIX": 1586123238710
+    },
+    {
+      "Brightness[%]": 55.83333,
+      "UNIX": 1586123268743
+    },
+    {
+      "Brightness[%]": 56,
+      "UNIX": 1586123298783
+    },
+    {
+      "Brightness[%]": 55.66667,
+      "UNIX": 1586123328826
+    },
+    {
+      "Brightness[%]": 56.83333,
+      "UNIX": 1586123358864
+    },
+    {
+      "Brightness[%]": 56.83333,
+      "UNIX": 1586123388912
+    },
+    {
+      "Brightness[%]": 56,
+      "UNIX": 1586123418959
+    },
+    {
+      "Brightness[%]": 54.83333,
+      "UNIX": 1586123449017
+    },
+    {
+      "Brightness[%]": 53.5,
+      "UNIX": 1586123479057
+    },
+    {
+      "Brightness[%]": 55.5,
+      "UNIX": 1586123509096
+    },
+    {
+      "Brightness[%]": 55.16667,
+      "UNIX": 1586123539137
+    },
+    {
+      "Brightness[%]": 55.5,
+      "UNIX": 1586123569172
+    },
+    {
+      "Brightness[%]": 55.16667,
+      "UNIX": 1586123599230
+    },
+    {
+      "Brightness[%]": 57.83333,
+      "UNIX": 1586123629276
+    },
+    {
+      "Brightness[%]": 59,
+      "UNIX": 1586123659330
+    },
+    {
+      "Brightness[%]": 57.16667,
+      "UNIX": 1586123689406
+    },
+    {
+      "Brightness[%]": 58.83333,
+      "UNIX": 1586123719450
+    },
+    {
+      "Brightness[%]": 57.83333,
+      "UNIX": 1586123749575
+    },
+    {
+      "Brightness[%]": 58.33333,
+      "UNIX": 1586123779639
+    },
+    {
+      "Brightness[%]": 57.66667,
+      "UNIX": 1586123809671
+    },
+    {
+      "Brightness[%]": 58.16667,
+      "UNIX": 1586123839716
+    },
+    {
+      "Brightness[%]": 60.33333,
+      "UNIX": 1586123869760
+    },
+    {
+      "Brightness[%]": 59.33333,
+      "UNIX": 1586123899802
+    },
+    {
+      "Brightness[%]": 58.5,
+      "UNIX": 1586123929852
+    },
+    {
+      "Brightness[%]": 57.83333,
+      "UNIX": 1586123959970
+    },
+    {
+      "Brightness[%]": 58.16667,
+      "UNIX": 1586123990013
+    },
+    {
+      "Brightness[%]": 58.66667,
+      "UNIX": 1586124020133
+    },
+    {
+      "Brightness[%]": 58.5,
+      "UNIX": 1586124050171
+    },
+    {
+      "Brightness[%]": 58.66667,
+      "UNIX": 1586124080192
+    },
+    {
+      "Brightness[%]": 58.5,
+      "UNIX": 1586124110239
+    },
+    {
+      "Brightness[%]": 55.66667,
+      "UNIX": 1586124140272
+    },
+    {
+      "Brightness[%]": 53.5,
+      "UNIX": 1586124170296
+    },
+    {
+      "Brightness[%]": 56.33333,
+      "UNIX": 1586124200339
+    },
+    {
+      "Brightness[%]": 56.16667,
+      "UNIX": 1586124230396
+    },
+    {
+      "Brightness[%]": 56.5,
+      "UNIX": 1586124260435
+    },
+    {
+      "Brightness[%]": 56.83333,
+      "UNIX": 1586124290475
+    },
+    {
+      "Brightness[%]": 57.5,
+      "UNIX": 1586124320588
+    },
+    {
+      "Brightness[%]": 53.66667,
+      "UNIX": 1586124350637
+    },
+    {
+      "Brightness[%]": 54.66667,
+      "UNIX": 1586124380678
+    },
+    {
+      "Brightness[%]": 53.16667,
+      "UNIX": 1586124410714
+    },
+    {
+      "Brightness[%]": 53.66667,
+      "UNIX": 1586124440790
+    },
+    {
+      "Brightness[%]": 53.33333,
+      "UNIX": 1586124470827
+    },
+    {
+      "Brightness[%]": 53.66667,
+      "UNIX": 1586124500858
+    },
+    {
+      "Brightness[%]": 27.5,
+      "UNIX": 1586124530929
+    },
+    {
+      "Brightness[%]": 1.5,
+      "UNIX": 1586124560958
+    },
+    {
+      "Brightness[%]": 1.166667,
+      "UNIX": 1586124591000
+    },
+    {
+      "Brightness[%]": 0.333333,
+      "UNIX": 1586124621037
+    },
+    {
+      "Brightness[%]": 0.833333,
+      "UNIX": 1586124651129
+    },
+    {
+      "Brightness[%]": 0.5,
+      "UNIX": 1586124681305
+    },
+    {
+      "Brightness[%]": 1.333333,
+      "UNIX": 1586124711601
+    },
+    {
+      "Brightness[%]": 0.666667,
+      "UNIX": 1586124741638
+    },
+    {
+      "Brightness[%]": 0.666667,
+      "UNIX": 1586124771988
+    },
+    {
+      "Brightness[%]": 0.833333,
+      "UNIX": 1586124802024
+    },
+    {
+      "Brightness[%]": 1,
+      "UNIX": 1586124832056
+    },
+    {
+      "Brightness[%]": 0.5,
+      "UNIX": 1586124862094
+    },
+    {
+      "Brightness[%]": 0.666667,
+      "UNIX": 1586124892187
+    },
+    {
+      "Brightness[%]": 0.833333,
+      "UNIX": 1586124922228
+    },
+    {
+      "Brightness[%]": 1.5,
+      "UNIX": 1586124952354
+    },
+    {
+      "Brightness[%]": 1.333333,
+      "UNIX": 1586124982423
+    },
+    {
+      "Brightness[%]": 0.5,
+      "UNIX": 1586125012453
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586125042493
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586125072521
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586125102554
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586125132586
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586125162619
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586125192652
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586125222686
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586125252719
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586125282752
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586125312781
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586125342816
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586125372849
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586125402881
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586125432913
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586125462946
+    },
+    {
+      "Brightness[%]": 0.166667,
+      "UNIX": 1586125492978
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586125523012
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586125553045
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586125583086
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586125613118
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586125643151
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586125673185
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586125703215
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586125733248
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586125763280
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586125793313
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586125823345
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586125853384
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586125883414
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586125913445
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586125943479
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586125973511
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126003545
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126033577
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126063610
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126093642
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126123676
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126153709
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126183974
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126214006
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126244040
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126274071
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126304105
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126334138
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126364179
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126394214
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126424245
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126454279
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126484313
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126514359
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126544390
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126574425
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126604454
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126634487
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126664532
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126694565
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126724597
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126754634
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126784666
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126814697
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126844734
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126874763
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126904797
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126934829
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126964864
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586126994900
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586127024932
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586127054962
+    },
+    {
+      "Brightness[%]": 0.5,
+      "UNIX": 1586127084997
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586127115032
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586127145061
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586127175095
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586127205129
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586127235163
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586127265195
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586127295233
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586127325266
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586127355297
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586127385329
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586127415363
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586127445396
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586127475430
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586127505602
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586127535815
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586127565867
+    },
+    {
+      "Brightness[%]": 0.166667,
+      "UNIX": 1586127595902
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586127625931
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586127655974
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586127686007
+    },
+    {
+      "Brightness[%]": 0.166667,
+      "UNIX": 1586127716285
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586127746318
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586127776351
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586127806384
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586127836418
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586127866450
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586127896488
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586127926516
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586127956551
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586127986587
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586128016623
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586128046655
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586128076686
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586128106721
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586128136754
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586128166787
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586128196819
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586128226854
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586128256889
+    },
+    {
+      "Brightness[%]": 0.333333,
+      "UNIX": 1586128286920
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586128317149
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586128347184
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586128377215
+    },
+    {
+      "Brightness[%]": 0.333333,
+      "UNIX": 1586128407251
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586128437289
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586128467324
+    },
+    {
+      "Brightness[%]": 0.333333,
+      "UNIX": 1586128497357
+    },
+    {
+      "Brightness[%]": 0.333333,
+      "UNIX": 1586128527411
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586128557443
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586128587478
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586128617514
+    },
+    {
+      "Brightness[%]": 0.166667,
+      "UNIX": 1586128647555
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586128677588
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586128707622
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586128737655
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586128767686
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586128797719
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586128827754
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586128857787
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586128887829
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586128917857
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586128947887
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586128977919
+    },
+    {
+      "Brightness[%]": 0.166667,
+      "UNIX": 1586129007951
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586129037984
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586129068018
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586129098058
+    },
+    {
+      "Brightness[%]": 0.5,
+      "UNIX": 1586129128090
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586129158124
+    },
+    {
+      "Brightness[%]": 0.333333,
+      "UNIX": 1586129188156
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586129218193
+    },
+    {
+      "Brightness[%]": 0.166667,
+      "UNIX": 1586129248221
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586129278255
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586129308287
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586129338320
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586129368354
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586129398402
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586129428435
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586129458467
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586129488501
+    },
+    {
+      "Brightness[%]": 0.5,
+      "UNIX": 1586129518539
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586129548571
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586129578610
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586129608643
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586129638674
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586129668709
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586129698740
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586129728770
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586129758805
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586129788838
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586129818877
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586129848914
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586129878953
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586129908984
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586129939017
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586129969052
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586129999080
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586130029111
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586130059145
+    },
+    {
+      "Brightness[%]": 0.333333,
+      "UNIX": 1586130089180
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586130119212
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586130149255
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586130179291
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586130209322
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586130239357
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586130269390
+    },
+    {
+      "Brightness[%]": 0.166667,
+      "UNIX": 1586130299424
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586130329457
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586130359490
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586130389573
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586130419608
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586130449661
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586130479700
+    },
+    {
+      "Brightness[%]": 0.333333,
+      "UNIX": 1586130509733
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586130539761
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586130569793
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586130599825
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586130629859
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586130659891
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586130689925
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586130719956
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586130749990
+    },
+    {
+      "Brightness[%]": 0.333333,
+      "UNIX": 1586130780024
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586130810058
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586130840091
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586130870126
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586130900158
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586130930191
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586130960227
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586130990259
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586131020295
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586131050334
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586131080365
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586131110399
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586131140434
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586131170464
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586131200496
+    },
+    {
+      "Brightness[%]": 0.333333,
+      "UNIX": 1586131230530
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586131260561
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586131290602
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586131320636
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586131350671
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586131380704
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586131410741
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586131440777
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586131470807
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586131500839
+    },
+    {
+      "Brightness[%]": 0.333333,
+      "UNIX": 1586131530870
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586131560907
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586131590943
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586131620974
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586131651009
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586131681042
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586131711080
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586131741118
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586131771156
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586131801191
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586131831223
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586131861260
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586131891290
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586131921324
+    },
+    {
+      "Brightness[%]": 0.166667,
+      "UNIX": 1586131951357
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586131981390
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586132011423
+    },
+    {
+      "Brightness[%]": 0.166667,
+      "UNIX": 1586132041456
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586132071494
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586132101524
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586132131558
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586132161593
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586132191627
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586132221661
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586132251696
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586132281729
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586132311762
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586132341797
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586132371839
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586132401875
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586132431909
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586132461942
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586132491976
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586132522008
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586132552045
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586132582075
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586132612109
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586132642141
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586132672175
+    },
+    {
+      "Brightness[%]": 0.166667,
+      "UNIX": 1586132702209
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586132732243
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586132762279
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586132792311
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586132822344
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586132852378
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586132882411
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586132912443
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586132942476
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586132972510
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586133002543
+    },
+    {
+      "Brightness[%]": 0.166667,
+      "UNIX": 1586133032591
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586133062608
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586133092641
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586133122672
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586133152706
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586133182741
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586133212777
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586133242807
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586133272845
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586133302884
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586133332915
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586133362947
+    },
+    {
+      "Brightness[%]": 0.166667,
+      "UNIX": 1586133392984
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586133423017
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586133453048
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586133483087
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586133513131
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586133543151
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586133573512
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586133603513
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586133633544
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586133663579
+    },
+    {
+      "Brightness[%]": 0.333333,
+      "UNIX": 1586133693639
+    },
+    {
+      "Brightness[%]": 0.333333,
+      "UNIX": 1586133723673
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586133753704
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586133783739
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586133813771
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586133843813
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586133873862
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586133903897
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586133933925
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586133963959
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586133993990
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586134024022
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586134054057
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586134084107
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586134114170
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586134144204
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586134174234
+    },
+    {
+      "Brightness[%]": 0.5,
+      "UNIX": 1586134204267
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586134234302
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586134264336
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586134294374
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586134324409
+    },
+    {
+      "Brightness[%]": 0.166667,
+      "UNIX": 1586134354439
+    },
+    {
+      "Brightness[%]": 0.333333,
+      "UNIX": 1586134384471
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586134414505
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586134444541
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586134474572
+    },
+    {
+      "Brightness[%]": 0,
+      "UNIX": 1586134504606
+    },
+    {
+      "Brightness[%]": 79.16666,
+      "UNIX": 1586358679531
+    },
+    {
+      "Brightness[%]": 80,
+      "UNIX": 1586358709564
+    },
+    {
+      "Brightness[%]": 80.66666,
+      "UNIX": 1586358739589
+    },
+    {
+      "Brightness[%]": 81.33334,
+      "UNIX": 1586358769624
+    },
+    {
+      "Brightness[%]": 81.66666,
+      "UNIX": 1586358799655
+    },
+    {
+      "Brightness[%]": 82.5,
+      "UNIX": 1586358829690
+    },
+    {
+      "Brightness[%]": 80.66666,
+      "UNIX": 1586358859720
+    },
+    {
+      "Brightness[%]": 80.66666,
+      "UNIX": 1586358889754
+    },
+    {
+      "Brightness[%]": 65.5,
+      "UNIX": 1586370565029
+    },
+    {
+      "Brightness[%]": 66.16666,
+      "UNIX": 1586370595055
+    },
+    {
+      "Brightness[%]": 66,
+      "UNIX": 1586370625087
+    },
+    {
+      "Brightness[%]": 66.83334,
+      "UNIX": 1586370655119
+    },
+    {
+      "Brightness[%]": 66.66666,
+      "UNIX": 1586370685152
+    },
+    {
+      "Brightness[%]": 64.5,
+      "UNIX": 1586370715196
+    },
+    {
+      "Brightness[%]": 64.66666,
+      "UNIX": 1586370745233
+    },
+    {
+      "Brightness[%]": 66.83334,
+      "UNIX": 1586370775277
+    },
+    {
+      "Brightness[%]": 64.66666,
+      "UNIX": 1586370805303
+    },
+    {
+      "Brightness[%]": 66.83334,
+      "UNIX": 1586370835335
+    },
+    {
+      "Brightness[%]": 64.33334,
+      "UNIX": 1586370865371
+    },
+    {
+      "Brightness[%]": 63,
+      "UNIX": 1586370895404
+    },
+    {
+      "Brightness[%]": 65.5,
+      "UNIX": 1586370925439
+    },
+    {
+      "Brightness[%]": 64,
+      "UNIX": 1586370955477
+    },
+    {
+      "Brightness[%]": 65.33334,
+      "UNIX": 1586370985509
+    },
+    {
+      "Brightness[%]": 65.66666,
+      "UNIX": 1586371015540
+    },
+    {
+      "Brightness[%]": 65,
+      "UNIX": 1586371045639
+    },
+    {
+      "Brightness[%]": 64,
+      "UNIX": 1586371075662
+    },
+    {
+      "Brightness[%]": 66,
+      "UNIX": 1586371105695
+    },
+    {
+      "Brightness[%]": 66.66666,
+      "UNIX": 1586371135730
+    },
+    {
+      "Brightness[%]": 64.33334,
+      "UNIX": 1586371165772
+    },
+    {
+      "Brightness[%]": 61,
+      "UNIX": 1586371195805
+    },
+    {
+      "Brightness[%]": 62.83333,
+      "UNIX": 1586371225846
+    },
+    {
+      "Brightness[%]": 65.16666,
+      "UNIX": 1586371255890
+    },
+    {
+      "Brightness[%]": 62.16667,
+      "UNIX": 1586371285922
+    },
+    {
+      "Brightness[%]": 62.33333,
+      "UNIX": 1586371315951
+    },
+    {
+      "Brightness[%]": 62.5,
+      "UNIX": 1586371345989
+    },
+    {
+      "Brightness[%]": 29.5,
+      "UNIX": 1586371376020
+    },
+    {
+      "Brightness[%]": 22.83333,
+      "UNIX": 1586371406058
+    },
+    {
+      "Brightness[%]": 17,
+      "UNIX": 1586371436086
+    },
+    {
+      "Brightness[%]": 14.5,
+      "UNIX": 1586371466454
+    },
+    {
+      "Brightness[%]": 16,
+      "UNIX": 1586371496490
+    },
+    {
+      "Brightness[%]": 16.33333,
+      "UNIX": 1586371526518
+    },
+    {
+      "Brightness[%]": 15.66667,
+      "UNIX": 1586371556555
+    },
+    {
+      "Brightness[%]": 15.16667,
+      "UNIX": 1586371586589
+    },
+    {
+      "Brightness[%]": 15.5,
+      "UNIX": 1586371616616
+    },
+    {
+      "Brightness[%]": 15.66667,
+      "UNIX": 1586371646650
+    },
+    {
+      "Brightness[%]": 15.5,
+      "UNIX": 1586371676687
+    },
+    {
+      "Brightness[%]": 16.83333,
+      "UNIX": 1586371706714
+    },
+    {
+      "Brightness[%]": 16,
+      "UNIX": 1586371736746
+    },
+    {
+      "Brightness[%]": 15.16667,
+      "UNIX": 1586371766779
+    },
+    {
+      "Brightness[%]": 16,
+      "UNIX": 1586371796814
+    },
+    {
+      "Brightness[%]": 16,
+      "UNIX": 1586371826845
+    },
+    {
+      "Brightness[%]": 15.5,
+      "UNIX": 1586371856876
+    }
+  ],
+  "MQ2": [
+    {
+      "Combustible_Gas[%]": 51,
+      "UNIX": 1586105962500
+    },
+    {
+      "Combustible_Gas[%]": 79,
+      "UNIX": 1586105992524
+    },
+    {
+      "Combustible_Gas[%]": 68,
+      "UNIX": 1586106022552
+    },
+    {
+      "Combustible_Gas[%]": 62,
+      "UNIX": 1586106052576
+    },
+    {
+      "Combustible_Gas[%]": 57,
+      "UNIX": 1586106082601
+    },
+    {
+      "Combustible_Gas[%]": 54,
+      "UNIX": 1586106112625
+    },
+    {
+      "Combustible_Gas[%]": 0.2,
+      "UNIX": 1586106165718
+    },
+    {
+      "Combustible_Gas[%]": 0,
+      "UNIX": 1586106195744
+    },
+    {
+      "Combustible_Gas[%]": 0,
+      "UNIX": 1586106225768
+    },
+    {
+      "Combustible_Gas[%]": 0,
+      "UNIX": 1586106255792
+    },
+    {
+      "Combustible_Gas[%]": 0,
+      "UNIX": 1586106285817
+    },
+    {
+      "Combustible_Gas[%]": 0,
+      "UNIX": 1586106495937
+    },
+    {
+      "Combustible_Gas[%]": 0,
+      "UNIX": 1586106525970
+    },
+    {
+      "Combustible_Gas[%]": 0,
+      "UNIX": 1586106555992
+    },
+    {
+      "Combustible_Gas[%]": 0,
+      "UNIX": 1586106586020
+    },
+    {
+      "Combustible_Gas[%]": 0,
+      "UNIX": 1586106616043
+    },
+    {
+      "Combustible_Gas[%]": 0,
+      "UNIX": 1586106646068
+    },
+    {
+      "Combustible_Gas[%]": 0,
+      "UNIX": 1586106676102
+    },
+    {
+      "Combustible_Gas[%]": 0,
+      "UNIX": 1586106706125
+    },
+    {
+      "Combustible_Gas[%]": 0,
+      "UNIX": 1586106736151
+    },
+    {
+      "Combustible_Gas[%]": 0,
+      "UNIX": 1586106766176
+    },
+    {
+      "Combustible_Gas[%]": 0,
+      "UNIX": 1586106796203
+    },
+    {
+      "Combustible_Gas[%]": 0,
+      "UNIX": 1586106826229
+    },
+    {
+      "Combustible_Gas[%]": 0,
+      "UNIX": 1586107456476
+    },
+    {
+      "Combustible_Gas[%]": 0,
+      "UNIX": 1586107486512
+    },
+    {
+      "Combustible_Gas[%]": 0,
+      "UNIX": 1586107576610
+    },
+    {
+      "Combustible_Gas[%]": 0,
+      "UNIX": 1586107636646
+    },
+    {
+      "Combustible_Gas[%]": 0,
+      "UNIX": 1586107846769
+    },
+    {
+      "Combustible_Gas[%]": 0,
+      "UNIX": 1586108357048
+    },
+    {
+      "Combustible_Gas[%]": 0,
+      "UNIX": 1586108507261
+    },
+    {
+      "Combustible_Gas[%]": 1,
+      "UNIX": 1586108897541
+    },
+    {
+      "Combustible_Gas[%]": 7,
+      "UNIX": 1586112397337
+    },
+    {
+      "Combustible_Gas[%]": 7,
+      "UNIX": 1586112427403
+    },
+    {
+      "Combustible_Gas[%]": 7,
+      "UNIX": 1586112457429
+    },
+    {
+      "Combustible_Gas[%]": 5,
+      "UNIX": 1586113567826
+    },
+    {
+      "Combustible_Gas[%]": 5,
+      "UNIX": 1586113597854
+    },
+    {
+      "Combustible_Gas[%]": 7,
+      "UNIX": 1586114108077
+    },
+    {
+      "Combustible_Gas[%]": 7,
+      "UNIX": 1586114138140
+    },
+    {
+      "Combustible_Gas[%]": 7,
+      "UNIX": 1586114168179
+    },
+    {
+      "Combustible_Gas[%]": 7,
+      "UNIX": 1586114228224
+    },
+    {
+      "Combustible_Gas[%]": 7,
+      "UNIX": 1586114258260
+    },
+    {
+      "Combustible_Gas[%]": 6.833334,
+      "UNIX": 1586114438349
+    },
+    {
+      "Combustible_Gas[%]": 7,
+      "UNIX": 1586114468374
+    },
+    {
+      "Combustible_Gas[%]": 6,
+      "UNIX": 1586114618443
+    },
+    {
+      "Combustible_Gas[%]": 6,
+      "UNIX": 1586114678501
+    },
+    {
+      "Combustible_Gas[%]": 6,
+      "UNIX": 1586114948599
+    },
+    {
+      "Combustible_Gas[%]": 6,
+      "UNIX": 1586114978635
+    },
+    {
+      "Combustible_Gas[%]": 6,
+      "UNIX": 1586115008661
+    },
+    {
+      "Combustible_Gas[%]": 6,
+      "UNIX": 1586115038686
+    },
+    {
+      "Combustible_Gas[%]": 6,
+      "UNIX": 1586115068712
+    },
+    {
+      "Combustible_Gas[%]": 6,
+      "UNIX": 1586115338848
+    },
+    {
+      "Combustible_Gas[%]": 6,
+      "UNIX": 1586115428931
+    },
+    {
+      "Combustible_Gas[%]": 6,
+      "UNIX": 1586115489003
+    },
+    {
+      "Combustible_Gas[%]": 6,
+      "UNIX": 1586115669113
+    },
+    {
+      "Combustible_Gas[%]": 6,
+      "UNIX": 1586115729186
+
