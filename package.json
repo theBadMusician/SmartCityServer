@@ -37,7 +37,7 @@
     "formidable": "^1.2.2",
     "fs": "0.0.1-security",
     "geoip-lite": "^1.4.1",
-    "gitlog": "^3.3.5",
+    "gitlog": "^4.0.4",
     "node-cleanup": "^2.1.2",
     "node-uuid": "^1.4.8",
     "nodemailer": "^6.4.13",
